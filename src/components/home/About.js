@@ -3,17 +3,20 @@ import dummy from "../../../public/dummy/dummy.avif";
 import Image from "next/image";
 const About = () => {
   return (
-    <div className="homepage-about-section">
-      <div className="container-fluid">
-        <div className="heading-div">
-          <p>
-            <span>About Us</span>
-          </p>
+    <div className="homepage-about-section" id="about-section-homepage">
+      <div className="container">
+        <div id="word-heading" className="work-heading-home">
+          <div>
+            <h2>About Us</h2>
+          </div>
           <h4>
-            We built a simple talent management platform to help smaller HR
-            teams have a greater impact on the growth of their organization.
+            At The Tous, we craft innovative digital strategies that drive
+            growth, engagement, and success. With a passion for creativity and
+            focus on results, we help eCommerce brands grow in the digital
+            world.
           </h4>
         </div>
+
         <div className="row justify-content-center">
           <div className="col-lg-4 col-sm-12 left">
             <div
@@ -23,7 +26,7 @@ const About = () => {
               data-aos-easing="ease-in-sine"
             >
               <h4>
-                100K+
+                57+ E-Commerce Websites Delivered
                 <Image
                   src={
                     "https://cdn.prod.website-files.com/66eab063c614790046e87eef/68dd737c5c8c9b1c39ed366b_Stat%20Icon.svg"
@@ -34,10 +37,12 @@ const About = () => {
                   priority
                 />
               </h4>
-              <span>Leapers</span>
               <p>
-                Every day, we enable more people to work better. We can’t help
-                but be impressed by this number, and it's only the beginning.
+                Since 2018, we’ve been passionately building successful
+                e-commerce websites, helping brands thrive in a digital-first
+                world. Each project is a reflection of our commitment to
+                delivering top-tier, user-friendly, and conversion-focused
+                platforms.
               </p>
             </div>
             <div
@@ -46,11 +51,13 @@ const About = () => {
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
             >
-              <h4>20,000+</h4>
-              <span>Customers</span>
+              <h4>15+ </h4>
+              <span>Team Members</span>
               <p>
-                We take great pride in our clients' trust. Helping them get
-                ready for this new era of work never gets old.
+                Our small but mighty team of 15 experts is dedicated to
+                providing the highest level of service. From strategy to
+                execution, we work seamlessly together to make sure your brand
+                stands out online.
               </p>
             </div>
           </div>
@@ -61,14 +68,18 @@ const About = () => {
           >
             <div className="inner-div">
               <div className="first-div">
-                <p>250+</p>
-                <span>Employees</span>
+                <h5>
+                  <span>Our Focus </span>
+                </h5>
+                <p>E-Commerce Brands</p>
               </div>
               <div className="second-div">
                 <p>
-                  {" "}
-                  That’s how many of us are dedicated to making work really work
-                  every day.
+                  At TheTous, we specialize in helping e-commerce brands grow
+                  through strategic Meta Ads, Google Ads, and Social Media
+                  Management. With a data-driven approach, we help brands
+                  connect with their audience and maximize ROI through tailored
+                  digital strategies.
                 </p>
               </div>
             </div>
@@ -96,14 +107,14 @@ const About = () => {
             >
               <div>
                 <p>
-                  <span className="span1">110</span>
-                  <br />
-                  <span className="span2">countries</span>
+                  <span className="span1">Active Since 2018</span>
                 </p>
 
                 <p>
-                  We have the chance to build relationships worldwide, giving us
-                  unique insights into talent management and its future.
+                  The Tous has been proudly delivering exceptional digital
+                  marketing and e-commerce solutions for over 5 years. We’ve
+                  consistently evolved with the digital landscape, staying ahead
+                  of trends and helping our clients succeed.
                 </p>
               </div>
             </div>

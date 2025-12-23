@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import "./style.css";
 
-import blog1 from "../../../public/blog/1724839571.webp"
-import blog2 from "../../../public/blog/1724839858.webp"
+import blog1 from "../../../public/blog/1724839571.webp";
+import blog2 from "../../../public/blog/1724839858.webp";
 
 const Blogs = () => {
   return (
     <div className="blog-main-page">
-      <div className="container-fluid bs-container mb-2">
+      <div className="container bs-container mb-2 mt-5">
         <div className="row">
           <div className="col-md-6 col-lg-6 col-sm-12  brand-strategy-div">
             <h1 className="w-100 blog_subtitle_style">Blogs</h1>
@@ -19,8 +19,9 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid bs-container3 mt-5 pt-2 last-section-of-every-page">
-        <div className="row">
+      <section className="">
+        <div className="container bs-container3 mt-5 pt-2 last-section-of-every-page">
+        <div className="row justify-content-center">
           <div className="col-lg-8">
             <div className="row bs-2-row-1 my-3">
               <div className="col-lg-4 col-md-4 col-sm-12 my-5">
@@ -82,10 +83,7 @@ const Blogs = () => {
                   <h6>SEO</h6>
                 </Link>
                 <hr />
-                <Link
-                  href="/"
-                  className="blog_title_border"
-                >
+                <Link href="/" className="blog_title_border">
                   <h6>Website</h6>
                 </Link>
                 <hr />
@@ -94,6 +92,7 @@ const Blogs = () => {
           </div>
         </div>
       </div>
+      </section>
     </div>
   );
 };

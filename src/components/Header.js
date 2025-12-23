@@ -33,18 +33,14 @@ const Header = () => {
   const [showPhoneMenu, setShowPhoneMenu] = useState(false);
   const handleShowPhoneMenu = () => {
     setShowPhoneMenu(true);
-    console.log("menue Show");
-    console.log(showPhoneMenu);
   };
   const handleHidePhoneMenu = () => {
     setShowPhoneMenu(false);
-    console.log("menue Hide");
-    console.log(showPhoneMenu);
   };
   // Phone Menu
 
   const pathname = usePathname();
-  useEffect (() => {
+  useEffect(() => {
     setShowPhoneMenu(false); // auto close on route change
   }, [pathname]);
   // showing the list hover on the heading
@@ -56,17 +52,17 @@ const Header = () => {
   const [secondList, setSecondList] = useState(false);
   const [thirdList, setThirdList] = useState(false);
   const handleShowList = (val) => {
-    if (val == "h1") {
+    if (val === "h1") {
       setFirstList(true);
       setSecondList(false);
       setThirdList(false);
     }
-    if (val == "h2") {
+    if (val === "h2") {
       setFirstList(false);
       setSecondList(true);
       setThirdList(false);
     }
-    if (val == "h3") {
+    if (val === "h3") {
       setFirstList(false);
       setSecondList(false);
       setThirdList(true);
@@ -95,7 +91,7 @@ const Header = () => {
         </div>
       </div>
       <header>
-        <div className="container-fluid">
+        <div className="container">
           <div className="flex row-div">
             <div className="logo-div">
               <Link href="/">
@@ -121,7 +117,7 @@ const Header = () => {
                         <li className={`heading-1`}>
                           <h4
                             onMouseEnter={() => handleShowList("h1")}
-                            onMouseLeave={() => handleMouseLeaveList}
+                            onMouseLeave={() => handleMouseLeaveList()}
                             className={`
 
                                 ${firstList ? "opacity-100" : ""}
@@ -140,7 +136,7 @@ const Header = () => {
                         >
                           <h4
                             onMouseEnter={() => handleShowList("h2")}
-                            onMouseLeave={() => handleMouseLeaveList}
+                            onMouseLeave={() => handleMouseLeaveList()}
                             className={`
                                
                               ${secondList ? "opacity-100" : ""} 
@@ -157,7 +153,7 @@ const Header = () => {
                         >
                           <h4
                             onMouseEnter={() => handleShowList("h3")}
-                            onMouseLeave={() => handleMouseLeaveList}
+                            onMouseLeave={() => handleMouseLeaveList()}
                             className={`
                               ${thirdList ? "opacity-100" : ""}
                               ${firstList ? "opacity-30" : ""}
@@ -538,6 +534,11 @@ const Header = () => {
             </div>
           </div>
         </div>
+        {/* Cta floating button whatapp */}
+
+        <Link href="/" id="whatsappFloatingButton">
+          <i className="ri-whatsapp-line"></i>
+        </Link>
       </header>
     </div>
   );

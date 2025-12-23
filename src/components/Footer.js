@@ -1,23 +1,18 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
-import Script from "../components/Script";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { usePathname } from "next/navigation";
 gsap.registerPlugin(ScrollTrigger);
-import { useLayoutEffect } from "react";
-import { useRouter } from "next/navigation";
- 
+
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 const Footer = () => {
   const footerRef = useRef(null);
   const pathname = usePathname();
-  const router = useRouter();
   useGSAP(() => {
-    console.log("Route changed:", pathname);
 
     // Reset footer position initially
     gsap.set("#footerSecond", { yPercent: -70 });
@@ -49,7 +44,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-md-12 col-lg-12 col-sm-12">
               <div id="footerFisrt" className="row-div">
-                <h2>Let's Talk</h2>
+                <h2>Let&apos;s Talk</h2>
                 <Link href="/contact">
                   <button>
                     <span className="btn-span-1">Contact Us</span>
@@ -87,6 +82,20 @@ const Footer = () => {
                   <Link href="/contact">Contact</Link>
                 </li>
               </ul>
+
+              <ul className="footer-ul-2">
+                <li>C-119,Ground Floor, Sec-2, Noida</li>
+                <li>
+                  <Link href={"mailto:grow@thetous.com"}>
+                    {" "}
+                    grow@thetous.com{" "}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={"tel:8901440322"}>+91-8901440322 </Link>
+                </li>
+              </ul>
+
               <div className="my-2 pe-2 footer-social-icon">
                 <h5>Connect with us</h5>
                 <p>
@@ -113,6 +122,13 @@ const Footer = () => {
                 <span className="footer-copyright-spanDiv">
                   Copyright © The Tous <span className="year">2025</span>. All
                   Rights Reserved.
+                </span>
+                <span>
+                  {" | "}
+                  <Link href={"/"}>Privacy Policy</Link>
+                </span>
+                <span>
+                  {" | "} <Link href={"/"}>Term & Conditions</Link>
                 </span>
               </h6>
             </div>

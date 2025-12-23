@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { usePathname } from "next/navigation";
@@ -10,7 +10,7 @@ const FooterAnimaton = () => {
   useEffect(() => {
     console.log("Route changed:", pathname);
 
-    gsap.set("#footerSecond", { yPercent: -70 });
+    gsap.set("#footerSecond", { yPercent: -70,duration:2 });
 
     const uncover = gsap.timeline({ paused: true });
 

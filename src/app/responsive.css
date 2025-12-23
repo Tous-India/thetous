@@ -31,9 +31,6 @@
 }
 
 /* Smallar phone */
-@media (max-width: 481px) and (min-width: 768px) {
-}
-/* Smallar phone */
 @media (max-width: 480px) {
   * {
     padding: 0;
@@ -45,95 +42,193 @@
     display: none;
   }
 
-  .parent-fo-header header .container .row-div .menu-div .ham-menu-icon {
-    display: block;
-  }
+  /* Header Css part 1 */
 
-  .parent-fo-header header img {
-    width: 100% !important;
-  }
-  .parent-fo-header
-    header
-    .container-fluid
-    .row-div
-    .menu-div
-    .phone-menu-div
-    img {
-    width: 50% !important;
-  }
-  .flair {
-    display: none;
-  }
-  .parent-fo-header header .container .row-div .menu-div .phone-menu-div {
-    display: flex;
-    z-index: 20 !important;
-  }
-  .parent-fo-header .para-div {
-    z-index: 4;
-  }
-  .home-banner-main-section {
-    .container {
-      .row-div {
-        flex-direction: column;
+  .parent-fo-header {
+    .para-div {
+      z-index: 4;
+    }
+    header {
+      img {
+        width: 100% !important;
+      }
+      .container {
         > div {
-          width: 100%;
+          padding: 10px 1rem;
+        }
+        .row-div {
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 1rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          .logo-div {
+            width: 60%;
+          }
+          .menu-div {
+            .phone-menu-div {
+              .inner-div {
+                .row {
+                  > div {
+                    .accordion-body {
+                      text-align: start;
+                      padding: 5px;
+                      li {
+                        transition: 0.3s;
+                        padding: 5px 0px;
+                        border-radius: 5px;
+                        &:hover {
+                          background-color: white;
+                        }
+                      }
+                    }
+                    .accordion-item:last-of-type {
+                      > .accordion-header {
+                        .accordion-button.collapsed {
+                          font-size: 1.75rem;
+                          border-bottom: 1px solid rgb(255, 255, 255) !important;
+                          color: #5b5b5b;
+                          padding: 0px;
+                          font-family: "Poppins";
+                        }
+                      }
+                    }
+                    .accordion-button:not(.collapsed) {
+                      font-size: 1.75rem;
+                      border-bottom: 1px solid #fafafa;
+                      padding: 0px 0 10px 0;
+                      font-weight: 600;
+                      font-family: "Poppins";
+                    }
+                  }
+                }
+              }
+              img {
+                width: 50% !important;
+                display: flex;
+                z-index: 20 !important;
+              }
+            }
+            .ham-menu-icon {
+              display: block;
+            }
+          }
         }
       }
     }
   }
 
-  .parent-fo-header header .container > div {
-    padding: 10px 1rem;
-  }
-  .home-banner-main-section .row-div .text-div h1 {
-    font-size: 13vw;
-    padding-left: 0.5rem;
-  }
-  .home-banner-main-section .row-div .text-div p {
-    padding-left: 0.5rem;
-    font-size: 1.5rem;
-  }
-  .home-banner-main-section .row-div .graphic-div {
+  .flair {
     display: none;
   }
 
-  .homepage-about-section .row .count-up-main-componenet {
-    .row {
-      justify-content: space-between;
-      > div {
-        width: 49%;
-        padding: 10px;
+  /* Home Banner start */
+  .home-banner-main-section {
+    .row-div {
+      h1 {
+        font-size: 10vw !important;
+        text-align: center;
+        span {
+          &:last-child {
+            margin-top: 0rem;
+          }
+        }
+      }
+
+      .trans {
+        font-size: 10vw;
+        letter-spacing: 0px;
+        margin: 0px;
+        padding: 0;
       }
     }
-  }
-
-  .home-banner-main-section .row-div .text-div a {
-    margin-left: 0.6rem;
-  }
-  .homepage-about-section {
-    padding: 2rem 0;
-    margin-top: 1rem;
-  }
-
-  .exquisites-home-page {
-    .row-div {
-      flex-direction: column;
+    .phone-trans {
+      display: block;
+      margin-top: 1rem !important;
     }
+
+    .robo-span {
+      display: block;
+      width: 45%;
+    }
+
+    .trans,
+    .sol,
+    .digi,
+    .ai,
+    .with,
+    .brand {
+      display: block;
+      width: 100%;
+      font-size: 10vw;
+    }
+    .brand,
+    .with {
+      width: fit-content;
+      font-weight: 700 !important;
+      font-size: 10vw !important;
+      letter-spacing: 0;
+    }
+
+    .ai {
+      width: 100%;
+      display: block;
+      margin-bottom: 1.5rem;
+      .strong {
+        font-weight: 500 !important;
+        font-size: 10vw !important;
+      }
+    }
+    .digi,
+    .sol {
+      width: fit-content;
+      font-size: 8vw;
+    }
+    a {
+      top: -1px;
+
+      span {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: gray;
+      }
+    }
+
+    .container {
+      > div {
+        padding: 10px 1rem;
+      }
+      .row-div {
+        flex-direction: column;
+        margin-top: 0;
+        padding: 0;
+
+        .col-div {
+          width: 100%;
+        }
+        > div {
+          width: 100%;
+        }
+      }
+    }
+
+    .desk-trans {
+      display: none;
+    }
+
+    height: 69vh;
   }
-  .exquisites-home-page .container .row-div .col-div .inner-div li {
-    font-size: 5vw;
-  }
-  .exquisites-home-page .container .row-div .col-div {
-    width: 100%;
-  }
+  /* Home Banner end  */
+
   #word-heading {
-    padding: 0 10px;
+    padding: 0 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     h2 {
       width: 55%;
       font-size: 2rem;
+      font-weight: 700;
     }
     a {
       width: 45%;
@@ -147,25 +242,47 @@
   .swiper-main-div .swiper-slide .inner-div p span {
     font-size: 8px;
   }
-  .homepage-about-section {
-    .right {
-      margin-top: 1rem;
-    }
-  }
+
+  /* work-home-section end */
+
   .work-home-section {
     margin-top: 1rem;
-    padding: 15px;
+    padding: 15px 0;
+    .swiper-main-div {
+      margin-top: 1rem;
+    }
+    h4 {
+      font-size: 1rem;
+      font-weight: 400 !important;
+      margin-top: 10px;
+    }
+    .heading-div {
+      > h4 {
+        padding: 10px;
+        text-align: start;
+        color: rgb(51, 51, 51);
+        padding-left: 0px;
+        font-size: 1.4rem !important;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+    }
+    .container-fluid {
+      padding-left: 5px;
+    }
     #word-heading {
       padding: 0 0px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      flex-direction: column;
       h2 {
         width: 55%;
         font-size: 2rem;
+        font-weight: 700;
       }
       a {
-        width: 45%;
+        width: fit-content;
         text-align: end !important;
       }
     }
@@ -177,14 +294,28 @@
       margin: 0;
     }
   }
-  .blog-section-home .container-fluid .mainBlogDiv .innerContainerBlog h3 {
-    font-size: 4vw;
-  }
+
+  /* work-home-section end */
+
   .blog-section-home {
-    padding: 0;
-    margin-top: 4rem;
+    /* padding-bottom: 0.75rem; */
+    margin-top: 2rem;
+    .container-fluid {
+      .imgDiv {
+        display: none;
+      }
+      .mainBlogDiv {
+        .innerContainerBlog h3 {
+          font-size: 4vw;
+        }
+      }
+    }
+
     .row {
       padding: 0;
+      &:last-child {
+        padding-bottom: 0.5rem;
+      }
       .col-12 {
         padding: 2.5px;
       }
@@ -193,12 +324,19 @@
     #word-heading {
       flex-direction: row;
       justify-content: space-between;
-      padding: 0 10px;
+      padding: 0 0px;
       display: flex;
     }
     .heading-div {
       margin-top: 1rem;
-      padding: 10px 0;
+      padding: 10px 10px;
+      .btn-span-2 {
+        padding: 10px 12px;
+        margin: 0;
+      }
+      .btn-span-1 {
+        padding: 5px 20px;
+      }
       a {
         width: 60% !important;
         text-align: end !important;
@@ -207,169 +345,38 @@
     }
   }
 
-  .exquisites-home-page .heading-div .btn-span-1 {
-    padding: 5px 20px;
-  }
-  .exquisites-home-page .heading-div .btn-span-2 {
-    padding: 10px 12px;
-    margin: 0;
-  }
-  .blog-section-home .heading-div .btn-span-1 {
-    padding: 5px 20px;
-  }
-  .blog-section-home .heading-div .btn-span-2 {
-    padding: 10px 12px;
-    margin: 0;
-  }
-
-  .sliders-home-page {
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-  }
-
-  .exquisites-home-page .heading-div > h4 {
-    padding: 10px;
-    font-size: 1rem;
-    font-weight: 400 !important;
-  }
-  .work-home-section .heading-div > h4 {
-    padding: 10px;
-    text-align: start;
-    color: rgb(51, 51, 51);
-    padding-left: 0px;
-    font-size: 1.4rem !important;
-    font-weight: 300;
-    line-height: 1.5;
-  }
-  footer {
-    #footerFisrt {
-      padding: 3rem 1.25rem 2rem 1rem;
-      button {
-        .btn-span-1 {
-          padding: 0.5rem 1rem;
-        }
-        .btn-span-2 {
-          padding: 0.4rem;
-        }
-      }
-      h2 {
-        font-size: 2rem;
-        margin: 0;
-      }
-    }
-
-    #footerSecond {
-      .row {
-        padding: 0 0rem;
-        > div {
-          padding: 0;
-        }
-      }
-    }
-
-    .footer-ul {
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      li {
-        line-height: 2rem;
-        width: 30%;
-        padding: 0px;
-        text-align: center;
-      }
-    }
-    .footer-social-icon {
-      padding-left: 1rem;
-    }
-
-    h6 {
-      padding-left: 1rem;
-    }
-  }
-
-  .work-home-section h4 {
-    font-size: 1rem;
-    font-weight: 400 !important;
-    margin-top: 10px;
-  }
-
-  .blog-section-home .container-fluid .imgDiv {
-    display: none;
-  }
-
-  .parent-fo-header
-    header
-    .container
-    .row-div
-    .menu-div
-    .phone-menu-div
-    .inner-div
-    .row
-    > div
-    .accordion-item:last-of-type
-    > .accordion-header
-    .accordion-button.collapsed {
-    font-size: 1.75rem;
-    border-bottom: 1px solid rgb(255, 255, 255) !important;
-  }
-
-  .parent-fo-header
-    header
-    .container
-    .row-div
-    .menu-div
-    .phone-menu-div
-    .inner-div
-    .row
-    > div
-    .accordion-button:not(.collapsed) {
-    font-size: 1.75rem;
-  }
-
-  .parent-fo-header
-    header
-    .container
-    .row-div
-    .menu-div
-    .phone-menu-div
-    .inner-div
-    .row
-    > div
-    .accordion-body {
-    text-align: start;
-    background-color: rgb(241, 241, 241);
-    padding: 5px;
-    li {
-      transition: 0.3s;
-      padding: 5px 20px;
-      border-radius: 5px;
-      &:hover {
-        background-color: white;
-      }
-    }
-  }
-
-  .phone-menu-div {
-    .accordion-body {
-      ul {
-        padding: 0;
-        li {
-          line-height: 40px;
-          a {
-            font-size: 1.25rem;
-            opacity: 0.75;
-          }
-        }
-      }
-    }
-  }
+  /* Home Exquisites-home-page start */
 
   .exquisites-home-page {
     overflow: visible !important;
     padding: 0 0.5rem;
     margin-top: 2rem;
+    .row-div {
+      flex-direction: column;
+      .col-div {
+        width: 100%;
+        .inner-div {
+          li {
+            font-size: 5vw;
+          }
+        }
+      }
+    }
     .heading-div {
-      margin-bottom: 2rem;
-      padding: 10px 0;
+      margin-bottom: 0rem;
+      padding: 0px 0;
+      .btn-span-1 {
+        padding: 5px 20px;
+      }
+      .btn-span-2 {
+        padding: 10px 12px;
+        margin: 0;
+      }
+      > h4 {
+        padding: 10px 0;
+        font-size: 1rem;
+        font-weight: 400 !important;
+      }
     }
     .container {
       overflow: visible !important;
@@ -377,7 +384,19 @@
       .row {
         overflow: visible !important;
         display: block !important;
-
+        > div {
+          h2 {
+            font-size: 8vw !important;
+          }
+          .inner-div {
+            padding: 30px 20px;
+          }
+          &:first-child {
+            .inner-div {
+              margin-top: 0;
+            }
+          }
+        }
         .col-12 {
           position: -webkit-sticky;
           position: sticky;
@@ -395,6 +414,81 @@
 
         .third {
           .inner-div {
+          }
+        }
+      }
+    }
+  }
+
+  /* Home Exquisites-home-page start */
+
+  .sliders-home-page {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  footer {
+    #footerFisrt {
+      padding: 5rem 1.25rem 2rem 1rem;
+      flex-direction: column;
+      align-items: start;
+      button {
+        .btn-span-1 {
+          padding: 0.5rem 1rem;
+        }
+        .btn-span-2 {
+          padding: 0.4rem;
+        }
+      }
+      h2 {
+        margin: 0;
+        font-size: 4.5rem;
+      }
+    }
+
+    #footerSecond {
+      .row {
+        padding: 0 0rem;
+        > div {
+          padding: 0;
+        }
+      }
+    }
+
+    .footer-ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+      li {
+        line-height: 2rem;
+        width: 45%;
+        padding: 0px;
+        text-align: start;
+      }
+    }
+    .footer-ul-2 {
+      padding: 0px 17px;
+    }
+    .footer-social-icon {
+      padding-left: 1rem;
+    }
+
+    h6 {
+      padding-left: 1rem;
+      line-height: 20px;
+    }
+  }
+
+  .phone-menu-div {
+    .accordion-body {
+      ul {
+        padding: 0;
+        li {
+          line-height: 25px;
+          a {
+            font-size: 1.25rem;
+            opacity: 0.75;
+            font-weight: 600;
           }
         }
       }
@@ -423,172 +517,83 @@
     }
   }
 
-  .parent-fo-header header .container-fluid .row-div .menu-div .ham-menu-icon {
-    display: block;
-  }
-
   .home-page-main {
-    padding: 0;
+    padding: 0 5px;
     margin-bottom: -3rem !important ;
   }
 
-  .home-banner-main-section {
-    .row-div {
-      margin-top: 0;
-      .col-div {
-        width: 100%;
-      }
-    }
-  }
-
-  .parent-fo-header {
-    header {
-      .container-fluid {
-        .row-div {
-          padding-top: 1rem;
-        }
-        > div {
-          padding: 10px 1rem;
-        }
-      }
-    }
-  }
-
-  .exquisites-home-page {
-    .container-fluid {
+  .homepage-about-section {
+    margin-top: 2rem;
+    .container {
       .row {
-        .col-12 {
+        margin-top: 0.8rem;
+        .mid {
+          margin-top: 1rem;
           .inner-div {
-            flex-direction: column;
-            ul {
-              padding: 0;
+            .first-div {
+              height: fit-content;
             }
           }
         }
+        .right {
+          margin-top: 1rem;
+          display: none;
+        }
       }
-    }
-  }
-
-  .exquisites-home-page .container-fluid .row .col-12 .inner-div .img-div img {
-    width: 100%;
-  }
-  .exquisites-home-page .container-fluid .row .col-12 ul li a {
-    font-size: 1rem;
-    color: black;
-  }
-
-  .exquisites-home-page .container-fluid .row .col-12 ul li h2 {
-    font-size: 9vw;
-  }
-
-  .exquisites-home-page .container-fluid .row .second {
-    top: 6rem;
-  }
-  .exquisites-home-page .container-fluid .row .third {
-    top: 12.25rem;
-  }
-  .homepage-about-section .container-fluid > .heading-div h4 {
-    width: 100%;
-  }
-
-  .homepage-about-section .container-fluid > .heading-div > p {
-    font-size: 12vw;
-  }
-  /*  */
-
-  .homepage-about-section .container-fluid .row {
-    .left {
-    }
-    .mid {
-      margin-top: 1rem;
+      #word-heading {
+        padding: 0;
+        h2 {
+          color: #333;
+          width: 55%;
+          padding-left: 0;
+          font-family: "Poppins";
+          font-size: 2rem;
+          font-weight: 700;
+        }
+        h4 {
+          color: #333;
+          line-height: 1.5;
+          opacity: 0.9;
+          margin-top: 0;
+          font-family: Poppins;
+          font-size: 1rem;
+          font-weight: 400 !important;
+        }
+      }
     }
   }
 
   footer {
-    padding-top:6rem;
+    padding-top: 3rem;
   }
+
+  /* Header Css part-2 and last */
 
   .parent-fo-header {
     header {
-      .container-fluid .row-div {
-        .menu-div {
-          .phone-menu-div {
-            .inner-div {
-              .row {
-                .phone-links {
-                  padding: 0px 20px !important;
-                  a {
-                    width: 100%;
-                    display: block;
-                    text-align: start;
-                    font-size: 1.75rem;
-                    font-weight: 500;
-                    color: #212529 !important;
-                    line-height: 2;
-                  }
-                }
-                .contact-div {
-                  padding: 0px 20px !important;
-                  a {
-                    width: 100%;
-                    display: block;
-                    text-align: start;
-                    font-size: 1.75rem;
-                    font-weight: 500;
-                    color: #212529 !important;
-                    line-height: 2;
-                  }
-                }
-                > div {
-                  width: 100%;
-                  h2 {
-                    line-height: 0;
-                    button {
-                      font-weight: 500 !important;
-                      font-family: "Poppins";
-                    }
-                  }
-                }
-              }
-            }
-          }
+      .phone-links,
+      .contact-div {
+        padding: 0px 25px !important;
+        a {
+          width: 100%;
+          display: block;
+          text-align: start;
+          font-size: 1.75rem;
+          font-weight: 500;
+          color: #5b5b5b !important;
+          line-height: 2;
+          display: block;
+          line-height: 50px;
+          -webkit-text-stroke-width: 0.65px;
         }
       }
     }
   }
 
-  .parent-fo-header
-    header
-    .container-fluid
-    .row-div
-    .menu-div
-    .phone-menu-div
-    .inner-div
-    .row
-    > div
-    .accordion-item:last-of-type
-    > .accordion-header
-    .accordion-button.collapsed {
-    font-size: 1.75rem;
-    font-weight: 700;
-  }
-
-  .parent-fo-header
-    header
-    .container-fluid
-    .row-div
-    .menu-div
-    .phone-menu-div
-    .inner-div
-    .row
-    > div
-    .accordion-button:not(.collapsed) {
-    font-size: 1.75rem;
-    font-weight: 700;
-  }
   .about-page-main {
     .aboutRow {
       margin: 0 !important;
+      padding: 0 1.5rem !important;
     }
     .aboutCta {
       margin-top: 1rem !important;
@@ -606,7 +611,8 @@
     padding-left: 0.75rem !important;
   }
   .about-page-main .aboutRow > .row > div:first-child h1 {
-    font-size: 8vw !important  ;
+    font-size: 10vw !important  ;
+    font-weight: 700;
   }
   .about-page-main .about-Page-right iframe {
     height: 18rem !important;
@@ -683,9 +689,67 @@
   body {
     overflow-x: clip !important;
   }
-  .exquisites-home-page {
-    .fourth {
-      display: none !important  ;
+
+  .home-page-why-we-us-section {
+    margin-top: 2rem;
+    .container {
+      .row {
+        > div {
+          width: 50%;
+          padding: 5px;
+          margin-top: 0px;
+          .innerDiv {
+            padding: 10px;
+            height: 10rem;
+            h5 {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    .heading-section {
+      padding: 0;
+      margin-bottom: 0;
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+      p {
+        padding: 10px 0 0 0;
+        font-size: 1rem;
+        font-weight: 400 !important;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .home-page-Testimonials {
+    padding: 3rem 0 2rem 0;
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .slide {
+      .innerDiv {
+        padding: 5px 0px;
+      }
+    }
+  }
+
+  .main-marquee-file {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    span {
+      font-weight: 500;
+      font-size: 2rem;
+    }
+    &::after {
+      box-shadow: 20px 0px 10px 5px white;
+    }
+    &::before {
+      box-shadow: -20px 0px 10px 5px white;
     }
   }
 }

@@ -12,7 +12,7 @@ const Blogs = () => {
       data-aos="fade-up"  
       data-aos-duration="2500"
     >
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <div className="col-12">
             <div className="heading-div">

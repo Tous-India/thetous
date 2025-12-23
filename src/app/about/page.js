@@ -1,20 +1,45 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import "./style.css";
 import Link from "next/link";
-import Image from "next/image";
+// import AboutTest from "@/components/AboutTest";
 
 const page = () => {
   return (
     <div className="about-page-main">
-      <div className="container bs-container mb-5 aboutRow">
+      <div className="container aboutRow">
         <div className="row align-items-center">
-          <div className="col-md-12 col-lg-6 col-sm-12 d-flex justify-content-centent align-items-center flex-column brand-strategy-div">
-            <h1 className="w-100">About Us.</h1>
+          <div className="col-md-12 col-lg-6 col-sm-12 d-flex justify-content-centent align-items-center flex-column brand-strategy-div content-div">
+            <h1 className="w-100">About Us</h1>
             <p className="w-100">
-              Our strategists, designers, video editors and animators provide
-              you with holistic solutions to grow your digital presence and
-              achieve your business goals through both day-to-day content and
-              integrated flagship campaigns.
+              The Tous is a performance-driven creative marketing agency, built
+              exclusively for eCommerce growth. Since 2018, we’ve helped
+              ambitious online brands scale with precision, creativity, and
+              measurable impact.
+            </p>
+            <p>
+              <strong>Why brands trust The Tous</strong>
+            </p>
+            <ul>
+              <li>
+                eCommerce-first agency with deep platform and consumer insight
+              </li>
+              <li>15+ specialists across strategy, design, media & tech</li>
+              <li>57+ E-Commerce websites delivered</li>
+              <li>
+                Data-led performance marketing focused on ROI, not vanity
+                metrics active since 2018
+              </li>
+              <li>Custom growth strategies—no templates, no shortcuts</li>
+              <li>
+                High-impact creative & UX built to convert, not just look good
+              </li>
+            </ul>
+            <p>
+              <span>
+                At The Tous, we don’t run campaigns—we build scalable eCommerce
+                businesses.
+              </span>
             </p>
           </div>
           <div className="col-md-12 col-lg-6 col-sm-12 d-flex justify-content-centent align-items-center flex-column brand-strategy-div about-Page-right">
@@ -23,60 +48,14 @@ const page = () => {
           </div>
         </div>
       </div>
-      <section className="aboutVision">
-        <div className="container">
-          <div className="row justify-content-centent">
-            <div className="col-lg-6 col-md-12  vision-btnDiv d-flex flex-column align-items-center justify-content-center">
-              <span>Vision</span>
-              <section className="careerAbout">
-                <div className="container">
-                  <div className="row">
-                    <div className="col-lg-12 col-md-8 col-sm-10 careerBox">
-                      <div className="careerButton">
-                        <h2>Career</h2>
-                        <Link href="mailto:grow@thetous.com">grow@thetous.com</Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-            <div className="col-lg-6 col-md-12 d-flex flex-direction-column justify-content-centent align-items-end p-0 m-0">
-              <h2>
-                <p>
-                  Empowering brands with innovative, human-centric marketing
-                  strategies that drive real results. Our vision is to be the
-                  most trusted partner for business growth and success.
-                </p>
-              </h2>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="ourTeam">
-        <div className="container">
-          <h2>Our Team</h2>
-          <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
-              <div className="innerDivAbout text-center">
-                <img
-                  src="https://tous.mankindpackers.site/upload/ourteam/1735382266.jpg"
-                  alt="Team Member"
-                />
-                <h4>Akash Chauhan</h4>
-                <h6 className="aboutTeamDes">IT Team Leader</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <AboutTest />
+      {/* <OurTeam /> */}
       <section className="aboutCta last-section-of-every-page">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1>
-                Together, let's have a quantifiable effect on your company.
-              </h1>
+              <p>Together, let&apos;s have a quantifiable effect on your company.</p>
               <Link href="">Design A Quote</Link>
             </div>
           </div>
@@ -87,3 +66,136 @@ const page = () => {
 };
 
 export default page;
+
+const AboutTest = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const tabs = [
+    {
+      label: "Vision",
+      heading: "",
+      description:
+        "Empowering brands with innovative, human-centric marketing strategies that drive real results. Our vision is to be the most trusted partner for business growth and success.",
+      image:
+        "https://cdn.prod.website-files.com/67726722d415dc401ae23cf6/677289e14dd4dbca1d8e5930_philip-oroni-IANBrm46bF0-unsplash%20(2).avif",
+    },
+    {
+      label: "Mission",
+      heading: " ",
+      description:
+        "We empower eCommerce brands with human-centric, data-driven marketing strategies that drive measurable growth, maximize ROI, and build lasting brand value—becoming a trusted partner in their long-term success.",
+      image:
+        "https://cdn.prod.website-files.com/67726722d415dc401ae23cf6/677289e19e4d013c6a4c5a1b_philip-oroni-Zx_G3LpNnV4-unsplash%20(1).avif",
+    },
+    {
+      label: "Values",
+      heading: " ",
+      description:
+        "Results-Driven Approach, Customer-Centric Strategy, Innovation & Creativity, Transparency & Integrity, Data-Backed Decisions, Agility & Adaptability, Customer Loyalty & Retention.",
+      image:
+        "https://cdn.prod.website-files.com/67726722d415dc401ae23cf6/677289e1c88b5b4c14d1e6fd_philip-oroni-h9N7bm-HRCo-unsplash.avif",
+    },
+  ];
+  return (
+    <div className="About-page-tabs">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 col-sm-12 left-col">
+            <div className="inner-div">
+              {/* Left Column - Content */}
+              <div className="space-y-6 height-[150px ]">
+                <h3 className="heading">
+                  Explore the Layers of Abstract Design and Depth
+                </h3>
+
+                {/* Tab Buttons */}
+                <div className="flex gap-2 flex-wrap tabs-button-div">
+                  {tabs.map((tab, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveTab(index)}
+                      className={`relative py-2 px-3 rounded-full font-medium transition-all duration-300 overflow-hidden border-2 border-solid border-black ${
+                        activeTab === index
+                          ? "text-white"
+                          : "hover:text-black hover:bg-[#eaeaea]"
+                      }`}
+                    >
+                      <span className="relative z-10">{tab.label}</span>
+                      {activeTab === index && (
+                        <div className="absolute inset-0 bg-black"></div>
+                      )}
+                      {activeTab !== index && (
+                        <div className="absolute inset-0"></div>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Tab Content */}
+              <div className="tab-contentd-div">
+                {tabs.map((tab, index) => (
+                  <div
+                    key={index}
+                    className={`transition-all duration-600  absolute left-[10px] top-[10px] ${
+                      activeTab === index
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0  translate-y-2 pointer-events-none"
+                    }`}
+                  >
+                    <div className="headings">{tab.heading}</div>
+                    <p className="">{tab.description}</p>
+                  </div>
+                ))}
+
+                {/* <Link href="#" className="become-member-button">
+                  Become a member
+                </Link> */}
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-6 col-sm-12 righ-col">
+            <div className="inner-div">
+              {/* Right Column - Images */}
+              {tabs.map((tab, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-all duration-600 img-div ${
+                    activeTab === index
+                      ? "opacity-100 scale-100 rotate-0"
+                      : "opacity-0 scale-95 rotate-3"
+                  }`}
+                >
+                  <img src={tab.image} alt={tab.heading} className=" " />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const OurTeam = () => {
+  return (
+    <section className="ourTeam">
+      <div className="container">
+        <h2>Our Team</h2>
+        <div className="row">
+          <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
+            <div className="innerDivAbout text-center">
+              <img
+                src="https://tous.mankindpackers.site/upload/ourteam/1735382266.jpg"
+                alt="Team Member"
+              />
+              <h4>Akash Chauhan</h4>
+              <h6 className="aboutTeamDes">IT Team Leader</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
