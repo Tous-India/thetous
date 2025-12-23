@@ -27,28 +27,38 @@ const Work = () => {
       className="work-home-section"
       data-aos="fade-up"
       // data-aos-anchor-placement="bottom-bottom"
-      data-aos-offset="300"
-      data-aos-duration="2500"
+      data-aos-offset="100"
+      data-aos-duration="2000"
     >
-      <div className="container-fluid">
-        <div id="word-heading" className="work-heading-home row-div">
-          <h2>Work</h2>
-          <Link href="/work">
-            <button>
-              <span className="btn-span-1">View All</span>
-              <span className="btn-span-2">
-                <i className="ri-arrow-right-up-long-line"></i>
-              </span>
-            </button>
-          </Link>
-        </div>
-        <h4>
-          The Tous work by combining creativity, data-driven insights, and
-          effective strategies, we create digital solutions that engage,
-          convert, and elevate your brand’s presence online. Luxeliv Project-1
-          Website ADS SEO Google Slivish.
-        </h4>
+      <div className="container">
         <div className="row">
+          <div className="col-12">
+            <div id="word-heading" className="work-heading-home">
+              <div>
+                <h2>Work</h2>
+                <Link href="/work">
+                  <button>
+                    <span className="btn-span-1">View All</span>
+                    <span className="btn-span-2">
+                      <i className="ri-arrow-right-up-long-line"></i>
+                    </span>
+                  </button>
+                </Link>
+              </div>
+              <h4>
+                The Tous work by combining creativity, data-driven insights, and
+                effective strategies, we create digital solutions that engage,
+                convert, and elevate your brand’s presence online.
+              </h4>
+              <Link href={"/"} className="add-your-project">
+                Add Your Project <i className="ri-arrow-right-up-line"></i>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container-fluid">
+        <div className="row mt-4">
           <div className="col-12">
             <div className="swiper-main-div">
               <Swiper

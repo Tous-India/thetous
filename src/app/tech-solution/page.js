@@ -2,12 +2,12 @@ import React from "react";
 import "./style.css";
 import Image from "next/image";
 import Link from "next/link";
-import svaa from "../../../public/home/clients/1729835040.webp";
-import vedica from "../../../public/home/clients/1729835073.webp";
-import shoolin from "../../../public/home/clients/1734673478.png";
-import vardhman from "../../../public/home/clients/1734673342.png";
-import jyotish from "../../../public/home/clients/1734673248.png";
-import autoboss from "../../../public/home/clients/1729835027.webp";
+import biodreama from "../../../public/client/biodreama.png";
+import cozzet from "../../../public/client/cozzet.png";
+import fnp from "../../../public/client/fnp.png";
+import luxeliv from "../../../public/client/luxeliv.png";
+import naarya from "../../../public/client/naarya.png";
+import ohmypet from "../../../public/client/ohmypet.png";
 
 // last sec image
 import petcenter from "../../../public/services/brand/1742808682.webp";
@@ -17,26 +17,41 @@ import madhu from "../../../public/services/brand/1742808302.png";
 const TechSolution = () => {
   return (
     <div className="about-page-main">
-      <div className="container-fluid bs-container">
+      <div className="container bs-container mt-4">
         <div className="row">
-          <div className="col-md-6 col-lg-6 col-sm-12 d-flex justif -content-centent align-items-center flex-column brand-strategy-div">
-            <h1 className="w-100">Tech Solution.</h1>
-            <p className="w-100">
-              Our strategists, designers, video editors and animators provide
-              you with holistic solutions to grow your digital presence and
-              achieve your business goals through both day-to-day content and
-              integrated flagship campaigns.
+          <div className="col-md-6 col-lg-6 col-sm-12 d-flex justify-content-start align-items-start flex-column brand-strategy-div">
+            <h1 className="w-100">Tech Solution</h1>
+            <p className="">
+              <strong>
+                Our strategists, designers, video editors and animators provide
+                you with holistic solutions to grow your digital presence and
+                achieve your business goals through both day-to-day content and
+                integrated flagship campaigns.
+              </strong>
             </p>
+            <p className="mt-4">
+              <span>Does This Sound Like Your Brand?</span>
+            </p>
+            <ul>
+              <li>Our online sales process feels complicated</li>
+              <li>Our website looks fine but doesn’t bring inquiries and orders</li>
+              <li>We want automation but don’t know where to start</li>
+              <li>Technology feels confusing and hard to manage</li>
+              <li>We need solutions that grow with our business</li>
+              <li>Too much manual work is slowing our team</li>
+              <li>We can’t track what’s actually working</li>
+              <li>We lose customers due to poor follow-ups</li>
+            </ul>
           </div>
 
           <div className="col-md-6 col-lg-6 col-sm-12 bs-container-clients">
-            <h4 className="text-center">Proud to work with</h4>
+            {/* <h4 className="text-center">Proud to work with</h4> */}
 
             <div className="row client-row-1">
               <div className="col-lg-4   col-md-4  col-sm-4 boxes-1">
                 <div className="client-img-div">
                   <Image
-                    src={autoboss}
+                    src={biodreama}
                     className="w-50"
                     alt=""
                     width={400}
@@ -47,7 +62,7 @@ const TechSolution = () => {
               <div className="col-lg-4 col-md-4 col-sm-4 boxes-1">
                 <div className="client-img-div">
                   <Image
-                    src={vardhman}
+                    src={cozzet}
                     className="w-50"
                     alt=""
                     width={400}
@@ -58,7 +73,7 @@ const TechSolution = () => {
               <div className="col-lg-4 col-md-4 col-sm-4 boxes-1">
                 <div className="client-img-div">
                   <Image
-                    src={jyotish}
+                    src={fnp}
                     className="w-50"
                     alt=""
                     width={400}
@@ -69,7 +84,7 @@ const TechSolution = () => {
               <div className="col-lg-4 col-md-4 col-sm-4 boxes-1">
                 <div className="client-img-div">
                   <Image
-                    src={svaa}
+                    src={luxeliv}
                     className="w-50"
                     alt=""
                     width={400}
@@ -80,7 +95,7 @@ const TechSolution = () => {
               <div className="col-lg-4 col-md-4 col-sm-4 boxes-1">
                 <div className="client-img-div">
                   <Image
-                    src={vedica}
+                    src={naarya}
                     className="w-50"
                     alt=""
                     width={400}
@@ -91,7 +106,7 @@ const TechSolution = () => {
               <div className="col-lg-4 col-md-4 col-sm-4 boxes-1">
                 <div className="client-img-div">
                   <Image
-                    src={shoolin}
+                    src={ohmypet}
                     className="w-50"
                     alt=""
                     width={400}
@@ -103,9 +118,9 @@ const TechSolution = () => {
           </div>
         </div>
       </div>
-      <div className="container-fluid bs-container2">
+      <div className="container bs-container2">
         <div className="row bs-row1">
-          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2">
+          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-0 py-2">
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <div className="accordion-item">
                 <h2 className="accordion-header">
@@ -154,7 +169,7 @@ const TechSolution = () => {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2">
+          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-2 py-2">
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <div className="accordion-item">
                 <h2 className="accordion-header">
@@ -196,7 +211,7 @@ const TechSolution = () => {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2">
+          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-0 py-2">
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <div className="accordion-item">
                 <h2 className="accordion-header">
@@ -245,7 +260,7 @@ const TechSolution = () => {
         </div>
 
         <div className="row bs-row2">
-          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2">
+          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-0 py-2">
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <div className="accordion-item">
                 <h2 className="accordion-header">
@@ -287,7 +302,7 @@ const TechSolution = () => {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2">
+          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-2 py-2">
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <div className="accordion-item">
                 <h2 className="accordion-header">
@@ -329,7 +344,7 @@ const TechSolution = () => {
             </div>
           </div>
 
-          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2">
+          <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-0 py-2">
             <div className="accordion" id="accordionPanelsStayOpenExample">
               <div className="accordion-item">
                 <h2 className="accordion-header">
@@ -373,83 +388,84 @@ const TechSolution = () => {
           </div>
         </div>
       </div>
+      <section className="last-section-of-every-page">
+        <div className="container bs-container3 mt-5 pt-5">
+          {/* <!-- Row 1 --> */}
+          <div className="row bs-2-row-1 my-3">
+            <div className="col-lg-4 col-md-4 col-sm-12 my-3">
+              <Link href="/" className="bs-img-div">
+                <Image
+                  src={madhu}
+                  alt=""
+                  className="rounded-4"
+                  width={400}
+                  height={400}
+                />
+              </Link>
+              <div className="buttonBox mt-2">
+                <button className="first">Website</button>
+                <button className="first">SEO</button>
+              </div>
+              <Link href={"/"}>
+                <h3 className="pt-2">Madhu Cookware </h3>
+              </Link>
+              <h5>
+                Shree Enterprises is a family-owned, Indian manufacturer of
+                kitchenware. From it...
+              </h5>
+            </div>
+            <div className="col-lg-4 col-md-4 col-sm-12 my-3">
+              <Link href="/" className="bs-img-div">
+                <Image
+                  src={dhison}
+                  alt=""
+                  className="rounded-4"
+                  width={400}
+                  height={400}
+                />
+              </Link>
+              <div className="buttonBox mt-2">
+                <button className="first">Website</button>
+                <button className="first">SEO</button>
+              </div>
+              <Link href={"/"}>
+                <h3 className="pt-2">Dhirsons Jewellery House </h3>
+              </Link>
+              <h5>
+                The Premium Diamond Jewellery Wholesale store in Karol Bagh,
+                Delhi &amp; Retail Stor...
+              </h5>
+            </div>
+            <div className="col-lg-4 col-md-4 col-sm-12 my-3">
+              <Link href={"/"}>
+                <Image
+                  src={petcenter}
+                  alt=""
+                  className="rounded-4"
+                  width={400}
+                  height={400}
+                />
+              </Link>
+              <div className="buttonBox mt-2">
+                <button className="first">Website</button>
+                <button className="first">ADS</button>
+                <button className="first">SEO</button>
+              </div>
+              <Link href={"/"}>
+                <h3 className="pt-2">The Pet Center </h3>
+              </Link>
+              <h5>
+                Pet grooming services at home. Wash, dry and brush your fuzzy
+                friend in the comf...
+              </h5>
+            </div>
 
-      <div className="container-fluid bs-container3 mt-5 pt-5 portfolioDiv last-section-of-every-page">
-        {/* <!-- Row 1 --> */}
-        <div className="row bs-2-row-1 my-3">
-          <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-            <Link href="/" className="bs-img-div">
-              <Image
-                src={madhu}
-                alt=""
-                className="rounded-4"
-                width={400}
-                height={400}
-              />
+            <Link href="/works" className="servicesArrowButton">
+              <i className="fa-solid fa-chevron-right"></i>
             </Link>
-            <div className="buttonBox mt-2">
-              <button className="first">Website</button>
-              <button className="first">SEO</button>
-            </div>
-            <Link href={"/"}>
-              <h3 className="pt-2">Madhu Cookware </h3>
-            </Link>
-            <h5>
-              Shree Enterprises is a family-owned, Indian manufacturer of
-              kitchenware. From it...
-            </h5>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-            <Link href="/" className="bs-img-div">
-              <Image
-                src={dhison}
-                alt=""
-                className="rounded-4"
-                width={400}
-                height={400}
-              />
-            </Link>
-            <div className="buttonBox mt-2">
-              <button className="first">Website</button>
-              <button className="first">SEO</button>
-            </div>
-            <Link href={"/"}>
-              <h3 className="pt-2">Dhirsons Jewellery House </h3>
-            </Link>
-            <h5>
-              The Premium Diamond Jewellery Wholesale store in Karol Bagh, Delhi
-              &amp; Retail Stor...
-            </h5>
-          </div>
-          <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-            <Link href={"/"}>
-              <Image
-                src={petcenter}
-                alt=""
-                className="rounded-4"
-                width={400}
-                height={400}
-              />
-            </Link>
-            <div className="buttonBox mt-2">
-              <button className="first">Website</button>
-              <button className="first">ADS</button>
-              <button className="first">SEO</button>
-            </div>
-            <Link href={"/"}>
-              <h3 className="pt-2">The Pet Center </h3>
-            </Link>
-            <h5>
-              Pet grooming services at home. Wash, dry and brush your fuzzy
-              friend in the comf...
-            </h5>
-          </div>
-
-          <Link href="/works" className="servicesArrowButton">
-            <i className="fa-solid fa-chevron-right"></i>
-          </Link>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

@@ -66,7 +66,7 @@ export default function Robot() {
   }, []);
 
   return (
-    <div className="robot-main-file w-100" ref={robotContainerRef}>
+    <div className="robot-main-file" ref={robotContainerRef}>
       <div className="robo" ref={roboRef}>
         <div className="inner">
           <div ref={headRef} style={{ transition: "transform 0.1s ease-out" }}>

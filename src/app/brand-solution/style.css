@@ -1,3 +1,40 @@
+/**
+ * ----------------------------------------
+ * animation smooth-updown
+ * ----------------------------------------
+ */
+@-webkit-keyframes smooth-updown {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes smooth-updown {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+}
+
 .brand-page-main {
   .bs-container-clients .client-row-1 {
     margin-top: 3.5rem;
@@ -19,10 +56,21 @@
     }
   }
   .client-img-div {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+
+    &:hover {
+      img {
+        scale: 1.05;
+      }
+    }
     img {
-      width: 70% !important;
+      width: 85% !important;
       filter: grayscale(100%);
-      height: 70%;
+      transition: 0.5s;
       object-fit: cover;
     }
   }
@@ -34,30 +82,53 @@
     text-align: start !important;
   }
   .brand-strategy-div {
-    padding-left: 2.5rem;
-    margin-bottom: 5rem;
+    padding-left: 0rem;
+
     h1 {
-      font-size: 5vw;
-      font-weight: 600;
+      font-size: 3vw;
+      font-weight: 700;
       font-family: "Poppins";
       padding: 1rem 0 0 0;
       text-align: start;
+      position: relative;
+      /* &::before {
+        content: "";
+        z-index: -1;
+        background-image: url("../../../public/circle-tous.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 7%;
+        height: 100%;
+        animation: 4s infinite smooth-updown;
+        position: absolute;
+        top: -10%;
+        left: -1.75%;
+      } */
     }
     p {
-      font-weight: 300;
-      font-size: 1.3rem;
-      line-height: 1.5;
-      position: relative;
-      color: rgb(51, 51, 51);
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -1.8rem;
-        left: 0.1rem;
-        height: 0.2rem;
-        width: 30%;
-        background-color: rgb(63, 63, 63);
-        border-radius: 4rem;
+      padding: 0;
+      margin: 5px 0;
+      strong {
+        color: #535353;
+        width: 85%;
+        margin: 5px 0;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -0.8rem;
+          left: 0.1rem;
+          height: 0.2rem;
+          width: 30%;
+          background-color: rgb(63, 63, 63);
+          border-radius: 4rem;
+        }
       }
     }
   }
@@ -83,6 +154,15 @@
     }
   }
   .bs-container {
+    ul {
+      width: 100%;
+      margin-bottom: 5px;
+      padding: 0 0 0 15px;
+      li {
+        font-size: 12px;
+        list-style: disc;
+      }
+    }
     .bs-row1 {
       margin: 1rem;
       padding: 1rem;
@@ -133,14 +213,20 @@
   .bs-container {
     margin-bottom: 4.5rem;
   }
-
-  .bs-container3 {
-    margin-bottom: -3rem;
-    background-color: white;
+  .about-page-last-section {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
     padding: 0 0rem !important;
-    /* box-shadow: 0px 50px 10px -5px gray; */
+    box-shadow: 0px 5px 10px -5px gray;
     position: relative;
     border-radius: 0 0 30px 30px;
+    z-index: 10;
+    margin-bottom: -3rem;
+  }
+  .bs-container3 {
+    padding: 0 0rem !important;
+    position: relative;
     z-index: 10;
     .buttonBox {
       display: flex;
@@ -174,6 +260,53 @@
     }
     .row {
       padding: 0 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-page-main .bs-container2 .accordion-item .accordion-header button {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .brand-page-main {
+    .bs-container-clients {
+      .client-row-1 {
+        row-gap: 0;
+        .boxes-1 {
+          width: 50%;
+        }
+      }
+    }
+    .client-img-div {
+    }
+
+    .bs-container3 {
+      .row {
+        background-color: white;
+        box-shadow: 0px 5px 10px -5px gray;
+        position: relative;
+        border-radius: 0 0 30px 30px;
+        z-index: 10;
+      }
+    }
+    padding: 10px;
+    .bs-container {
+      padding: 0 1.5rem !important;
+      margin-top: 0px !important;
+    }
+    .brand-strategy-div {
+      h1 {
+        font-size: 10vw !important;
+        font-weight: 700;
+/* 
+        &:before {
+          width: 14%;
+          top: 4%;
+          left: -1rem;
+        } */
+      }
     }
   }
 }

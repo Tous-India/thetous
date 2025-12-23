@@ -1,7 +1,5 @@
 "use client";
-import { gsap } from "gsap";
 import { useEffect } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Banner from "@/components/home/Banner";
 import Work from "@/components/home/Work";
 import Exquisites from "@/components/home/Exquisites";
@@ -11,35 +9,31 @@ import About from "@/components/home/About";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Lenis from "lenis";
-import Footer from "@/components/Footer";
 import Testimonials from "@/components/home/Testimonials";
+import Marquee from "@/components/home/Marquee";
+import WhyWeUs from "@/components/home/WhyWeUs";
 
 export default function Index() {
-  // gsap
-  useEffect(() => {
-    gsap.set(".flair", { xPercent: -50, yPercent: -50 });
-
-    let xTo = gsap.quickTo(".flair", "x", { duration: 0.6, ease: "power3" }),
-      yTo = gsap.quickTo(".flair", "y", { duration: 0.6, ease: "power3" });
-
-    window.addEventListener("mousemove", (e) => {
-      xTo(e.clientX);
-      yTo(e.clientY);
-    });
-  }, []);
-
   useEffect(() => {
     AOS.init();
   }, []);
   useEffect(() => {
     const lenis = new Lenis();
+    let rafId;
 
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      rafId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+      }
+      lenis.destroy();
+    };
   }, []);
 
   return (
@@ -47,11 +41,40 @@ export default function Index() {
       {/* <main> */}
       <Banner />
       <About />
+      <Marquee speed={15}>
+        <div className="flex items-center gap-8 px-4">
+          <span className="text-black text-2xl font-semibold whitespace-nowrap">
+            Your ecommerce Success Starts Here
+          </span>
+          <span className="text-black">
+            <i className="ri-asterisk"></i>
+          </span>
+          <span className="text-black text-2xl font-semibold whitespace-nowrap">
+            Reach Out for a Custom Strategy
+          </span>
+          <span className="text-black">
+            <i className="ri-asterisk"></i>
+          </span>
+          {/* <span className="text-black text-2xl font-semibold whitespace-nowrap">
+            No Gaps or Jumps
+          </span>
+          <span className="text-black">
+            <i className="ri-asterisk"></i>
+          </span>
+          <span className="text-black text-2xl font-semibold whitespace-nowrap">
+            Perfectly Seamless
+          </span>
+          <span className="text-black">
+            <i className="ri-asterisk"></i>
+          </span>{" "} */}
+        </div>
+      </Marquee>
       <Work />
       <Exquisites />
+      <WhyWeUs />
       <Sliders />
+      <Testimonials />
       <Blogs />
-      <Testimonials/>
       {/* </main> */}
     </div>
   );

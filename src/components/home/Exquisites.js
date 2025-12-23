@@ -3,15 +3,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import ig from "../../../public/blog/1724839571.webp";
-import one1 from "../../../public/home/brand.webp";
-import o1 from "../../../public/home/brand-2.webp";
-import two from "../../../public/home/media.webp";
-import three from "../../../public/home/tech.webp";
+import ts from "../../../public/ts.png";
+import ms from "../../../public/ms.png";
+import bs from "../../../public/bs.png";
 const Exquisites = () => {
   return (
     <div className="exquisites-home-page">
-      <div className="container-fluid">
+      <div className="container">
         <div className="heading-div">
           <div id="word-heading" className="work-heading-home row-div">
             <h2>Exquisites</h2>
@@ -25,99 +23,67 @@ const Exquisites = () => {
             </Link>
           </div>
           <h4>
-            Unlock your brand's potential with tailored digital marketing
+            Unlock your brand&apos;s potential with tailored digital marketing
             strategies. We deliver results that resonate and drive growth.
           </h4>
         </div>
-        <div className="row ">
+        <div className="row justify-content-center">
           <div className="col-lg-4 col-sm-12 first">
-            <div className="inner-div">
+            <Link href={"#"} className="inner-div">
               <ul>
+                <li>
+                  <Image src={bs} alt="Service1" width={70} height={70} />
+                </li>
                 <li>
                   <h2>
                     <span>Brand Solutions</span>
                   </h2>
                 </li>
-                <li>
-                  <Link href={"/"}>Social Media Management</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>Original Content & Copywriting</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>Video Editing & Animation</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>Model & Product Photography</Link>
-                </li>
-                <li>
-                  <Link href={"/"}> New Brand Launch & Rebranding</Link>
-                </li>
+                <li>Social Media Management</li>
+                <li>Original Content & Copywriting</li>
+                <li>Video Editing & Animation</li>
+                <li>Model & Product Photography</li>
+                <li>New Brand Launch & Rebranding</li>
               </ul>
-               
-            </div>
+            </Link>
           </div>
           <div className="col-lg-4 col-sm-12 second">
-            <div className="inner-div">
+            <Link href={"#"} className="inner-div">
               <ul>
+                <li>
+                  <Image src={ts} alt="Service1" width={70} height={70} />
+                </li>
                 <li>
                   <h2>
                     <span>Tech Solutions</span>
                   </h2>
                 </li>
-                <li>
-                  {" "}
-                  <Link href={"/"}>Custom Web Development</Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link href={"/"}>Web Personalization</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>E-Commerce</Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link href={"/"}>Email Marketing</Link>
-                </li>
-                <li>
-                  <Link href={"/"}>UI/UX</Link>
-                </li>
+                <li>Custom Web Development</li>
+                <li>Web Personalization</li>
+                <li>E-Commerce</li>
+                <li>Email Marketing</li>
+                <li>UI/UX</li>
               </ul>
-               
-            </div>
+            </Link>
           </div>
           <div className="col-lg-4 col-sm-12 third">
-            <div className="inner-div">
+            <Link href={"#"} className="inner-div">
               <ul>
+                <li>
+                  <Image src={ms} alt="Service1" width={70} height={70} />
+                </li>
                 <li>
                   <h2>
                     <span>Media Solutions</span>
                   </h2>
                 </li>
-                <li>
-                  {" "}
-                  <Link href={"/"}>Media Buying</Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link href={"/"}>Media Planning</Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link href={"/"}>Performance Marketing</Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link href={"/"}>Search Engine Optimization</Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link href={"/"}>Coversation Rate Optimization</Link>
-                </li>
+                <li>Media Buying</li>
+                <li>Media Planning</li>
+                <li>Performance Marketing</li>
+                <li>Search Engine Optimization</li>
+                <li>Coversation Rate Optimization</li>
               </ul>
-               
-            </div>
+            </Link>
           </div>
         </div>
       </div>
