@@ -1,121 +1,161 @@
-import React, { useRef } from "react";
-import dummy from "../../../public/dummy/dummy.avif";
+import React from "react";
+import dummy from "../../../public/Aboout us sq.webp";
 import Image from "next/image";
+
+// Data configuration object
+const ABOUT_DATA = {
+  heading: {
+    title: "About Us",
+    description:
+      "At The Tous, we craft innovative digital strategies that drive growth, engagement, and success. With a passion for creativity and focus on results, we help E-Commerce brands grow in the digital world.",
+  },
+  leftSection: {
+    card1: {
+      title: "57+ E-Commerce Websites Delivered",
+      iconUrl:
+        "https://cdn.prod.website-files.com/66eab063c614790046e87eef/68dd737c5c8c9b1c39ed366b_Stat%20Icon.svg",
+      description:
+        "Since 2018, we’ve been creating conversion-focused E-Commerce websites that help brands scale digitally.",
+      aos: {
+        animation: "fade-right",
+        offset: "200",
+        easing: "ease-in-sine",
+      },
+    },
+    card2: {
+      title: "15+",
+      subtitle: "Team Members",
+      description:
+        "Our team of 15 digital experts works seamlessly from strategy to execution to help your brand stand out online.",
+      aos: {
+        animation: "fade-right",
+        offset: "100",
+        easing: "ease-in-sine",
+      },
+    },
+  },
+  middleSection: {
+    title: "Our Focus",
+    subtitle: "E-Commerce Brands",
+    description:
+      "Data-driven ads and social strategies that help E-Commerce brands grow and maximize ROI.",
+    aos: {
+      animation: "flip-up",
+      duration: "1000",
+    },
+  },
+  rightSection: {
+    image: {
+      src: dummy,
+      alt: "about-image",
+      width: 400,
+      height: 400,
+    },
+    card: {
+      title: "Active Since 2018",
+      description:
+        "With 5+ years of expertise, The Tous delivers future-ready digital marketing and E-Commerce solutions that keep brands ahead.",
+    },
+    aos: {
+      animation: "fade-left",
+      offset: "100",
+      easing: "ease-in-sine",
+    },
+  },
+};
+
 const About = () => {
+  const { heading, leftSection, middleSection, rightSection } = ABOUT_DATA;
+
   return (
     <div className="homepage-about-section" id="about-section-homepage">
       <div className="container">
         <div id="word-heading" className="work-heading-home">
           <div>
-            <h2>About Us</h2>
+            <h2 className="main-section-heading">{heading.title}</h2>
           </div>
-          <h4>
-            At The Tous, we craft innovative digital strategies that drive
-            growth, engagement, and success. With a passion for creativity and
-            focus on results, we help eCommerce brands grow in the digital
-            world.
-          </h4>
+          <h4>{heading.description}</h4>
         </div>
 
         <div className="row justify-content-center">
+          {/* Left Section */}
           <div className="col-lg-4 col-sm-12 left">
             <div
               className="inner-div-1"
-              data-aos="fade-right"
-              data-aos-offset="200"
-              data-aos-easing="ease-in-sine"
+              data-aos={leftSection.card1.aos.animation}
+              data-aos-offset={leftSection.card1.aos.offset}
+              data-aos-easing={leftSection.card1.aos.easing}
             >
               <h4>
-                57+ E-Commerce Websites Delivered
+                {leftSection.card1.title}
                 <Image
-                  src={
-                    "https://cdn.prod.website-files.com/66eab063c614790046e87eef/68dd737c5c8c9b1c39ed366b_Stat%20Icon.svg"
-                  }
+                  src={leftSection.card1.iconUrl}
                   width={100}
                   height={100}
                   alt=""
                   priority
                 />
               </h4>
-              <p>
-                Since 2018, we’ve been passionately building successful
-                e-commerce websites, helping brands thrive in a digital-first
-                world. Each project is a reflection of our commitment to
-                delivering top-tier, user-friendly, and conversion-focused
-                platforms.
-              </p>
+              <p>{leftSection.card1.description}</p>
             </div>
             <div
               className="inner-div-2"
-              data-aos="fade-right"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
+              data-aos={leftSection.card2.aos.animation}
+              data-aos-offset={leftSection.card2.aos.offset}
+              data-aos-easing={leftSection.card2.aos.easing}
             >
-              <h4>15+ </h4>
-              <span>Team Members</span>
-              <p>
-                Our small but mighty team of 15 experts is dedicated to
-                providing the highest level of service. From strategy to
-                execution, we work seamlessly together to make sure your brand
-                stands out online.
-              </p>
+              <h4>{leftSection.card2.title}</h4>
+              <span>{leftSection.card2.subtitle}</span>
+              <p>{leftSection.card2.description}</p>
             </div>
           </div>
+
+          {/* Middle Section */}
           <div
             className="col-lg-4 col-sm-12 mid"
-            data-aos="flip-up"
-            data-aos-duration="1000"
+            data-aos={middleSection.aos.animation}
+            data-aos-duration={middleSection.aos.duration}
           >
             <div className="inner-div">
               <div className="first-div">
-                <h5>
-                  <span>Our Focus </span>
+                <h5 className="inner-heading mb-3">
+                  <span>{middleSection.title}</span>
                 </h5>
-                <p>E-Commerce Brands</p>
+                <p>{middleSection.subtitle}</p>
               </div>
               <div className="second-div">
-                <p>
-                  At TheTous, we specialize in helping e-commerce brands grow
-                  through strategic Meta Ads, Google Ads, and Social Media
-                  Management. With a data-driven approach, we help brands
-                  connect with their audience and maximize ROI through tailored
-                  digital strategies.
-                </p>
+                <p>{middleSection.description}</p>
               </div>
             </div>
           </div>
+
+          {/* Right Section */}
           <div className="col-lg-4 col-sm-12 right">
             <div
               className="inner-div-1"
-              data-aos="fade-left"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
+              data-aos={rightSection.aos.animation}
+              data-aos-offset={rightSection.aos.offset}
+              data-aos-easing={rightSection.aos.easing}
             >
               <Image
-                src={dummy}
-                alt="about-image"
-                width={400}
-                height={400}
+                src={rightSection.image.src}
+                alt={rightSection.image.alt}
+                width={rightSection.image.width}
+                height={rightSection.image.height}
                 priority
               />
             </div>
             <div
               className="inner-div-2"
-              data-aos="fade-left"
-              data-aos-offset="300"
-              data-aos-easing="ease-in-sine"
+              data-aos={rightSection.aos.animation}
+              data-aos-offset={rightSection.aos.offset}
+              data-aos-easing={rightSection.aos.easing}
             >
               <div>
                 <p>
-                  <span className="span1">Active Since 2018</span>
+                  <span className="span1">{rightSection.card.title}</span>
                 </p>
-
-                <p>
-                  The Tous has been proudly delivering exceptional digital
-                  marketing and e-commerce solutions for over 5 years. We’ve
-                  consistently evolved with the digital landscape, staying ahead
-                  of trends and helping our clients succeed.
-                </p>
+                <p>{rightSection.card.description}</p>
               </div>
             </div>
           </div>

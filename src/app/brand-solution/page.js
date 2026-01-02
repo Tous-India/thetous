@@ -24,10 +24,10 @@ const BrandSolution = () => {
               <h1 className="w-100">Brand Solution</h1>
               <p className="">
                 <strong>
-                  Our strategists, designers, video editors and animators
-                  provide you with holistic solutions to grow your digital
-                  presence and achieve your business goals through both
-                  day-to-day content and integrated flagship campaigns.
+                  Our marketing strategists and performance specialists craft
+                  data-driven campaigns that amplify your brand visibility,
+                  convert visitors into customers, and deliver sustainable
+                  growth through strategic advertising and search optimization.
                 </strong>
               </p>
               <p className="mt-4">
@@ -173,55 +173,6 @@ const BrandSolution = () => {
                       className="accordion-button collapsed"
                       type="button"
                       data-bs-toggle="collapse"
-                      data-bs-target="#panelsStayOpen-collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="panelsStayOpen-collapseTwo"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                      >
-                        <g
-                          fill="none"
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                        >
-                          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"></path>
-                          <path d="M14 9.75a3.016 3.016 0 0 0-4.163.173a2.993 2.993 0 0 0 0 4.154A3.016 3.016 0 0 0 14 14.25"></path>
-                        </g>
-                      </svg>
-                      Copyrighting
-                    </button>
-                  </h2>
-                  <div
-                    id="panelsStayOpen-collapseTwo"
-                    className="accordion-collapse collapse"
-                  >
-                    <div className="accordion-body">
-                      We craft compelling and persuasive copy that captures your
-                      brand’s voice and resonates with your target audience.
-                      Whether for websites, ads, or social media, our copy
-                      drives engagement and conversions. Every word is
-                      strategically chosen to communicate your message clearly
-                      and effectively, turning readers into loyal customers.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-12 col-sm-12 bs-box py-2 px-0">
-              <div className="accordion" id="accordionPanelsStayOpenExample">
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
                       data-bs-target="#panelsStayOpen-collapseThree"
                       aria-expanded="false"
                       aria-controls="panelsStayOpen-collapseThree"
@@ -237,7 +188,7 @@ const BrandSolution = () => {
                           d="M4 15q-.825 0-1.412-.587T2 13V4q0-.825.588-1.412T4 2h9q.825 0 1.413.588T15 4v9q0 .825-.587 1.413T13 15zm0-2h9V4H4zm4-1.75L6.8 9.6L5 12h7L9.7 9zM17 22q-1.25 0-2.125-.875T14 19t.875-2.125T17 16q.275 0 .513.05t.487.125V11h4v2h-2v6q0 1.25-.875 2.125T17 22M4 13V4z"
                         ></path>
                       </svg>
-                      Media Buying & Media Planing
+                      Media Buying & Media Planning
                     </button>
                   </h2>
                   <div
@@ -257,10 +208,8 @@ const BrandSolution = () => {
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="row bs-row2 justify-between">
-            <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-0 py-2">
+            <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-0 py-0">
               <div className="accordion" id="accordionPanelsStayOpenExample">
                 <div className="accordion-item">
                   <h2 className="accordion-header">
@@ -303,7 +252,9 @@ const BrandSolution = () => {
                 </div>
               </div>
             </div>
+          </div>
 
+          <div className="row bs-row2 justify-start">
             <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-2 py-2">
               <div className="accordion" id="accordionPanelsStayOpenExample">
                 <div className="accordion-item">
@@ -337,7 +288,7 @@ const BrandSolution = () => {
                           <path d="m38.142 9.858l-5.657 5.657M9.858 38.142l5.657-5.657M4 24h8M9.858 9.858l5.657 5.657"></path>
                         </g>
                       </svg>
-                      Pay Per Click
+                      Google Ads
                     </button>
                   </h2>
                   <div
@@ -411,7 +362,7 @@ const BrandSolution = () => {
             {/* <!-- Row 1 --> */}
             <div className="row bs-2-row-1 my-3 px-0">
               <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-                <Link href="/" className="bs-img-div">
+                <Link href="/case-studies/madhu-cookware" className="bs-img-div">
                   <Image
                     src={madhu}
                     alt=""
@@ -424,16 +375,21 @@ const BrandSolution = () => {
                   <button className="first">Website</button>
                   <button className="first">SEO</button>
                 </div>
-                <Link href={"/"}>
-                  <h3 className="pt-2">Madhu Cookware </h3>
+                <Link href={"/case-studies/madhu-cookware"}>
+                  <h3 className="pt-2 services-card-heading">
+                    Madhu Cookware{" "}
+                  </h3>
                 </Link>
-                <h5>
+                <h5 className="services-card-para">
                   Shree Enterprises is a family-owned, Indian manufacturer of
                   kitchenware. From it...
                 </h5>
               </div>
               <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-                <Link href="/" className="bs-img-div">
+                <Link
+                  href="/case-studies/dhirsons-jewellery-house"
+                  className="bs-img-div"
+                >
                   <Image
                     src={dhison}
                     alt=""
@@ -446,16 +402,18 @@ const BrandSolution = () => {
                   <button className="first">Website</button>
                   <button className="first">SEO</button>
                 </div>
-                <Link href={"/"}>
-                  <h3 className="pt-2">Dhirsons Jewellery House </h3>
+                <Link href={"/case-studies/dhirsons-jewellery-house"}>
+                  <h3 className="pt-2 services-card-heading">
+                    Dhirsons Jewellery House{" "}
+                  </h3>
                 </Link>
-                <h5>
+                <h5 className="services-card-para">
                   The Premium Diamond Jewellery Wholesale store in Karol Bagh,
                   Delhi &amp; Retail Stor...
                 </h5>
               </div>
               <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-                <Link href={"/"}>
+                <Link href={"/case-studies/the-pet-center"}>
                   <Image
                     src={petcenter}
                     alt=""
@@ -469,10 +427,12 @@ const BrandSolution = () => {
                   <button className="first">ADS</button>
                   <button className="first">SEO</button>
                 </div>
-                <Link href={"/"}>
-                  <h3 className="pt-2">The Pet Center </h3>
+                <Link href={"/case-studies/the-pet-center"}>
+                  <h3 className="pt-2 services-card-heading">
+                    The Pet Center{" "}
+                  </h3>
                 </Link>
-                <h5>
+                <h5 className="services-card-para">
                   Pet grooming services at home. Wash, dry and brush your fuzzy
                   friend in the comf...
                 </h5>

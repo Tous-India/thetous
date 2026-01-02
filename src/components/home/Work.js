@@ -21,6 +21,22 @@ import Img10 from "../../../public/home/work/1742642817.webp";
 import Img11 from "../../../public/home/work/1742644830.webp";
 import Img12 from "../../../public/home/work/1742807329.webp";
 
+// Project data with case study links
+const projects = [
+  // { title: "Geetika Vidya Ohlyan", image: Img1, link: "/" },
+  // { title: "The Pet Center", image: Img2, link: "/" },
+  { title: "Dhirsons Jewellery House", image: Img3, link: "/case-studies/dhirsons-jewellery-house" },
+  { title: "Luxeliv", image: Img4, link: "/case-studies/luxeliv" },
+  { title: "Silvago", image: Img5, link: "/case-studies/silvago" },
+  { title: "Prozvofit", image: Img6, link: "/case-studies/prozvofit" },
+  { title: "Crossroads Hospital", image: Img7, link: "/case-studies/crossroads-hospital" },
+  { title: "Drym Foods", image: Img8, link: "/" },
+  // { title: "Geetika Vidya Ohlyan", image: Img9, link: "/" },
+  // { title: "13 YELLOW AIRPORT CABS", image: Img10, link: "/" },
+  { title: "Executive Cars", image: Img11, link: "/case-studies/executive-cars" },
+  { title: "Oh My Pet Grooming", image: Img12, link: "/case-studies/oh-my-pet-grooming" },
+];
+
 const Work = () => {
   return (
     <div
@@ -35,7 +51,7 @@ const Work = () => {
           <div className="col-12">
             <div id="word-heading" className="work-heading-home">
               <div>
-                <h2>Work</h2>
+                <h2 className="main-section-heading">Work</h2>
                 <Link href="/work">
                   <button>
                     <span className="btn-span-1">View All</span>
@@ -90,180 +106,22 @@ const Work = () => {
                 }}
                 modules={[Autoplay]}
               >
-                <SwiperSlide>
-                  <h4>Geetika Vidya Ohlyan</h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img1}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4>The Pet Center</h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img2}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4>Dhirsons Jewellery House </h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img3}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4>Luxeliv</h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img4}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4>Slivish</h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img5}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4>Prozvofit</h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img6}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        priority
-                        height={"100%"}
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4>Crossroad Hospital</h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img7}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4>Drym Foods</h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img8}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4>Geetika Vidya Ohlyan</h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img9}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4> 3 YELLOW AIRPORT CABS </h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img10}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4>EXECUTIVE CARS</h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img11}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <h4>Oh My Pet Grooming</h4>
-                  <div className="inner-div">
-                    <Link href="/">
-                      <Image
-                        src={Img12}
-                        alt="Profile Picture"
-                        width={"100%"}
-                        height={"100%"}
-                        priority
-                      />
-                    </Link>
-                  </div>
-                </SwiperSlide>
-                {/* <SwiperSlide className="last-slide-of-all">
-                  <h4>Geetika Vidya</h4>
-                  <div className="inner-div">
-                    <Link href="/">View All</Link>
-                  </div>
-                </SwiperSlide> */}
+                {projects.map((project, index) => (
+                  <SwiperSlide key={index}>
+                    <h4>{project.title}</h4>
+                    <div className="inner-div">
+                      <Link href={project.link}>
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={"100%"}
+                          height={"100%"}
+                          priority
+                        />
+                      </Link>
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
           </div>

@@ -10,13 +10,87 @@ import Image from "next/image";
 import kb from "../../../public/client/kb.webp";
 import user from "../../../public/client/user.png";
 
+// Testimonials data
+const testimonialsData = [
+  {
+    id: 1,
+    rating: 5.0,
+    className: "slide one",
+    testimonial: "The Tous completely transformed our digital presence. From website development to SEO and social media management, everything was executed professionally. We started receiving quality leads within weeks.",
+    clientName: "Rohit Mehra",
+    clientPosition: "Founder",
+    clientImage: user,
+    brandLogo: kb,
+  },
+  {
+    id: 2,
+    rating: 4.0,
+    className: "slide two",
+    testimonial: "Working with The Tous feels like having an in-house digital team. Their designs, branding, and content strategy are always on point. Communication and delivery timelines are excellent.",
+    clientName: "Ananya Sharma",
+    clientPosition: "Marketing Head",
+    clientImage: user,
+    brandLogo: kb,
+  },
+  {
+    id: 3,
+    rating: 5.0,
+    className: "slide three",
+    testimonial: "The Tous delivered a modern, high-performing website along with consistent social media creatives. Their understanding of branding and user experience is impressive.",
+    clientName: "Vikas Jain",
+    clientPosition: "Business Owner",
+    clientImage: user,
+    brandLogo: kb,
+  },
+  {
+    id: 4,
+    rating: 5.0,
+    className: "slide four",
+    testimonial: "Our social media engagement and organic website traffic increased significantly after partnering with The Tous. Their SEO and SMM strategies are practical and result-driven.",
+    clientName: "Neha Kapoor",
+    clientPosition: "Growth Manager",
+    clientImage: user,
+    brandLogo: kb,
+  },
+  {
+    id: 5,
+    rating: 5.0,
+    className: "slide five",
+    testimonial: "Professional, reliable, and creative. The Tous is a one-stop solution for web development, SEO, social media, graphics, and video marketing.",
+    clientName: "Saurabh Gupta",
+    clientPosition: "Brand Manager",
+    clientImage: user,
+    brandLogo: kb,
+  },
+  {
+    id: 6,
+    rating: 5.0,
+    className: "slide six",
+    testimonial: "We consider The Tous a long-term growth partner. Their team understands both performance marketing and brand building, which is rare.",
+    clientName: "Kunal Arora",
+    clientPosition: "Brand Strategist",
+    clientImage: user,
+    brandLogo: kb,
+  },
+  {
+    id: 7,
+    rating: 5.0,
+    className: "slide seven",
+    testimonial: "From strategy to execution, The Tous delivers. Their structured approach to digital marketing and clear reporting made collaboration smooth and effective.",
+    clientName: "Aman Gupta",
+    clientPosition: "Operations Head",
+    clientImage: user,
+    brandLogo: kb,
+  },
+];
+
 const Testimonials = () => {
   return (
     <div className="home-page-Testimonials">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h2>Testimonials</h2>
+            <h2 className="main-section-heading">Testimonials</h2>
             <Swiper
               className="mySwiper"
               loop={true}
@@ -45,258 +119,43 @@ const Testimonials = () => {
               }}
               modules={[Pagination, Navigation, Autoplay]}
             >
-              <SwiperSlide className="slide one">
-                <div className="innerDiv">
-                  <span>
-                    <strong>5.0</strong>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                  </span>
-                  <p>
-                    &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolore perspiciatis, harum expedita nobis dicta repellendus
-                    architecto assumenda natus ut placeat.&rdquo;
-                  </p>
+              {testimonialsData.map((testimonial) => (
+                <SwiperSlide key={testimonial.id} className={testimonial.className}>
+                  <div className="innerDiv">
+                    <span>
+                      <strong>{testimonial.rating}</strong>
+                      {[...Array(Math.floor(testimonial.rating))].map((_, index) => (
+                        <i key={index} className="ri-star-s-fill"></i>
+                      ))}
+                    </span>
+                    <p>&ldquo;{testimonial.testimonial}&rdquo;</p>
 
-                  <div className="client-info-div">
-                    <div className="client-d">
-                      <Image src={user} alt="Brand" width={50} height={50} />
-                      <p>
-                        <strong>Client Name</strong>
-                        <br />
-                        <span>Client Desgination</span>
-                      </p>
-                    </div>
-                    <div className="brand">
-                      <Image
-                        src={kb}
-                        alt="client brand logo"
-                        width={100}
-                        height={100}
-                      />
+                    <div className="client-info-div">
+                      <div className="client-d">
+                        <Image
+                          src={testimonial.clientImage}
+                          alt={testimonial.clientName}
+                          width={50}
+                          height={50}
+                        />
+                        <p>
+                          <strong>{testimonial.clientName}</strong>
+                          <br />
+                          <span>{testimonial.clientPosition}</span>
+                        </p>
+                      </div>
+                      <div className="brand">
+                        <Image
+                          src={testimonial.brandLogo}
+                          alt="client brand logo"
+                          width={100}
+                          height={100}
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="slide two">
-                <div className="innerDiv">
-                  <span>
-                    <strong>5.0</strong>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                  </span>
-                  <p>
-                    &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolore perspiciatis, harum expedita nobis dicta repellendus
-                    architecto assumenda natus ut placeat.&rdquo;
-                  </p>
-
-                  <div className="client-info-div">
-                    <div className="client-d">
-                      <Image src={user} alt="Brand" width={50} height={50} />
-                      <p>
-                        <strong>Client Name</strong>
-                        <br />
-                        <span>Client Desgination</span>
-                      </p>
-                    </div>
-                    <div className="brand">
-                      <Image
-                        src={kb}
-                        alt="client brand logo"
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="slide three">
-                <div className="innerDiv">
-                  <span>
-                    <strong>5.0</strong>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                  </span>
-                  <p>
-                    &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolore perspiciatis, harum expedita nobis dicta repellendus
-                    architecto assumenda natus ut placeat.&rdquo;
-                  </p>
-
-                  <div className="client-info-div">
-                    <div className="client-d">
-                      <Image src={user} alt="Brand" width={50} height={50} />
-                      <p>
-                        <strong>Client Name</strong>
-                        <br />
-                        <span>Client Desgination</span>
-                      </p>
-                    </div>
-                    <div className="brand">
-                      <Image
-                        src={kb}
-                        alt="client brand logo"
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="slide four">
-                <div className="innerDiv">
-                  <span>
-                    <strong>5.0</strong>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                  </span>
-                  <p>
-                    &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolore perspiciatis, harum expedita nobis dicta repellendus
-                    architecto assumenda natus ut placeat.&rdquo;
-                  </p>
-
-                  <div className="client-info-div">
-                    <div className="client-d">
-                      <Image src={user} alt="Brand" width={50} height={50} />
-                      <p>
-                        <strong>Client Name</strong>
-                        <br />
-                        <span>Client Desgination</span>
-                      </p>
-                    </div>
-                    <div className="brand">
-                      <Image
-                        src={kb}
-                        alt="client brand logo"
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="slide five">
-                <div className="innerDiv">
-                  <span>
-                    <strong>5.0</strong>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                  </span>
-                  <p>
-                    &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolore perspiciatis, harum expedita nobis dicta repellendus
-                    architecto assumenda natus ut placeat.&rdquo;
-                  </p>
-
-                  <div className="client-info-div">
-                    <div className="client-d">
-                      <Image src={user} alt="Brand" width={50} height={50} />
-                      <p>
-                        <strong>Client Name</strong>
-                        <br />
-                        <span>Client Desgination</span>
-                      </p>
-                    </div>
-                    <div className="brand">
-                      <Image
-                        src={kb}
-                        alt="client brand logo"
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="slide six">
-                <div className="innerDiv">
-                  <span>
-                    <strong>5.0</strong>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                  </span>
-                  <p>
-                    &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolore perspiciatis, harum expedita nobis dicta repellendus
-                    architecto assumenda natus ut placeat.&rdquo;
-                  </p>
-
-                  <div className="client-info-div">
-                    <div className="client-d">
-                      <Image src={user} alt="Brand" width={50} height={50} />
-                      <p>
-                        <strong>Client Name</strong>
-                        <br />
-                        <span>Client Desgination</span>
-                      </p>
-                    </div>
-                    <div className="brand">
-                      <Image
-                        src={kb}
-                        alt="client brand logo"
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className="slide seven">
-                <div className="innerDiv">
-                  <span>
-                    <strong>5.0</strong>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                    <i className="ri-star-s-fill"></i>
-                  </span>
-                  <p>
-                    &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolore perspiciatis, harum expedita nobis dicta repellendus
-                    architecto assumenda natus ut placeat.&rdquo;
-                  </p>
-
-                  <div className="client-info-div">
-                    <div className="client-d">
-                      <Image src={user} alt="Brand" width={50} height={50} />
-                      <p>
-                        <strong>Client Name</strong>
-                        <br />
-                        <span>Client Desgination</span>
-                      </p>
-                    </div>
-                    <div className="brand">
-                      <Image
-                        src={kb}
-                        alt="client brand logo"
-                        width={100}
-                        height={100}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>

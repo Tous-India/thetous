@@ -30,6 +30,437 @@
 @media (max-width: 1279px) and (min-width: 769px) {
 }
 
+@media (max-width: 720px) and (min-width: 540px) {
+  /* CSS styles for portrait tablets only (example range) */
+  body {
+    /* background-color: red; */
+    /* overflow-x: hidden; */
+  }
+  html {
+    overflow: auto;
+  }
+  .home-banner-main-section .row-div h1 span .strong {
+    font-size: 3.5rem;
+  }
+  .home-banner-main-section .row-div h1 {
+    .digi,
+    .sol {
+      font-size: 3.5rem;
+      margin-top: 1.5rem;
+    }
+  }
+  .flair {
+    display: none;
+  }
+
+  .parent-fo-header header .container .row-div .menu-div .phone-menu-div {
+    z-index: 999;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+    width: 95vw;
+    height: 100vh;
+    padding: 4rem 1rem 0;
+    transition: all 0.3s;
+    display: flex;
+    position: fixed;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* transform: translateX(-110%); */
+    box-shadow: 0 0 10px gray;
+    top: 0;
+  }
+
+  .showPhoneMenu {
+    transform: translateX(0%) !important;
+    transition: 0.5s;
+    display: block;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+  .parent-fo-header header .container .row-div .menu-div .ham-menu-icon {
+    display: block;
+  }
+
+  .parent-fo-header header .container .row-div .logo-div {
+    width: 60%;
+  }
+
+  .parent-fo-header header .container .row-div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .home-banner-main-section .row-div .trans {
+    font-size: 4rem;
+  }
+  .home-banner-main-section .row-div .brand {
+    font-size: 4rem;
+  }
+
+  header .container .row-div .menu-div .phone-menu-div .inner-div .row > div {
+    text-align: start;
+    padding: 0 2rem 0 2rem !important;
+    a {
+      width: 100%;
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+  }
+  .parent-fo-header header .container .row-div .menu-div .phone-menu-div img {
+    width: 45%;
+  }
+
+  .home-page-why-we-us-section .heading-section p {
+    width: 100%;
+  }
+  .about-page-main .aboutRow {
+    padding: 0 2rem !important;
+  }
+  .about-page-main .About-page-tabs {
+    padding: 0 2rem;
+  }
+  .about-page-main .about-Page-right {
+    margin-bottom: -150px;
+  }
+  .homepage-about-section .container .row .mid .inner-div {
+    margin: 1.5rem 0;
+  }
+  .exquisites-home-page .container .row li h2 {
+    span {
+      font-size: 2rem;
+    }
+  }
+  footer #footerFisrt h2 {
+    font-size: 3rem;
+  }
+  .parent-fo-header
+    header
+    .container
+    .row-div
+    .menu-div
+    .phone-menu-div
+    .cross-icon {
+    top: 3rem;
+  }
+  .parent-fo-header .p-tag {
+    margin: 0px;
+  }
+  footer #footerSecond .row {
+    padding-top: 3rem;
+  }
+  .parent-fo-header
+    header
+    .container
+    .row-div
+    .menu-div
+    .phone-menu-div
+    .inner-div
+    .row
+    > div
+    .accordion-body {
+    padding: 0 0 0 0;
+    padding-left: 10px;
+    ul {
+      padding: 0;
+      li {
+        a {
+          font-weight: 300;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .parent-fo-header
+    header
+    .container
+    .row-div
+    .menu-div
+    .phone-menu-div
+    .inner-div
+    .row
+    > div
+    .accordion-item:last-of-type
+    > .accordion-header
+    .accordion-button.collapsed {
+    padding: 0;
+    margin: 0px 0 3px 0;
+    border-radius: 0;
+    padding: 2px 0;
+  }
+
+  .parent-fo-header
+    header
+    .container
+    .row-div
+    .menu-div
+    .phone-menu-div
+    .inner-div
+    .row
+    > div
+    .accordion-button:not(.collapsed) {
+    padding: 0 0 10px 0;
+  }
+
+  .showPhoneMenu {
+    transform: translateX(0%) !important;
+    transition: 0.5s;
+    display: block;
+  }
+  .contact-page-main .container-fluid .row .first-form-row > div input {
+    margin: 10px 0;
+  }
+  .container {
+    max-width: 100%;
+  }
+  /*  */
+
+  .brand-page-main {
+    .bs-container,
+    .bs-container2,
+    .bs-container3 {
+      padding: 0 30px !important;
+    }
+    .bs-container3 {
+      .row {
+        padding: 0 20px !important;
+      }
+    }
+  }
+  .media-page-main {
+    .bs-container,
+    .bs-container2,
+    .bs-container3 {
+      padding: 0 30px !important;
+    }
+    .bs-container3 {
+      .row {
+        padding: 0 20px !important;
+      }
+    }
+  }
+  .about-page-main {
+    .bs-container,
+    .bs-container2,
+    .bs-container3 {
+      padding: 0 30px !important;
+    }
+    .bs-container3 {
+      .row {
+        padding: 0 20px !important;
+      }
+    }
+  }
+
+  /*  */
+  footer .footer-ul {
+    flex-wrap: wrap;
+  }
+  .work-card .img-div img {
+    width: 100%;
+  }
+  .about-page-main .boxes-1 {
+    width: 50%;
+    padding: 0;
+  }
+  .about-page-main .client-img-div img {
+    width: 100% !important;
+  }
+  .about-page-main .bs-container-clients .client-row-1 {
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 720px) {
+  /* CSS styles for portrait tablets only (example range) */
+  html {
+    overflow-x: hidden;
+  }
+  header {
+    .container {
+      max-width: 95%;
+      width: 100%;
+    }
+  }
+
+  footer .footer-ul {
+    flex-wrap: wrap;
+  }
+  .bs-container2 .accordion-item .accordion-header button {
+    font-size: 1.25rem !important;
+  }
+  .about-page-main .bs-container3 .buttonBox {
+    button {
+      font-size: 10px;
+      padding: 2px 10px !important;
+      background-color: red;
+    }
+  }
+  .about-page-main .bs-container3 {
+    max-width: 95%;
+    margin-top: 0px !important;
+  }
+  .about-page-main .bs-container {
+    margin-bottom: 1.5rem !important;
+  }
+  .about-page-main .bs-container {
+    margin-bottom: 1.5rem 24px;
+  }
+  .about-page-main .bs-container {
+    max-width: 95%;
+  }
+
+  .about-page-main .bs-container2 {
+    max-width: 95%;
+  }
+  .home-banner-main-section {
+    height: 40vh;
+  }
+
+  .home-page-why-we-us-section .container .row {
+    justify-content: space-between;
+  }
+  .home-page-why-we-us-section .container .row > div {
+    width: 50%;
+  }
+  .homepage-about-section .container .row .left {
+    margin-bottom: 1.5rem;
+  }
+  .homepage-about-section .container .row .right {
+    margin-top: 1.5rem;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .flair {
+    display: none;
+  }
+  .parent-fo-header header .container .row-div .menu-div .ham-menu-icon {
+    display: block;
+  }
+
+  .parent-fo-header header .container .row-div .logo-div {
+    width: 45%;
+  }
+  .parent-fo-header header .container .row-div .menu-div .phone-menu-div {
+    z-index: 999;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+    width: 95vw;
+    height: 100vh;
+    padding: 4rem 1rem 0;
+    transition: all 0.3s;
+    display: flex;
+    position: fixed;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* transform: translateX(-110%); */
+    box-shadow: 0 0 10px gray;
+    top: 0;
+  }
+  .parent-fo-header
+    header
+    .container
+    .row-div
+    .menu-div
+    .phone-menu-div
+    .inner-div
+    .row
+    > div {
+    text-align: start;
+    padding: 0 2rem 0 2rem !important;
+    a {
+      width: 100%;
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 5px 0;
+    }
+  }
+  .parent-fo-header header .container .row-div .menu-div .phone-menu-div img {
+    width: 25%;
+  }
+
+  footer #footerFisrt h2 {
+    font-size: 4rem;
+  }
+
+  .parent-fo-header
+    header
+    .container
+    .row-div
+    .menu-div
+    .phone-menu-div
+    .inner-div
+    .row
+    > div
+    .accordion-body {
+    padding: 0 0 0 0;
+    padding-left: 10px;
+    ul {
+      padding: 0;
+      li {
+        a {
+          font-weight: 300;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .parent-fo-header
+    header
+    .container
+    .row-div
+    .menu-div
+    .phone-menu-div
+    .inner-div
+    .row
+    > div
+    .accordion-item:last-of-type
+    > .accordion-header
+    .accordion-button.collapsed {
+    padding: 0;
+    margin: 0px 0 3px 0;
+    border-radius: 0;
+    padding: 2px 0;
+  }
+
+  .parent-fo-header
+    header
+    .container
+    .row-div
+    .menu-div
+    .phone-menu-div
+    .inner-div
+    .row
+    > div
+    .accordion-button:not(.collapsed) {
+    padding: 0 0 10px 0;
+  }
+
+  .showPhoneMenu {
+    transform: translateX(0%) !important;
+    transition: 0.5s;
+    display: block;
+  }
+
+  .work-main-page .container {
+    max-width: 95%;
+  }
+}
+
 /* Smallar phone */
 @media (max-width: 480px) {
   * {
@@ -85,20 +516,22 @@
                     .accordion-item:last-of-type {
                       > .accordion-header {
                         .accordion-button.collapsed {
-                          font-size: 1.75rem;
+                          font-size: 1.6rem;
                           border-bottom: 1px solid rgb(255, 255, 255) !important;
-                          color: #5b5b5b;
+                          color: #000000;
                           padding: 0px;
                           font-family: "Poppins";
+                          font-weight: 400;
                         }
                       }
                     }
                     .accordion-button:not(.collapsed) {
-                      font-size: 1.75rem;
+                      font-size: 1.6rem;
                       border-bottom: 1px solid #fafafa;
                       padding: 0px 0 10px 0;
-                      font-weight: 600;
+                      font-weight: 400;
                       font-family: "Poppins";
+                      color: #000000;
                     }
                   }
                 }
@@ -190,7 +623,7 @@
       span {
         font-size: 18px;
         text-transform: uppercase;
-        color: gray;
+        color: rgb(0, 0, 0);
       }
     }
 
@@ -386,7 +819,7 @@
         display: block !important;
         > div {
           h2 {
-            font-size: 8vw !important;
+            font-size: 1.5rem !important;
           }
           .inner-div {
             padding: 30px 20px;
@@ -429,7 +862,7 @@
 
   footer {
     #footerFisrt {
-      padding: 5rem 1.25rem 2rem 1rem;
+      padding: 4rem 1.25rem 2rem 1rem;
       flex-direction: column;
       align-items: start;
       button {
@@ -486,9 +919,9 @@
         li {
           line-height: 25px;
           a {
-            font-size: 1.25rem;
-            opacity: 0.75;
-            font-weight: 600;
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: black;
           }
         }
       }
@@ -528,7 +961,7 @@
       .row {
         margin-top: 0.8rem;
         .mid {
-          margin-top: 1rem;
+          margin-top: 1.5rem;
           .inner-div {
             .first-div {
               height: fit-content;
@@ -558,11 +991,18 @@
           font-family: Poppins;
           font-size: 1rem;
           font-weight: 400 !important;
+          margin-top: 1rem;
         }
       }
     }
   }
-
+  .homepage-about-section .container .row .mid .inner-div .first-div p {
+    margin-bottom: 1.5rem;
+  }
+  .home-page-Testimonials .slide .innerDiv > p {
+    color: #626262;
+    line-height: 28px !important;
+  }
   footer {
     padding-top: 3rem;
   }
@@ -575,16 +1015,15 @@
       .contact-div {
         padding: 0px 25px !important;
         a {
-          width: 100%;
-          display: block;
           text-align: start;
-          font-size: 1.75rem;
-          font-weight: 500;
-          color: #5b5b5b !important;
-          line-height: 2;
-          display: block;
-          line-height: 50px;
           -webkit-text-stroke-width: 0.65px;
+          width: 100%;
+          font-size: 1.5rem;
+          font-weight: 300;
+          line-height: 50px;
+          display: block;
+          color: #000000 !important;
+          letter-spacing: 1px;
         }
       }
     }
@@ -593,8 +1032,9 @@
   .about-page-main {
     .aboutRow {
       margin: 0 !important;
-      padding: 0 1.5rem !important;
+      padding: 0 1rem !important;
     }
+
     .aboutCta {
       margin-top: 1rem !important;
       .row {
@@ -652,9 +1092,11 @@
   }
   .work-main-page .bs-container .row div {
     padding-left: 0.75rem !important ;
+    margin-bottom: -2rem;
   }
   .work-main-page .bs-container .row div h1 {
     font-size: 8vw !important;
+    font-weight: 700;
   }
   .work-main-page .work-accordian-section {
     margin-bottom: -5rem !important;
@@ -721,12 +1163,14 @@
         font-size: 1rem;
         font-weight: 400 !important;
         margin-bottom: 10px;
+        width: 100%;
       }
     }
   }
 
   .home-page-Testimonials {
     padding: 3rem 0 2rem 0;
+    padding-bottom: 0px;
     h2 {
       font-size: 2rem;
       font-weight: 700;

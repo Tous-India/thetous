@@ -85,26 +85,12 @@
     padding-left: 0rem;
 
     h1 {
-      font-size: 3vw;
-      font-weight: 700;
-      font-family: "Poppins";
-      padding: 1rem 0 0 0;
       text-align: start;
+      padding: 1rem 0 0;
+      font-family: "Lato";
+      font-size: 2.5rem;
+      font-weight: 600;
       position: relative;
-      /* &::before {
-        content: "";
-        z-index: -1;
-        background-image: url("../../../public/circle-tous.webp");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 7%;
-        height: 100%;
-        animation: 4s infinite smooth-updown;
-        position: absolute;
-        top: -10%;
-        left: -1.75%;
-      } */
     }
     p {
       padding: 0;
@@ -143,7 +129,7 @@
         button {
           background-color: white !important;
           border: none !important;
-          font-size: 3vh;
+          font-size: 1rem;
           font-weight: 500;
           color: #323232 !important;
           box-shadow: none;
@@ -236,6 +222,7 @@
     padding: 0 0rem !important;
     position: relative;
     z-index: 10;
+    margin-top: 0 !important;
     .buttonBox {
       display: flex;
       gap: 1rem;
@@ -322,4 +309,56 @@
       }
     }
   }
+
+  /* ---------------------   */
+
+  .about-page-main .client-img-div {
+    padding: 0;
+    img {
+      width: 95% !important;
+    }
+  }
+  .about-page-main .bs-container {
+    padding: 0 !important;
+  }
+  .about-page-main .brand-strategy-div {
+    padding: 0 1rem;
+  }
+  .about-page-main .row {
+    row-gap: 0rem;
+  }
+  .about-page-main.bs-container2 .bs-row2 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .about-page-main .bs-container2 .bs-row1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    > div {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+  .about-page-main .bs-container3 {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  .about-page-main .bs-container-clients .client-row-1 {
+    margin-top: 0px;
+  }
+  .about-page-main .bs-container {
+    margin-bottom: 0px;
+  }
+
+  .about-page-main .bs-container2 .bs-row2 {
+    margin-top: 0;
+    padding-top: 0;
+    > div {
+      padding-left: 0 !important;
+      padding-right: 0px !important;
+    }
+  }
+
+  /* -  -------------------------------   */
 }

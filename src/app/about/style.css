@@ -38,16 +38,17 @@
 .about-page-main {
   .aboutRow {
     padding: 0 0rem;
-    height: 85vh;
+    height: fit-content;
+    margin-bottom: 2rem;
     > .row {
       align-items: start;
       .content-div {
         padding-left: 0;
         h1 {
           position: relative;
-          font-size: 5vw;
+          font-size: 2.5rem;
           font-weight: 600;
-          font-family: "Poppins";
+          font-family: "Lato";
           padding: 1rem 0 0 0;
           text-align: start;
           /* &::before {
@@ -136,7 +137,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        p {
+        .p {
           font-size: 3rem;
           font-weight: 600;
           color: white;
@@ -283,19 +284,13 @@
     font-size: 1.5rem;
   }
 
-  /* .about-page-main .aboutRow > .row .content-div h1:before {
-    width: 14%;
-    top: 4%;
-    left: -1rem;
-  } */
-
   .about-page-main {
     .aboutRow {
       padding: 10px;
       height: fit-content;
     }
     .About-page-tabs {
-      padding: 10px;
+      padding: 0px 10px;
 
       .left-col {
         p {
@@ -313,7 +308,7 @@
     .aboutCta {
       .row {
         .col-12 {
-          p {
+          .p {
             width: 100%;
             font-size: 2rem;
           }

@@ -1,6 +1,6 @@
 .contact-page-main {
   .container-fluid {
-    margin-bottom:-5rem !important;
+    margin-bottom: -5rem !important;
     background-color: white;
     padding: 0 0rem !important;
     box-shadow: 0px 10px 10px -10px gray;
@@ -11,12 +11,14 @@
       display: flex;
       justify-content: end;
       button {
-        font-weight: 500;
-        background-color: rgb(0, 0, 0);
-        color: white;
-        font-size: 1.25rem !important;
-        transition: 0.3s;
-        border-radius: 0px !important;
+        color: #fff;
+        background-color: #000;
+        border: 2px solid #000;
+        border-radius: 1px;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s;
+        text-transform: uppercase !important;
+        margin-top: 1rem;
         &:hover {
           background-color: white;
           color: rgb(0, 0, 0);
@@ -25,11 +27,11 @@
     }
     form {
       h3 {
-        font-weight: 500;
-        font-size: 2vw;
+        font-weight: 600;
+        font-size: 2.5vw;
         padding: 0 !important;
         margin-bottom: 1rem;
-        font-family: "Poppins";
+        font-family: "Lato";
       }
     }
     .row {
@@ -71,9 +73,10 @@
     }
     .row {
       #mainContact .row-two-contact form h3 {
-        font-weight: 500;
+        font-weight: 600;
         font-size: 2vw !important;
         padding: 0 !important;
+        font-family: "Lato";
       }
       #mainContact iframe {
         border-radius: 5px;
@@ -416,10 +419,23 @@
         padding: 1.5rem;
         h3 {
           font-size: 1.75rem;
-          font-weight: 500;
-          font-family: "Poppins";
+          font-weight: 600;
+          font-family: "Lato";
         }
       }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .contact-page-main {
+    .container-fluid {
+      > .row {
+        margin-top: 0px !important;
+      }
+    }
+    form {
+      padding: 10px !important;
     }
   }
 }

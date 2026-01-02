@@ -13,17 +13,17 @@ const Footer = () => {
   const footerRef = useRef(null);
   const pathname = usePathname();
   useGSAP(() => {
-
     // Reset footer position initially
     gsap.set("#footerSecond", { yPercent: -70 });
 
     // Define the timeline for uncover animation
     const uncover = gsap.timeline({ paused: true });
-    uncover.to("#footerSecond", { yPercent: 0, ease: "none" });
+    uncover.to("#footerSecond", { yPercent: 0, duration: 3, ease: "none" });
 
     // Create ScrollTrigger instance
     const trigger = ScrollTrigger.create({
-      trigger: ".last-section-of-every-page",
+      trigger:
+        ".last-section-of-every-page,.work-main-page,.contact-page-main,.blog-main-pag,.about-page-main,.case-studies-page",
       start: "bottom bottom",
       end: "+=75%",
       animation: uncover,
@@ -75,7 +75,7 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <Link href="/blogs">Blogs</Link>
+                  <Link href="https://blog.thetous.com/">Blogs</Link>
                 </li>
 
                 <li>

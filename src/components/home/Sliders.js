@@ -23,258 +23,119 @@ import vardhman from "../../../public/home/clients/fnp.jpg";
 import jyotish from "../../../public/home/clients/bio.jpg";
 import autoboss from "../../../public/home/clients/ewow.jpg";
 
+// Configuration objects
+const IMAGE_CONFIG = {
+  width: 400,
+  height: 200,
+  alt: "Client Image",
+  priority: true,
+};
+
+const SWIPER_CONFIG = {
+  speed: 6000,
+  loop: true,
+  allowTouchMove: false,
+  modules: [Autoplay],
+  effect: "slide",
+  breakpoints: {
+    0: {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
+    },
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+  },
+};
+
+const AUTOPLAY_CONFIG = {
+  delay: 0,
+  disableOnInteraction: false,
+};
+
+// Slider data
+const topSliderImages = [
+  motherMuskan,
+  hk,
+  elise,
+  boxica,
+  dirson,
+  thirstybull,
+  corru,
+  motherMuskan,
+  motherMuskan,
+  motherMuskan,
+  motherMuskan,
+];
+
+const bottomSliderImages = [
+  ohmypet,
+  prozvofit,
+  knockout,
+  svaa,
+  vedica,
+  shoolin,
+  vardhman,
+  autoboss,
+  jyotish,
+];
+
+const sliderConfigs = [
+  {
+    className: "swiper-container swiper--top",
+    images: topSliderImages,
+    autoplay: AUTOPLAY_CONFIG,
+  },
+  {
+    className: "swiper-container swiper--bottom",
+    images: bottomSliderImages,
+    autoplay: {
+      ...AUTOPLAY_CONFIG,
+      reverseDirection: true,
+    },
+  },
+];
+
 const Sliders = () => {
   return (
-    <div className="sliders-home-page" data-aos="fade-up"  
-      data-aos-duration="2000">
+    <div
+      className="sliders-home-page"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <section id="home-clients" className="homeClients">
         <div className="container-fluid">
           <div className="row justify-content-center">
             <main>
-              {/* Top Swiper */}
-              <Swiper
-                className="swiper-container swiper--top"
-                speed={6000}
-                autoplay={{
-                  delay: 0,
-                  disableOnInteraction: false,
-                  //   pauseOnMouseEnter: true,
-                }}
-                loop={true}
-                // slidesPerView={5}
-                allowTouchMove={false}
-                modules={[Autoplay]}
-                effect="slide"
-                breakpoints={{
-                  0: {
-                    slidesPerView: 1.5,
-                    spaceBetween: 10,
-                  },
-                  480: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                  },
-                  768: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                  },
-                  1024: {
-                    slidesPerView: 5,
-                    spaceBetween: 20,
-                  },
-                }}
-              >
-                <SwiperSlide>
-                  <Image
-                    src={motherMuskan}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image src={hk} width={400} height={200} alt="Client Image" priority />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={elise}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={boxica}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={dirson}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={thirstybull}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={corru}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={motherMuskan}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={motherMuskan}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={motherMuskan}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={motherMuskan}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-              </Swiper>
-
-              {/* Bottom Swiper */}
-              <Swiper
-                className="swiper-container swiper--bottom"
-                speed={6000}
-                autoplay={{
-                  delay: 0,
-                  disableOnInteraction: false,
-                  //   pauseOnMouseEnter: true,
-                  reverseDirection: true,
-                }}
-                loop={true}
-                // slidesPerView={5}
-                allowTouchMove={false}
-                modules={[Autoplay]}
-                effect="slide"
-                breakpoints={{
-                  0: {
-                    slidesPerView: 1.5,
-                    spaceBetween: 10,
-                  },
-                  480: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                  },
-                  768: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                  },
-                  1024: {
-                    slidesPerView: 5,
-                    spaceBetween: 20,
-                  },
-                }}
-              >
-                <SwiperSlide>
-                  <Image
-                    src={ohmypet}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={prozvofit}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={knockout}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={svaa}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={vedica}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={shoolin}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={vardhman}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={autoboss}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Image
-                    src={jyotish}
-                    width={400}
-                    height={200}
-                    alt="Client Image"
-                    priority
-                  />
-                </SwiperSlide>
-              </Swiper>
+              {sliderConfigs.map((config, index) => (
+                <Swiper
+                  key={index}
+                  className={config.className}
+                  autoplay={config.autoplay}
+                  {...SWIPER_CONFIG}
+                >
+                  {config.images.map((image, imgIndex) => (
+                    <SwiperSlide key={imgIndex}>
+                      <Image
+                        src={image}
+                        {...IMAGE_CONFIG}
+                        alt=""
+                        width={""}
+                        height={""}
+                      />
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              ))}
             </main>
           </div>
         </div>

@@ -1,12 +1,27 @@
 "use client";
 import { gsap } from "gsap";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const MousePointer = () => {
   const [isHovered, setIsHovered] = useState(false); // state to track hover effect for text
+  const pathname = usePathname(); // Track route changes
 
   useEffect(() => {
-    gsap.set(".flair", { xPercent: -50, yPercent: -50 });
+    // Reset cursor to default state on route change
+    gsap.set(".flair", {
+      xPercent: -50,
+      yPercent: -50,
+      scale: 1,
+      width: "20px",
+      height: "20px",
+      borderRadius: "50px",
+      mixBlendMode: "difference",
+      backgroundColor: "",
+      color: "",
+      boxShadow: ""
+    });
+    setIsHovered(false);
 
     let xTo = gsap.quickTo(".flair", "x", { duration: 0.6, ease: "power3" }),
       yTo = gsap.quickTo(".flair", "y", { duration: 0.6, ease: "power3" });
@@ -46,7 +61,9 @@ const MousePointer = () => {
     });
 
     // work mouse movement
-    const sectionLinks = document.querySelectorAll(".work-home-section .swiper-main-div a");
+    const sectionLinks = document.querySelectorAll(
+      ".work-home-section .swiper-main-div a"
+    );
 
     const sectionHandlers = [];
     sectionLinks.forEach((link) => {
@@ -61,7 +78,7 @@ const MousePointer = () => {
           mixBlendMode: "unset",
           backgroundColor: "black",
           color: "white",
-          boxShadow: "0px 0px 20px -5px gray"
+          boxShadow: "0px 0px 20px -5px gray",
         });
         setIsHovered(true);
       };
@@ -83,6 +100,7 @@ const MousePointer = () => {
 
       link.addEventListener("mouseenter", mouseEnter);
       link.addEventListener("mouseleave", mouseLeave);
+      link.addEventListener("onclick", mouseLeave);
 
       sectionHandlers.push({ link, mouseEnter, mouseLeave });
     });
@@ -101,7 +119,7 @@ const MousePointer = () => {
         link.removeEventListener("mouseleave", mouseLeave);
       });
     };
-  }, []); // Removed isHovered from dependency array
+  }, [pathname]); // Re-run effect when route changes
 
   return <div className="flair flair--3">{isHovered ? "View" : ""}</div>;
 };

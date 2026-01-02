@@ -23,10 +23,10 @@ const MediaSolution = () => {
             <h1 className="w-100">Media Solution</h1>
             <p className="w-100">
               <strong>
-                With daily content and integrated flagship campaigns, our
-                strategists, designers, video editors, and animators provide you
-                comprehensive solutions to expand your online presence and meet
-                your business objectives.
+                Our creative team of designers, video editors, photographers, and
+                content strategists craft compelling visual stories that capture
+                attention, engage audiences, and elevate your brand across all
+                digital and print platforms.
               </strong>
             </p>
             <p className="mt-4">
@@ -148,7 +148,7 @@ const MediaSolution = () => {
                         clipRule="evenodd"
                       ></path>
                     </svg>
-                    Graphic Designing
+                    AI Graphic Designing
                   </button>
                 </h2>
                 <div
@@ -199,7 +199,7 @@ const MediaSolution = () => {
                         <path d="m21 19l8 5l-8 5z"></path>
                       </g>
                     </svg>
-                    Video Editing
+                   AI Video Editing
                   </button>
                 </h2>
                 <div
@@ -402,7 +402,7 @@ const MediaSolution = () => {
           {/* <!-- Row 1 --> */}
           <div className="row bs-2-row-1 my-3">
             <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-              <Link href="/" className="bs-img-div">
+              <Link href="/case-studies/executive-cars" className="bs-img-div">
                 <Image
                   src={executive}
                   alt=""
@@ -416,16 +416,16 @@ const MediaSolution = () => {
                 <button className="first">SEO</button>
                 <button className="first">Ads</button>
               </div>
-              <Link href={"/"}>
-                <h3 className="pt-2">EXECUTIVE CARS</h3>
+              <Link href={"/case-studies/executive-cars"}>
+                <h3 className="pt-2 services-card-heading">EXECUTIVE CARS</h3>
               </Link>
-              <h5>
+              <h5 className="services-card-para">
                 Welcome to our first-class chauffeur car service in Melbourne,
                 the best choice ...
               </h5>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-              <Link href="/" className="bs-img-div">
+              <Link href="/case-studies/oh-my-pet-grooming" className="bs-img-div">
                 <Image
                   src={ohmypety}
                   alt=""
@@ -438,16 +438,16 @@ const MediaSolution = () => {
                 <button className="first">Website</button>
                 <button className="first">SEO</button>
               </div>
-              <Link href={"/"}>
-                <h3 className="pt-2">Oh My Pet Grooming</h3>
+              <Link href={"/case-studies/oh-my-pet-grooming"}>
+                <h3 className="pt-2 services-card-heading">Oh My Pet Grooming</h3>
               </Link>
-              <h5>
+              <h5 className="services-card-para">
                 At Oh My Pet Grooming, we bring professional pet care services
                 right to your doo...
               </h5>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-              <Link href={"/"}>
+              <Link href={"/case-studies/the-pet-center"}>
                 <Image
                   src={petcenter}
                   alt=""
@@ -461,10 +461,10 @@ const MediaSolution = () => {
                 <button className="first">ADS</button>
                 <button className="first">SEO</button>
               </div>
-              <Link href={"/"}>
-                <h3 className="pt-2">The Pet Center </h3>
+              <Link href={"/case-studies/the-pet-center"}>
+                <h3 className="pt-2 services-card-heading">The Pet Center </h3>
               </Link>
-              <h5>
+              <h5 className="services-card-para">
                 Pet grooming services at home. Wash, dry and brush your fuzzy
                 friend in the comf...
               </h5>

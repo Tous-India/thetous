@@ -9,6 +9,7 @@ import "remixicon/fonts/remixicon.css";
 import MousePointer from "@/components/MousePointer";
 import LenisProvider from "@/components/LenisProvider";
 import FooterAnimaton from "@/components/FooterAnimaton";
+import QueryProvider from "@/components/QueryProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,13 +47,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <LenisProvider>
-          <Header />
-          {children}
-          <MousePointer />
-          <Footer />
-          <BootstrapClient />
-        </LenisProvider>
+        <QueryProvider>
+          <LenisProvider>
+            <Header />
+            {children}
+            <MousePointer />
+            <Footer />
+            <BootstrapClient />
+          </LenisProvider>
+        </QueryProvider>
       </body>
     </html>
   );

@@ -1,7 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {
-    root: "./", // or specify the correct directory path
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'thetous.com',
+        pathname: '/wp-content/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'blog.thetous.com',
+        pathname: '/wp-content/uploads/**',
+      },
+    ],
   },
 };
 

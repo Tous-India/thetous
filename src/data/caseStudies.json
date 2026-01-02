@@ -1,0 +1,318 @@
+{
+  "caseStudies": [
+    {
+      "id": "luxeliv",
+      "title": "Luxeliv",
+      "description": " is an online luxury lifestyle and fashion brand",
+      "tags": ["Website", "SEO"],
+      "image": "/home/work/1731492385.webp",
+      "heroImage": {
+        "desktop": "https://placehold.co/1920x600",
+        "mobile": "https://placehold.co/1000x800"
+      },
+      "overview": {
+        "description": "Our client was heavily dependent on Amazon and Meesho for sales. While marketplace visibility brought orders, high RTO rates, low margins, and uncontrollable ad costs were eating into profitability. Their own website had traffic but almost negligible conversions, making them believe that website sales don’t work for their  category.                                                                            Our team partnered with the brand to transform their underperforming website into a profit-generating sales channel,reducing dependency on marketplaces and keeping margins in their own hands.",
+        "industry": "Manufacturing & E-commerce",
+        "services": [
+          "Website Conversion Optimization",
+          "Meta Ads Strategy Built for ROAS",
+          "Shifted Consumer Behavior"
+        ]
+      },
+      "challenges": {
+        "title": "Challenges Before Partnering With Us",
+        "painPoints": [
+          {
+            "painPoint": "Reliance on Amazon & Meesho",
+            "impact": "Reduced margins due to commissions and discounts"
+          },
+          {
+            "painPoint": "High RTO rates",
+            "impact": "Losses on every return / COD failure"
+          },
+          {
+            "painPoint": "Website was not converting",
+            "impact": "Traffic but no sales"
+          },
+          {
+            "painPoint": "Meta ads were running blindly",
+            "impact": "Ad spend was high, but ROI was near zero"
+          },
+          {
+            "painPoint": "Customers didn't trust the website",
+            "impact": "People browsed but finalized orders on marketplaces"
+          }
+        ],
+        "summary": "The brand wasn't struggling with demand — they were struggling with conversion, trust, and profitability."
+      },
+      "servicesDelivered": {
+        "title": "Services we delivered",
+        "description": "We developed a comprehensive digital solution including a modern website with e-commerce capabilities, implemented SEO best practices, and created a cohesive brand strategy that built the trust and increase the conversion."
+      },
+      "result": {
+        "title": "Results Achieved",
+        "subtitle": "In a span of 30 days, the impact was visible — and scalable.",
+        "description": "The new digital platform successfully elevated Luxeliv's brand presence, resulting in increased online visibility, improved customer engagement, and a significant boost in online sales. The website effectively showcases their premium kitchenware collection while maintaining the warmth of their family-owned business values.",
+        "metricsTable": [
+          {
+            "metric": "Sessions",
+            "before": "Low & unqualified",
+            "after": "35,319 in a month",
+            "change": "+38% Growth"
+          },
+          {
+            "metric": "Monthly Orders",
+            "before": "<20",
+            "after": "~120",
+            "change": "150%–184% Growth"
+          },
+          {
+            "metric": "Total Sales",
+            "before": "₹60K/mo",
+            "after": "₹2.41L at peak",
+            "change": "Up to 327% Growth"
+          },
+          {
+            "metric": "Conversion Rate",
+            "before": "Almost Zero",
+            "after": "2.13% at highest",
+            "change": "+731% Improvement"
+          }
+        ],
+        "summary": [
+          "From \"no sales on website\" → to becoming a primary sales channel",
+          "From losing margins on RTO & platform fees → to profitable direct orders"
+        ],
+        "images": [
+          "/casestudy/luxeliv-1.webp",
+          "/casestudy/luxeliv-2.webp",
+          "/casestudy/luxeliv-3.webp"
+        ]
+      }
+    },
+    {
+      "id": "dhirsons-jewellery-house",
+      "title": "Dhirsons Jewellery House",
+      "description": "The Premium Diamond Jewellery Wholesale store in Karol Bagh, Delhi & Retail Store...",
+      "tags": ["Website", "SEO"],
+      "image": "/work/dhirsons.webp",
+      "heroImage": {
+        "desktop": "https://placehold.co/1920x600",
+        "mobile": "https://placehold.co/1000x800"
+      },
+      "overview": {
+        "description": "Dhirsons Jewellery House is a premium diamond jewellery destination in Delhi's prestigious Karol Bagh area. We crafted a luxurious digital experience that mirrors their exceptional craftsmanship.",
+        "industry": "Luxury Retail & Jewellery",
+        "services": ["Website Development", "SEO", "Digital Marketing"]
+      },
+      "challenges": [
+        "Showcasing high-end jewellery in a digital format",
+        "Building trust for online luxury purchases",
+        "Competing in the premium jewellery market online",
+        "Creating an elegant user experience that matches the brand"
+      ],
+      "servicesDelivered": {
+        "title": "Services we delivered",
+        "description": "We created an elegant, sophisticated website that showcases their premium diamond collection with high-quality imagery and detailed product information. The platform includes advanced search functionality, secure checkout, and comprehensive SEO optimization to attract high-value customers."
+      },
+      "result": {
+        "description": "The digital transformation positioned Dhirsons as a leading online destination for premium diamond jewellery. The website successfully conveys luxury and trust, resulting in increased inquiries from both wholesale and retail customers.",
+        "metrics": [
+          "120% increase in online inquiries",
+          "80% improvement in search rankings",
+          "60% boost in website engagement"
+        ]
+      }
+    },
+    {
+      "id": "oh-my-pet-grooming",
+      "title": "Oh My Pet Grooming",
+      "description": "At Oh My Pet Grooming, we bring professional pet care services right to your door...",
+      "tags": ["Website", "SEO"],
+      "image": "/work/ohmypet.webp",
+      "heroImage": {
+        "desktop": "https://placehold.co/1920x600",
+        "mobile": "https://placehold.co/1000x800"
+      },
+      "overview": {
+        "description": "Oh My Pet Grooming is a mobile pet grooming service bringing professional care directly to pet owners' doorsteps. We developed a user-friendly platform that makes booking convenient and stress-free.",
+        "industry": "Pet Care & Services",
+        "services": ["Website Development", "SEO", "Booking System Integration"]
+      },
+      "challenges": [
+        "Creating an intuitive online booking system",
+        "Building trust with pet owners for a mobile service",
+        "Optimizing for local search results",
+        "Showcasing services and pricing clearly"
+      ],
+      "servicesDelivered": {
+        "title": "Services we delivered",
+        "description": "We built a welcoming, easy-to-navigate website with an integrated booking system that allows pet owners to schedule appointments effortlessly. The site features service descriptions, pricing transparency, and local SEO optimization to reach nearby customers."
+      },
+      "result": {
+        "description": "The new website streamlined the booking process and significantly increased customer acquisition. Pet owners can now easily schedule services, view available time slots, and learn about grooming options, leading to higher conversion rates and customer satisfaction.",
+        "metrics": [
+          "200% increase in online bookings",
+          "140% growth in customer base",
+          "50% reduction in booking time"
+        ]
+      }
+    },
+    {
+      "id": "executive-cars",
+      "title": "Executive Cars",
+      "description": "Welcome to our first-class chauffeur car service in Melbourne, the best choice...",
+      "tags": ["Website", "SEO", "Ads"],
+      "image": "/work/executive.webp",
+      "heroImage": {
+        "desktop": "https://placehold.co/1920x600",
+        "mobile": "https://placehold.co/1000x800"
+      },
+      "overview": {
+        "description": "Executive Cars offers premium chauffeur services in Melbourne, providing luxury transportation for corporate and private clients. We created a sophisticated digital platform that reflects their high-end service standards.",
+        "industry": "Luxury Transportation",
+        "services": [
+          "Website Development",
+          "SEO",
+          "Google Ads",
+          "Brand Strategy"
+        ]
+      },
+      "challenges": [
+        "Conveying luxury and professionalism online",
+        "Competing in the premium transportation market",
+        "Implementing effective booking and inquiry systems",
+        "Targeting corporate and high-value individual clients"
+      ],
+      "servicesDelivered": {
+        "title": "Services we delivered",
+        "description": "We developed a premium website showcasing their fleet and services with elegant design and seamless functionality. The platform includes online booking, corporate account management, and targeted advertising campaigns to reach Melbourne's business community."
+      },
+      "result": {
+        "description": "The digital transformation established Executive Cars as Melbourne's premier chauffeur service online. The combination of an elegant website, strategic SEO, and targeted advertising resulted in significant growth in both corporate contracts and individual bookings.",
+        "metrics": [
+          "180% increase in corporate inquiries",
+          "220% growth in online bookings",
+          "90% improvement in ROI from ads"
+        ]
+      }
+    },
+    {
+      "id": "silvago",
+      "title": "Silvago",
+      "description": "Minimal silver jewellery brand delivering elegance with simplicity...",
+      "tags": ["Website", "SEO", "Ads"],
+      "image": "/home/work/1731492367.webp",
+      "heroImage": {
+        "desktop": "https://placehold.co/1920x600",
+        "mobile": "https://placehold.co/1000x800"
+      },
+      "overview": {
+        "description": "Silvago is a contemporary silver jewellery brand focusing on minimalist designs that celebrate simplicity and elegance. We crafted a digital experience that embodies their modern aesthetic.",
+        "industry": "Fashion & Jewellery",
+        "services": [
+          "E-commerce Website",
+          "SEO",
+          "Social Media Ads",
+          "Brand Development"
+        ]
+      },
+      "challenges": [
+        "Standing out in the competitive jewellery market",
+        "Attracting minimalist design enthusiasts",
+        "Creating a seamless e-commerce experience",
+        "Building brand awareness from scratch"
+      ],
+      "servicesDelivered": {
+        "title": "Services we delivered",
+        "description": "We designed and developed a clean, minimalist e-commerce platform that perfectly showcases Silvago's jewellery collection. The website features intuitive navigation, high-quality product photography, and integrated payment solutions, complemented by targeted advertising campaigns."
+      },
+      "result": {
+        "description": "The launch successfully positioned Silvago as a go-to destination for minimalist silver jewellery. The clean design and strategic marketing attracted a dedicated customer base, resulting in strong sales growth and brand recognition.",
+        "metrics": [
+          "250% increase in online sales",
+          "180% growth in social media following",
+          "70% improvement in conversion rate"
+        ]
+      }
+    },
+    {
+      "id": "prozvofit",
+      "title": "Prozvofit",
+      "description": "Gym equipment manufacturer delivering strength-focused solutions...",
+      "tags": ["Website", "SEO", "Ads"],
+      "image": "/home/work/1726132161.webp",
+      "heroImage": {
+        "desktop": "https://placehold.co/1920x600",
+        "mobile": "https://placehold.co/1000x800"
+      },
+      "overview": {
+        "description": "Prozvofit manufactures professional-grade gym equipment designed for strength training and fitness facilities. We built a powerful digital platform to showcase their industrial-strength product line.",
+        "industry": "Fitness Equipment Manufacturing",
+        "services": [
+          "Website Development",
+          "SEO",
+          "PPC Advertising",
+          "Content Strategy"
+        ]
+      },
+      "challenges": [
+        "Showcasing heavy equipment effectively online",
+        "Reaching gym owners and fitness facilities",
+        "Competing with established equipment brands",
+        "Demonstrating product quality and durability"
+      ],
+      "servicesDelivered": {
+        "title": "Services we delivered",
+        "description": "We developed a comprehensive B2B platform featuring detailed product specifications, high-quality imagery, and technical documentation. The site includes quote request functionality, distributor information, and strategic advertising to reach gym owners and fitness entrepreneurs."
+      },
+      "result": {
+        "description": "The digital platform successfully established Prozvofit as a serious competitor in the gym equipment market. The website effectively communicates product quality and attracted inquiries from fitness facilities, leading to substantial business growth.",
+        "metrics": [
+          "300% increase in B2B inquiries",
+          "160% growth in distributor partnerships",
+          "120% improvement in lead quality"
+        ]
+      }
+    },
+    {
+      "id": "crossroads-hospital",
+      "title": "Crossroads Hospital",
+      "description": "Healthcare website with patient-focused digital experience...",
+      "tags": ["Website", "SEO"],
+      "image": "/home/work/1731492317.webp",
+      "heroImage": {
+        "desktop": "https://placehold.co/1920x600",
+        "mobile": "https://placehold.co/1000x800"
+      },
+      "overview": {
+        "description": "Crossroads Hospital is a modern healthcare facility committed to patient-centered care. We created a comprehensive digital platform that makes healthcare information accessible and appointment booking effortless.",
+        "industry": "Healthcare & Medical Services",
+        "services": [
+          "Website Development",
+          "SEO",
+          "Patient Portal Integration",
+          "Accessibility Optimization"
+        ]
+      },
+      "challenges": [
+        "Creating a user-friendly experience for all age groups",
+        "Ensuring HIPAA compliance and data security",
+        "Integrating appointment booking systems",
+        "Making medical information easily accessible"
+      ],
+      "servicesDelivered": {
+        "title": "Services we delivered",
+        "description": "We developed a comprehensive healthcare website with integrated patient portal, online appointment booking, and easy access to medical services information. The platform is fully responsive, accessible, and optimized for search engines to help patients find the care they need."
+      },
+      "result": {
+        "description": "The new digital platform transformed patient engagement and streamlined hospital operations. Patients can now easily book appointments, access their records, and find information about services, resulting in improved patient satisfaction and operational efficiency.",
+        "metrics": [
+          "190% increase in online appointments",
+          "140% growth in patient portal registrations",
+          "65% reduction in phone inquiries"
+        ]
+      }
+    }
+  ]
+}

@@ -23,23 +23,25 @@ const TechSolution = () => {
             <h1 className="w-100">Tech Solution</h1>
             <p className="">
               <strong>
-                Our strategists, designers, video editors and animators provide
-                you with holistic solutions to grow your digital presence and
-                achieve your business goals through both day-to-day content and
-                integrated flagship campaigns.
+                {`Our developers, automation experts, and digital strategists
+                deliver powerful tech solutions that streamline your operations,
+                enhance customer experience, and drive measurable business growth
+                through innovative technology and intelligent automation.`}
               </strong>
             </p>
             <p className="mt-4">
-              <span>Does This Sound Like Your Brand?</span>
+              <span>{`Does This Sound Like Your Brand?`}</span>
             </p>
             <ul>
               <li>Our online sales process feels complicated</li>
-              <li>Our website looks fine but doesn’t bring inquiries and orders</li>
-              <li>We want automation but don’t know where to start</li>
+              <li>
+                {`Our website looks fine but doesn't bring inquiries and orders`}
+              </li>
+              <li>{`We want automation but don't know where to start`}</li>
               <li>Technology feels confusing and hard to manage</li>
               <li>We need solutions that grow with our business</li>
               <li>Too much manual work is slowing our team</li>
-              <li>We can’t track what’s actually working</li>
+              <li>{`We can't track what's actually working`}</li>
               <li>We lose customers due to poor follow-ups</li>
             </ul>
           </div>
@@ -150,7 +152,7 @@ const TechSolution = () => {
                         <path d="M11.5 21a17 17 0 0 1-1.826-4m2.826 4a17 17 0 0 0 1.828-4M2 10l1 4l1.5-4L6 14l1-4m10 0l1 4l1.5-4l1.5 4l1-4M9.5 10l1 4l1.5-4l1.5 4l1-4"></path>
                       </g>
                     </svg>
-                    Web Developement
+                    Web & App Development
                   </button>
                 </h2>
                 <div
@@ -192,7 +194,7 @@ const TechSolution = () => {
                         d="M9.5 7v3h-3V7zm0 7v-3h-3v3zm4-7v3h-3V7zm0 7v-3h-3v3zM7 4V2.5A1.5 1.5 0 0 1 8.5 1h3A1.5 1.5 0 0 1 13 2.5V4h4.5a.5.5 0 0 1 .5.5v10a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 2 14.5v-10a.5.5 0 0 1 .5-.5zm1-1.5V4h4V2.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5m-5 12A1.5 1.5 0 0 0 4.5 16h11a1.5 1.5 0 0 0 1.5-1.5V5H3z"
                       ></path>
                     </svg>{" "}
-                    E-Commerce
+                    E-Commerce Development
                   </button>
                 </h2>
                 <div
@@ -325,7 +327,7 @@ const TechSolution = () => {
                         d="M14.608 12.172c0 .84.239 1.175.864 1.175c1.393 0 2.28-1.775 2.28-4.727c0-4.512-3.288-6.672-7.393-6.672c-4.223 0-8.064 2.832-8.064 8.184c0 5.112 3.36 7.896 8.52 7.896c1.752 0 2.928-.192 4.727-.792l.386 1.607c-1.776.577-3.674.744-5.137.744c-6.768 0-10.393-3.72-10.393-9.456c0-5.784 4.201-9.72 9.985-9.72c6.024 0 9.215 3.6 9.215 8.016c0 3.744-1.175 6.6-4.871 6.6c-1.681 0-2.784-.672-2.928-2.161c-.432 1.656-1.584 2.161-3.145 2.161c-2.088 0-3.84-1.609-3.84-4.848c0-3.264 1.537-5.28 4.297-5.28c1.464 0 2.376.576 2.782 1.488l.697-1.272h2.016v7.057zm-2.951-3.168c0-1.319-.985-1.872-1.801-1.872c-.888 0-1.871.719-1.871 2.832c0 1.68.744 2.616 1.871 2.616c.792 0 1.801-.504 1.801-1.896z"
                       ></path>
                     </svg>
-                    Email Marketing
+                    Website Designing
                   </button>
                 </h2>
                 <div
@@ -333,11 +335,12 @@ const TechSolution = () => {
                   className="accordion-collapse collapse "
                 >
                   <div className="accordion-body">
-                    We craft personalized email campaigns that engage your
-                    audience and drive conversions. Our strategy focuses on
-                    creating compelling content and optimizing delivery to
-                    ensure maximum open rates and click-throughs, boosting your
-                    brand’s reach.
+                    We design visually compelling and user-friendly websites
+                    that engage visitors and convert them into customers. Our
+                    approach focuses on intuitive layouts, impactful content
+                    placement, and performance optimization to ensure seamless
+                    user experiences that strengthen your brand’s digital
+                    presence.
                   </div>
                 </div>
               </div>
@@ -367,7 +370,7 @@ const TechSolution = () => {
                         d="M18.5 10.255q0 .067-.003.133A1.54 1.54 0 0 0 17.473 10q-.243 0-.473.074V5.75a.75.75 0 0 0-.75-.75h-8.5a.75.75 0 0 0-.75.75v4.505c0 .414.336.75.75.75h8.276l-.01.025l-.003.012l-.45 1.384l-.01.026l-.019.053H7.75a2.25 2.25 0 0 1-2.25-2.25V5.75A2.25 2.25 0 0 1 7.75 3.5h3.5v-.75a.75.75 0 0 1 .649-.743L12 2a.75.75 0 0 1 .743.649l.007.101l-.001.75h3.5a2.25 2.25 0 0 1 2.25 2.25zm-5.457 3.781l.112-.036H6.254a2.25 2.25 0 0 0-2.25 2.25v.907a3.75 3.75 0 0 0 1.305 2.844c1.563 1.343 3.802 2 6.691 2c2.076 0 3.817-.339 5.213-1.028a1.55 1.55 0 0 1-1.169-1.003l-.004-.012l-.03-.093c-1.086.422-2.42.636-4.01.636c-2.559 0-4.455-.556-5.713-1.638a2.25 2.25 0 0 1-.783-1.706v-.907a.75.75 0 0 1 .75-.75H12v-.003a1.54 1.54 0 0 1 1.031-1.456zM10.999 7.75a1.25 1.25 0 1 0-2.499 0a1.25 1.25 0 0 0 2.499 0m3.243-1.25a1.25 1.25 0 1 1 0 2.499a1.25 1.25 0 0 1 0-2.499m1.847 10.912a2.83 2.83 0 0 0-1.348-.955l-1.377-.448a.544.544 0 0 1 0-1.025l1.377-.448a2.84 2.84 0 0 0 1.76-1.762l.01-.034l.449-1.377a.544.544 0 0 1 1.026 0l.448 1.377a2.84 2.84 0 0 0 1.798 1.796l1.378.448l.027.007a.544.544 0 0 1 0 1.025l-1.378.448a2.84 2.84 0 0 0-1.798 1.796l-.447 1.377a.55.55 0 0 1-.2.263a.544.544 0 0 1-.827-.263l-.448-1.377a2.8 2.8 0 0 0-.45-.848m7.694 3.801l-.765-.248a1.58 1.58 0 0 1-.999-.998l-.249-.765a.302.302 0 0 0-.57 0l-.249.764a1.58 1.58 0 0 1-.983.999l-.766.248a.302.302 0 0 0 0 .57l.766.249a1.58 1.58 0 0 1 .999 1.002l.248.764a.303.303 0 0 0 .57 0l.25-.764a1.58 1.58 0 0 1 .998-.999l.766-.248a.302.302 0 0 0 0-.57z"
                       ></path>
                     </svg>{" "}
-                    Chatbot
+                    AI Chatbot
                   </button>
                 </h2>
                 <div
@@ -393,7 +396,7 @@ const TechSolution = () => {
           {/* <!-- Row 1 --> */}
           <div className="row bs-2-row-1 my-3">
             <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-              <Link href="/" className="bs-img-div">
+              <Link href="/case-studies/madhu-cookware" className="bs-img-div">
                 <Image
                   src={madhu}
                   alt=""
@@ -406,16 +409,19 @@ const TechSolution = () => {
                 <button className="first">Website</button>
                 <button className="first">SEO</button>
               </div>
-              <Link href={"/"}>
-                <h3 className="pt-2">Madhu Cookware </h3>
+              <Link href={"/case-studies/madhu-cookware"}>
+                <h3 className="pt-2 services-card-heading">Madhu Cookware </h3>
               </Link>
-              <h5>
-                Shree Enterprises is a family-owned, Indian manufacturer of
-                kitchenware. From it...
+              <h5 className="services-card-para">
+                Madhu Cookware has evolved into an essential component of every
+                kitchen
               </h5>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-              <Link href="/" className="bs-img-div">
+              <Link
+                href="/case-studies/dhirsons-jewellery-house"
+                className="bs-img-div"
+              >
                 <Image
                   src={dhison}
                   alt=""
@@ -428,16 +434,18 @@ const TechSolution = () => {
                 <button className="first">Website</button>
                 <button className="first">SEO</button>
               </div>
-              <Link href={"/"}>
-                <h3 className="pt-2">Dhirsons Jewellery House </h3>
+              <Link href={"/case-studies/dhirsons-jewellery-house"}>
+                <h3 className="pt-2 services-card-heading">
+                  Dhirsons Jewellery House{" "}
+                </h3>
               </Link>
-              <h5>
+              <h5 className="services-card-para">
                 The Premium Diamond Jewellery Wholesale store in Karol Bagh,
                 Delhi &amp; Retail Stor...
               </h5>
             </div>
             <div className="col-lg-4 col-md-4 col-sm-12 my-3">
-              <Link href={"/"}>
+              <Link href={"/case-studies/the-pet-center"}>
                 <Image
                   src={petcenter}
                   alt=""
@@ -451,10 +459,10 @@ const TechSolution = () => {
                 <button className="first">ADS</button>
                 <button className="first">SEO</button>
               </div>
-              <Link href={"/"}>
-                <h3 className="pt-2">The Pet Center </h3>
+              <Link href={"/case-studies/the-pet-center"}>
+                <h3 className="pt-2 services-card-heading">The Pet Center </h3>
               </Link>
-              <h5>
+              <h5 className="services-card-para">
                 Pet grooming services at home. Wash, dry and brush your fuzzy
                 friend in the comf...
               </h5>

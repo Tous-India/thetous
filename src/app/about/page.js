@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./style.css";
 import Link from "next/link";
 // import AboutTest from "@/components/AboutTest";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -13,7 +14,7 @@ const page = () => {
             <h1 className="w-100">About Us</h1>
             <p className="w-100">
               The Tous is a performance-driven creative marketing agency, built
-              exclusively for eCommerce growth. Since 2018, we’ve helped
+              exclusively for E-Commerce growth. Since 2018, we’ve helped
               ambitious online brands scale with precision, creativity, and
               measurable impact.
             </p>
@@ -22,7 +23,7 @@ const page = () => {
             </p>
             <ul>
               <li>
-                eCommerce-first agency with deep platform and consumer insight
+                E-Commerce first agency with deep platform and consumer insight
               </li>
               <li>15+ specialists across strategy, design, media & tech</li>
               <li>57+ E-Commerce websites delivered</li>
@@ -37,7 +38,7 @@ const page = () => {
             </ul>
             <p>
               <span>
-                At The Tous, we don’t run campaigns—we build scalable eCommerce
+                At The Tous, we don’t run campaigns—we build scalable E-Commerce
                 businesses.
               </span>
             </p>
@@ -51,11 +52,13 @@ const page = () => {
 
       <AboutTest />
       {/* <OurTeam /> */}
-      <section className="aboutCta last-section-of-every-page">
+      <section className="aboutCta">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <p>Together, let&apos;s have a quantifiable effect on your company.</p>
+              <div className="p">
+                Together, let&apos;s have a quantifiable effect on your company.
+              </div>
               <Link href="">Design A Quote</Link>
             </div>
           </div>
@@ -83,7 +86,7 @@ const AboutTest = () => {
       label: "Mission",
       heading: " ",
       description:
-        "We empower eCommerce brands with human-centric, data-driven marketing strategies that drive measurable growth, maximize ROI, and build lasting brand value—becoming a trusted partner in their long-term success.",
+        "We empower E-Commerce brands with human-centric, data-driven marketing strategies that drive measurable growth, maximize ROI, and build lasting brand value—becoming a trusted partner in their long-term success.",
       image:
         "https://cdn.prod.website-files.com/67726722d415dc401ae23cf6/677289e19e4d013c6a4c5a1b_philip-oroni-Zx_G3LpNnV4-unsplash%20(1).avif",
     },
@@ -167,7 +170,13 @@ const AboutTest = () => {
                       : "opacity-0 scale-95 rotate-3"
                   }`}
                 >
-                  <img src={tab.image} alt={tab.heading} className=" " />
+                  <Image
+                    src={tab.image}
+                    alt={tab.heading}
+                    className=" "
+                    width={100}
+                    height={100}
+                  />
                 </div>
               ))}
             </div>
@@ -186,9 +195,11 @@ const OurTeam = () => {
         <div className="row">
           <div className="col-lg-3 col-md-6 col-sm-6 mb-4">
             <div className="innerDivAbout text-center">
-              <img
+              <Image
                 src="https://tous.mankindpackers.site/upload/ourteam/1735382266.jpg"
                 alt="Team Member"
+                width={100}
+                height={100}
               />
               <h4>Akash Chauhan</h4>
               <h6 className="aboutTeamDes">IT Team Leader</h6>

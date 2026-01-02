@@ -6,27 +6,25 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 // brand
-import copywriter from "../../public/services/brand/copywriting.webp"; //default
-import mediaManagement from "../../public/services/brand/mediamanagement.webp";
-import socialMedia from "../../public/services/brand/socialmedia.webp";
-import performanceMarketing from "../../public/services/brand/performancemarketing.webp";
-import payPerClick from "../../public/services/brand/payperclick.webp";
+import copywriter from "../../public/services/brand/meta-ads.webp"; //default
+import socialMedia from "../../public/services/brand/social-media-management.webp";
+import performanceMarketing from "../../public/services/brand/performance-marketing.webp";
+import payPerClick from "../../public/services/brand/google-ads.webp";
 import seo from "../../public/services/brand/seo.webp";
 // media
-import animation from "../../public/services/media/animation.webp";
-import modelShoot from "../../public/services/media/modelshoot.webp";
-import productShoot from "../../public/services/media/productshoot.webp";
-import printMedia from "../../public/services/media/printmedia.webp";
-import videoEditing from "../../public/services/media/videoediting.webp";
-import graphicDesign from "../../public/services/media/graphicdesign.webp";
+import modelShoot from "../../public/services/media/model-shoot.webp";
+import productShoot from "../../public/services/media/producctt shooot.webp";
+import printMedia from "../../public/services/media/print-media.webp";
+import videoEditing from "../../public/services/media/video generation.webp";
+import graphicDesign from "../../public/services/media/graphic designing.webp";
 
 // tech
-import emailMarketing from "../../public/services/tech/emailmarketing.webp";
+import websiteDesign from "../../public/services/tech/website-design.webp";
 import whatsappMarketing from "../../public/services/tech/whatsappmarketing.webp";
 import chatBot from "../../public/services/tech/chatbot.webp";
 import automation from "../../public/services/tech/automation.webp";
 import ecommerce from "../../public/services/tech/ecommerce.webp";
-import webdev from "../../public/services/tech/webdev.webp";
+import webAndApp from "../../public/services/tech/webdev.webp";
 
 const Header = () => {
   // Phone Menu
@@ -48,7 +46,7 @@ const Header = () => {
 
   //
 
-  const [firstList, setFirstList] = useState(false);
+  const [firstList, setFirstList] = useState(true);
   const [secondList, setSecondList] = useState(false);
   const [thirdList, setThirdList] = useState(false);
   const handleShowList = (val) => {
@@ -69,11 +67,11 @@ const Header = () => {
     }
   };
 
-  const handleMouseLeaveList = () => {
-    setFirstList(false);
-    setSecondList(false);
-    setThirdList(false);
-  };
+  // const handleMouseLeaveList = () => {
+  //   setFirstList(false);
+  //   setSecondList(false);
+  //   setThirdList(false);
+  // };
 
   // MenuList with Image Change
 
@@ -117,7 +115,7 @@ const Header = () => {
                         <li className={`heading-1`}>
                           <h4
                             onMouseEnter={() => handleShowList("h1")}
-                            onMouseLeave={() => handleMouseLeaveList()}
+                            // onMouseLeave={() => handleMouseLeaveList()}
                             className={`
 
                                 ${firstList ? "opacity-100" : ""}
@@ -127,7 +125,7 @@ const Header = () => {
                               
                               `}
                           >
-                            Brand Solutions
+                            <Link href="/brand-solution">Brand Solutions</Link>
                           </h4>
                         </li>
                         <li
@@ -136,7 +134,7 @@ const Header = () => {
                         >
                           <h4
                             onMouseEnter={() => handleShowList("h2")}
-                            onMouseLeave={() => handleMouseLeaveList()}
+                            // onMouseLeave={() => handleMouseLeaveList()}
                             className={`
                                
                               ${secondList ? "opacity-100" : ""} 
@@ -144,7 +142,7 @@ const Header = () => {
                               ${thirdList ? "opacity-30" : ""} 
                             `}
                           >
-                            Tech Solutions
+                            <Link href="/tech-solution">Tech Solutions</Link>
                           </h4>
                         </li>
                         <li
@@ -153,14 +151,14 @@ const Header = () => {
                         >
                           <h4
                             onMouseEnter={() => handleShowList("h3")}
-                            onMouseLeave={() => handleMouseLeaveList()}
+                            // onMouseLeave={() => handleMouseLeaveList()}
                             className={`
                               ${thirdList ? "opacity-100" : ""}
                               ${firstList ? "opacity-30" : ""}
                               ${secondList ? "opacity-30" : ""}
                               `}
                           >
-                            Media Solutions
+                            <Link href="/media-solution">Media Solutions</Link>
                           </h4>
                         </li>
                       </ul>
@@ -174,24 +172,10 @@ const Header = () => {
                         >
                           <Link
                             href="/"
-                            className="sub-list-elem-1"
-                            onMouseOver={() => handleMenuItemEnter(socialMedia)}
-                          >
-                            Social Media Management
-                          </Link>
-                          <Link
-                            href="/"
-                            className="sub-list-elem-2"
-                            onMouseOver={() => handleMenuItemEnter(copywriter)}
-                          >
-                            Copyrighting
-                          </Link>
-                          <Link
-                            href="/"
                             className="sub-list-elem-3"
                             onMouseOver={() => handleMenuItemEnter(socialMedia)}
                           >
-                            Media Buying & Media Planing
+                            Media Planning & Media Buying
                           </Link>
                           <Link
                             href="/"
@@ -207,7 +191,14 @@ const Header = () => {
                             className="sub-list-elem-5"
                             onMouseOver={() => handleMenuItemEnter(payPerClick)}
                           >
-                            Pay Per Click
+                            Google Ads
+                          </Link>
+                          <Link
+                            href="/"
+                            className="sub-list-elem-1"
+                            onMouseOver={() => handleMenuItemEnter(socialMedia)}
+                          >
+                            Social Media Management
                           </Link>
                           <Link
                             href="/"
@@ -225,18 +216,18 @@ const Header = () => {
                           id="second-list-div"
                         >
                           <Link
-                            href="/"
+                            href="/tech-solution/web-development"
                             className="sub-list-elem-d2-1"
-                            onMouseOver={() => handleMenuItemEnter(webdev)}
+                            onMouseOver={() => handleMenuItemEnter(webAndApp)}
                           >
-                            Web Developement
+                            Web & App Development
                           </Link>
                           <Link
-                            href="/"
+                            href="/tech-solution/shopify-development"
                             className="sub-list-elem-d2-2"
                             onMouseOver={() => handleMenuItemEnter(ecommerce)}
                           >
-                            E-Commerce
+                            E-Commerce Development
                           </Link>
                           <Link
                             href="/"
@@ -252,23 +243,23 @@ const Header = () => {
                               handleMenuItemEnter(whatsappMarketing)
                             }
                           >
-                            Whatsapp Marketing
+                            Website Designing
                           </Link>
                           <Link
                             href="/"
                             className="sub-list-elem-d2-5"
                             onMouseOver={() =>
-                              handleMenuItemEnter(emailMarketing)
+                              handleMenuItemEnter(websiteDesign)
                             }
                           >
-                            Email Marketing
+                            Whatsapp Marketing
                           </Link>
                           <Link
                             href="/"
                             className="sub-list-elem-d2-6"
                             onMouseOver={() => handleMenuItemEnter(chatBot)}
                           >
-                            Chatbot
+                            AI Chatbot
                           </Link>
                         </div>
                         <div
@@ -284,7 +275,7 @@ const Header = () => {
                               handleMenuItemEnter(graphicDesign)
                             }
                           >
-                            Graphic Designing
+                            AI Graphic Designing
                           </Link>
                           <Link
                             href="/"
@@ -293,7 +284,7 @@ const Header = () => {
                               handleMenuItemEnter(videoEditing)
                             }
                           >
-                            Video Editing
+                            AI Video Editing
                           </Link>
                           <Link
                             href="/"
@@ -318,13 +309,6 @@ const Header = () => {
                           >
                             Model Shoot
                           </Link>
-                          <Link
-                            href="/"
-                            className="sub-list-elem-d3-1"
-                            onMouseOver={() => handleMenuItemEnter(animation)}
-                          >
-                            Animation (Adding Soon)
-                          </Link>
                         </div>
                       </div>
                       <div className="image-div">
@@ -344,7 +328,7 @@ const Header = () => {
                     <Link href="/work">Work</Link>
                   </li>
                   <li>
-                    <Link href="/blogs">Blog</Link>
+                    <Link href="https://blog.thetous.com/" target="_blank" rel="noopener noreferrer">Blog</Link>
                   </li>
                   <li>
                     <Link href="/contact" className="contact-button-header">
@@ -370,8 +354,6 @@ const Header = () => {
                     <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2 phone-links">
                       <Link href="/">Home</Link>
                       <Link href="/about">About</Link>
-                      <Link href="/work">Work</Link>
-                      <Link href="/blogs">Blog</Link>
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2">
                       <div
@@ -388,7 +370,9 @@ const Header = () => {
                               aria-expanded="false"
                               aria-controls="panelsStayOpen-collapseOne"
                             >
-                              Brand Solutions
+                              <Link href="/brand-solution">
+                                Brand Solutions
+                              </Link>
                             </button>
                           </h2>
                           <div
@@ -398,21 +382,18 @@ const Header = () => {
                             <div className="accordion-body">
                               <ul>
                                 <li>
-                                  <Link href="/">Social Media Management </Link>
-                                </li>
-                                <li>
-                                  <Link href="/">Copyrighting </Link>
-                                </li>
-                                <li>
                                   <Link href="/">
-                                    Media Buying & Media Planing
+                                    Media Planning & Media Buying
                                   </Link>
                                 </li>
                                 <li>
                                   <Link href="/">Performance Marketing </Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Pay Per Click </Link>
+                                  <Link href="/">Google Ads </Link>
+                                </li>
+                                <li>
+                                  <Link href="/">Social Media Management </Link>
                                 </li>
                                 <li>
                                   <Link href="/">SEO </Link>
@@ -439,7 +420,7 @@ const Header = () => {
                               aria-expanded="false"
                               aria-controls="panelsStayOpen-collapseTwo"
                             >
-                              Tech Solutions
+                              <Link href="/tech-solution">Tech Solutions</Link>
                             </button>
                           </h2>
                           <div
@@ -449,22 +430,22 @@ const Header = () => {
                             <div className="accordion-body">
                               <ul>
                                 <li>
-                                  <Link href="/">Web Developement</Link>
+                                  <Link href="/tech-solution/web-development">Web & App Development</Link>
                                 </li>
                                 <li>
-                                  <Link href="/">E-Commerce</Link>
+                                  <Link href="/tech-solution/shopify-development">E-Commerce Development</Link>
                                 </li>
                                 <li>
                                   <Link href="/">Automation</Link>
                                 </li>
                                 <li>
+                                  <Link href="/">Website Designing</Link>
+                                </li>
+                                <li>
                                   <Link href="/">Whatsapp Marketing</Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Email Marketing</Link>
-                                </li>
-                                <li>
-                                  <Link href="/">Chatbot </Link>
+                                  <Link href="/">AI Chatbot </Link>
                                 </li>
                               </ul>
                             </div>
@@ -488,7 +469,9 @@ const Header = () => {
                               aria-expanded="false"
                               aria-controls="panelsStayOpen-collapseThree"
                             >
-                              Media Solutions
+                              <Link href="/media-solution">
+                                Media Solutions
+                              </Link>
                             </button>
                           </h2>
                           <div
@@ -498,10 +481,10 @@ const Header = () => {
                             <div className="accordion-body">
                               <ul>
                                 <li>
-                                  <Link href="/">Graphic Designing</Link>
+                                  <Link href="/">AI Graphic Designing</Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Video Editing</Link>
+                                  <Link href="/">AI Video Editing</Link>
                                 </li>
                                 <li>
                                   <Link href="/">Print Media</Link>
@@ -512,9 +495,6 @@ const Header = () => {
                                 <li>
                                   <Link href="/">Model Shoot</Link>
                                 </li>
-                                <li>
-                                  <Link href="/">Animation (Adding Soon) </Link>
-                                </li>
                               </ul>
                             </div>
                           </div>
@@ -523,6 +503,8 @@ const Header = () => {
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2 contact-div">
                       <Link href="/contact">Contact Us</Link>
+                      <Link href="/work">Work</Link>
+                      <Link href="https://blog.thetous.com/" target="_blank" rel="noopener noreferrer">Blog</Link>
                     </div>
                   </div>
                 </div>
@@ -536,7 +518,7 @@ const Header = () => {
         </div>
         {/* Cta floating button whatapp */}
 
-        <Link href="/" id="whatsappFloatingButton">
+        <Link href="https://wa.link/vj2khp" id="whatsappFloatingButton">
           <i className="ri-whatsapp-line"></i>
         </Link>
       </header>

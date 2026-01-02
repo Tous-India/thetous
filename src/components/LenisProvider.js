@@ -1,11 +1,13 @@
 // app/components/LenisProvider.js
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 export default function LenisProvider({ children }) {
   const lenisRef = useRef(null);
+  const pathname = usePathname();
 
   useLayoutEffect(() => {
     // Check if the component is mounted on the client side
@@ -25,8 +27,20 @@ export default function LenisProvider({ children }) {
       }
 
       requestAnimationFrame(raf);
+
+      // Cleanup function
+      return () => {
+        lenis.destroy();
+      };
     }
   }, []);
+
+  // Scroll to top on route change
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    }
+  }, [pathname]);
 
   return <>{children}</>;
 }

@@ -55,21 +55,10 @@ export default function Index() {
           <span className="text-black">
             <i className="ri-asterisk"></i>
           </span>
-          {/* <span className="text-black text-2xl font-semibold whitespace-nowrap">
-            No Gaps or Jumps
-          </span>
-          <span className="text-black">
-            <i className="ri-asterisk"></i>
-          </span>
-          <span className="text-black text-2xl font-semibold whitespace-nowrap">
-            Perfectly Seamless
-          </span>
-          <span className="text-black">
-            <i className="ri-asterisk"></i>
-          </span>{" "} */}
         </div>
       </Marquee>
       <Work />
+
       <Exquisites />
       <WhyWeUs />
       <Sliders />

@@ -11,7 +11,7 @@ const WhyWeUs = () => {
     <div className="home-page-why-we-us-section">
       <div className="container">
         <div className="heading-section">
-          <h2>Why Choose Us ?</h2>
+          <h2 className="main-section-heading">Why Choose Us ?</h2>
           <p>
             We follow a clear, structured process to deliver impactful results
             for your brand—every single time.

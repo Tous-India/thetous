@@ -1,22 +1,106 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "./style.css";
 
 const Contact = () => {
-  // Form submission handler
-  const handleSubmit = (e) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    services: [],
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleCheckboxChange = (e) => {
+    const { value, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      services: checked
+        ? [...prev.services, value]
+        : prev.services.filter((service) => service !== value),
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          services: [],
+          message: "",
+        });
+        // Uncheck all checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+          cb.checked = false;
+        });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: data.error || "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="contact-page-main">
-      <div className="container-fluid last-section-of-every-page">
+      <div className="container-fluid">
         <div className="row row-two-contact my-5 justify-content-center">
           <div className="col-sm-12 col-md-5 col-lg-5 contact-cols-4 left">
             <div id="output"></div>
-            <form className="d-flex flex-column p-4 rounded-2">
+            {submitStatus && (
+              <div
+                className={`alert rounded-0 py-2 ${
+                  submitStatus.type === "success"
+                    ? "alert-success"
+                    : "alert-danger"
+                } mb-3`}
+                role="alert"
+              >
+                {submitStatus.message}
+              </div>
+            )}
+            <form className="d-flex flex-column p-4 rounded-2" onSubmit={handleSubmit}>
               <h3 className="text-start p-2">Get In Touch</h3>
 
               <div className="row first-form-row">
@@ -26,6 +110,9 @@ const Contact = () => {
                     name="name"
                     placeholder="Your name goes here"
                     className=""
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
                   />
                   <div className="text-danger" id="name_error"></div>
                 </div>
@@ -35,6 +122,9 @@ const Contact = () => {
                     name="email"
                     placeholder="Drop your email here"
                     className=""
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
                   />
                   <div className="text-danger" id="email_error"></div>
                 </div>
@@ -60,6 +150,7 @@ const Contact = () => {
                           type="checkbox"
                           value={value}
                           id={`checkbox-${index}`}
+                          onChange={handleCheckboxChange}
                         />
                         <div className="checkbox__checkmark"></div>
                         <div className="checkbox__body">{value}</div>
@@ -74,6 +165,9 @@ const Contact = () => {
                 name="phone"
                 placeholder="Share your digits"
                 className="mt-0 type-number"
+                value={formData.phone}
+                onChange={handleInputChange}
+                required
               />
               <div className="text-danger" id="phone_error"></div>
 
@@ -81,23 +175,20 @@ const Contact = () => {
                 name="message"
                 rows="5"
                 cols="30"
-                placeholder="Type away, we’re listening!"
+                placeholder="Type away, we're listening!"
                 className="p-2 mt-4"
+                value={formData.message}
+                onChange={handleInputChange}
+                required
               ></textarea>
               <div className="text-danger" id="message_error"></div>
 
               <div className="buttonDiv">
-                <button
-                  type="submit"
-                  className="btn btn-outline-dark rounded-5 my-4 text-uppercase"
-                >
-                  Submit <i className="ri-arrow-right-up-long-line"></i>
+                <button type="submit" className="" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Submit"}{" "}
+                  <i className="ri-arrow-right-up-long-line"></i>
                 </button>
               </div>
-              <button
-                className="btn btn-success d-none"
-                id="successMessage"
-              ></button>
             </form>
           </div>
 
@@ -106,8 +197,8 @@ const Contact = () => {
               <h3>Connect with us</h3>
               <p>
                 Phone:
+                <Link href="tel:+91-8901440322"> +91-8901440322</Link>{","}
                 <Link href="tel:+91-9996639777"> +91-9996639777</Link>
-                <Link href="tel:+91-8930431532"> +91-8930431532</Link>
                 <br />
                 Email:{" "}
                 <Link href="mailto:grow@thetous.com">grow@thetous.com</Link>
