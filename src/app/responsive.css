@@ -24,18 +24,15 @@
 } */
 
 /* 1280+ */
-@media (min-width: 1280px) {
-}
+/* @media (min-width: 1280px) {
+} */
 
-@media (max-width: 1279px) and (min-width: 769px) {
-}
+/* @media (max-width: 1279px) and (min-width: 769px) {
+} */
 
 @media (max-width: 720px) and (min-width: 540px) {
   /* CSS styles for portrait tablets only (example range) */
-  body {
-    /* background-color: red; */
-    /* overflow-x: hidden; */
-  }
+  
   html {
     overflow: auto;
   }
@@ -848,10 +845,10 @@
           }
         }
 
-        .third {
+        /* .third {
           .inner-div {
           }
-        }
+        } */
       }
     }
   }
@@ -1127,8 +1124,8 @@
   .contact-page-main .container-fluid .row {
     .first-form-row {
       gap: 0.5rem;
-      > div input {
-      }
+      /* > div input {
+      } */
     }
   }
   html,

@@ -889,7 +889,7 @@ const ShopifyDevelopment = () => {
             <h3 className="main-section-heading">Our Shopify Portfolio</h3>
             <div className="mb-12">
               {/* Tab Navigation */}
-              <div className="flex items-center justify-start gap-4 mb-16 flex-wrap transition-all duration-500 mb-5">
+              <div className="flex items-center justify-start gap-4 flex-wrap transition-all duration-500 mb-5">
                 {portfolioTabs.map((tab) => (
                   <button
                     key={tab.id}
