@@ -85,7 +85,7 @@ const Header = () => {
     <div className="parent-fo-header">
       <div className="para-div">
         <div className="p-tag">
-          !!! Building Digital Pathways to Your Success !!!
+          <p>Building Digital Pathways to Your Success</p>
         </div>
       </div>
       <header>
@@ -328,7 +328,13 @@ const Header = () => {
                     <Link href="/work">Work</Link>
                   </li>
                   <li>
-                    <Link href="https://blog.thetous.com/" target="_blank" rel="noopener noreferrer">Blog</Link>
+                    <Link
+                      href="https://blog.thetous.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Blog
+                    </Link>
                   </li>
                   <li>
                     <Link href="/contact" className="contact-button-header">
@@ -430,10 +436,14 @@ const Header = () => {
                             <div className="accordion-body">
                               <ul>
                                 <li>
-                                  <Link href="/tech-solution/web-development">Web & App Development</Link>
+                                  <Link href="/tech-solution/web-development">
+                                    Web & App Development
+                                  </Link>
                                 </li>
                                 <li>
-                                  <Link href="/tech-solution/shopify-development">E-Commerce Development</Link>
+                                  <Link href="/tech-solution/shopify-development">
+                                    E-Commerce Development
+                                  </Link>
                                 </li>
                                 <li>
                                   <Link href="/">Automation</Link>
@@ -504,7 +514,13 @@ const Header = () => {
                     <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2 contact-div">
                       <Link href="/contact">Contact Us</Link>
                       <Link href="/work">Work</Link>
-                      <Link href="https://blog.thetous.com/" target="_blank" rel="noopener noreferrer">Blog</Link>
+                      <Link
+                        href="https://blog.thetous.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Blog
+                      </Link>
                     </div>
                   </div>
                 </div>

@@ -542,29 +542,40 @@
   .web-dev-tabs {
     .mb-12 {
       > .flex {
-        gap: 0.5rem !important;
+        gap: 1.5rem !important;
         justify-content: center;
       }
     }
   }
 
-  .what-we-offer-web-dev .content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .content-div {
-      width: 47%;
+  .what-we-offer-web-dev {
+    .flex-shrink-0 {
+      position: absolute;
+      right: 5%;
+    }
+    .content-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 10px;
+      row-gap: 15px;
+      .content-div {
+        width: 47%;
+      }
     }
   }
-
+  .web-devlopment-main-page .hero-web-dev {
+    margin: 0rem 0;
+  }
   .our-process-web-dev {
     .content-wrapper {
       display: flex;
       flex-wrap: wrap;
-      row-gap: 10px;
+      row-gap: 20px;
+      gap: 10px;
       justify-content: space-between;
       .content-div {
-        width: 43%;
+        width: 45%;
       }
     }
   }
@@ -619,6 +630,7 @@
   }
   .web-devlopment-main-page .faq-web-dev .inner-heading {
     line-height: 20px;
+    padding: 1rem 0;
   }
 
   .web-devlopment-main-page .web-dev-tabs .inner-heading {
@@ -631,13 +643,12 @@
     left: 40%;
   }
 
-.web-dev-tabs{
-  .main-section-heading{
-    text-align: center;
-    &::after{
-      left: 40%;
+  .web-dev-tabs {
+    .main-section-heading {
+      text-align: center;
+      &::after {
+        left: 40%;
+      }
     }
   }
-}
-  
 }

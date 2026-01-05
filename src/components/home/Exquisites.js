@@ -29,103 +29,55 @@ const Exquisites = () => {
         </div>
         <div className="row justify-content-center">
           <div className="col-lg-4 col-sm-12 first">
-            <div className="inner-div">
+            <Link className="inner-div" href={"/brand-solution"}>
               <ul>
                 <li>
                   <Image src={bs} alt="Service1" width={70} height={70} />
                 </li>
                 <li>
-                  <h2 className="inner-heading">
-                    Brand Solutions
-                  </h2>
+                  <h2 className="inner-heading">Brand Solutions</h2>
                 </li>
-                <li>
-                  <Link href={"/brand-solution"}>Social Media Management</Link>
-                </li>
-                <li>
-                  <Link href={"/brand-solution"}>
-                    Original Content & Copywriting
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/brand-solution"}>
-                    Video Editing & Animation
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/brand-solution"}>
-                    Model & Product Photography
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/brand-solution"}>
-                    New Brand Launch & Rebranding
-                  </Link>
-                </li>
+                <li>Social Media Management</li>
+                <li>Original Content & Copywriting</li>
+                <li>Video Editing & Animation</li>
+                <li>Model & Product Photography</li>
+                <li>New Brand Launch & Rebranding</li>
               </ul>
-            </div>
+            </Link>
           </div>
           <div className="col-lg-4 col-sm-12 second">
-            <div className="inner-div">
+            <Link className="inner-div" href={"/tech-solution"}>
               <ul>
                 <li>
                   <Image src={ts} alt="Service1" width={70} height={70} />
                 </li>
                 <li>
-                  <h2 className="inner-heading">
-                    Tech Solutions 
-                  </h2>
+                  <h2 className="inner-heading">Tech Solutions</h2>
                 </li>
-                <li>
-                  <Link href={"/tech-solution"}>Custom Web Development</Link>
-                </li>
-                <li>
-                  <Link href={"/tech-solution"}>Web Personalization</Link>
-                </li>
-                <li>
-                  <Link href={"/tech-solution"}>E-Commerce</Link>
-                </li>
-                <li>
-                  <Link href={"/tech-solution"}>Email Marketing</Link>
-                </li>
-                <li>
-                  <Link href={"/tech-solution"}>UI/UX</Link>
-                </li>
+                <li>Custom Web Development</li>
+                <li>Web Personalization</li>
+                <li>E-Commerce</li>
+                <li>Email Marketing</li>
+                <li>UI/UX</li>
               </ul>
-            </div>
+            </Link>
           </div>
           <div className="col-lg-4 col-sm-12 third">
-            <div className="inner-div">
+            <Link className="inner-div" href={"/media-solution"}>
               <ul>
                 <li>
                   <Image src={ms} alt="Service1" width={70} height={70} />
                 </li>
                 <li>
-                  <h2 className="inner-heading">
-                     Media Solutions 
-                  </h2>
+                  <h2 className="inner-heading">Media Solutions</h2>
                 </li>
-                <li>
-                  <Link href={"/media-solution"}>Media Buying</Link>
-                </li>
-                <li>
-                  <Link href={"/media-solution"}>Media Planning</Link>
-                </li>
-                <li>
-                  <Link href={"/media-solution"}>Performance Marketing</Link>
-                </li>
-                <li>
-                  <Link href={"/media-solution"}>
-                    Search Engine Optimization
-                  </Link>
-                </li>
-                <li>
-                  <Link href={"/media-solution"}>
-                    Conversation Rate Optimization
-                  </Link>
-                </li>
+                <li>Media Buying</li>
+                <li>Media Planning</li>
+                <li>Performance Marketing</li>
+                <li>Search Engine Optimization</li>
+                <li>Conversation Rate Optimization</li>
               </ul>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

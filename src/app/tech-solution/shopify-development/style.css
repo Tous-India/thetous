@@ -45,7 +45,6 @@
     font-family: "Poppins" !important;
     margin: 0;
   }
- 
 
   .hero-web-dev {
     margin: 3rem 0;
@@ -163,6 +162,9 @@
   }
   .what-we-offer-web-dev {
     margin-bottom: 4.5rem;
+    .main-section-heading{
+      margin-bottom: 2rem;
+    }
     .inner-heading {
       font-size: 1rem;
       font-weight: 500;
@@ -221,6 +223,7 @@
       font-weight: 600;
       margin: 10px 0;
     }
+    
     .process-text-wrapper {
       position: relative;
     }
@@ -383,6 +386,9 @@
   }
 
   .web-dev-tabs {
+    .main-section-heading {
+      margin-bottom: 2rem;
+    }
     .inner-heading {
       font-size: 16px;
       line-height: 25px !important;
@@ -585,6 +591,8 @@
   .shopify-devlopment-main-page .main-section-heading {
     font-size: 2rem;
     font-weight: 600;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
 
   .shopify-devlopment-main-page {
@@ -606,6 +614,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    column-gap: 10px;
+    row-gap: 20px;
     .content-div {
       width: 47%;
     }
@@ -615,7 +625,8 @@
     .content-wrapper {
       display: flex;
       flex-wrap: wrap;
-      row-gap: 10px;
+      row-gap: 20px;
+      column-gap: 10px;
       justify-content: space-between;
       .content-div {
         width: 43%;
@@ -691,6 +702,7 @@
   .web-dev-tabs {
     .main-section-heading {
       text-align: center;
+
       &::after {
         left: 40%;
       }
@@ -735,5 +747,17 @@
         font-size: 1.25rem;
       }
     }
+  }
+
+  .shopify-devlopment-main-page .hero-web-dev {
+    margin: -1rem 0;
+  }
+
+  .what-we-offer-web-dev {
+    padding-top: 3rem;
+  }
+
+  .shopify-devlopment-main-page .what-we-offer-web-dev .inner-heading {
+    line-height: 23px;
   }
 }

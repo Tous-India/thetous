@@ -470,9 +470,7 @@ const ShopifyDevelopment = () => {
                             d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
                           />
                         </svg>
-                        <h3 className="inner-heading">
-                          Platform Migration to Shopify
-                        </h3>
+                        <h3 className="inner-heading">Migration to Shopify</h3>
                       </div>
                       <svg
                         className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
@@ -515,7 +513,7 @@ const ShopifyDevelopment = () => {
           </section>
 
           {/* Process Section */}
-          <h3 className="main-section-heading">
+          <h3 className="main-section-heading mb-5">
             Our Shopify Development Process
           </h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 our-process-web-dev">
@@ -929,9 +927,7 @@ const ShopifyDevelopment = () => {
                     </p>
 
                     <div className="mb-6">
-                      <h4 className="inner-heading">
-                        What we delivered:
-                      </h4>
+                      <h4 className="inner-heading">What we delivered:</h4>
                       <ul className="space-y-2">
                         {portfolioContent[activeTab].deliverables.map(
                           (item, index) => (
@@ -982,21 +978,21 @@ const ShopifyDevelopment = () => {
                           loop
                           muted
                           playsInline
-                          className="w-full h-[80vh]"
+                          preload="auto"
+                          className="lg:w-75 sm:w-100 object-cover"
                         >
                           <source
                             src={
                               activeTab === "customized"
-                                ? "/silvago.MP4"
+                                ? "/silvago.mp4"
                                 : activeTab === "tailored"
-                                ? "/luxeliv.MP4"
+                                ? "/luxeliv.mp4"
                                 : activeTab === "coaches"
-                                ? "/relaxer.MP4"
-                                : "/pearlsnpastels.MP4"
+                                ? "/relaxer.mp4"
+                                : "/pearlsnpastels.mp4"
                             }
                             type="video/mp4"
                           />
-                          Your browser does not support the video tag.
                         </video>
                       </div>
                     </div>
