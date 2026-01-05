@@ -76,21 +76,44 @@
 
   .hero-web-dev {
     margin: 3rem 0;
-    a {
-      margin-top: 1.25rem;
-    }
-    .right-banner {
-      ul {
-        padding: 0;
-        padding-left: 10px;
-        li {
-          margin: 2.5px 0;
-        }
-        svg {
-          margin-right: 10px;
+    .left-banner {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      p {
+        margin-bottom: 0;
+        ul {
+          display: flex;
         }
       }
     }
+    .video-container {
+      position: relative;
+      .video-sound-toggle {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+        z-index: 3;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        transition: all 0.3s;
+        display: flex;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+      }
+    }
+    a {
+      margin-top: 1.25rem;
+    }
+
     .main-section-heading {
       font-size: 2.5rem;
       font-weight: 600;
@@ -139,8 +162,8 @@
   .what-we-offer-web-dev {
     margin-bottom: 3rem;
     .inner-heading {
-      font-size: 1.25rem;
-      font-weight: 600;
+      font-size: 1rem;
+      font-weight: 500;
     }
     .content-wrapper {
       .content-div {
@@ -305,6 +328,36 @@
     .inner-heading {
       color: rgb(53, 53, 53);
     }
+    .right-div {
+      justify-content: center;
+      align-items: end;
+      padding: 0;
+      display: flex;
+      .img-div {
+        width: 60%;
+      }
+    }
+    .row {
+      gap: 0;
+    }
+    .left-div {
+      ul {
+        padding: 0;
+        li {
+          margin: 7px 0;
+          color: #434343;
+          padding-left: 0;
+          font-size: 14px;
+          font-weight: 400;
+          font-family: Poppins !important;
+          line-height: 20px !important;
+          svg {
+            padding: 0;
+            margin: 0 10px 0 0 !important;
+          }
+        }
+      }
+    }
   }
 
   .stats-web-dev {
@@ -353,6 +406,43 @@
   }
 
   .web-dev-tabs {
+    .animate-fadeSlideIn {
+      h2 {
+        text-transform: capitalize;
+        width: 100%;
+        margin: 0;
+        font-size: 1.25rem !important;
+        font-weight: 500;
+        line-height: 30px;
+        font-family: "Lato" !important;
+      }
+      p,
+      li {
+        color: #434343;
+        margin: 0;
+        padding-left: 0;
+        font-size: 14px;
+        font-weight: 400;
+        font-family: Poppins !important;
+        line-height: 20px !important;
+        margin: 7px 0;
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+      h4 {
+        font-family: "Lato" !important;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      h3 {
+        font-size: 14px !important;
+        font-weight: 400;
+      }
+      ul {
+        padding: 0;
+      }
+    }
     a {
       margin-top: 1rem;
     }
@@ -515,7 +605,7 @@
     }
   }
   .web-devlopment-main-page .hero-web-dev .main-section-heading {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 600;
   }
   .web-devlopment-main-page .hero-web-dev p {
@@ -549,6 +639,7 @@
   }
 
   .what-we-offer-web-dev {
+    margin-top: 2rem;
     .flex-shrink-0 {
       position: absolute;
       right: 5%;
@@ -650,5 +741,9 @@
         left: 40%;
       }
     }
+  }
+
+  .web-devlopment-main-page .what-we-offer-web-dev .inner-heading {
+    line-height: 23px;
   }
 }

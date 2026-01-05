@@ -4,7 +4,7 @@ import Link from "next/link";
 import Logo from "../../public/black-the-tous.png";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-
+import whatsapp from "../../public/whatsapp.png";
 // brand
 import copywriter from "../../public/services/brand/meta-ads.webp"; //default
 import socialMedia from "../../public/services/brand/social-media-management.webp";
@@ -534,8 +534,17 @@ const Header = () => {
         </div>
         {/* Cta floating button whatapp */}
 
-        <Link href="https://wa.link/vj2khp" id="whatsappFloatingButton">
-          <i className="ri-whatsapp-line"></i>
+        <a
+          href="https://wa.link/vj2khp"
+          id="whatsappFloatingButton"
+          rel={null}
+          // rel="noopener noreferrer"
+        >
+          <Image src={whatsapp} alt="whatsapp" width={100} height={100} />
+        </a>
+
+        <Link href="/quote" id="quoteFloatingButton">
+          Get Quote
         </Link>
       </header>
     </div>

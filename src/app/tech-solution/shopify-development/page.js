@@ -239,7 +239,7 @@ const ShopifyDevelopment = () => {
                   </strong>
                 </p>
 
-                <Link href="/contact" className="inline-block c_button_black">
+                <Link href="/quote" className="inline-block c_button_black">
                   Start Your Shopify Store
                 </Link>
               </div>
@@ -254,7 +254,11 @@ const ShopifyDevelopment = () => {
             <div className="grid  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 content-wrapper">
               {/* Service 1: Custom Shopify Store Development */}
               <div className="content-div">
-                <div className="border-div border-2 border-gray-200 rounded-0 overflow-hidden">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 0 ? "!border-b-0 active-gradient" : ""
+                  }`}
+                >
                   <button
                     onClick={() =>
                       setActiveService(activeService === 0 ? null : 0)
@@ -318,7 +322,11 @@ const ShopifyDevelopment = () => {
 
               {/* Service 2: Shopify Theme Customization */}
               <div className="content-div ">
-                <div className="border-div border-2 border-gray-200 rounded-0 overflow-hidden">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 1 ? "!border-b-0 active-gradient" : ""
+                  }`}
+                >
                   <button
                     onClick={() =>
                       setActiveService(activeService === 1 ? null : 1)
@@ -383,7 +391,11 @@ const ShopifyDevelopment = () => {
 
               {/* Service 3: Shopify Plus Development */}
               <div className="content-div">
-                <div className="border-div border-2 border-gray-200 rounded-0 overflow-hidden">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 2 ? "!border-b-0 active-gradient" : ""
+                  }`}
+                >
                   <button
                     onClick={() =>
                       setActiveService(activeService === 2 ? null : 2)
@@ -448,7 +460,11 @@ const ShopifyDevelopment = () => {
 
               {/* Service 4: Shopify Migration Services */}
               <div className="content-div">
-                <div className="border-div border-2 border-gray-200 rounded-0 overflow-hidden">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 3 ? "!border-b-0 active-gradient" : ""
+                  }`}
+                >
                   <button
                     onClick={() =>
                       setActiveService(activeService === 3 ? null : 3)
@@ -884,7 +900,7 @@ const ShopifyDevelopment = () => {
           </section>
 
           <section className="py-24 max-w-7xl mx-auto mt-5 mb-5 web-dev-tabs">
-            <h3 className="main-section-heading">Our Shopify Portfolio</h3>
+            <h3 className="main-section-heading mb-4">Our Shopify Portfolio</h3>
             <div className="mb-12">
               {/* Tab Navigation */}
               <div className="flex items-center justify-start gap-4 flex-wrap transition-all duration-500 mb-5">
@@ -908,7 +924,7 @@ const ShopifyDevelopment = () => {
                 {/* Left Content */}
                 <div className="order-2 md:order-1 overflow-hidden">
                   <div key={activeTab} className="animate-fadeSlideIn">
-                    <h2 className="inner-heading">
+                    <h2 className="inner-heading !text-xl">
                       {portfolioContent[activeTab].title}
                     </h2>
 
@@ -927,7 +943,7 @@ const ShopifyDevelopment = () => {
                     </p>
 
                     <div className="mb-6">
-                      <h4 className="inner-heading">What we delivered:</h4>
+                      <h4 className="inner-heading leading-[auto]">What we delivered:</h4>
                       <ul className="space-y-2">
                         {portfolioContent[activeTab].deliverables.map(
                           (item, index) => (
@@ -950,7 +966,7 @@ const ShopifyDevelopment = () => {
                       </ul>
                     </div>
 
-                    <div className="bg-gray-50 p-4 rounded-lg mb-6">
+                    <div className="bg-gray-50 p-4 rounded-lg mb-6 pt-0">
                       <h4 className="inner-heading mb-2">Impact:</h4>
                       <p className="text-gray-700">
                         {portfolioContent[activeTab].impact}
@@ -959,7 +975,7 @@ const ShopifyDevelopment = () => {
 
                     <Link
                       href="/contact"
-                      className="inline-block c_button_black"
+                      className="inline-block c_button_black mt-4"
                     >
                       Build Your Store
                     </Link>
@@ -1009,7 +1025,7 @@ const ShopifyDevelopment = () => {
                 <div className="row">
                   {/* Left Column - Pain Points */}
                   <div className="col-md-6 col-lg-6 col-sm-12 cta-left">
-                    <h2 className="main-section-heading">
+                    <h2 className="main-section-heading mb-4">
                       Is Your E-Commerce Store Struggling?
                     </h2>
                     <ul className="space-y-3 mb-8">
@@ -1161,7 +1177,7 @@ const ShopifyDevelopment = () => {
           </section>
 
           {/* FAQs */}
-          <h3 className="main-section-heading ">Frequently Asked Questions</h3>
+          <h3 className="main-section-heading mb-4">Frequently Asked Questions</h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">

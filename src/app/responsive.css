@@ -1098,6 +1098,8 @@
   .work-main-page .bs-container .row div h1 {
     font-size: 8vw !important;
     font-weight: 700;
+    margin-top: 0;
+    padding-top: 0;
   }
   .work-main-page .work-accordian-section {
     margin-bottom: -5rem !important;

@@ -294,7 +294,7 @@
   padding: 2rem;
   background: #f9f9f9;
   border-radius: 10px;
-  border-left: 4px solid #000;
+  /* border-left: 4px solid #000; */
 }
 
 .section-subtitle {
@@ -499,7 +499,7 @@
   padding: 2rem;
   background: #e3f2fd;
   border-radius: 10px;
-  border-left: 4px solid #2196f3;
+  /* border-left: 4px solid #2196f3; */
   display: flex;
   gap: 1rem;
   align-items: flex-start;

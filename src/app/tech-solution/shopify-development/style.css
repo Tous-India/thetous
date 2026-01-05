@@ -67,8 +67,8 @@
 
       .video-sound-toggle {
         position: absolute;
-        bottom: 20px;
-        right: 20px;
+        bottom: 2rem;
+        right: 2rem;
         background: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(10px);
         border: 2px solid rgba(255, 255, 255, 0.2);
@@ -80,7 +80,7 @@
         justify-content: center;
         cursor: pointer;
         transition: all 0.3s ease;
-        z-index: 10;
+        z-index: 3;
         color: white;
 
         &:hover {
@@ -162,7 +162,7 @@
   }
   .what-we-offer-web-dev {
     margin-bottom: 4.5rem;
-    .main-section-heading{
+    .main-section-heading {
       margin-bottom: 2rem;
     }
     .inner-heading {
@@ -188,14 +188,20 @@
             linear-gradient(135deg, #00dbde, #fc00ff) border-box;
           border: 2px solid transparent;
         }
+        &.active-gradient {
+          border-color: transparent;
+          box-shadow: 0 0 0 2px transparent;
+          background: linear-gradient(white, white) padding-box,
+            linear-gradient(135deg, #00dbde, #fc00ff) border-box;
+          border: 2px solid transparent;
+        }
       }
       .para-div {
-        /* border-color: transparent;
-        box-shadow: 0 0 0 2px transparent;
-        background: linear-gradient(white, white) padding-box,
+        background: linear-gradient(#fff, #fff) padding-box padding-box,
           linear-gradient(135deg, #00dbde, #fc00ff) border-box;
-        border: 2px solid transparent; */
-        border: 2px solid rgb(219, 219, 219);
+        border: 2px solid rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0);
+
         border-top: none;
         padding: 1rem;
       }
@@ -223,7 +229,7 @@
       font-weight: 600;
       margin: 10px 0;
     }
-    
+
     .process-text-wrapper {
       position: relative;
     }
@@ -374,6 +380,9 @@
     }
     .border-b {
       transition: all 0.3s ease;
+      button {
+        padding: 1rem 0 !important;
+      }
       &:hover {
         border-image: linear-gradient(to right, #00dbde, #fc00ff) 1;
         button {
@@ -386,9 +395,7 @@
   }
 
   .web-dev-tabs {
-    .main-section-heading {
-      margin-bottom: 2rem;
-    }
+  
     .inner-heading {
       font-size: 16px;
       line-height: 25px !important;
@@ -404,7 +411,7 @@
       }
     }
     a {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
     .phone-button {
       button {
@@ -571,10 +578,10 @@
       flex-direction: column-reverse;
     }
     .video-container {
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
     .main-section-heading {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
       font-weight: 600;
     }
   }
@@ -604,8 +611,8 @@
   .web-dev-tabs {
     .mb-12 {
       > .flex {
-        gap: 0.5rem !important;
-        justify-content: center;
+        row-gap: 2rem !important;
+        justify-content: space-evenly;
       }
     }
   }

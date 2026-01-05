@@ -9,8 +9,8 @@ const page = () => {
   return (
     <div className="about-page-main">
       <div className="container aboutRow">
-        <div className="row align-items-center">
-          <div className="col-md-12 col-lg-6 col-sm-12 d-flex justify-content-centent align-items-center flex-column brand-strategy-div content-div">
+        <div className="row align-items-start">
+          <div className="col-md-12 col-lg-6 col-sm-12 d-flex justify-content-centent align-items-start flex-column brand-strategy-div content-div">
             <h1 className="w-100">About Us</h1>
             <p className="w-100">
               The Tous is a performance-driven creative marketing agency, built
@@ -43,7 +43,7 @@ const page = () => {
               </span>
             </p>
           </div>
-          <div className="col-md-12 col-lg-6 col-sm-12 d-flex justify-content-centent align-items-center flex-column brand-strategy-div about-Page-right">
+          <div className="col-md-12 col-lg-6 col-sm-12 d-flex justify-content-centent align-items-start flex-column brand-strategy-div about-Page-right">
             <iframe src="https://lottie.host/embed/2ac5f84d-2e64-4c29-bbb8-c6d7843c3558/LLOzV1kglb.json"></iframe>
             <p></p>
           </div>
@@ -177,6 +177,7 @@ const AboutTest = () => {
                     width={100}
                     height={100}
                   />
+                  <p>{tab.image}</p>
                 </div>
               ))}
             </div>

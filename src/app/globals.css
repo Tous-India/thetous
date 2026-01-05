@@ -564,7 +564,7 @@ h6 {
   }
   h4 {
     color: #333;
-    font-size:14px;
+    font-size: 14px;
     font-weight: 400 !important;
     line-height: 1.5;
     margin-top: 1rem;
@@ -653,7 +653,6 @@ h6 {
   .heading-div {
     padding: 10px 0px;
     margin-bottom: 0rem;
- 
 
     .btn-span-1 {
       border-radius: 1px;
@@ -707,7 +706,7 @@ h6 {
           line-height: 30px;
           li {
             opacity: 0.6;
-            a{
+            a {
               font-size: 14px;
               font-family: "Poppins";
             }
@@ -802,7 +801,7 @@ h6 {
   .heading-div {
     padding: 10px 0px;
     margin-top: 0rem;
-    
+
     .btn-span-1 {
       border-radius: 1px;
       background-color: black;
@@ -1526,13 +1525,31 @@ footer {
   bottom: 2rem;
   right: 2rem;
   z-index: 1000;
-  i {
-    color: green;
-    font-size: 2.25rem;
+  img {
+    filter: drop-shadow(0 0 0.25rem rgb(175, 175, 175));
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+#quoteFloatingButton {
+  width: fit-content;
+  position: fixed;
+  top: 45%;
+  right: -2.25rem;
+  z-index: 1000;
+  border: 2px solid blue;
+  padding: 5px 10px;
+  font-family: "Lato";
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px 0px gray;
+  transform: rotate(90deg);
+  &:hover{
     background-color: white;
-    border-radius: 10rem;
-    box-shadow: 0px 0px 10px 0px gray;
-    padding: 10px;
+    color: black;
   }
 }
 
@@ -1541,7 +1558,7 @@ footer {
   .heading-section {
     margin-bottom: 30px;
     padding: 0 0.75rem;
-  
+
     p {
       color: #393939;
       font-size: 14px;
@@ -1612,7 +1629,7 @@ p {
   padding-left: 0;
   font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 1  rem;
+  margin-bottom: 1 rem;
   position: relative;
   padding-bottom: 1rem;
   font-family: "Lato", sans-serif !important;

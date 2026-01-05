@@ -11,6 +11,12 @@
   .bs-container {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: #535353;
+    }
+     margin-bottom: 1.5rem !important;
   }
   h1 {
     text-align: start;
@@ -85,7 +91,7 @@
 @media (max-width: 720px) {
   .work-main-page {
     padding: 10px !important;
-
+    margin-top: 0px !important;
     .container-2 {
       .row {
         justify-content: space-between;

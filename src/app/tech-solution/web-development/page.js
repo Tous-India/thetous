@@ -1,14 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import "./style.css";
+import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
+
 const WebDevelopment = () => {
+  const videoRef = React.useRef(null);
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);
   const [activeTab, setActiveTab] = useState("customized");
   const [expandedProcesses, setExpandedProcesses] = useState({});
   const [expandedWhyChoose, setExpandedWhyChoose] = useState({});
-
+  const [isMuted, setIsMuted] = useState(true);
   const faqs = [
     {
       question: "What's the typical timeline for a project?",
@@ -43,77 +47,96 @@ const WebDevelopment = () => {
   ];
 
   const portfolioTabs = [
-    { id: "customized", label: "Customized Workouts" },
-    { id: "tailored", label: "Tailored Exercises" },
-    { id: "coaches", label: "Top Coaches" },
-    { id: "custom", label: "Custom Workouts" },
+    { id: "customized", label: "Silvago" },
+    { id: "tailored", label: "KB Group" },
+    { id: "coaches", label: "Vaqya" },
+    { id: "custom", label: "Shoolin" },
   ];
 
   const portfolioContent = {
     customized: {
-      title: "Customized Workouts",
-      subtitle: "for You",
+      title: "Silvago – Mobile App Development",
+      subtitle: "Silver Jewellery & Lifestyle",
       description:
-        "Individual programs are tailored specifically to your body, lifestyle, and fitness goals, ensuring every workout is optimized for you.",
-      projects: [
-        {
-          title: "E-Commerce Platform",
-          description: "Custom storefront with advanced inventory management",
-        },
-        {
-          title: "Corporate Website",
-          description: "Modern presence with seamless CMS integration",
-        },
+        "We designed and developed a high-performance mobile shopping app for Silvago, focused on delivering a smooth, premium jewellery-buying experience.",
+      features: [
+        "Custom product browsing with clean UI",
+        "Secure checkout flow with offer logic",
+        "Buy 1 Get 1 & promotional rules integration",
+        "Wishlist and order tracking",
+        "Optimized performance for faster load times",
       ],
+      impact: [
+        "Improved mobile conversion rate",
+        "Faster browsing and checkout experience",
+        "Better engagement from repeat customers",
+      ],
+      platform: "Android & iOS (Custom Mobile App)",
     },
     tailored: {
-      title: "Tailored Exercises",
-      subtitle: "for Every Goal",
+      title: "KB – Web Application Development",
+      subtitle: "Business Operations / Internal Management",
       description:
-        "Personalized workout plans crafted to suit your body, routine, and fitness ambitions. Every session is designed to maximize your results.",
-      projects: [
-        {
-          title: "SaaS Application",
-          description: "Scalable platform serving thousands of users",
-        },
-        {
-          title: "Portfolio Site",
-          description: "Minimal design showcasing creative work",
-        },
+        "We developed a scalable web application for KB, tailored to manage internal workflows and operational data efficiently.",
+      features: [
+        "Role-based access system",
+        "Centralized data management",
+        "Workflow automation for daily operations",
+        "Clean, responsive interface for desktop use",
+        "Secure authentication and data handling",
       ],
+      impact: [
+        "Reduced manual work and errors",
+        "Faster decision-making through organized data",
+        "Improved internal productivity",
+      ],
+      platform: "Custom Web Application",
     },
     coaches: {
-      title: "Top Coaches",
-      subtitle: "Proven Results",
+      title: "Vaqya LLC – Analytics Dashboard",
+      subtitle: "Healthcare Analytics (USA)",
       description:
-        "Our app features a diverse team of professional trainers with years of experience. Whether you're a beginner or advanced.",
-      projects: [
-        {
-          title: "Mobile App",
-          description: "Native iOS and Android experience",
-        },
-        {
-          title: "Dashboard Platform",
-          description: "Real-time analytics and reporting",
-        },
+        "We designed and developed an analytics dashboard for Vaqya LLC, focused on delivering meaningful insights for doctors and healthcare teams in the USA.",
+      features: [
+        "Patient analytics and performance metrics",
+        "Referral and treatment tracking",
+        "Visual reports with charts and trends",
+        "Doctor-friendly UI with clear data hierarchy",
+        "Secure and scalable dashboard architecture",
       ],
+      impact: [
+        "Clear visibility into patient data",
+        "Faster insights for decision-making",
+        "Improved reporting accuracy and usability",
+      ],
+      platform: "Advanced Analytics Web Dashboard",
     },
     custom: {
-      title: "Custom Workouts",
-      subtitle: "Just For You",
+      title: "Shoolin – CRM System Development",
+      subtitle: "Commercial Kitchen Equipment",
       description:
-        "Designed around your unique needs, our smart system generates the ideal workout plan. It's your personal blueprint for achieving your best results.",
-      projects: [
-        {
-          title: "Booking System",
-          description: "Automated scheduling and management",
-        },
-        {
-          title: "Payment Gateway",
-          description: "Secure transactions and subscriptions",
-        },
+        "For Shoolin, we built a fully customized CRM to manage leads, customers, and sales operations for a B2B environment.",
+      features: [
+        "Lead and customer management dashboard",
+        "Sales pipeline tracking",
+        "Follow-ups, reminders, and status updates",
+        "Analytics for orders and customer activity",
+        "Clean UI designed for daily operational use",
       ],
+      impact: [
+        "Better lead tracking and follow-ups",
+        "Improved sales team efficiency",
+        "Centralized customer data for faster actions",
+      ],
+      platform: "Custom CRM Web Application",
     },
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
   };
 
   return (
@@ -122,158 +145,76 @@ const WebDevelopment = () => {
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           {/* Hero Section */}
           <section className="py-24 hero-web-dev">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="row">
+              {/* Right Column - Client Logos */}
+              <div className="col-md-6 col-lg-9 col-sm-12 video-div">
+                <div className="video-container">
+                  <video
+                    ref={videoRef}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-100 h-auto rounded-lg"
+                  >
+                    <source
+                      src="/The-Tous-Web-&-App-development.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  {/* Sound Toggle Button */}
+                  <button
+                    onClick={toggleMute}
+                    className="video-sound-toggle"
+                    aria-label={isMuted ? "Unmute video" : "Mute video"}
+                  >
+                    {isMuted ? (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="w-5 h-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25m-10.5-6l4.72-4.72a.75.75 0 011.28.531V19.94a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.506-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.395C2.806 8.757 3.63 8.25 4.51 8.25H6.75z"
+                        />
+                      </svg>
+                    ) : (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="w-5 h-5"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"
+                        />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              </div>
               {/* Left Column - Content */}
-              <div className="col-md-6 col-lg-6 col-sm-12 w-100 left-banner">
+              <div className="col-md-6 col-lg-3 col-sm-12 left-banner ">
                 <h1 className="main-section-heading">
-                  Web & App Development Services for E-Commerce Businesses
+                  Build Your Custom Web/Mobile App
                 </h1>
-                <p className="mb-6">
-                  <strong>
-                    Our development team builds custom websites and applications
-                    that don&apos;t just look professional—they convert visitors
-                    into customers and scale with your business. Since 2018,
-                    we&apos;ve delivered 57+ high-performance websites for
-                    e-commerce brands across India and internationally.
-                  </strong>
-                </p>
+                <p className="mb-6">• CRM • Web Apps</p>
+                <p>• Mobile Apps • Enterprise Portals</p>
 
                 <Link href="/contact" className="inline-block c_button_black">
                   Start a Project
                 </Link>
-              </div>
-
-              {/* Right Column - Client Logos */}
-              <div className="col-md-6 col-lg-6 col-sm-12 w-100 right-banner">
-                <h2 className="text-2xl font-semibold mb-4 mt-8">
-                  Does This Sound Like Your Business?
-                </h2>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-start">
-                    <svg
-                      className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span>
-                      Your website looks fine but orders aren&apos;t coming in
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span>
-                      Customers abandon carts before completing purchase
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span>
-                      Your site is slow, hurting both SEO and conversions
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span>Managing inventory and orders feels complicated</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span>Mobile users struggle to navigate and buy</span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span>
-                      Your website can&apos;t handle growing traffic or catalog
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span>
-                      Payment gateway integration is unreliable or insecure
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span>
-                      You lack automation for customer follow-ups and recovery
-                    </span>
-                  </li>
-                </ul>
               </div>
             </div>
           </section>
@@ -283,7 +224,6 @@ const WebDevelopment = () => {
               Our Web Development Services
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 content-wrapper">
-              
               {/* Service 1: Web Application Development */}
               <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
                 <button
@@ -304,7 +244,7 @@ const WebDevelopment = () => {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={1.5}
-                          d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                         />
                       </svg>
                       <h3 className="inner-heading">
@@ -349,7 +289,7 @@ const WebDevelopment = () => {
                 </div>
               </div>
 
-              {/* Service 2: CMS Integration & Management */}
+              {/* Service 2: Mobile App Development */}
               <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
                 <button
                   onClick={() =>
@@ -369,7 +309,7 @@ const WebDevelopment = () => {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={1.5}
-                          d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                          d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
                         />
                       </svg>
                       <h3 className="inner-heading">Mobile App Development</h3>
@@ -930,26 +870,63 @@ const WebDevelopment = () => {
                 {/* Left Content */}
                 <div className="order-2 md:order-1 overflow-hidden">
                   <div key={activeTab} className="animate-fadeSlideIn">
-                    <p className="text-sm uppercase tracking-wider text-gray-500 mb-2 span">
-                      {activeTab === "customized" && "Your Goals"}
-                      {activeTab === "tailored" && "Stronger Together"}
-                      {activeTab === "coaches" && "Expert Guidance"}
-                      {activeTab === "custom" && "Personalized Plans"}
-                    </p>
-                    <h2 className="inner-heading">
+                    <h2 className="inner-heading !text-xl">
                       {portfolioContent[activeTab].title}
                     </h2>
-                    <h3 className="inner-heading">
-                      {portfolioContent[activeTab].subtitle}
-                    </h3>
-                    <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                    <p className="text-sm text-gray-500 mb-2">
+                      Industry: {portfolioContent[activeTab].subtitle}
+                    </p>
+                    <p className="text-sm text-gray-500 mb-4">
+                      Platform: {portfolioContent[activeTab].platform}
+                    </p>
+                    <p className="text-gray-600 leading-relaxed mb-3">
                       {portfolioContent[activeTab].description}
                     </p>
+
+                    <div className="mb-6">
+                      <h4 className="inner-heading leading-[auto]">
+                        What We Delivered:
+                      </h4>
+                      <ul className="space-y-2">
+                        {portfolioContent[activeTab].features.map(
+                          (feature, index) => (
+                            <li key={index} className="flex items-start">
+                              <svg
+                                className="w-5 h-5 mt-1 mr-3 flex-shrink-0 text-green-600"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                  clipRule="evenodd"
+                                />
+                              </svg>
+                              <span className="text-gray-700">{feature}</span>
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </div>
+
+                    <div className="bg-gray-50 p-4 rounded-lg mb-6 pt-0">
+                      <h4 className="inner-heading mb-2">Impact:</h4>
+                      <div className="space-y-1">
+                        {portfolioContent[activeTab].impact.map(
+                          (item, index) => (
+                            <p key={index} className="text-gray-700">
+                              • {item}
+                            </p>
+                          )
+                        )}
+                      </div>
+                    </div>
+
                     <Link
                       href="/contact"
-                      className="inline-block c_button_black"
+                      className="inline-block c_button_black mt-4"
                     >
-                      Download App
+                      Start Your Project
                     </Link>
                   </div>
                 </div>
@@ -960,81 +937,33 @@ const WebDevelopment = () => {
                     {/* Phone Mockup Container */}
                     <div className="relative mx-auto max-w-sm">
                       {/* Phone Frame */}
-                      <div className="bg-black rounded-[3rem] p-4 shadow-2xl">
-                        <div className="bg-white rounded-[2.5rem] overflow-hidden">
-                          {/* Phone Content */}
-                          <div className="p-6 min-h-[600px] flex flex-col">
-                            {/* Tab Navigation Inside Phone */}
-                            <div className="flex gap-2 mb-6 bg-gray-100 rounded-full p-1 phone-button">
-                              <button className="flex-1 py-2 text-xs font-medium bg-white rounded-full shadow-sm">
-                                Plan Setup
-                              </button>
-                              <button className="flex-1 py-2 text-xs font-medium text-gray-600">
-                                Challenges
-                              </button>
-                              <button className="flex-1 py-2 text-xs font-medium text-gray-600">
-                                Trainers
-                              </button>
-                              <button className="flex-1 py-2 text-xs font-medium text-gray-600">
-                                Fitness Plan
-                              </button>
-                            </div>
-
-                            {/* Dynamic Content */}
-                            <div className="flex-1 flex flex-col justify-between overflow-hidden phone-content">
-                              <div
-                                key={`projects-${activeTab}`}
-                                className="animate-fadeSlideIn"
-                              >
-                                {portfolioContent[activeTab].projects.map(
-                                  (project, index) => (
-                                    <div
-                                      key={index}
-                                      className="mb-4 p-4 bg-gray-50 rounded-0 border border-gray-200 project-card"
-                                    >
-                                      <h4 className="font-semibold text-sm mb-2 inner-heading">
-                                        {project.title}
-                                      </h4>
-                                      <p className="text-xs text-gray-600">
-                                        {project.description}
-                                      </p>
-                                    </div>
-                                  )
-                                )}
-                              </div>
-
-                              {/* Bottom Button */}
-                              <button className="w-full bg-black text-white py-4 rounded-2xl font-medium text-sm mt-4">
-                                Continue
-                              </button>
-                            </div>
+                      <div className=" ">
+                        <div className="relative mx-auto">
+                          <div className="rounded-lg overflow-hidden">
+                            <video
+                              key={activeTab}
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              preload="auto"
+                              className="shadow"
+                            >
+                              <source
+                                src={
+                                  activeTab === "customized"
+                                    ? "/silvago.mp4"
+                                    : activeTab === "tailored"
+                                    ? "/KB Crm.mp4"
+                                    : activeTab === "coaches"
+                                    ? "/Vaqya.mp4"
+                                    : "/vis.mp4"
+                                }
+                                type="video/mp4"
+                              />
+                            </video>
                           </div>
                         </div>
-                      </div>
-
-                      {/* Floating Element */}
-                      <div
-                        key={`floating-${activeTab}`}
-                        className="absolute -right-4 top-[65%] transform -translate-y-1/2 bg-white rounded-sm p-4  shadow-lg animate-fadeSlideIn"
-                      >
-                        <div className="text-4xl mb-2">
-                          {activeTab === "customized" && "😊"}
-                          {activeTab === "tailored" && "🥑"}
-                          {activeTab === "coaches" && "💪"}
-                          {activeTab === "custom" && "✅"}
-                        </div>
-                        <p className="text-xs font-medium text-gray-800 whitespace-nowrap">
-                          {activeTab === "customized" && "Transform Dreams"}
-                          {activeTab === "tailored" && "Fuel Progress With"}
-                          {activeTab === "coaches" && "Proven Results"}
-                          {activeTab === "custom" && "Success Starts"}
-                        </p>
-                        <p className="text-xs text-gray-600 whitespace-nowrap">
-                          {activeTab === "customized" && "Into Reality"}
-                          {activeTab === "tailored" && "Smart Nutrition"}
-                          {activeTab === "coaches" && "Expert Guidance"}
-                          {activeTab === "custom" && "With A Plan"}
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -1044,95 +973,152 @@ const WebDevelopment = () => {
           </section>
           {/* Feature Inclusions */}
           <section className="py-24 bg-white standard-feature pt-5 mb-5">
-            <div className="max-w-7xl mx-auto">
-              <h3 className="main-section-heading">Standard Features</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4 pb-3 border-b border-gray-200 py-3 ">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full border-2 border-black flex items-center justify-center me-2">
+            <div className="container">
+              <div className="row">
+                {/* Right Column - Client Logos */}
+                <div className="col-md-6 col-lg-6 col-sm-12 left-div">
+                  <h2 className="text-2xl font-semibold mb-4 mt-8">
+                    Does This Sound Like Your Business?
+                  </h2>
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-start">
                       <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
                       >
                         <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={3}
-                          d="M5 13l4 4L19 7"
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
                         />
                       </svg>
-                    </div>
-                  </div>
-                  <span className="inner-heading">
-                    Responsive across devices
-                  </span>
+                      <span>
+                        Your website looks fine but orders aren&apos;t coming in
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span>
+                        Customers abandon carts before completing purchase
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span>
+                        Your site is slow, hurting both SEO and conversions
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span>
+                        Managing inventory and orders feels complicated
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span>Mobile users struggle to navigate and buy</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span>
+                        Your website can&apos;t handle growing traffic or
+                        catalog
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span>
+                        Payment gateway integration is unreliable or insecure
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span>
+                        You lack automation for customer follow-ups and recovery
+                      </span>
+                    </li>
+                  </ul>
                 </div>
-
-                <div className="flex items-start space-x-4 pb-6 border-b border-gray-200 py-3 ">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full border-2 border-black flex items-center justify-center me-2">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={3}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
+                <div className="col-md-6 col-lg-6 col-sm-12 right-div">
+                  <div className="img-div">
+                    <Image
+                      src={painPoints}
+                      width={500}
+                      height={500}
+                      alt="Web Development Challenges"
+                    />
                   </div>
-                  <span className="inner-heading">CMS Integration</span>
-                </div>
-
-                <div className="flex items-start space-x-4 pb-6 border-b border-gray-200 py-3 ">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full border-2 border-black flex items-center justify-center me-2">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={3}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <span className="inner-heading">SEO Best Practices</span>
-                </div>
-
-                <div className="flex items-start space-x-4 pb-6 border-b border-gray-200 py-3 ">
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full border-2 border-black flex items-center justify-center me-2">
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={3}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <span className="inner-heading">
-                    Performance Optimization
-                  </span>
                 </div>
               </div>
             </div>
