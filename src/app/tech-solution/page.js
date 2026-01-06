@@ -20,7 +20,7 @@ const TechSolution = () => {
       <div className="container bs-container mt-4">
         <div className="row">
           <div className="col-md-6 col-lg-6 col-sm-12 d-flex justify-content-start align-items-start flex-column brand-strategy-div">
-            <h1 className="w-100">Tech Solution</h1>
+            <h1 className="w-100">Tech Solutions</h1>
             <p className="">
               <strong>
                 {`Our developers, automation experts, and digital strategists

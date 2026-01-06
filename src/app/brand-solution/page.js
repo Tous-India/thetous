@@ -21,7 +21,7 @@ const BrandSolution = () => {
         <div className="container bs-container mt-4 ">
           <div className="row">
             <div className="col-md-6 col-lg-6 col-sm-12 d-flex justif-content-start align-items-start flex-column brand-strategy-div">
-              <h1 className="w-100">Brand Solution</h1>
+              <h1 className="w-100">Brand Solutions</h1>
               <p className="">
                 <strong>
                   Our marketing strategists and performance specialists craft

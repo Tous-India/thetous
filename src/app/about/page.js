@@ -59,7 +59,7 @@ const page = () => {
               <div className="p">
                 Together, let&apos;s have a quantifiable effect on your company.
               </div>
-              <Link href="">Design A Quote</Link>
+              <Link href="/quote">Design A Quote</Link>
             </div>
           </div>
         </div>

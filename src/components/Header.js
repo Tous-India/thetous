@@ -171,14 +171,14 @@ const Header = () => {
                           id="first-list-div"
                         >
                           <Link
-                            href="/"
+                            href="/brand-solution"
                             className="sub-list-elem-3"
                             onMouseOver={() => handleMenuItemEnter(socialMedia)}
                           >
                             Media Planning & Media Buying
                           </Link>
                           <Link
-                            href="/"
+                            href="/brand-solution"
                             className="sub-list-elem-4"
                             onMouseOver={() =>
                               handleMenuItemEnter(performanceMarketing)
@@ -187,21 +187,21 @@ const Header = () => {
                             Performance Marketing
                           </Link>
                           <Link
-                            href="/"
+                            href="/brand-solution"
                             className="sub-list-elem-5"
                             onMouseOver={() => handleMenuItemEnter(payPerClick)}
                           >
                             Google Ads
                           </Link>
                           <Link
-                            href="/"
+                            href="/brand-solution"
                             className="sub-list-elem-1"
                             onMouseOver={() => handleMenuItemEnter(socialMedia)}
                           >
                             Social Media Management
                           </Link>
                           <Link
-                            href="/"
+                            href="/brand-solution"
                             className="sub-list-elem-6"
                             onMouseOver={() => handleMenuItemEnter(seo)}
                           >
@@ -230,14 +230,14 @@ const Header = () => {
                             E-Commerce Development
                           </Link>
                           <Link
-                            href="/"
+                            href="/tech-solution"
                             className="sub-list-elem-d2-3"
                             onMouseOver={() => handleMenuItemEnter(automation)}
                           >
                             Automation
                           </Link>
                           <Link
-                            href="/"
+                            href="/tech-solution"
                             className="sub-list-elem-d2-4"
                             onMouseOver={() =>
                               handleMenuItemEnter(whatsappMarketing)
@@ -246,7 +246,7 @@ const Header = () => {
                             Website Designing
                           </Link>
                           <Link
-                            href="/"
+                            href="/tech-solution"
                             className="sub-list-elem-d2-5"
                             onMouseOver={() =>
                               handleMenuItemEnter(websiteDesign)
@@ -255,7 +255,7 @@ const Header = () => {
                             Whatsapp Marketing
                           </Link>
                           <Link
-                            href="/"
+                            href="/tech-solution"
                             className="sub-list-elem-d2-6"
                             onMouseOver={() => handleMenuItemEnter(chatBot)}
                           >
@@ -269,7 +269,7 @@ const Header = () => {
                           id="third-list-div"
                         >
                           <Link
-                            href="/"
+                            href="/media-solution"
                             className="sub-list-elem-d3-1"
                             onMouseOver={() =>
                               handleMenuItemEnter(graphicDesign)
@@ -278,7 +278,7 @@ const Header = () => {
                             AI Graphic Designing
                           </Link>
                           <Link
-                            href="/"
+                            href="/media-solution"
                             className="sub-list-elem-d3-1"
                             onMouseOver={() =>
                               handleMenuItemEnter(videoEditing)
@@ -287,14 +287,14 @@ const Header = () => {
                             AI Video Editing
                           </Link>
                           <Link
-                            href="/"
+                            href="/media-solution"
                             className="sub-list-elem-d3-1"
                             onMouseOver={() => handleMenuItemEnter(printMedia)}
                           >
                             Print Media
                           </Link>
                           <Link
-                            href="/"
+                            href="/media-solution"
                             className="sub-list-elem-d3-1"
                             onMouseOver={() =>
                               handleMenuItemEnter(productShoot)
@@ -303,7 +303,7 @@ const Header = () => {
                             Product Shoot
                           </Link>
                           <Link
-                            href="/"
+                            href="/media-solution"
                             className="sub-list-elem-d3-1"
                             onMouseOver={() => handleMenuItemEnter(modelShoot)}
                           >
@@ -388,21 +388,21 @@ const Header = () => {
                             <div className="accordion-body">
                               <ul>
                                 <li>
-                                  <Link href="/">
+                                  <Link href="/brand-solution">
                                     Media Planning & Media Buying
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Performance Marketing </Link>
+                                  <Link href="/brand-solution">Performance Marketing </Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Google Ads </Link>
+                                  <Link href="/brand-solution">Google Ads </Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Social Media Management </Link>
+                                  <Link href="/brand-solution">Social Media Management </Link>
                                 </li>
                                 <li>
-                                  <Link href="/">SEO </Link>
+                                  <Link href="/brand-solution">SEO </Link>
                                 </li>
                               </ul>
                             </div>
@@ -446,16 +446,16 @@ const Header = () => {
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Automation</Link>
+                                  <Link href="/tech-solution">Automation</Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Website Designing</Link>
+                                  <Link href="/tech-solution">Website Designing</Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Whatsapp Marketing</Link>
+                                  <Link href="/tech-solution">Whatsapp Marketing</Link>
                                 </li>
                                 <li>
-                                  <Link href="/">AI Chatbot </Link>
+                                  <Link href="/tech-solution">AI Chatbot </Link>
                                 </li>
                               </ul>
                             </div>
@@ -491,19 +491,19 @@ const Header = () => {
                             <div className="accordion-body">
                               <ul>
                                 <li>
-                                  <Link href="/">AI Graphic Designing</Link>
+                                  <Link href="/media-solution">AI Graphic Designing</Link>
                                 </li>
                                 <li>
-                                  <Link href="/">AI Video Editing</Link>
+                                  <Link href="/media-solution">AI Video Editing</Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Print Media</Link>
+                                  <Link href="/media-solution">Print Media</Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Product Shoot</Link>
+                                  <Link href="/media-solution">Product Shoot</Link>
                                 </li>
                                 <li>
-                                  <Link href="/">Model Shoot</Link>
+                                  <Link href="/media-solution">Model Shoot</Link>
                                 </li>
                               </ul>
                             </div>

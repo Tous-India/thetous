@@ -20,7 +20,7 @@ const MediaSolution = () => {
       <div className="container bs-container mt-5">
         <div className="row">
           <div className="col-md-6 col-lg-6 col-sm-12 d-flex justif-content-start align-items-start flex-column brand-strategy-div">
-            <h1 className="w-100">Media Solution</h1>
+            <h1 className="w-100">Media Solutions</h1>
             <p className="w-100">
               <strong>
                 Our creative team of designers, video editors, photographers, and
