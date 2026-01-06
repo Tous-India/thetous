@@ -1539,6 +1539,7 @@ footer {
   right: -2.25rem;
   z-index: 1000;
   border: 2px solid blue;
+  border-radius: 0 5px 5px;
   padding: 5px 10px;
   font-family: "Lato";
   background-color: black;

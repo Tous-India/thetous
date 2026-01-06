@@ -1,5 +1,6 @@
 .web-devlopment-main-page {
   background-color: rgb(255, 255, 255) !important;
+
   .c_button_black {
     color: #fff;
     background-color: #000;
@@ -19,6 +20,7 @@
       background-color: white;
     }
   }
+
   .c_button_white {
     color: black;
     background-color: white;
@@ -29,11 +31,13 @@
     font-weight: 500;
     border: 2px solid white;
     text-transform: uppercase;
+
     &:hover {
       color: white;
       background-color: black;
     }
   }
+
   .main-section-heading {
     color: #242424;
     margin: 0;
@@ -44,6 +48,7 @@
     position: relative;
     padding-bottom: 1rem;
     font-family: "Lato" !important;
+
     &::after {
       content: "";
       position: absolute;
@@ -55,6 +60,7 @@
       border-radius: 2px;
     }
   }
+
   p {
     color: #434343;
     padding-left: 0;
@@ -64,6 +70,7 @@
     font-family: "Poppins" !important;
     margin: 0;
   }
+
   .inner-heading {
     font-family: "Poppins" !important;
     text-transform: capitalize;
@@ -76,20 +83,25 @@
 
   .hero-web-dev {
     margin: 3rem 0;
+
     .left-banner {
       display: flex;
       flex-direction: column;
       align-items: start;
       justify-content: center;
+
       p {
         margin-bottom: 0;
+
         ul {
           display: flex;
         }
       }
     }
+
     .video-container {
       position: relative;
+
       .video-sound-toggle {
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
@@ -110,6 +122,7 @@
         right: 2rem;
       }
     }
+
     a {
       margin-top: 1.25rem;
     }
@@ -117,24 +130,27 @@
     .main-section-heading {
       font-size: 2.5rem;
       font-weight: 600;
-      background: linear-gradient(135deg, #00dbde 0%, #fc00ff 100%);
+      background: #161616;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       line-height: 1.1;
       margin-bottom: 1.5rem;
     }
+
     p {
       font-size: 14px;
       font-weight: 300;
       line-height: 1.65;
       margin-bottom: 1rem;
     }
+
     h2 {
       font-size: 1.75rem;
       font-weight: 600;
       margin-bottom: 1rem;
     }
+
     ul {
       li {
         span {
@@ -144,6 +160,7 @@
         }
       }
     }
+
     .bs-container-clients {
       img {
         filter: grayscale(100%);
@@ -152,6 +169,7 @@
         height: 60px;
         width: auto;
         object-fit: contain;
+
         &:hover {
           filter: grayscale(0%);
           opacity: 1;
@@ -159,18 +177,22 @@
       }
     }
   }
+
   .what-we-offer-web-dev {
     margin-bottom: 3rem;
+
     .inner-heading {
       font-size: 1rem;
       font-weight: 500;
     }
+
     .content-wrapper {
       .content-div {
         border: 1px solid rgb(219, 219, 219);
         padding: 1rem;
         position: relative;
         transition: all 0.3s ease;
+
         &:hover {
           border-color: transparent;
           box-shadow: 0 0 0 2px transparent;
@@ -178,32 +200,39 @@
             linear-gradient(135deg, #00dbde, #fc00ff) border-box;
           border: 2px solid transparent;
         }
+
         .svg {
           height: 40px;
           width: 40px;
           margin-bottom: 10px;
           transition: all 0.3s ease;
         }
+
         &:hover .svg {
           color: #00dbde;
         }
       }
     }
+
     p {
       font-size: 13px;
       margin-top: 5px;
     }
   }
+
   .our-process-web-dev {
     padding: 2rem;
+
     .inner-heading {
       font-size: 1.25rem;
       font-weight: 600;
       margin: 10px 0;
     }
+
     .process-text-wrapper {
       position: relative;
     }
+
     .process-text {
       position: relative;
       max-height: 2.8em;
@@ -214,11 +243,13 @@
       line-height: 1.4;
       opacity: 1;
     }
+
     .process-text.expanded {
       max-height: 500px;
       transition: max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1),
         opacity 0.75s linear;
     }
+
     .read-more-btn {
       background: transparent;
       border: none;
@@ -230,6 +261,7 @@
       transition: all 0.3s ease;
       font-family: "Poppins";
       position: relative;
+
       &::after {
         content: "";
         position: absolute;
@@ -240,8 +272,10 @@
         background: linear-gradient(to right, #00dbde, #fc00ff);
         transition: width 0.3s ease;
       }
+
       &:hover {
         color: #fc00ff;
+
         &::after {
           width: 100%;
         }
@@ -256,16 +290,19 @@
     .why-para {
       margin-bottom: 2rem;
     }
+
     button {
       font-size: 14px;
       font-weight: 500;
     }
+
     .content-wrapper {
       .inner-div {
         padding: 1.5rem;
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
+
         &::after {
           content: "";
           position: absolute;
@@ -276,11 +313,14 @@
           background: linear-gradient(to right, #00dbde, #fc00ff);
           transition: left 0.3s ease;
         }
+
         &:hover::after {
           left: 0;
         }
+
         .w-16 {
           position: relative;
+
           &::before {
             content: "";
             position: absolute;
@@ -291,22 +331,27 @@
             transition: opacity 0.3s ease;
           }
         }
+
         &:hover .w-16::before {
           opacity: 0.15;
         }
       }
     }
+
     .main-section-heading {
       margin-bottom: 5px;
     }
+
     .inner-heading {
       font-size: 1.25rem;
       font-weight: 600;
       margin-top: 10px;
     }
+
     .why-text-wrapper {
       position: relative;
     }
+
     .why-text {
       position: relative;
       max-height: 1.4em;
@@ -317,6 +362,7 @@
       line-height: 1.4;
       opacity: 1;
     }
+
     .why-text.expanded {
       max-height: 500px;
       transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
@@ -328,21 +374,26 @@
     .inner-heading {
       color: rgb(53, 53, 53);
     }
+
     .right-div {
       justify-content: center;
       align-items: end;
       padding: 0;
       display: flex;
+
       .img-div {
         width: 60%;
       }
     }
+
     .row {
       gap: 0;
     }
+
     .left-div {
       ul {
         padding: 0;
+
         li {
           margin: 7px 0;
           color: #434343;
@@ -351,6 +402,7 @@
           font-weight: 400;
           font-family: Poppins !important;
           line-height: 20px !important;
+
           svg {
             padding: 0;
             margin: 0 10px 0 0 !important;
@@ -360,25 +412,31 @@
     }
   }
 
+
   .stats-web-dev {
     padding: 2rem 1rem;
+
     .main-section-heading {
       margin-bottom: 10px;
+
       &::after {
         left: 48%;
       }
     }
+
     .content {
       margin-bottom: 2rem;
     }
+
     .numbers {
-      > div {
+      >div {
         .inner-heading {
           margin-bottom: 10px;
           font-weight: 600;
           color: black;
         }
-        > div {
+
+        >div {
           background: linear-gradient(to right, #00dbde, #fc00ff);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -392,10 +450,13 @@
     .inner-heading {
       font-size: 1rem !important;
     }
+
     .border-b {
       transition: all 0.3s ease;
+
       &:hover {
         border-image: linear-gradient(to right, #00dbde, #fc00ff) 1;
+
         button {
           svg {
             color: #00dbde;
@@ -412,10 +473,11 @@
         width: 100%;
         margin: 0;
         font-size: 1.25rem !important;
-        font-weight: 500;
+        font-weight: 600;
         line-height: 30px;
         font-family: "Lato" !important;
       }
+
       p,
       li {
         color: #434343;
@@ -426,59 +488,71 @@
         font-family: Poppins !important;
         line-height: 20px !important;
         margin: 7px 0;
+
         svg {
           margin-right: 0.5rem;
         }
       }
+
       h4 {
         font-family: "Lato" !important;
         font-size: 18px;
         font-weight: 600;
       }
+
       h3 {
         font-size: 14px !important;
         font-weight: 400;
       }
+
       ul {
         padding: 0;
       }
     }
+
     a {
       margin-top: 1rem;
     }
+
     .phone-button {
       button {
         font-size: 10px;
       }
     }
+
     .phone-content {
       .inner-heading {
         font-size: 1.25rem;
         line-height: 20px;
         margin-bottom: 0;
       }
+
       .project-card {
         &:nth-child(1) {
           animation-delay: 0s;
         }
+
         &:nth-child(2) {
           animation-delay: 0.1s;
         }
+
         &:nth-child(3) {
           animation-delay: 0.2s;
         }
+
         &:nth-child(4) {
           animation-delay: 0.3s;
         }
       }
     }
+
     .inner-heading {
       font-size: 2.5rem;
       line-height: 50px;
     }
 
-    p {
-    }
+    p {}
+
     .span {
       font-weight: 600;
     }
@@ -490,6 +564,7 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -540,11 +615,9 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 219, 222, 0.1),
-    rgba(252, 0, 255, 0.1)
-  );
+  background: linear-gradient(135deg,
+      rgba(0, 219, 222, 0.1),
+      rgba(252, 0, 255, 0.1));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -561,15 +634,18 @@
   position: relative;
   z-index: 10;
   margin-bottom: -2rem !important;
+
   .row {
     align-items: center;
     justify-content: center;
+
     .col-12 {
       text-align: center;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+
       .p {
         font-size: 3rem;
         font-weight: 600;
@@ -577,12 +653,14 @@
         width: 80%;
         margin-bottom: 2rem;
       }
+
       a {
         background-color: white;
         color: black;
         padding: 1rem 2rem;
         font-weight: 400;
         transition: 0.3s;
+
         &:hover {
           background-color: rgb(0, 0, 0);
           padding: 1rem 2rem;
@@ -604,15 +682,19 @@
       }
     }
   }
+
   .web-devlopment-main-page .hero-web-dev .main-section-heading {
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 600;
+    margin-top: 18px;
   }
+
   .web-devlopment-main-page .hero-web-dev p {
     font-size: 1rem;
     width: 100%;
     display: block;
   }
+
   .web-devlopment-main-page .hero-web-dev h2 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -624,14 +706,14 @@
   }
 
   .web-devlopment-main-page {
-    > div {
+    >div {
       padding: 15px !important;
     }
   }
 
   .web-dev-tabs {
     .mb-12 {
-      > .flex {
+      >.flex {
         gap: 1.5rem !important;
         justify-content: center;
       }
@@ -640,24 +722,29 @@
 
   .what-we-offer-web-dev {
     margin-top: 2rem;
+
     .flex-shrink-0 {
       position: absolute;
       right: 5%;
     }
+
     .content-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       gap: 10px;
       row-gap: 15px;
+
       .content-div {
         width: 47%;
       }
     }
   }
+
   .web-devlopment-main-page .hero-web-dev {
     margin: 0rem 0;
   }
+
   .our-process-web-dev {
     .content-wrapper {
       display: flex;
@@ -665,6 +752,7 @@
       row-gap: 20px;
       gap: 10px;
       justify-content: space-between;
+
       .content-div {
         width: 45%;
       }
@@ -678,6 +766,7 @@
       justify-content: space-between;
       gap: 5px;
       row-gap: 1rem;
+
       .inner-div {
         width: 48%;
       }
@@ -686,19 +775,23 @@
 
   .stats-web-dev {
     padding: 0 !important;
+
     .main-section-heading {
       margin-bottom: 10px;
     }
+
     .content {
       p {
         margin-bottom: 0 !important;
       }
     }
+
     .numbers {
       .text-center {
-        > div {
+        >div {
           font-size: 3.5rem;
         }
+
         p {
           font-size: 12px;
           line-height: 17px !important;
@@ -707,7 +800,7 @@
     }
   }
 
-  .web-devlopment-main-page .stats-web-dev .numbers > div .inner-heading {
+  .web-devlopment-main-page .stats-web-dev .numbers>div .inner-heading {
     font-size: 1.15rem;
   }
 
@@ -719,6 +812,7 @@
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
+
   .web-devlopment-main-page .faq-web-dev .inner-heading {
     line-height: 20px;
     padding: 1rem 0;
@@ -737,6 +831,7 @@
   .web-dev-tabs {
     .main-section-heading {
       text-align: center;
+
       &::after {
         left: 40%;
       }
@@ -745,5 +840,16 @@
 
   .web-devlopment-main-page .what-we-offer-web-dev .inner-heading {
     line-height: 23px;
+  }
+
+  .web-devlopment-main-page .hero-web-dev .video-container .video-sound-toggle {
+    width: 28px;
+    height: 28px;
+    bottom: 12rem;
+    right: 0.5rem;
+
+  }
+  #devHeading{
+    font-size: 1.6rem !important;
   }
 }
