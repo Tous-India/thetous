@@ -1124,13 +1124,8 @@ const WebDevelopment = () => {
             </div>
           </section>
           {/* FAQs */}
-<<<<<<< HEAD
-          <h3 className="main-section-heading ">Frequently Asked Questions</h3>
-          <section className="bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
-=======
           <h3 className="main-section-heading " id="devHeading">Frequently Asked Questions</h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
->>>>>>> 8e204e6970982f10320e5a02aec2b786946cf421
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">
                 {faqs.map((faq, index) => (

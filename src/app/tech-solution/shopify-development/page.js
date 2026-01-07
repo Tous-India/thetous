@@ -1179,13 +1179,7 @@ const ShopifyDevelopment = () => {
           </section>
 
           {/* FAQs */}
-<<<<<<< HEAD
-          <h3 className="main-section-heading mb-4">
-            Frequently Asked Questions
-          </h3>
-=======
           <h3 className="main-section-heading mb-4" id="devHeading">Frequently Asked Questions</h3>
->>>>>>> 8e204e6970982f10320e5a02aec2b786946cf421
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">
