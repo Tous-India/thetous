@@ -454,6 +454,19 @@
           font-size: 1.75rem;
           font-weight: 600;
           font-family: "Lato";
+          margin-bottom: 1rem;
+        }
+
+        .contact-info-section {
+          p {
+            margin-bottom: 0.8rem;
+          }
+
+          .contact-phones,
+          .contact-email,
+          .contact-address {
+            line-height: 1rem;
+          }
         }
       }
     }

@@ -8,13 +8,16 @@ import caseStudiesData from "@/data/caseStudies.json";
 /* ================= IMAGES ================= */
 
 import prozvofit from "../../../public/home/work/1726132161.webp";
-import silvago from "../../../public/home/work/1731492367.webp";
+import silvago from "../../../public/home/work/silvago.png";
 import luxeliv from "../../../public/home/work/1731492385.webp";
 import executive from "../../../public/work/executive.webp";
 import ohmypet from "../../../public/work/ohmypet.webp";
 import dhirsons from "../../../public/work/dhirsons.webp";
 import crossraod from "../../../public/home/work/1731492317.webp";
-import silvagoNew from "../../../public/home/work/silvago.png";
+import godrej from "../../../public/home/work/godrej.jpg";
+import m2mPanipat from "../../../public/home/work/m2m-panipat.webp";
+import skaOrion from "../../../public/home/work/SKA orion.jpg";
+import tarc from "../../../public/home/work/TARC.jpg";
 
 /* ================= IMAGE MAP ================= */
 
@@ -25,7 +28,11 @@ const imageMap = {
   "/work/ohmypet.webp": ohmypet,
   "/work/dhirsons.webp": dhirsons,
   "/home/work/1731492317.webp": crossraod,
-  "/home/work/silvago.png": silvagoNew,
+  "/home/work/silvago.png": silvago,
+  "/home/work/godrej.jpg": godrej,
+  "/home/work/m2m-panipat.webp": m2mPanipat,
+  "/home/work/SKA orion.jpg": skaOrion,
+  "/home/work/TARC.jpg": tarc,
 };
 
 /* ================= DATA ================= */

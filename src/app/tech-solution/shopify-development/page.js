@@ -1180,7 +1180,7 @@ const ShopifyDevelopment = () => {
 
           {/* FAQs */}
           <h3 className="main-section-heading mb-4" id="devHeading">Frequently Asked Questions</h3>
-          <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
+          <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">
                 {faqs.map((faq, index) => (

@@ -83,7 +83,7 @@
               left: 0.1rem;
               height: 0.2rem;
               width: 30%;
-              background-color: rgb(63, 63, 63);
+              background: linear-gradient(to right, #00dbde, #fc00ff);
               border-radius: 4rem;
             }
           }

@@ -866,7 +866,7 @@ const WebDevelopment = () => {
               </div>
 
               {/* Content Area */}
-              <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="grid md:grid-cols-2 gap-13 items-center">
                 {/* Left Content */}
                 <div className="order-2 md:order-1 overflow-hidden">
                   <div key={activeTab} className="animate-fadeSlideIn">
@@ -972,12 +972,12 @@ const WebDevelopment = () => {
             </div>
           </section>
           {/* Feature Inclusions */}
-          <section className="py-24 bg-white standard-feature pt-5 mb-5">
+          <section className="py-24 bg-white standard-feature pt-2 mb-5">
             <div className="container">
               <div className="row">
                 {/* Right Column - Client Logos */}
                 <div className="col-md-6 col-lg-6 col-sm-12 left-div">
-                  <h2 className="text-2xl font-semibold mb-4 mt-8">
+                  <h2 className="main-section-heading mb-4">
                     Does This Sound Like Your Business?
                   </h2>
                   <ul className="space-y-3 mb-8">
@@ -1125,7 +1125,7 @@ const WebDevelopment = () => {
           </section>
           {/* FAQs */}
           <h3 className="main-section-heading " id="devHeading">Frequently Asked Questions</h3>
-          <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
+          <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">
                 {faqs.map((faq, index) => (

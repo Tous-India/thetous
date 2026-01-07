@@ -194,16 +194,17 @@ const Contact = () => {
           <div className="col-sm-12 col-md-5 col-lg-5 contact-cols-3 d-flex flex-column justify-content-center right">
             <div>
               <h3>Connect with us</h3>
-              <p >
-
-                <Link href="tel:+91-8901440322"> +91-8901440322</Link>{","} &nbsp;
-                <Link href="tel:+91-9996639777"> +91-9996639777</Link>
-                <br />
-
-                <Link href="mailto:grow@thetous.com">grow@thetous.com</Link>
-              </p>
-              <div className="w-75">
-                C-116, 1st Floor, Sector-2, Noida, UP 201301
+              <div className="contact-info-section">
+                <p className="contact-phones">
+                  <Link href="tel:+91-8901440322">+91-8901440322</Link>{","} &nbsp;
+                  <Link href="tel:+91-9996639777">+91-9996639777</Link>
+                </p>
+                <p className="contact-email">
+                  <Link href="mailto:grow@thetous.com">grow@thetous.com</Link>
+                </p>
+                <p className="contact-address">
+                  C-116, 1st Floor, Sector-2, Noida, UP 201301
+                </p>
               </div>
               <p className="d-flex gap-2 fs-2">
                 <Link

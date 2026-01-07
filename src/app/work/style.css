@@ -43,7 +43,8 @@
 .work-main-page .container-2 {
   .row {
     row-gap: 1rem;
-    justify-content: space-between;
+    justify-content: flex-start;
+    column-gap: 2%;
     > div {
       padding: 0;
       width: 32%;

@@ -165,8 +165,8 @@
       "tags": ["Website", "SEO", "Ads"],
       "image": "/work/executive.webp",
       "heroImage": {
-        "desktop": "/home/case-study/cars-desktop.webp",
-        "mobile": "/home/case-study/cars-mobile.webp"
+        "desktop": "/home/case-study/ec-desktop.jpg",
+        "mobile": "/home/case-study/ec-mobile.jpg"
       },
       "overview": {
         "description": "Executive Cars offers premium chauffeur services in Melbourne, providing luxury transportation for corporate and private clients. We created a sophisticated digital platform that reflects their high-end service standards.",
@@ -202,7 +202,7 @@
       "title": "Silvago",
       "description": "Minimal silver jewellery brand delivering elegance with simplicity...",
       "tags": ["Website", "SEO", "Ads"],
-      "image": "/home/work/1731492367.webp",
+      "image": "/home/work/silvago.png",
       "heroImage": {
         "desktop": "/home/case-study/silvago-casestudy-desktop.webp",
         "mobile": "/home/case-study/silvago-casestudy-mobile.webp"
@@ -243,8 +243,8 @@
       "tags": ["Website", "SEO", "Ads"],
       "image": "/home/work/1726132161.webp",
       "heroImage": {
-        "desktop": "https://placehold.co/1920x600",
-        "mobile": "https://placehold.co/1000x800"
+        "desktop": "/home/case-study/prozvo-desktop.jpg",
+        "mobile": "/home/case-study/prozvo-mobile.jpg"
       },
       "overview": {
         "description": "Prozvofit manufactures professional-grade gym equipment designed for strength training and fitness facilities. We built a powerful digital platform to showcase their industrial-strength product line.",
@@ -313,6 +313,34 @@
           "65% reduction in phone inquiries"
         ]
       }
+    },
+    {
+      "id": "godrej",
+      "title": "Godrej",
+      "description": "Real estate development with premium residential projects...",
+      "tags": ["Website", "SEO"],
+      "image": "/home/work/godrej.jpg"
+    },
+    {
+      "id": "m2m-panipat",
+      "title": "M2M Panipat",
+      "description": "Industrial and manufacturing solutions...",
+      "tags": ["Website", "SEO"],
+      "image": "/home/work/m2m-panipat.webp"
+    },
+    {
+      "id": "ska-orion",
+      "title": "SKA Orion",
+      "description": "Premium residential real estate project...",
+      "tags": ["Website", "SEO"],
+      "image": "/home/work/SKA orion.jpg"
+    },
+    {
+      "id": "tarc",
+      "title": "TARC",
+      "description": "Real estate development and construction...",
+      "tags": ["Website", "SEO"],
+      "image": "/home/work/TARC.jpg"
     }
   ]
 }

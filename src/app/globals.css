@@ -95,7 +95,7 @@ select {
 }
 
 .parent-fo-header {
-  border-radius: 2rem 2rem 0 0;
+  /* border-radius: 2rem 2rem 0 0; */
   margin-top: 0 !important;
   position: relative;
   transition: 0.3s !important;
@@ -1881,6 +1881,21 @@ p {
   .home-banner-main-section {
     .row-div {
       flex-direction: column;
+    }
+  }
+
+  body {
+    margin-bottom: 120vh !important;
+  }
+
+  footer {
+    position: fixed !important;
+    bottom: 0 !important;
+
+    #footerFisrt {
+      h2 {
+        font-size: 3rem !important;
+      }
     }
   }
 
