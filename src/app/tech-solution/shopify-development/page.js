@@ -229,7 +229,7 @@ const ShopifyDevelopment = () => {
 
               {/* Right Column - Content */}
               <div className="col-md-6 col-lg-3 col-sm-12 right-banner">
-                <h1 className="main-section-heading">
+                <h1 className="main-section-heading" id="noLine">
                   Need a website that brings you business ?
                 </h1>
                 <p className="mb-6">
@@ -322,7 +322,7 @@ const ShopifyDevelopment = () => {
 
               {/* Service 2: Shopify Theme Customization */}
               <div className="content-div ">
-                <div
+                <div id="boxHeight"
                   className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
                     activeService === 1 ? "!border-b-0 active-gradient" : ""
                   }`}
