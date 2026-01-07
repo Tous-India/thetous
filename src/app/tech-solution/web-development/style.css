@@ -251,35 +251,17 @@
     }
 
     .read-more-btn {
-      background: transparent;
+      background: linear-gradient(135deg, #00dbde 0%, #fc00ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       border: none;
-      color: #00dbde;
       font-size: 14px;
       font-weight: 500;
       cursor: pointer;
       padding: 0;
-      transition: all 0.3s ease;
       font-family: "Poppins";
       position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: linear-gradient(to right, #00dbde, #fc00ff);
-        transition: width 0.3s ease;
-      }
-
-      &:hover {
-        color: #fc00ff;
-
-        &::after {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -849,7 +831,8 @@
     right: 0.5rem;
 
   }
-  #devHeading{
+
+  #devHeading {
     font-size: 1.6rem !important;
   }
 }

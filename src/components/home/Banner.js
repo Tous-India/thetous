@@ -26,7 +26,7 @@ const Banner = () => {
               </span>
               <span className="mx-3 trans phone-trans">Transforming</span>{" "}
               <span className="brand">Brands </span>{" "}
-              <span className="with">With &nbsp;</span>
+              <span className="with">With &nbsp;</span> 
               <span className="ai">
                 {" "}
                 <div className="strong"> AI-Driven</div>
