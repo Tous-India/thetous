@@ -1,9 +1,6 @@
 .web-devlopment-main-page {
-<<<<<<< HEAD
-=======
   background-color: rgb(255, 255, 255) !important;
 
->>>>>>> 8e204e6970982f10320e5a02aec2b786946cf421
   .c_button_black {
     color: #fff;
     background-color: #000;
@@ -85,13 +82,8 @@
   }
 
   .hero-web-dev {
-<<<<<<< HEAD
-    margin: 0rem 0;
-    padding-bottom: 5rem;
-=======
     margin: 3rem 0;
 
->>>>>>> 8e204e6970982f10320e5a02aec2b786946cf421
     .left-banner {
       display: flex;
       flex-direction: column;
@@ -704,11 +696,7 @@
   .web-devlopment-main-page .hero-web-dev .main-section-heading {
     font-size: 2rem;
     font-weight: 600;
-<<<<<<< HEAD
-    margin-top: 1rem;
-=======
     margin-top: 18px;
->>>>>>> 8e204e6970982f10320e5a02aec2b786946cf421
   }
 
   .web-devlopment-main-page .hero-web-dev p {

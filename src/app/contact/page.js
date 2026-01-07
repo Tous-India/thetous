@@ -233,15 +233,9 @@ const Contact = () => {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.5266628342315!2d77.31511669999999!3d28.583973099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5004045d0ab%3A0x783d74db012b0922!2sThe%20Tous!5e0!3m2!1sen!2sin!4v1767699289826!5m2!1sen!2sin"
               width="100%"
-<<<<<<< HEAD
-              height="210"
+              height="250"
               style={{ border: 0 }}
               allowFullScreen
-=======
-              height="250"
-              // style="border: 0"
-              allowFullScreen=""
->>>>>>> 8e204e6970982f10320e5a02aec2b786946cf421
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>

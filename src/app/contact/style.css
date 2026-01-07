@@ -11,8 +11,6 @@
     height: 300px;
   }
   .container-fluid {
-<<<<<<< HEAD
-=======
     margin-bottom: -5rem !important;
     background-color: white;
     padding: 0 0rem !important;
@@ -21,7 +19,6 @@
     border-radius: 0 0 30px 30px;
     z-index: 1;
 
->>>>>>> 8e204e6970982f10320e5a02aec2b786946cf421
     .buttonDiv {
       display: flex;
       justify-content: end;
