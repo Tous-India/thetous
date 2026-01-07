@@ -14,17 +14,18 @@ import executive from "../../../public/work/executive.webp";
 import ohmypet from "../../../public/work/ohmypet.webp";
 import dhirsons from "../../../public/work/dhirsons.webp";
 import crossraod from "../../../public/home/work/1731492317.webp";
+import silvagoNew from "../../../public/home/work/silvago.png";
 
 /* ================= IMAGE MAP ================= */
 
 const imageMap = {
   "/home/work/1726132161.webp": prozvofit,
-  "/home/work/1731492367.webp": silvago,
   "/home/work/1731492385.webp": luxeliv,
   "/work/executive.webp": executive,
   "/work/ohmypet.webp": ohmypet,
   "/work/dhirsons.webp": dhirsons,
   "/home/work/1731492317.webp": crossraod,
+  "/home/work/silvago.png": silvagoNew,
 };
 
 /* ================= DATA ================= */

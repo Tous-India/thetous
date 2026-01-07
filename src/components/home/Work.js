@@ -8,33 +8,51 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Images
 
-import Img1 from "../../../public/home/work/1742640759.webp";
-import Img2 from "../../../public/home/work/1742808682.webp";
+import Img1 from "../../../public/home/work/SKA orion.jpg";
+import Img2 from "../../../public/home/work/TARC.jpg";
 import Img3 from "../../../public/home/work/1742808668.webp";
 import Img4 from "../../../public/home/work/1731492385.webp";
 import Img5 from "../../../public/home/work/1731492367.webp";
 import Img6 from "../../../public/home/work/1726133585.webp";
 import Img7 from "../../../public/home/work/1731492317.webp";
 import Img8 from "../../../public/home/work/1731492299.webp";
-import Img9 from "../../../public/home/work/1742640759.webp";
-import Img10 from "../../../public/home/work/1742642817.webp";
+import Img9 from "../../../public/home/work/m2m-panipat.webp";
+import Img10 from "../../../public/home/work/godrej.jpg";
 import Img11 from "../../../public/home/work/1742644830.webp";
 import Img12 from "../../../public/home/work/1742807329.webp";
+import Img13 from "../../../public/home/work/silvago.png";
 
 // Project data with case study links
 const projects = [
-  // { title: "Geetika Vidya Ohlyan", image: Img1, link: "/" },
-  // { title: "The Pet Center", image: Img2, link: "/" },
-  { title: "Dhirsons Jewellery House", image: Img3, link: "/case-studies/dhirsons-jewellery-house" },
-  { title: "Luxeliv", image: Img4, link: "/case-studies/luxeliv" },
-  { title: "Silvago", image: Img5, link: "/case-studies/silvago" },
-  { title: "Prozvofit", image: Img6, link: "/case-studies/prozvofit" },
-  { title: "Crossroads Hospital", image: Img7, link: "/case-studies/crossroads-hospital" },
-  { title: "Drym Foods", image: Img8, link: "/" },
-  // { title: "Geetika Vidya Ohlyan", image: Img9, link: "/" },
-  // { title: "13 YELLOW AIRPORT CABS", image: Img10, link: "/" },
-  { title: "Executive Cars", image: Img11, link: "/case-studies/executive-cars" },
-  { title: "Oh My Pet Grooming", image: Img12, link: "/case-studies/oh-my-pet-grooming" },
+  { title: "M3M Panipat", image: Img9, link: "#" },
+  { title: "Godrej South Estate", image: Img10, link: "#" },
+  { title: "Silvago", image: Img13, link: "#" },
+  // {
+  //   title: "Dhirsons Jewellery House",
+  //   image: Img3,
+  //   link: "/case-studies/dhirsons-jewellery-house",
+  // },
+  { title: "Luxeliv", image: Img4, link: "#" },
+  // { title: "Silvago", image: Img5, link: "/case-studies/silvago" },
+  // { title: "Prozvofit", image: Img6, link: "/case-studies/prozvofit" },
+  // {
+  //   title: "Crossroads Hospital",
+  //   image: Img7,
+  //   link: "/case-studies/crossroads-hospital",
+  // },
+  // { title: "Drym Foods", image: Img8, link: "/" },
+  { title: "SKA Orion", image: Img1, link: "#" },
+  { title: "TARC", image: Img2, link: "#" },
+  // {
+  //   title: "Executive Cars",
+  //   image: Img11,
+  //   link: "/case-studies/executive-cars",
+  // },
+  // {
+  //   title: "Oh My Pet Grooming",
+  //   image: Img12,
+  //   link: "/case-studies/oh-my-pet-grooming",
+  // },
 ];
 
 const Work = () => {

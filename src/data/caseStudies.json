@@ -7,8 +7,8 @@
       "tags": ["Website", "SEO"],
       "image": "/home/work/1731492385.webp",
       "heroImage": {
-        "desktop": "https://placehold.co/1920x600",
-        "mobile": "https://placehold.co/1000x800"
+        "desktop": "/home/case-study/luxeliv-desktop.webp",
+        "mobile": "/home/case-study/luxeliv-mobile.webp"
       },
       "overview": {
         "description": "Our client was heavily dependent on Amazon and Meesho for sales. While marketplace visibility brought orders, high RTO rates, low margins, and uncontrollable ad costs were eating into profitability. Their own website had traffic but almost negligible conversions, making them believe that website sales don’t work for their  category.                                                                            Our team partnered with the brand to transform their underperforming website into a profit-generating sales channel,reducing dependency on marketplaces and keeping margins in their own hands.",
@@ -97,8 +97,8 @@
       "tags": ["Website", "SEO"],
       "image": "/work/dhirsons.webp",
       "heroImage": {
-        "desktop": "https://placehold.co/1920x600",
-        "mobile": "https://placehold.co/1000x800"
+        "desktop": "/home/case-study/dhirson.webp",
+        "mobile": "/home/case-study/dhirson.webp"
       },
       "overview": {
         "description": "Dhirsons Jewellery House is a premium diamond jewellery destination in Delhi's prestigious Karol Bagh area. We crafted a luxurious digital experience that mirrors their exceptional craftsmanship.",
@@ -131,8 +131,8 @@
       "tags": ["Website", "SEO"],
       "image": "/work/ohmypet.webp",
       "heroImage": {
-        "desktop": "https://placehold.co/1920x600",
-        "mobile": "https://placehold.co/1000x800"
+        "desktop": "/home/case-study/omp-desktop.jpg",
+        "mobile": "/home/case-study/omp-desktop.jpg"
       },
       "overview": {
         "description": "Oh My Pet Grooming is a mobile pet grooming service bringing professional care directly to pet owners' doorsteps. We developed a user-friendly platform that makes booking convenient and stress-free.",
@@ -165,8 +165,8 @@
       "tags": ["Website", "SEO", "Ads"],
       "image": "/work/executive.webp",
       "heroImage": {
-        "desktop": "https://placehold.co/1920x600",
-        "mobile": "https://placehold.co/1000x800"
+        "desktop": "/home/case-study/cars-desktop.webp",
+        "mobile": "/home/case-study/cars-mobile.webp"
       },
       "overview": {
         "description": "Executive Cars offers premium chauffeur services in Melbourne, providing luxury transportation for corporate and private clients. We created a sophisticated digital platform that reflects their high-end service standards.",
@@ -204,8 +204,8 @@
       "tags": ["Website", "SEO", "Ads"],
       "image": "/home/work/1731492367.webp",
       "heroImage": {
-        "desktop": "https://placehold.co/1920x600",
-        "mobile": "https://placehold.co/1000x800"
+        "desktop": "/home/case-study/silvago-casestudy-desktop.webp",
+        "mobile": "/home/case-study/silvago-casestudy-mobile.webp"
       },
       "overview": {
         "description": "Silvago is a contemporary silver jewellery brand focusing on minimalist designs that celebrate simplicity and elegance. We crafted a digital experience that embodies their modern aesthetic.",
@@ -282,8 +282,8 @@
       "tags": ["Website", "SEO"],
       "image": "/home/work/1731492317.webp",
       "heroImage": {
-        "desktop": "https://placehold.co/1920x600",
-        "mobile": "https://placehold.co/1000x800"
+        "desktop": "/home/case-study/crossroad-desktop.webp",
+        "mobile": "/home/case-study/crossroad-mobile.webp"
       },
       "overview": {
         "description": "Crossroads Hospital is a modern healthcare facility committed to patient-centered care. We created a comprehensive digital platform that makes healthcare information accessible and appointment booking effortless.",

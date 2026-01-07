@@ -61,49 +61,49 @@ const MousePointer = () => {
     });
 
     // work mouse movement
-    const sectionLinks = document.querySelectorAll(
-      ".work-home-section .swiper-main-div a"
-    );
+    // const sectionLinks = document.querySelectorAll(
+    //   ".work-home-section .swiper-main-div a"
+    // );
 
-    const sectionHandlers = [];
-    sectionLinks.forEach((link) => {
-      const mouseEnter = () => {
-        // Scale the cursor on hover and show the text
-        gsap.to(".flair", {
-          duration: 0.3,
-          scale: 1.2,
-          width: "70px",
-          height: "70px",
-          borderRadius: "50px",
-          mixBlendMode: "unset",
-          backgroundColor: "black",
-          color: "white",
-          boxShadow: "0px 0px 20px -5px gray",
-        });
-        setIsHovered(true);
-      };
+    // const sectionHandlers = [];
+    // sectionLinks.forEach((link) => {
+    //   const mouseEnter = () => {
+    //     // Scale the cursor on hover and show the text
+    //     gsap.to(".flair", {
+    //       duration: 0.3,
+    //       scale: 1.2,
+    //       width: "70px",
+    //       height: "70px",
+    //       borderRadius: "50px",
+    //       mixBlendMode: "unset",
+    //       backgroundColor: "black",
+    //       color: "white",
+    //       boxShadow: "0px 0px 20px -5px gray",
+    //     });
+    //     setIsHovered(true);
+    //   };
 
-      const mouseLeave = () => {
-        // Reset cursor size and hide the text when leaving
-        gsap.to(".flair", {
-          duration: 0.3,
-          scale: 1,
-          width: "20px",
-          height: "20px",
-          borderRadius: "50px",
-          mixBlendMode: "difference",
-          backgroundColor: "",
-          color: "",
-        });
-        setIsHovered(false);
-      };
+    //   const mouseLeave = () => {
+    //     // Reset cursor size and hide the text when leaving
+    //     gsap.to(".flair", {
+    //       duration: 0.3,
+    //       scale: 1,
+    //       width: "20px",
+    //       height: "20px",
+    //       borderRadius: "50px",
+    //       mixBlendMode: "difference",
+    //       backgroundColor: "",
+    //       color: "",
+    //     });
+    //     setIsHovered(false);
+    //   };
 
-      link.addEventListener("mouseenter", mouseEnter);
-      link.addEventListener("mouseleave", mouseLeave);
-      link.addEventListener("onclick", mouseLeave);
+    //   link.addEventListener("mouseenter", mouseEnter);
+    //   link.addEventListener("mouseleave", mouseLeave);
+    //   link.addEventListener("onclick", mouseLeave);
 
-      sectionHandlers.push({ link, mouseEnter, mouseLeave });
-    });
+    //   sectionHandlers.push({ link, mouseEnter, mouseLeave });
+    // });
 
     return () => {
       // Cleanup event listeners on unmount
@@ -114,10 +114,10 @@ const MousePointer = () => {
         link.removeEventListener("mouseleave", mouseLeave);
       });
 
-      sectionHandlers.forEach(({ link, mouseEnter, mouseLeave }) => {
-        link.removeEventListener("mouseenter", mouseEnter);
-        link.removeEventListener("mouseleave", mouseLeave);
-      });
+      // sectionHandlers.forEach(({ link, mouseEnter, mouseLeave }) => {
+      //   link.removeEventListener("mouseenter", mouseEnter);
+      //   link.removeEventListener("mouseleave", mouseLeave);
+      // });
     };
   }, [pathname]); // Re-run effect when route changes
 

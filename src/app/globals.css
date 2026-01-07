@@ -1863,6 +1863,15 @@ p {
 }
 
 @media (max-width: 720px) {
+  .with {
+    padding-left: 0 !important;
+  }
+  .home-banner-main-section .row-div .digi {
+    font-size: 2.5rem;
+  }
+  .home-banner-main-section .row-div .sol {
+    font-size: 2.5rem;
+  }
   .showPhoneMenu {
     transform: translateX(0%) !important;
     transition: 0.5s;

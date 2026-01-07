@@ -669,7 +669,7 @@
       font-weight: 700;
     }
     a {
-      width: 45%;
+      width: 50%;
       text-align: end !important;
     }
   }
@@ -953,7 +953,7 @@
         width: 100% !important;
         /* border: 1px solid red; */
         overflow: hidden;
-        scale: 1.25;
+        scale: 1;
       }
     }
   }

@@ -11,7 +11,7 @@ const ABOUT_DATA = {
   },
   leftSection: {
     card1: {
-      title: "57+ E-Commerce Websites Delivered",
+      title: "99+ Projects Delivered",
       iconUrl:
         "https://cdn.prod.website-files.com/66eab063c614790046e87eef/68dd737c5c8c9b1c39ed366b_Stat%20Icon.svg",
       description:
@@ -23,7 +23,7 @@ const ABOUT_DATA = {
       },
     },
     card2: {
-      title: "15+",
+      title: "18+",
       subtitle: "Team Members",
       description:
         "Our team of 15 digital experts works seamlessly from strategy to execution to help your brand stand out online.",
@@ -36,7 +36,7 @@ const ABOUT_DATA = {
   },
   middleSection: {
     title: "Our Focus",
-    subtitle: "E-Commerce Brands",
+    subtitle: "Real Estate Brands",
     description:
       "Data-driven ads and social strategies that help E-Commerce brands grow and maximize ROI.",
     aos: {
