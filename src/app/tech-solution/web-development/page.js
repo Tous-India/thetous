@@ -141,7 +141,7 @@ const WebDevelopment = () => {
 
   return (
     <React.Fragment>
-      <main className="min-h-screen bg-white web-devlopment-main-page">
+      <main className="web-devlopment-main-page">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           {/* Hero Section */}
           <section className="py-24 hero-web-dev">

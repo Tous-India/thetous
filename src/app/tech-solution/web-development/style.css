@@ -429,6 +429,12 @@
   }
 
   .faq-web-dev {
+    padding-bottom: 3rem !important;
+    background-color: white;
+    > div {
+      background-color: #fafafa;
+      padding: 1rem;
+    }
     .inner-heading {
       font-size: 1rem !important;
     }
@@ -556,6 +562,10 @@
   .animate-fadeSlideIn {
     animation: fadeSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
+
+  background-color: white;
+  padding-top: 3rem;
+   
 }
 
 /* Case Study Cards */
@@ -610,11 +620,11 @@
 
 .webDevCta {
   background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
-  margin-top: 5rem;
+  margin-top: 0rem;
   border-radius: 0 0 2rem 2rem;
-  padding: 3rem 0;
+  padding: 5rem 0;
   position: relative;
-  z-index: 10;
+  z-index: 5;
   margin-bottom: -2rem !important;
 
   .row {

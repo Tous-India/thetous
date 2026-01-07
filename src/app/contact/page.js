@@ -195,18 +195,16 @@ const Contact = () => {
             <div>
               <h3>Connect with us</h3>
               <p >
-                
+
                 <Link href="tel:+91-8901440322"> +91-8901440322</Link>{","} &nbsp;
                 <Link href="tel:+91-9996639777"> +91-9996639777</Link>
                 <br />
-                
+
                 <Link href="mailto:grow@thetous.com">grow@thetous.com</Link>
-                <div>
-                  <p className="w-75">
-                    C-116, 1st Floor, Sector-2, Noida, UP 201301
-                  </p>
-                </div>
               </p>
+              <div className="w-75">
+                C-116, 1st Floor, Sector-2, Noida, UP 201301
+              </div>
               <p className="d-flex gap-2 fs-2">
                 <Link
                   href="https://www.instagram.com"
@@ -234,8 +232,8 @@ const Contact = () => {
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.5266628342315!2d77.31511669999999!3d28.583973099999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5004045d0ab%3A0x783d74db012b0922!2sThe%20Tous!5e0!3m2!1sen!2sin!4v1767699289826!5m2!1sen!2sin"
               width="100%"
               height="250"
-              // style="border: 0"
-              allowFullScreen=""
+              style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>

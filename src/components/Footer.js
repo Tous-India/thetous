@@ -1,44 +1,10 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import Link from "next/link";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { usePathname } from "next/navigation";
-gsap.registerPlugin(ScrollTrigger);
-
-import { useGSAP } from "@gsap/react";
-gsap.registerPlugin(useGSAP);
 
 const Footer = () => {
-  const footerRef = useRef(null);
-  const pathname = usePathname();
-  useGSAP(() => {
-    // Reset footer position initially
-    gsap.set("#footerSecond", { yPercent: -70 });
-
-    // Define the timeline for uncover animation
-    const uncover = gsap.timeline({ paused: true });
-    uncover.to("#footerSecond", { yPercent: 0, duration: 3, ease: "none" });
-
-    // Create ScrollTrigger instance
-    const trigger = ScrollTrigger.create({
-      trigger:
-        ".last-section-of-every-page,.work-main-page,.contact-page-main,.blog-main-pag,.about-page-main,.case-studies-page",
-      start: "bottom bottom",
-      end: "+=75%",
-      animation: uncover,
-      scrub: true,
-    });
-
-    // Cleanup to prevent duplicate triggers when route changes
-    return () => {
-      trigger.kill();
-      uncover.kill();
-    };
-  }, [pathname]);
-
   return (
-    <footer id="footer" ref={footerRef}>
+    <footer id="footer">
       <div id="footerSecond">
         <div className="container">
           <div className="row">

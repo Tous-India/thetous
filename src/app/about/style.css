@@ -36,11 +36,15 @@
 }
 
 .about-page-main {
+  background-color: rgb(255, 255, 255);
+  margin-top: -2rem;
+  border-radius: 0 0 32px 32px;
   .aboutRow {
     padding: 0 1rem;
     height: fit-content;
     margin-bottom: 2rem;
     margin-top: 2rem;
+  
     > .row {
       align-items: start;
       .content-div {
@@ -52,21 +56,6 @@
           font-family: "Lato";
           padding: 1rem 0 0 0;
           text-align: start;
-          /* &::before {
-            content: "";
-            width: 10%;
-            height: 100%;
-            position: absolute;
-            top: -10%;
-            left: -1.75%;
-            z-index: -1;
-            background-image: url("../../../public/circle-tous.webp");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            
-            animation: smooth-updown 4s infinite;
-          } */
         }
         ul {
           padding: 0 0px 0 15px;
@@ -126,9 +115,9 @@
     margin-top: 5rem;
     border-radius: 0 0 2rem 2rem;
     padding: 3rem 0;
-    position: relative;
-    z-index: 10;
-    margin-bottom: -2rem !important;
+    position: relative; 
+    z-index: 5;
+    margin-bottom: -3.25rem !important;
     .row {
       align-items: center;
       justify-content: center;
@@ -161,41 +150,7 @@
     }
   }
 
-  .ourTeam {
-    margin: 6rem 0 0rem 0rem;
-    text-align: center;
-    h2 {
-      font-size: 3vw;
-      font-weight: 600;
-    }
-    .row {
-      margin-top: 3rem;
-      > div {
-        > div {
-          border: 1px solid rgb(240, 240, 240);
-          padding: 0rem 0 2rem 0;
-          transition: 0.3s;
-          border-radius: 5px;
-          overflow: hidden;
-          &:hover {
-            box-shadow: 0px 0px 20px -10px gray;
-            img {
-              scale: 1.05;
-            }
-          }
-          h4 {
-            font-weight: 600;
-          }
-          font-size: 0.8vw;
-          img {
-            width: 100%;
-            margin-bottom: 1rem;
-            transition: 1s;
-          }
-        }
-      }
-    }
-  }
+ 
 
   .About-page-tabs {
     font-family: "Poppins" !important;

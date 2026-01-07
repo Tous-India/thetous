@@ -56,7 +56,12 @@ a {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
+  /* Add bottom margin equal to footer height for reveal effect - responsive */
+  margin-bottom: 33rem;
+  background-color: white;
+  box-shadow: 0px 25px 20px -2px rgb(0, 0, 0);
+  border-radius: 30px 30px !important;
 }
 
 html {
@@ -74,23 +79,14 @@ select {
   font-family: "Poppins", sans-serif !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  /* font-family: "Montserrat", sans-serif !important; */
-}
 
 .home-page-main {
   position: relative;
-  z-index: 4;
+  z-index: 1;
   background-color: white;
   padding: 0;
-  box-shadow: 0px 10px 10px -7px gray;
+  box-shadow: 0px 20px 50px -5px rgb(0, 0, 0);
   border-radius: 0 0 30px 30px;
-  margin-bottom: -3rem;
 }
 
 .row-div {
@@ -126,15 +122,18 @@ h6 {
   }
 
   .para-div {
-    background: transparent;
+    background-color: rgb(0, 0, 0);
     text-align: center;
     color: white;
     padding: 5px;
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    top: -2.25rem;
+    position: relative;
+    z-index: 3;
     width: 100%;
+    padding: 12px 0;
+    padding-bottom: 3rem;
+    p {
+      margin: 0;
+    }
   }
 
   header {
@@ -148,13 +147,7 @@ h6 {
     }
 
     .container {
-      padding: 0;
-      border-radius: 2rem 2rem 0px 0px;
-      background-color: white;
-      position: relative;
-      z-index: 5;
-
-      >div {
+      > div {
         justify-content: space-between;
         align-items: center;
         padding: 10px 2rem;
@@ -220,7 +213,7 @@ h6 {
                   text-align: start;
                   position: absolute;
                   width: 75vw;
-                  left: 4vw;
+                  left: 12vw;
                   top: 6rem;
                   padding: 2rem 1rem;
                   z-index: 55;
@@ -1351,11 +1344,14 @@ footer {
   background-color: black;
   color: white;
   padding: 3rem 0 2rem 0;
-  margin: 0rem 0 0 0rem;
-  z-index: 0;
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
+  margin: 0;
+  /* Fixed positioning for reveal effect */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  overflow: visible;
 
   a {
     color: white;
