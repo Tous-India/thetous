@@ -195,18 +195,16 @@ const Contact = () => {
             <div>
               <h3>Connect with us</h3>
               <p >
-                
+
                 <Link href="tel:+91-8901440322"> +91-8901440322</Link>{","} &nbsp;
                 <Link href="tel:+91-9996639777"> +91-9996639777</Link>
                 <br />
-                
+
                 <Link href="mailto:grow@thetous.com">grow@thetous.com</Link>
-                <div>
-                  <p className="w-75">
-                    C-116, 1st Floor, Sector-2, Noida, UP 201301
-                  </p>
-                </div>
               </p>
+              <div className="w-75">
+                C-116, 1st Floor, Sector-2, Noida, UP 201301
+              </div>
               <p className="d-flex gap-2 fs-2">
                 <Link
                   href="https://www.instagram.com"

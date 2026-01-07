@@ -105,6 +105,9 @@
 }
 
 @media (max-width: 720px) {
+  .work-card-inner{
+    margin-top: 2rem;
+  }
   .work-main-page {
     padding: 10px !important;
     margin-top: 0px !important;
