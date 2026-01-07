@@ -67,7 +67,6 @@ const Header = () => {
     }
   };
 
-
   // MenuList with Image Change
 
   const handleMenuItemEnter = (img) => {
@@ -388,13 +387,19 @@ const Header = () => {
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/brand-solution">Performance Marketing </Link>
+                                  <Link href="/brand-solution">
+                                    Performance Marketing{" "}
+                                  </Link>
                                 </li>
                                 <li>
-                                  <Link href="/brand-solution">Google Ads </Link>
+                                  <Link href="/brand-solution">
+                                    Google Ads{" "}
+                                  </Link>
                                 </li>
                                 <li>
-                                  <Link href="/brand-solution">Social Media Management </Link>
+                                  <Link href="/brand-solution">
+                                    Social Media Management{" "}
+                                  </Link>
                                 </li>
                                 <li>
                                   <Link href="/brand-solution">SEO </Link>
@@ -444,10 +449,14 @@ const Header = () => {
                                   <Link href="/tech-solution">Automation</Link>
                                 </li>
                                 <li>
-                                  <Link href="/tech-solution">Website Designing</Link>
+                                  <Link href="/tech-solution">
+                                    Website Designing
+                                  </Link>
                                 </li>
                                 <li>
-                                  <Link href="/tech-solution">Whatsapp Marketing</Link>
+                                  <Link href="/tech-solution">
+                                    Whatsapp Marketing
+                                  </Link>
                                 </li>
                                 <li>
                                   <Link href="/tech-solution">AI Chatbot </Link>
@@ -486,19 +495,29 @@ const Header = () => {
                             <div className="accordion-body">
                               <ul>
                                 <li>
-                                  <Link href="/media-solution">AI Graphic Designing</Link>
+                                  <Link href="/media-solution">
+                                    AI Graphic Designing
+                                  </Link>
                                 </li>
                                 <li>
-                                  <Link href="/media-solution">AI Video Editing</Link>
+                                  <Link href="/media-solution">
+                                    AI Video Editing
+                                  </Link>
                                 </li>
                                 <li>
-                                  <Link href="/media-solution">Print Media</Link>
+                                  <Link href="/media-solution">
+                                    Print Media
+                                  </Link>
                                 </li>
                                 <li>
-                                  <Link href="/media-solution">Product Shoot</Link>
+                                  <Link href="/media-solution">
+                                    Product Shoot
+                                  </Link>
                                 </li>
                                 <li>
-                                  <Link href="/media-solution">Model Shoot</Link>
+                                  <Link href="/media-solution">
+                                    Model Shoot
+                                  </Link>
                                 </li>
                               </ul>
                             </div>

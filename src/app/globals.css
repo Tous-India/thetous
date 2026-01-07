@@ -56,7 +56,7 @@ a {
 }
 
 body {
-  overflow-x: clip;
+  overflow-x: hidden;
   /* Add bottom margin equal to footer height for reveal effect - responsive */
   margin-bottom: 33rem;
   background-color: white;
@@ -79,14 +79,13 @@ select {
   font-family: "Poppins", sans-serif !important;
 }
 
-
 .home-page-main {
   position: relative;
   z-index: 1;
   background-color: white;
   padding: 0;
-  box-shadow: 0px 20px 50px -5px rgb(0, 0, 0);
   border-radius: 0 0 30px 30px;
+  isolation: isolate;
 }
 
 .row-div {
@@ -96,11 +95,11 @@ select {
 }
 
 .parent-fo-header {
-  box-shadow: 0px -65px 10px 30px black;
   border-radius: 2rem 2rem 0 0;
-  margin-top: 2.5rem !important;
+  margin-top: 0 !important;
   position: relative;
   transition: 0.3s !important;
+  z-index: 100;
 
   .p-tag {
     font-family: "Poppins" !important;
@@ -127,7 +126,7 @@ select {
     color: white;
     padding: 5px;
     position: relative;
-    z-index: 3;
+    z-index: 0;
     width: 100%;
     padding: 12px 0;
     padding-bottom: 3rem;
@@ -137,10 +136,12 @@ select {
   }
 
   header {
-
-    /* img {
-      width: 40%;
-    } */
+    background-color: white;
+    position: relative;
+    z-index: 100;
+    margin-top: -2rem;
+    border-radius: 30px 30px 0 0;
+    overflow: visible;
     .para-div {
       z-index: 500;
       background: transparent;
@@ -152,7 +153,7 @@ select {
         align-items: center;
         padding: 10px 2rem;
 
-        >div {
+        > div {
           &:last-child {
             text-align: end;
 
@@ -193,20 +194,20 @@ select {
               }
             }
 
-            >ul {
+            > ul {
               display: flex;
               align-items: center;
               justify-content: end;
               margin: 0;
               gap: 3rem;
 
-              >li {
+              > li {
                 text-transform: uppercase;
                 font-weight: 500;
                 padding: 10px 0;
 
                 .inner-ul-dropdown {
-                  overflow-x: clip;
+                  overflow-x: hidden;
                   opacity: 0;
                   visibility: hidden;
                   transition: 0.3s;
@@ -216,7 +217,7 @@ select {
                   left: 12vw;
                   top: 6rem;
                   padding: 2rem 1rem;
-                  z-index: 55;
+                  z-index: 1000;
                   height: 20rem;
                   display: flex;
                   align-items: center;
@@ -225,6 +226,7 @@ select {
                   border: 1px solid rgba(128, 128, 128, 0.281);
                   border-radius: 10px;
                   box-shadow: 0px 2px 10px -5px gray;
+                  background-color: white;
 
                   /* Heading div */
                   .main-heading {
@@ -250,7 +252,7 @@ select {
                     height: 100%;
                     overflow: hidden;
 
-                    >div {
+                    > div {
                       display: flex;
                       flex-direction: column;
                       align-items: start;
@@ -350,7 +352,7 @@ select {
             position: fixed;
             left: 0;
             top: 0rem !important;
-            z-index: 999;
+            z-index: 9999;
             box-shadow: 0px 0px 10px 0px gray;
             display: flex;
             align-items: start;
@@ -367,7 +369,7 @@ select {
             }
 
             .row {
-              >div {
+              > div {
                 padding: 0;
               }
             }
@@ -391,7 +393,7 @@ select {
               padding: 0 !important;
 
               .row {
-                >div {
+                > div {
                   width: 100%;
 
                   .accordion {
@@ -409,7 +411,9 @@ select {
                     border: none !important;
                   }
 
-                  .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
+                  .accordion-item:last-of-type
+                    > .accordion-header
+                    .accordion-button.collapsed {
                     box-shadow: unset !important;
                     border: none !important;
                     font-size: 1.25rem;
@@ -453,7 +457,7 @@ select {
   left: 0;
   top: 0;
   border-radius: 50%;
-  z-index: 2000;
+  z-index: 10000;
   pointer-events: none;
   mix-blend-mode: difference;
   background-color: white;
@@ -529,7 +533,8 @@ select {
       font-size: 3.5rem;
       padding-left: 3.8rem;
     }
-    .digi,.sol{
+    .digi,
+    .sol {
       font-size: 3.5rem;
     }
   }
@@ -542,7 +547,7 @@ select {
     .inner {
       width: 100%;
 
-      >div {
+      > div {
         &:first-child {
           position: relative;
           z-index: 10;
@@ -589,7 +594,7 @@ select {
   .work-heading-home {
     padding: 1rem 0;
 
-    >div {
+    > div {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -675,7 +680,7 @@ select {
   }
 
   .swiper-slide {
-    >h4 {
+    > h4 {
       text-align: center;
       text-transform: uppercase;
       font-family: "Poppins";
@@ -753,7 +758,7 @@ select {
       margin-right: 1rem;
     }
 
-    >h4 {
+    > h4 {
       color: #333;
       font-size: 14px;
       font-family: "Poppins";
@@ -769,7 +774,7 @@ select {
     .row {
       position: relative;
 
-      >div {
+      > div {
         .inner-div {
           background-color: rgba(255, 255, 255, 0.335);
           padding: 50px 20px;
@@ -1006,7 +1011,7 @@ select {
   margin-top: 4rem;
   margin-bottom: 0rem;
 
-  >.homeClients {
+  > .homeClients {
     position: relative;
 
     &::after {
@@ -1169,7 +1174,8 @@ select {
           border-radius: 10px;
           height: fit-content;
 
-          span {}
+          span {
+          }
 
           p {
             margin-top: 1rem;
@@ -1198,7 +1204,8 @@ select {
           border-radius: 10px;
           color: white;
 
-          span {}
+          span {
+          }
 
           p {
             margin-top: 1rem;
@@ -1286,7 +1293,7 @@ select {
           color: white;
           padding: 1.65rem;
 
-          >div {
+          > div {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1313,7 +1320,7 @@ select {
 
 .count-up-main-componenet {
   .row {
-    >div {
+    > div {
       background-color: rgb(238, 238, 238);
       margin: 10px 0;
       padding: 20px 0;
@@ -1512,7 +1519,7 @@ footer {
   box-shadow: 0px 20px 20px -5px;
   background-color: rgb(255, 255, 255);
 
-  >div {
+  > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1610,7 +1617,7 @@ footer {
         height: auto;
       }
 
-      >span {
+      > span {
         strong {
           margin-right: 10px;
         }
@@ -1620,7 +1627,7 @@ footer {
         }
       }
 
-      >p {
+      > p {
         line-height: 28px;
         color: rgb(98, 98, 98);
       }
@@ -1653,9 +1660,11 @@ footer {
         }
 
         p {
-          span {}
+          span {
+          }
 
-          strong {}
+          strong {
+          }
         }
       }
     }
@@ -1711,7 +1720,7 @@ footer {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  z-index: 1000;
+  z-index: 5000;
 
   img {
     filter: drop-shadow(0 0 0.25rem rgb(175, 175, 175));
@@ -1725,7 +1734,7 @@ footer {
   position: fixed;
   top: 45%;
   right: -2.25rem;
-  z-index: 1000;
+  z-index: 5000;
   border: 2px solid blue;
   border-radius: 0 5px 5px;
   padding: 5px 10px;
@@ -1763,7 +1772,7 @@ footer {
 
   .container {
     .row {
-      >div {
+      > div {
         margin-top: 1.5rem;
 
         .innerDiv {
@@ -1843,8 +1852,6 @@ p {
   }
 }
 
-
-
 .inner-heading {
   font-family: "Poppins" !important;
   text-transform: capitalize;
@@ -1877,7 +1884,7 @@ p {
   }
 
   #noLine {
-    padding-bottom:0 !important;
+    padding-bottom: 0 !important;
     &::after {
       display: none;
     }
