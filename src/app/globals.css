@@ -1884,9 +1884,6 @@ p {
     }
   }
 
-  body {
-    margin-bottom: 120vh !important;
-  }
 
   footer {
     position: fixed !important;

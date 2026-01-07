@@ -80,7 +80,7 @@ const AboutTest = () => {
       description:
         "Empowering brands with innovative, human-centric marketing strategies that drive real results. Our vision is to be the most trusted partner for business growth and success.",
       image:
-        "https://cdn.prod.website-files.com/67726722d415dc401ae23cf6/677289e14dd4dbca1d8e5930_philip-oroni-IANBrm46bF0-unsplash%20(2).avif",
+        "/about/vision.webp",
     },
     {
       label: "Mission",
@@ -88,7 +88,7 @@ const AboutTest = () => {
       description:
         "We empower E-Commerce brands with human-centric, data-driven marketing strategies that drive measurable growth, maximize ROI, and build lasting brand value—becoming a trusted partner in their long-term success.",
       image:
-        "https://cdn.prod.website-files.com/67726722d415dc401ae23cf6/677289e19e4d013c6a4c5a1b_philip-oroni-Zx_G3LpNnV4-unsplash%20(1).avif",
+        "/about/mission.webp",
     },
     {
       label: "Values",
@@ -96,7 +96,7 @@ const AboutTest = () => {
       description:
         "Results-Driven Approach, Customer-Centric Strategy, Innovation & Creativity, Transparency & Integrity, Data-Backed Decisions, Agility & Adaptability, Customer Loyalty & Retention.",
       image:
-        "https://cdn.prod.website-files.com/67726722d415dc401ae23cf6/677289e1c88b5b4c14d1e6fd_philip-oroni-h9N7bm-HRCo-unsplash.avif",
+        "/about/values.webp",
     },
   ];
   return (
@@ -170,14 +170,12 @@ const AboutTest = () => {
                       : "opacity-0 scale-95 rotate-3"
                   }`}
                 >
-                  <Image
+                  <img
                     src={tab.image}
                     alt={tab.heading}
-                    className=" "
-                    width={100}
-                    height={100}
+                    className=""
                   />
-                  <p>{tab.image}</p>
+                 
                 </div>
               ))}
             </div>

@@ -15,7 +15,7 @@ import ohmypet from "../../../public/work/ohmypet.webp";
 import dhirsons from "../../../public/work/dhirsons.webp";
 import crossraod from "../../../public/home/work/1731492317.webp";
 import godrej from "../../../public/home/work/godrej.jpg";
-import m2mPanipat from "../../../public/home/work/m2m-panipat.webp";
+import m3mPanipat from "../../../public/home/work/m3m-panipat.webp";
 import skaOrion from "../../../public/home/work/SKA orion.jpg";
 import tarc from "../../../public/home/work/TARC.jpg";
 
@@ -30,7 +30,7 @@ const imageMap = {
   "/home/work/1731492317.webp": crossraod,
   "/home/work/silvago.png": silvago,
   "/home/work/godrej.jpg": godrej,
-  "/home/work/m2m-panipat.webp": m2mPanipat,
+  "/home/work/m3m-panipat.webp": m3mPanipat,
   "/home/work/SKA orion.jpg": skaOrion,
   "/home/work/TARC.jpg": tarc,
 };

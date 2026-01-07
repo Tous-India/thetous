@@ -16,7 +16,7 @@ import Img5 from "../../../public/home/work/1731492367.webp";
 import Img6 from "../../../public/home/work/1726133585.webp";
 import Img7 from "../../../public/home/work/1731492317.webp";
 import Img8 from "../../../public/home/work/1731492299.webp";
-import Img9 from "../../../public/home/work/m2m-panipat.webp";
+import Img9 from "../../../public/home/work/m3m-panipat.webp";
 import Img10 from "../../../public/home/work/godrej.jpg";
 import Img11 from "../../../public/home/work/1742644830.webp";
 import Img12 from "../../../public/home/work/1742807329.webp";

@@ -899,7 +899,7 @@ const ShopifyDevelopment = () => {
             </div>
           </section>
 
-          <section className="py-24 max-w-7xl mx-auto mt-5 mb-5 web-dev-tabs">
+          <section className="py-24 max-w-7xl mx-auto mt-5 web-dev-tabs">
             <h3 className="main-section-heading mb-4">Our Shopify Portfolio</h3>
             <div className="mb-12">
               {/* Tab Navigation */}

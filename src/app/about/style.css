@@ -202,10 +202,9 @@
         overflow: hidden;
       }
       img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
+        width: 80%;
+        object-fit: contain;
+        border-radius: 10px;  
       }
     }
 
@@ -226,6 +225,9 @@
 }
 
 @media (max-width: 480px) {
+  .about-page-main .About-page-tabs .righ-col img{
+    width: 100%;
+  }
   .about-page-main .About-page-tabs .left-col .tab-contentd-div {
     height: 240px;
     position: relative;

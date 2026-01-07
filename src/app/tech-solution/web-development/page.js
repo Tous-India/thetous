@@ -977,7 +977,7 @@ const WebDevelopment = () => {
               <div className="row">
                 {/* Right Column - Client Logos */}
                 <div className="col-md-6 col-lg-6 col-sm-12 left-div">
-                  <h2 className="main-section-heading mb-4">
+                  <h2 className="main-section-heading mb-4" id="devHeading">
                     Does This Sound Like Your Business?
                   </h2>
                   <ul className="space-y-3 mb-8">
