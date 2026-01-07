@@ -67,11 +67,6 @@ const Header = () => {
     }
   };
 
-  // const handleMouseLeaveList = () => {
-  //   setFirstList(false);
-  //   setSecondList(false);
-  //   setThirdList(false);
-  // };
 
   // MenuList with Image Change
 

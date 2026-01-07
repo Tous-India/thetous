@@ -2,8 +2,8 @@
 
 .work-main-page {
   background-color: white;
-  margin: 2rem 0 -3rem 0 !important;
-  padding: 0 0 5rem 0 !important;
+  margin: -2rem 0 -3.25rem 0 !important;
+  padding: 3rem 0 5rem 0 !important;
   box-shadow: 0px 5px 10px -5px gray;
   position: relative;
   border-radius: 0 0 30px 30px;
@@ -16,7 +16,7 @@
       font-weight: 400;
       color: #535353;
     }
-     margin-bottom: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
   }
   h1 {
     text-align: start;

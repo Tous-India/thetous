@@ -230,8 +230,8 @@ const Contact = () => {
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14007.332766375888!2d77.2194014!3d28.6347611!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdbd20f0f0eb%3A0xb84891262d7483e!2sOffice%20On!5e0!3m2!1sen!2sin!4v1719305295633!5m2!1sen!2sin"
               width="100%"
               height="210"
-              // style="border: 0"
-              allowFullScreen=""
+              style={{ border: 0 }}
+              allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>

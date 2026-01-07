@@ -786,7 +786,7 @@ const Quote = () => {
   };
 
   return (
-    <div className="quote-page-main">
+    <div className="quote-main-page">
       <div className="container">
         <div className="quote-header">
           <h1>Get Your Custom Quote</h1>

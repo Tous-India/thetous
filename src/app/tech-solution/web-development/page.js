@@ -141,7 +141,7 @@ const WebDevelopment = () => {
 
   return (
     <React.Fragment>
-      <main className="min-h-screen bg-white web-devlopment-main-page">
+      <main className="web-devlopment-main-page">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           {/* Hero Section */}
           <section className="py-24 hero-web-dev">
@@ -1125,7 +1125,7 @@ const WebDevelopment = () => {
           </section>
           {/* FAQs */}
           <h3 className="main-section-heading ">Frequently Asked Questions</h3>
-          <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
+          <section className="bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">
                 {faqs.map((faq, index) => (

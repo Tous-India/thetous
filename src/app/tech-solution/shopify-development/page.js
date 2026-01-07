@@ -163,7 +163,7 @@ const ShopifyDevelopment = () => {
 
   return (
     <React.Fragment>
-      <main className="min-h-screen bg-white shopify-devlopment-main-page">
+      <main className=" shopify-devlopment-main-page">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           {/* Hero Section */}
           <section className="py-24 hero-web-dev">
@@ -943,7 +943,9 @@ const ShopifyDevelopment = () => {
                     </p>
 
                     <div className="mb-6">
-                      <h4 className="inner-heading leading-[auto]">What we delivered:</h4>
+                      <h4 className="inner-heading leading-[auto]">
+                        What we delivered:
+                      </h4>
                       <ul className="space-y-2">
                         {portfolioContent[activeTab].deliverables.map(
                           (item, index) => (
@@ -1177,7 +1179,9 @@ const ShopifyDevelopment = () => {
           </section>
 
           {/* FAQs */}
-          <h3 className="main-section-heading mb-4">Frequently Asked Questions</h3>
+          <h3 className="main-section-heading mb-4">
+            Frequently Asked Questions
+          </h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">
