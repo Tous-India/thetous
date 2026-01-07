@@ -7,7 +7,13 @@ import Image from "next/image";
 
 // image
 
-import kb from "../../../public/client/kb.webp";
+import kb from "../../../public/client/kbvista.webp";
+import hk from "../../../public/client/hk.webp";
+import fnp from "../../../public/client/fnp-logo.webp";
+import omp from "../../../public/client/omp.webp";
+import corru from "../../../public/client/5m.webp";
+import vardhaman from "../../../public/client/vardhaman.webp";
+import bulls from "../../../public/client/bulls.webp";
 import user from "../../../public/client/user.png";
 
 // Testimonials data
@@ -20,7 +26,7 @@ const testimonialsData = [
     clientName: "Rohit Mehra",
     clientPosition: "Founder",
     clientImage: user,
-    brandLogo: kb,
+    brandLogo: hk,
   },
   {
     id: 2,
@@ -40,7 +46,7 @@ const testimonialsData = [
     clientName: "Vikas Jain",
     clientPosition: "Business Owner",
     clientImage: user,
-    brandLogo: kb,
+    brandLogo: fnp,
   },
   {
     id: 4,
@@ -50,7 +56,7 @@ const testimonialsData = [
     clientName: "Neha Kapoor",
     clientPosition: "Growth Manager",
     clientImage: user,
-    brandLogo: kb,
+    brandLogo: omp,
   },
   {
     id: 5,
@@ -60,7 +66,7 @@ const testimonialsData = [
     clientName: "Saurabh Gupta",
     clientPosition: "Brand Manager",
     clientImage: user,
-    brandLogo: kb,
+    brandLogo: corru,
   },
   {
     id: 6,
@@ -70,7 +76,7 @@ const testimonialsData = [
     clientName: "Kunal Arora",
     clientPosition: "Brand Strategist",
     clientImage: user,
-    brandLogo: kb,
+    brandLogo: vardhaman,
   },
   {
     id: 7,
@@ -80,7 +86,7 @@ const testimonialsData = [
     clientName: "Aman Gupta",
     clientPosition: "Operations Head",
     clientImage: user,
-    brandLogo: kb,
+    brandLogo: bulls,
   },
 ];
 
@@ -123,7 +129,6 @@ const Testimonials = () => {
                 <SwiperSlide key={testimonial.id} className={testimonial.className}>
                   <div className="innerDiv">
                     <span>
-                      <strong>{testimonial.rating}</strong>
                       {[...Array(Math.floor(testimonial.rating))].map((_, index) => (
                         <i key={index} className="ri-star-s-fill"></i>
                       ))}

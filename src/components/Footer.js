@@ -50,7 +50,7 @@ const Footer = () => {
               </ul>
 
               <ul className="footer-ul-2">
-                <li>C-119,Ground Floor, Sec-2, Noida</li>
+                <li>C-116, 1st Floor, Sector-2, Noida, UP 201301</li>
                 <li>
                   <Link href={"mailto:grow@thetous.com"}>
                     {" "}

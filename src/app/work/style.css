@@ -15,6 +15,18 @@
       font-size: 14px;
       font-weight: 400;
       color: #535353;
+      position: relative;
+      padding-bottom: 1rem;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0.2rem;
+        width: 100px;
+        background: linear-gradient(to right, #00dbde, #fc00ff);
+        border-radius: 4rem;
+      }
     }
     margin-bottom: 1.5rem !important;
   }
@@ -78,10 +90,14 @@
 
 .work-card .work-tags span {
   margin-right: 10px;
-  background-color: rgb(6, 6, 6);
-  color: white;
+  background: white;
+  color: black;
   padding: 5px 10px;
-  border-radius: 5rem;
+  border-radius: 5px;
+  border: 1.5px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #00dbde, #fc00ff) border-box;
+  font-size: 11px;
 }
 
 .work-card .work-tags {

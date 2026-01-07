@@ -212,7 +212,7 @@ const WebDevelopment = () => {
                 <p className="mb-6">• CRM • Web Apps</p>
                 <p>• Mobile Apps • Enterprise Portals</p>
 
-                <Link href="/contact" className="inline-block c_button_black">
+                <Link href="/quote" className="inline-block c_button_black">
                   Start a Project
                 </Link>
               </div>
@@ -220,7 +220,7 @@ const WebDevelopment = () => {
           </section>
           {/* Services Overview - 6 Item Accordion */}
           <section className="py-24 max-w-7xl mx-auto what-we-offer-web-dev">
-            <h3 className="main-section-heading mb-12">
+            <h3 className="main-section-heading mb-12" id="devHeading">
               Our Web Development Services
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 content-wrapper">
@@ -484,7 +484,7 @@ const WebDevelopment = () => {
             </div>
           </section>
           {/* Process Section */}
-          <h3 className="main-section-heading">Our Development Process</h3>
+          <h3 className="main-section-heading" id="devHeading">Our Development Process</h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 our-process-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-4 gap-12 content-wrapper">
@@ -553,7 +553,7 @@ const WebDevelopment = () => {
                         expandedProcesses[2] ? "expanded" : ""
                       }`}
                     >
-                      With 6+ years of development expertise and 57+ successful
+                      With 7+ years of development expertise and 42+ successful
                       launches, our team builds robust, scalable solutions using
                       modern frameworks. We conduct rigorous QA testing across
                       devices, browsers, and real-world scenarios to ensure
@@ -607,7 +607,7 @@ const WebDevelopment = () => {
           {/* Why Choose Us */}
           <section className="py-24 max-w-7xl mx-auto why-choose-us-web-dev">
             <div className="mb-12">
-              <h3 className="main-section-heading">
+              <h3 className="main-section-heading" id="devHeading">
                 Why Choose The Tous for Web Development
               </h3>
               <p className="why-para">
@@ -811,7 +811,7 @@ const WebDevelopment = () => {
                 <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
                   Our Track Record
                 </p>
-                <h2 className="main-section-heading">
+                <h2 className="main-section-heading" id="devHeading">
                   Proven Track Record in Web Development
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -822,14 +822,14 @@ const WebDevelopment = () => {
               </div>
               <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">57+</div>
-                  <p className="inner-heading">Websites Delivered</p>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">42+</div>
+                  <p className="inner-heading">Web/Mobile Apps Delivered</p>
                   <p className="text-sm text-gray-500">
                     E-commerce & corporate sites launched since 2018
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">6+</div>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">7+</div>
                   <p className="inner-heading">Years of Excellence</p>
                   <p className="text-sm text-gray-500">
                     Trusted development partner for growing brands
@@ -1124,8 +1124,13 @@ const WebDevelopment = () => {
             </div>
           </section>
           {/* FAQs */}
+<<<<<<< HEAD
           <h3 className="main-section-heading ">Frequently Asked Questions</h3>
           <section className="bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
+=======
+          <h3 className="main-section-heading " id="devHeading">Frequently Asked Questions</h3>
+          <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
+>>>>>>> 8e204e6970982f10320e5a02aec2b786946cf421
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
@@ -1181,7 +1186,7 @@ const WebDevelopment = () => {
               <div className="p">
                 Together, let&apos;s have a quantifiable effect on your company.
               </div>
-              <Link href="">Design A Quote</Link>
+              <Link href="/quote">Design A Quote</Link>
             </div>
           </div>
         </div>

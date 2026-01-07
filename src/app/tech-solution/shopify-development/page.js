@@ -248,7 +248,7 @@ const ShopifyDevelopment = () => {
 
           {/* Services Overview */}
           <section className="py-24 max-w-7xl mx-auto what-we-offer-web-dev">
-            <h3 className="main-section-heading mb-12">
+            <h3 className="main-section-heading mb-12" id="devHeading">
               Our Shopify Development Services
             </h3>
             <div className="grid  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 content-wrapper">
@@ -529,7 +529,7 @@ const ShopifyDevelopment = () => {
           </section>
 
           {/* Process Section */}
-          <h3 className="main-section-heading mb-5">
+          <h3 className="main-section-heading mb-5" id="devHeading">
             Our Shopify Development Process
           </h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 our-process-web-dev">
@@ -658,7 +658,7 @@ const ShopifyDevelopment = () => {
           {/* Why Choose Us */}
           <section className="py-24 max-w-7xl mx-auto why-choose-us-web-dev">
             <div className="mb-12">
-              <h3 className="main-section-heading">
+              <h3 className="main-section-heading" id="devHeading">
                 Why Choose The Tous for Shopify Development
               </h3>
               <p className="why-para">
@@ -862,7 +862,7 @@ const ShopifyDevelopment = () => {
                 <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
                   Our Track Record
                 </p>
-                <h2 className="main-section-heading">
+                <h2 className="main-section-heading" id="devHeading">
                   Proven Results in Shopify Development
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -1027,7 +1027,7 @@ const ShopifyDevelopment = () => {
                 <div className="row">
                   {/* Left Column - Pain Points */}
                   <div className="col-md-6 col-lg-6 col-sm-12 cta-left">
-                    <h2 className="main-section-heading mb-4">
+                    <h2 className="main-section-heading mb-4" id="devHeading">
                       Is Your E-Commerce Store Struggling?
                     </h2>
                     <ul className="space-y-3 mb-8">
@@ -1179,9 +1179,13 @@ const ShopifyDevelopment = () => {
           </section>
 
           {/* FAQs */}
+<<<<<<< HEAD
           <h3 className="main-section-heading mb-4">
             Frequently Asked Questions
           </h3>
+=======
+          <h3 className="main-section-heading mb-4" id="devHeading">Frequently Asked Questions</h3>
+>>>>>>> 8e204e6970982f10320e5a02aec2b786946cf421
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">

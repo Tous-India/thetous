@@ -961,7 +961,7 @@ select {
     align-items: center;
     justify-content: center;
     img {
-      width: 50% !important;
+      /* width: 50% !important; */
       margin: 1rem;
       border-radius: 0.5rem;
       filter: grayscale(100%);
@@ -987,7 +987,7 @@ select {
 
   .swiper-slide img {
     display: block;
-    width: 80% !important;
+    width: 60% !important;
     height: 100%;
     object-fit: cover;
   }
@@ -1536,6 +1536,7 @@ footer {
   right: -2.25rem;
   z-index: 1000;
   border: 2px solid blue;
+  border-radius: 0 5px 5px;
   padding: 5px 10px;
   font-family: "Lato";
   background-color: black;

@@ -5,23 +5,15 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Top slider images
-import motherMuskan from "../../../public/home/clients/1729244143.webp";
-import hk from "../../../public/home/clients/1729244208.webp";
-import corru from "../../../public/home/clients/1729244242.webp";
-import dirson from "../../../public/home/clients/1729244173.webp";
-import boxica from "../../../public/home/clients/1729244188.webp";
-import thirstybull from "../../../public/home/clients/1729834525.webp";
-import elise from "../../../public/home/clients/1729244306.webp";
+import bioderma from "../../../public/home/clients/bio.jpg";
+import luxeliv from "../../../public/home/clients/luxeliv.jpg";
+import fnp from "../../../public/home/clients/fnp.jpg";
+import prozvofit from "../../../public/home/clients/prozvofit.webp";
 // Bottom slider images
-import ohmypet from "../../../public/home/clients/omp.jpg";
-import prozvofit from "../../../public/home/clients/luxeliv.jpg";
-import knockout from "../../../public/home/clients/t2a.jpg";
-import svaa from "../../../public/home/clients/silvish.jpg";
-import vedica from "../../../public/home/clients/sansafe.jpg";
-import shoolin from "../../../public/home/clients/shoolin.jpg";
-import vardhman from "../../../public/home/clients/fnp.jpg";
-import jyotish from "../../../public/home/clients/bio.jpg";
-import autoboss from "../../../public/home/clients/ewow.jpg";
+import nestloom from "../../../public/home/clients/nest.webp";
+import silvago from "../../../public/home/clients/silvago.webp";
+import pearls from "../../../public/home/clients/pearls.webp";
+import kb from "../../../public/home/clients/kb.webp";
 
 // Configuration objects
 const IMAGE_CONFIG = {
@@ -64,29 +56,25 @@ const AUTOPLAY_CONFIG = {
 
 // Slider data
 const topSliderImages = [
-  motherMuskan,
-  hk,
-  elise,
-  boxica,
-  dirson,
-  thirstybull,
-  corru,
-  motherMuskan,
-  motherMuskan,
-  motherMuskan,
-  motherMuskan,
+  luxeliv,
+  bioderma,
+  fnp,
+  prozvofit,
+  luxeliv,
+  bioderma,
+  fnp,
+  prozvofit,
 ];
 
 const bottomSliderImages = [
-  ohmypet,
-  prozvofit,
-  knockout,
-  svaa,
-  vedica,
-  shoolin,
-  vardhman,
-  autoboss,
-  jyotish,
+  nestloom,
+  silvago,
+  pearls,
+  kb,
+  nestloom,
+  silvago,
+  pearls,
+  kb,
 ];
 
 const sliderConfigs = [

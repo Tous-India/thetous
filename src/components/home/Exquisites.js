@@ -13,9 +13,9 @@ const Exquisites = () => {
         <div className="heading-div">
           <div id="word-heading" className="work-heading-home row-div">
             <h2 className="main-section-heading">Exquisites</h2>
-            <Link href="https://tous.mankindpackers.site/works">
+            <Link href="/contact">
               <button>
-                <span className="btn-span-1">View All</span>
+                <span className="btn-span-1">Contact Us</span>
                 <span className="btn-span-2">
                   <i className="ri-arrow-right-up-long-line"></i>
                 </span>

@@ -63,10 +63,10 @@ const Work = () => {
               </div>
               <h4>
                 The Tous work by combining creativity, data-driven insights, and
-                effective strategies, we create digital solutions that engage,
+                effective strategies. We create digital solutions that engage,
                 convert, and elevate your brand’s presence online.
               </h4>
-              <Link href={"/"} className="add-your-project">
+              <Link href={"/quote"} className="add-your-project">
                 Add Your Project <i className="ri-arrow-right-up-line"></i>
               </Link>
             </div>
