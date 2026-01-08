@@ -24,15 +24,16 @@ import Img13 from "../../../public/home/work/silvago.png";
 
 // Project data with case study links
 const projects = [
-  { title: "M3M Panipat", image: Img9, link: "#" },
-  { title: "Godrej South Estate", image: Img10, link: "#" },
-  { title: "Silvago", image: Img13, link: "#" },
+  // { title: "M3M Panipat", image: Img9, link: "#" },
+  { title: "M3M Panipat", image: Img9},
+  { title: "Godrej South Estate", image: Img10},
+  { title: "Silvago", image: Img13},
   // {
   //   title: "Dhirsons Jewellery House",
   //   image: Img3,
   //   link: "/case-studies/dhirsons-jewellery-house",
   // },
-  { title: "Luxeliv", image: Img4, link: "#" },
+  { title: "Luxeliv", image: Img4},
   // { title: "Silvago", image: Img5, link: "/case-studies/silvago" },
   // { title: "Prozvofit", image: Img6, link: "/case-studies/prozvofit" },
   // {
@@ -41,8 +42,8 @@ const projects = [
   //   link: "/case-studies/crossroads-hospital",
   // },
   // { title: "Drym Foods", image: Img8, link: "/" },
-  { title: "SKA Orion", image: Img1, link: "#" },
-  { title: "TARC", image: Img2, link: "#" },
+  { title: "SKA Orion", image: Img1},
+  { title: "TARC", image: Img2},
   // {
   //   title: "Executive Cars",
   //   image: Img11,
@@ -128,7 +129,7 @@ const Work = () => {
                   <SwiperSlide key={index}>
                     <h4>{project.title}</h4>
                     <div className="inner-div">
-                      <Link href={project.link}>
+                      {/* <Link href={project.link}> */}
                         <Image
                           src={project.image}
                           alt={project.title}
@@ -136,7 +137,7 @@ const Work = () => {
                           height={"100%"}
                           priority
                         />
-                      </Link>
+                      {/* </Link> */}
                     </div>
                   </SwiperSlide>
                 ))}

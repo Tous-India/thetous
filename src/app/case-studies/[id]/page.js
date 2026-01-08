@@ -168,7 +168,7 @@ const CaseStudyPage = ({ params }) => {
                         </table>
                         {project.challenges.summary && (
                           <p className="challenges-summary">
-                            {`The brand wasn't struggling with <em>demand</em> —
+                            {`The brand wasn't struggling with demand —
                             they were struggling with`}{" "}
                             <strong>
                               conversion, trust, and profitability.
