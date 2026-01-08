@@ -477,6 +477,7 @@
 
 @media (max-width: 720px) {
   .contact-page-main {
+    margin-bottom: -1rem !important;
     .container-fluid {
       > .row {
         margin-top: 0px !important;
@@ -486,6 +487,9 @@
     form {
       padding: 20px !important;
     }
+  }
+  .aboutCta{
+    
   }
 
   .contact-page-main .container-fluid .row .right {

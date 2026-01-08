@@ -112,6 +112,7 @@
   .work-main-page {
     padding: 10px !important;
     margin-top: 0px !important;
+    margin-bottom: -1rem !important;
     .container-2 {
       .row {
         justify-content: space-between;

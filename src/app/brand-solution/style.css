@@ -256,6 +256,9 @@
 }
 
 @media (max-width: 480px) {
+  .brand-page-main{
+    margin-bottom: -1rem !important;
+  }
   .brand-page-main .bs-container2 .accordion-item .accordion-header button {
     font-size: 1.25rem;
     font-weight: 400;

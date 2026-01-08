@@ -225,6 +225,9 @@
 }
 
 @media (max-width: 480px) {
+  .about-page-main .aboutCta{
+    margin-bottom: -1rem !important;
+  }
   .about-page-main .About-page-tabs .righ-col img{
     width: 100%;
   }
@@ -243,6 +246,7 @@
   }
 
   .about-page-main {
+    margin-bottom: -1rem !important;
     .aboutRow {
       padding: 10px;
       height: fit-content;
