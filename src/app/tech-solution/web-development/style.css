@@ -867,4 +867,11 @@
   #devHeading {
     font-size: 1.6rem !important;
   }
+  .left-div{
+    padding: 0 !important;
+  }
+  .faq-web-dev button{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }

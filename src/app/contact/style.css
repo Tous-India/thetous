@@ -13,6 +13,7 @@
   .container-fluid {
     background-color: white;
     padding: 0 0rem !important;
+    margin-bottom: -1rem !important;
     position: relative;
     z-index: 1;
 
@@ -489,6 +490,7 @@
   .contact-page-main .container-fluid .row .right {
     border-radius: 0 0 30px 30px !important;
     margin-bottom: -1rem;
+    margin: 0 0 -3rem !important;
     background: white;
   }
 }

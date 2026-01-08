@@ -77,6 +77,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  margin-top: 5px;
   margin-bottom: 0.5rem;
   transition: all 0.3s ease;
   z-index: 2;
@@ -136,6 +137,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -684,6 +686,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -789,6 +792,11 @@
 }
 
 @media (max-width: 480px) {
+  .quote-main-page {
+    margin-bottom: -1rem !important;
+
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
   }

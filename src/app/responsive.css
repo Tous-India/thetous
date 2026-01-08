@@ -482,6 +482,7 @@
   .parent-fo-header {
     .para-div {
       z-index: -5;
+      border-radius: 0 !important;
     }
     header {
       z-index: -2;
@@ -1227,6 +1228,6 @@
 
 @media (max-width: 540px) {
   body {
-    margin-bottom: 42rem;
+    margin-bottom: 39rem;
   }
 }

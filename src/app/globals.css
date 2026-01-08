@@ -59,7 +59,7 @@ body {
   overflow-x: hidden;
   /* Add bottom margin equal to footer height for reveal effect - responsive */
   margin-bottom: 33rem;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   box-shadow: 0px 25px 20px -2px rgb(0, 0, 0);
   border-radius: 30px 30px !important;
 }
@@ -130,6 +130,7 @@ select {
     width: 100%;
     padding: 12px 0;
     padding-bottom: 3rem;
+
     p {
       margin: 0;
     }
@@ -142,18 +143,19 @@ select {
     margin-top: -2rem;
     border-radius: 30px 30px 0 0;
     overflow: visible;
+
     .para-div {
       z-index: 500;
       background: transparent;
     }
 
     .container {
-      > div {
+      >div {
         justify-content: space-between;
         align-items: center;
         padding: 10px 2rem;
 
-        > div {
+        >div {
           &:last-child {
             text-align: end;
 
@@ -194,14 +196,14 @@ select {
               }
             }
 
-            > ul {
+            >ul {
               display: flex;
               align-items: center;
               justify-content: end;
               margin: 0;
               gap: 3rem;
 
-              > li {
+              >li {
                 text-transform: uppercase;
                 font-weight: 500;
                 padding: 10px 0;
@@ -252,7 +254,7 @@ select {
                     height: 100%;
                     overflow: hidden;
 
-                    > div {
+                    >div {
                       display: flex;
                       flex-direction: column;
                       align-items: start;
@@ -369,7 +371,7 @@ select {
             }
 
             .row {
-              > div {
+              >div {
                 padding: 0;
               }
             }
@@ -393,7 +395,7 @@ select {
               padding: 0 !important;
 
               .row {
-                > div {
+                >div {
                   width: 100%;
 
                   .accordion {
@@ -411,9 +413,7 @@ select {
                     border: none !important;
                   }
 
-                  .accordion-item:last-of-type
-                    > .accordion-header
-                    .accordion-button.collapsed {
+                  .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
                     box-shadow: unset !important;
                     border: none !important;
                     font-size: 1.25rem;
@@ -533,6 +533,7 @@ select {
       font-size: 3.5rem;
       padding-left: 3.8rem;
     }
+
     .digi,
     .sol {
       font-size: 3.5rem;
@@ -547,7 +548,7 @@ select {
     .inner {
       width: 100%;
 
-      > div {
+      >div {
         &:first-child {
           position: relative;
           z-index: 10;
@@ -594,7 +595,7 @@ select {
   .work-heading-home {
     padding: 1rem 0;
 
-    > div {
+    >div {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -680,7 +681,7 @@ select {
   }
 
   .swiper-slide {
-    > h4 {
+    >h4 {
       text-align: center;
       text-transform: uppercase;
       font-family: "Poppins";
@@ -758,7 +759,7 @@ select {
       margin-right: 1rem;
     }
 
-    > h4 {
+    >h4 {
       color: #333;
       font-size: 14px;
       font-family: "Poppins";
@@ -774,7 +775,7 @@ select {
     .row {
       position: relative;
 
-      > div {
+      >div {
         .inner-div {
           background-color: rgba(255, 255, 255, 0.335);
           padding: 50px 20px;
@@ -1011,7 +1012,7 @@ select {
   margin-top: 4rem;
   margin-bottom: 0rem;
 
-  > .homeClients {
+  >.homeClients {
     position: relative;
 
     &::after {
@@ -1174,8 +1175,7 @@ select {
           border-radius: 10px;
           height: fit-content;
 
-          span {
-          }
+          span {}
 
           p {
             margin-top: 1rem;
@@ -1204,8 +1204,7 @@ select {
           border-radius: 10px;
           color: white;
 
-          span {
-          }
+          span {}
 
           p {
             margin-top: 1rem;
@@ -1293,7 +1292,7 @@ select {
           color: white;
           padding: 1.65rem;
 
-          > div {
+          >div {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1320,7 +1319,7 @@ select {
 
 .count-up-main-componenet {
   .row {
-    > div {
+    >div {
       background-color: rgb(238, 238, 238);
       margin: 10px 0;
       padding: 20px 0;
@@ -1519,7 +1518,7 @@ footer {
   box-shadow: 0px 20px 20px -5px;
   background-color: rgb(255, 255, 255);
 
-  > div {
+  >div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1617,7 +1616,7 @@ footer {
         height: auto;
       }
 
-      > span {
+      >span {
         strong {
           margin-right: 10px;
         }
@@ -1627,7 +1626,7 @@ footer {
         }
       }
 
-      > p {
+      >p {
         line-height: 28px;
         color: rgb(98, 98, 98);
       }
@@ -1660,11 +1659,9 @@ footer {
         }
 
         p {
-          span {
-          }
+          span {}
 
-          strong {
-          }
+          strong {}
         }
       }
     }
@@ -1736,7 +1733,7 @@ footer {
   right: -2.25rem;
   z-index: 5000;
   border: 2px solid blue;
-  border-radius: 0 5px 5px;
+  border-radius: 0 0 5px 5px;
   padding: 5px 10px;
   font-family: "Lato";
   background-color: black;
@@ -1772,7 +1769,7 @@ footer {
 
   .container {
     .row {
-      > div {
+      >div {
         margin-top: 1.5rem;
 
         .innerDiv {
@@ -1863,15 +1860,33 @@ p {
 }
 
 @media (max-width: 720px) {
+
+  .work-main-page,
+  .home-page-main,
+  .about-page-main,
+  .brand-page-main,
+  .web-devlopment-main-page,
+  .shopify-devlopment-main-page,
+  .media-page-main,
+  .contact-page-main {
+    margin-top: -0.5rem;
+  }
+  .quote-main-page {
+    padding-top: 2rem;
+  }
+
   .with {
     padding-left: 0 !important;
   }
+
   .home-banner-main-section .row-div .digi {
     font-size: 2.5rem;
   }
+
   .home-banner-main-section .row-div .sol {
     font-size: 2.5rem;
   }
+
   .showPhoneMenu {
     transform: translateX(0%) !important;
     transition: 0.5s;
@@ -1906,6 +1921,7 @@ p {
 
   #noLine {
     padding-bottom: 0 !important;
+
     &::after {
       display: none;
     }
