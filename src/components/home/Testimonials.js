@@ -137,12 +137,12 @@ const Testimonials = () => {
 
                     <div className="client-info-div">
                       <div className="client-d">
-                        <Image
+                        {/* <Image
                           src={testimonial.clientImage}
                           alt={testimonial.clientName}
                           width={50}
                           height={50}
-                        />
+                        /> */}
                         <p>
                           <strong>{testimonial.clientName}</strong>
                           <br />

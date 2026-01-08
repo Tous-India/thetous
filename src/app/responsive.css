@@ -740,6 +740,7 @@
   .blog-section-home {
     /* padding-bottom: 0.75rem; */
     margin-top: 2rem;
+    margin-bottom: 0 !important;
     .container-fluid {
       .imgDiv {
         display: none;

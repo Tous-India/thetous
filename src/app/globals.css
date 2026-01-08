@@ -1721,7 +1721,7 @@ footer {
 
   img {
     filter: drop-shadow(0 0 0.25rem rgb(175, 175, 175));
-    width: 3.5rem;
+    width: 3.5rem !important;
     height: 3.5rem;
   }
 }
@@ -1858,7 +1858,9 @@ p {
   margin: 0;
   width: 100%;
 }
-
+.about-page-main, .shopify-devlopment-main-page {
+  padding-top: 2rem;
+}
 @media (max-width: 720px) {
 
   .work-main-page,

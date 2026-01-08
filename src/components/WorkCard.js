@@ -3,9 +3,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 const WorkCard = ({ item }) => {
-  useEffect(()=>{
-    console.log("Item: ",item)
-  },[])
+
   if (!item.image) {
     return null;
   }
