@@ -27,7 +27,7 @@ import Img13 from "../../../public/home/work/silvago.png";
 const projects = [
   // { title: "M3M Panipat", image: Img9, link: "#" },
   { title: "M3M Panipat", image: Img9},
-  { title: "Godrej South Estate", image: Img10},
+  { title: "Godrej", image: Img10},
   { title: "Silvago", image: Img13},
   // {
   //   title: "Dhirsons Jewellery House",
