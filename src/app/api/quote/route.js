@@ -32,16 +32,13 @@ export async function POST(request) {
       budget,
       expectations,
 
-      // Qualification
-      agreeToContact,
-
       // Metadata
       timestamp,
       leadSource,
     } = formData;
 
     // Validate required fields
-    if (!fullName || !email || !phone || !agreeToContact) {
+    if (!fullName || !email || !phone) {
       return NextResponse.json(
         { error: "Required fields are missing" },
         { status: 400 }
@@ -78,7 +75,7 @@ export async function POST(request) {
 
     const leadScore = calculateLeadScore();
     const leadPriority =
-      leadScore >= 70 ? "🔥 HOT" : leadScore >= 40 ? "🟡 WARM" : "🔵 COLD";
+      leadScore >= 70 ? " HOT" : leadScore >= 40 ? "🟡 WARM" : "🔵 COLD";
 
     // Format services list
     const servicesList = services
@@ -367,7 +364,7 @@ export async function POST(request) {
           <div class="container">
             <div class="header">
               <div style="margin-bottom: 20px;">
-                <img src="https://blog.thetous.com/wp-content/uploads/2025/12/black-the-tous-1.png" alt="The Tous Logo" style="max-width: 200px; height: auto; margin-bottom: 10px;" />
+                <img src="https://blog.thetous.com/wp-content/uploads/2026/01/logo.webp" alt="The Tous Logo" style="max-width: 200px; height: auto; margin-bottom: 10px;" />
               </div>
               <h1>✨ Thank You, ${fullName}!</h1>
               <p style="margin: 10px 0 0 0; opacity: 0.9;">Your quote request has been received</p>

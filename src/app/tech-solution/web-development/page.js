@@ -223,7 +223,7 @@ const WebDevelopment = () => {
             <h3 className="main-section-heading mb-12" id="devHeading">
               Our Web Development Services
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 content-wrapper">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 content-wrapper">
               {/* Service 1: Web Application Development */}
               <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
                 <button
@@ -252,9 +252,8 @@ const WebDevelopment = () => {
                       </h3>
                     </div>
                     <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 2 ? "rotate-180" : ""
-                      }`}
+                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 2 ? "rotate-180" : ""
+                        }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -269,9 +268,8 @@ const WebDevelopment = () => {
                   </div>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 2 ? "max-h-96" : "max-h-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ${activeService === 2 ? "max-h-96" : "max-h-0"
+                    }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
@@ -315,9 +313,8 @@ const WebDevelopment = () => {
                       <h3 className="inner-heading">Mobile App Development</h3>
                     </div>
                     <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 3 ? "rotate-180" : ""
-                      }`}
+                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 3 ? "rotate-180" : ""
+                        }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -332,9 +329,8 @@ const WebDevelopment = () => {
                   </div>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 3 ? "max-h-96" : "max-h-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ${activeService === 3 ? "max-h-96" : "max-h-0"
+                    }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
@@ -380,9 +376,8 @@ const WebDevelopment = () => {
                       </h3>
                     </div>
                     <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 0 ? "rotate-180" : ""
-                      }`}
+                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 0 ? "rotate-180" : ""
+                        }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -397,9 +392,8 @@ const WebDevelopment = () => {
                   </div>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 0 ? "max-h-96" : "max-h-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ${activeService === 0 ? "max-h-96" : "max-h-0"
+                    }`}
                 >
                   <div className="px-6 pb-6">
                     <p className="">
@@ -444,9 +438,8 @@ const WebDevelopment = () => {
                       </h3>
                     </div>
                     <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 1 ? "rotate-180" : ""
-                      }`}
+                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 1 ? "rotate-180" : ""
+                        }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -461,9 +454,8 @@ const WebDevelopment = () => {
                   </div>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 1 ? "max-h-96" : "max-h-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ${activeService === 1 ? "max-h-96" : "max-h-0"
+                    }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
@@ -493,9 +485,8 @@ const WebDevelopment = () => {
                   <h3 className="inner-heading">Discover & Strategy</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${
-                        expandedProcesses[0] ? "expanded" : ""
-                      }`}
+                      className={`process-text ${expandedProcesses[0] ? "expanded" : ""
+                        }`}
                     >
                       Our strategists analyze your market position, competitor
                       landscape, and customer journey to identify conversion
@@ -521,9 +512,8 @@ const WebDevelopment = () => {
                   <h3 className="inner-heading">Design & Prototype</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${
-                        expandedProcesses[1] ? "expanded" : ""
-                      }`}
+                      className={`process-text ${expandedProcesses[1] ? "expanded" : ""
+                        }`}
                     >
                       Our 15+ design specialists craft user-centered experiences
                       through wireframes, interactive prototypes, and visual
@@ -549,9 +539,8 @@ const WebDevelopment = () => {
                   <h3 className="inner-heading">Develop & Test</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${
-                        expandedProcesses[2] ? "expanded" : ""
-                      }`}
+                      className={`process-text ${expandedProcesses[2] ? "expanded" : ""
+                        }`}
                     >
                       With 7+ years of development expertise and 42+ successful
                       launches, our team builds robust, scalable solutions using
@@ -577,9 +566,8 @@ const WebDevelopment = () => {
                   <h3 className="inner-heading">Launch & Support</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${
-                        expandedProcesses[3] ? "expanded" : ""
-                      }`}
+                      className={`process-text ${expandedProcesses[3] ? "expanded" : ""
+                        }`}
                     >
                       We manage seamless deployment, configure analytics
                       tracking, and monitor performance metrics closely
@@ -642,9 +630,8 @@ const WebDevelopment = () => {
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${
-                      expandedWhyChoose[0] ? "expanded" : ""
-                    }`}
+                    className={`why-text ${expandedWhyChoose[0] ? "expanded" : ""
+                      }`}
                   >
                     We specialize in building online stores that actually
                     convert. Our e-commerce sites integrate payment gateways,
@@ -688,9 +675,8 @@ const WebDevelopment = () => {
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${
-                      expandedWhyChoose[1] ? "expanded" : ""
-                    }`}
+                    className={`why-text ${expandedWhyChoose[1] ? "expanded" : ""
+                      }`}
                   >
                     Speed is revenue. We build lightning-fast websites using
                     Next.js, optimized images, and efficient code that loads in
@@ -734,9 +720,8 @@ const WebDevelopment = () => {
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${
-                      expandedWhyChoose[2] ? "expanded" : ""
-                    }`}
+                    className={`why-text ${expandedWhyChoose[2] ? "expanded" : ""
+                      }`}
                   >
                     Your business won&apos;t stay the same size forever. We
                     build scalable solutions using React, Node.js, and cloud
@@ -782,9 +767,8 @@ const WebDevelopment = () => {
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${
-                      expandedWhyChoose[3] ? "expanded" : ""
-                    }`}
+                    className={`why-text ${expandedWhyChoose[3] ? "expanded" : ""
+                      }`}
                   >
                     You get a complete team, not just developers. Our integrated
                     approach combines strategy, design, development, SEO, and
@@ -854,11 +838,10 @@ const WebDevelopment = () => {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-500 ${
-                      activeTab === tab.id
+                    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-500 ${activeTab === tab.id
                         ? "bg-black text-white duration-500 px-3"
                         : "bg-gray-100 text-gray-600 hover:bg-gray-200 duration-500 px-3"
-                    }`}
+                      }`}
                   >
                     {tab.label}
                   </button>
@@ -954,10 +937,10 @@ const WebDevelopment = () => {
                                   activeTab === "customized"
                                     ? "/silvago.mp4"
                                     : activeTab === "tailored"
-                                    ? "/KB Crm.mp4"
-                                    : activeTab === "coaches"
-                                    ? "/Vaqya.mp4"
-                                    : "/vis.mp4"
+                                      ? "/KB Crm.mp4"
+                                      : activeTab === "coaches"
+                                        ? "/Vaqya.mp4"
+                                        : "/vis.mp4"
                                 }
                                 type="video/mp4"
                               />
@@ -1109,6 +1092,12 @@ const WebDevelopment = () => {
                       </span>
                     </li>
                   </ul>
+                  <Link
+                    href="/contact"
+                    className="inline-block c_button_black mt-4"
+                  >
+                    Get Started
+                  </Link>
                 </div>
                 <div className="col-md-6 col-lg-6 col-sm-12 right-div">
                   <div className="img-div">
@@ -1140,9 +1129,8 @@ const WebDevelopment = () => {
                         {faq.question}
                       </span>
                       <svg
-                        className={`w-6 h-6 flex-shrink-0 transition-transform duration-300 ${
-                          activeFaq === index ? "rotate-180" : ""
-                        }`}
+                        className={`w-6 h-6 flex-shrink-0 transition-transform duration-300 ${activeFaq === index ? "rotate-180" : ""
+                          }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1156,11 +1144,10 @@ const WebDevelopment = () => {
                       </svg>
                     </button>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                        activeFaq === index
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${activeFaq === index
                           ? "max-h-96 opacity-100 pb-4"
                           : "max-h-0 opacity-0.75"
-                      }`}
+                        }`}
                     >
                       <p className="text-gray-600 text-lg leading-relaxed">
                         {faq.answer}

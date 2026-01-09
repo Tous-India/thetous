@@ -8,7 +8,7 @@ const WorkCard = ({ item }) => {
     return null;
   }
 
-  const disabledLinks = ['tarc', 'ska-orion', 'm3m-panipat', 'godrej'];
+  const disabledLinks = ['tarc', 'ska-orion'];
   const isLinkDisabled = disabledLinks.includes(item.id);
 
   const cardContent = (

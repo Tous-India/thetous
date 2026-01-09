@@ -4,7 +4,10 @@
       "id": "luxeliv",
       "title": "Luxeliv",
       "description": " is an online luxury lifestyle and fashion brand",
-      "tags": ["Website", "SEO"],
+      "tags": [
+        "Website",
+        "SEO"
+      ],
       "image": "/home/work/1731492385.webp",
       "heroImage": {
         "desktop": "/home/case-study/luxeliv-desktop.webp",
@@ -47,7 +50,14 @@
       },
       "servicesDelivered": {
         "title": "Services we delivered",
-        "description": "We developed a comprehensive digital solution including a modern website with e-commerce capabilities, implemented SEO best practices, and created a cohesive brand strategy that built the trust and increase the conversion."
+        "description": [
+          "Developed a modern and user-friendly website",
+          "Implemented e-commerce functionality",
+          "Applied SEO best practices for better search visibility",
+          "Created a cohesive brand strategy",
+          "Built trust through consistent design and messaging",
+          "Improved overall user engagement and conversions"
+        ]
       },
       "result": {
         "title": "Results Achieved",
@@ -93,8 +103,11 @@
     {
       "id": "dhirsons-jewellery-house",
       "title": "Dhirsons Jewellery House",
-      "description": "The Premium Diamond Jewellery Wholesale store in Karol Bagh, Delhi & Retail Store...",
-      "tags": ["Website", "SEO"],
+      "description": " The Premium Diamond Jewellery Wholesale store in Karol Bagh, Delhi & Retail Store",
+      "tags": [
+        "Website",
+        "SEO"
+      ],
       "image": "/work/dhirsons.webp",
       "heroImage": {
         "desktop": "/home/case-study/dhirson.webp",
@@ -103,7 +116,11 @@
       "overview": {
         "description": "Dhirsons Jewellery House is a premium diamond jewellery destination in Delhi's prestigious Karol Bagh area. We crafted a luxurious digital experience that mirrors their exceptional craftsmanship.",
         "industry": "Luxury Retail & Jewellery",
-        "services": ["Website Development", "SEO", "Digital Marketing"]
+        "services": [
+          "Website Development",
+          "SEO",
+          "Digital Marketing"
+        ]
       },
       "challenges": [
         "Showcasing high-end jewellery in a digital format",
@@ -113,7 +130,14 @@
       ],
       "servicesDelivered": {
         "title": "Services we delivered",
-        "description": "We created an elegant, sophisticated website that showcases their premium diamond collection with high-quality imagery and detailed product information. The platform includes advanced search functionality, secure checkout, and comprehensive SEO optimization to attract high-value customers."
+        "description": [
+          "Designed an elegant and sophisticated website",
+          "Showcased premium diamond collections with high-quality imagery",
+          "Provided detailed product information for better buyer confidence",
+          "Implemented advanced search and filtering functionality",
+          "Integrated a secure and reliable checkout system",
+          "Applied comprehensive SEO optimization to attract high-value customers"
+        ]
       },
       "result": {
         "description": "The digital transformation positioned Dhirsons as a leading online destination for premium diamond jewellery. The website successfully conveys luxury and trust, resulting in increased inquiries from both wholesale and retail customers.",
@@ -127,8 +151,11 @@
     {
       "id": "oh-my-pet-grooming",
       "title": "Oh My Pet Grooming",
-      "description": "At Oh My Pet Grooming, we bring professional pet care services right to your door...",
-      "tags": ["Website", "SEO"],
+      "description": " At Oh My Pet Grooming, we bring professional pet care services right to your door",
+      "tags": [
+        "Website",
+        "SEO"
+      ],
       "image": "/work/ohmypet.webp",
       "heroImage": {
         "desktop": "/home/case-study/omp-desktop.jpg",
@@ -137,7 +164,11 @@
       "overview": {
         "description": "Oh My Pet Grooming is a mobile pet grooming service bringing professional care directly to pet owners' doorsteps. We developed a user-friendly platform that makes booking convenient and stress-free.",
         "industry": "Pet Care & Services",
-        "services": ["Website Development", "SEO", "Booking System Integration"]
+        "services": [
+          "Website Development",
+          "SEO",
+          "Booking System Integration"
+        ]
       },
       "challenges": [
         "Creating an intuitive online booking system",
@@ -147,7 +178,13 @@
       ],
       "servicesDelivered": {
         "title": "Services we delivered",
-        "description": "We built a welcoming, easy-to-navigate website with an integrated booking system that allows pet owners to schedule appointments effortlessly. The site features service descriptions, pricing transparency, and local SEO optimization to reach nearby customers."
+        "description": [
+          "Built a welcoming and easy-to-navigate website",
+          "Integrated an online booking system for effortless appointment scheduling",
+          "Added clear service descriptions for better understanding",
+          "Ensured pricing transparency to build customer trust",
+          "Optimized the website for local SEO to reach nearby customers"
+        ]
       },
       "result": {
         "description": "The new website streamlined the booking process and significantly increased customer acquisition. Pet owners can now easily schedule services, view available time slots, and learn about grooming options, leading to higher conversion rates and customer satisfaction.",
@@ -161,8 +198,12 @@
     {
       "id": "executive-cars",
       "title": "Executive Cars",
-      "description": "Welcome to our first-class chauffeur car service in Melbourne, the best choice...",
-      "tags": ["Website", "SEO", "Ads"],
+      "description": " Welcome to our first-class chauffeur car service in Melbourne, the best choice",
+      "tags": [
+        "Website",
+        "SEO",
+        "Ads"
+      ],
       "image": "/work/executive.webp",
       "heroImage": {
         "desktop": "/home/case-study/ec-desktop.jpg",
@@ -186,7 +227,14 @@
       ],
       "servicesDelivered": {
         "title": "Services we delivered",
-        "description": "We developed a premium website showcasing their fleet and services with elegant design and seamless functionality. The platform includes online booking, corporate account management, and targeted advertising campaigns to reach Melbourne's business community."
+        "description": [
+          "Developed a premium website with elegant design and smooth functionality",
+          "Showcased fleet details and service offerings clearly",
+          "Integrated online booking functionality",
+          "Enabled corporate account management features",
+          "Executed targeted advertising campaigns",
+          "Focused outreach on Melbourne’s business community"
+        ]
       },
       "result": {
         "description": "The digital transformation established Executive Cars as Melbourne's premier chauffeur service online. The combination of an elegant website, strategic SEO, and targeted advertising resulted in significant growth in both corporate contracts and individual bookings.",
@@ -200,8 +248,12 @@
     {
       "id": "silvago",
       "title": "Silvago",
-      "description": "Minimal silver jewellery brand delivering elegance with simplicity...",
-      "tags": ["Website", "SEO", "Ads"],
+      "description": " Minimal silver jewellery brand delivering elegance with simplicity",
+      "tags": [
+        "Website",
+        "SEO",
+        "Ads"
+      ],
       "image": "/home/work/silvago.png",
       "heroImage": {
         "desktop": "/home/case-study/silvago-casestudy-desktop.webp",
@@ -225,7 +277,14 @@
       ],
       "servicesDelivered": {
         "title": "Services we delivered",
-        "description": "We designed and developed a clean, minimalist e-commerce platform that perfectly showcases Silvago's jewellery collection. The website features intuitive navigation, high-quality product photography, and integrated payment solutions, complemented by targeted advertising campaigns."
+        "description": [
+          "Designed and developed a clean, minimalist e-commerce website",
+          "Showcased Silvago’s jewellery collection effectively",
+          "Implemented intuitive and user-friendly navigation",
+          "Used high-quality product photography for better presentation",
+          "Integrated secure and seamless payment solutions",
+          "Supported the platform with targeted advertising campaigns"
+        ]
       },
       "result": {
         "description": "The launch successfully positioned Silvago as a go-to destination for minimalist silver jewellery. The clean design and strategic marketing attracted a dedicated customer base, resulting in strong sales growth and brand recognition.",
@@ -239,8 +298,12 @@
     {
       "id": "prozvofit",
       "title": "Prozvofit",
-      "description": "Gym equipment manufacturer delivering strength-focused solutions...",
-      "tags": ["Website", "SEO", "Ads"],
+      "description": " Gym equipment manufacturer delivering strength-focused solutions",
+      "tags": [
+        "Website",
+        "SEO",
+        "Ads"
+      ],
       "image": "/home/work/1726132161.webp",
       "heroImage": {
         "desktop": "/home/case-study/prozvo-desktop.jpg",
@@ -264,7 +327,15 @@
       ],
       "servicesDelivered": {
         "title": "Services we delivered",
-        "description": "We developed a comprehensive B2B platform featuring detailed product specifications, high-quality imagery, and technical documentation. The site includes quote request functionality, distributor information, and strategic advertising to reach gym owners and fitness entrepreneurs."
+        "description": [
+          "Developed a comprehensive B2B-focused platform",
+          "Displayed detailed product specifications clearly",
+          "Showcased high-quality product imagery",
+          "Provided technical documentation for informed decision-making",
+          "Integrated quote request functionality",
+          "Included distributor and partner information",
+          "Executed strategic advertising to reach gym owners and fitness entrepreneurs"
+        ]
       },
       "result": {
         "description": "The digital platform successfully established Prozvofit as a serious competitor in the gym equipment market. The website effectively communicates product quality and attracted inquiries from fitness facilities, leading to substantial business growth.",
@@ -278,8 +349,11 @@
     {
       "id": "crossroads-hospital",
       "title": "Crossroads Hospital",
-      "description": "Healthcare website with patient-focused digital experience...",
-      "tags": ["Website", "SEO"],
+      "description": " Healthcare website with patient-focused digital experience",
+      "tags": [
+        "Website",
+        "SEO"
+      ],
       "image": "/home/work/1731492317.webp",
       "heroImage": {
         "desktop": "/home/case-study/crossroad-desktop.webp",
@@ -303,7 +377,13 @@
       ],
       "servicesDelivered": {
         "title": "Services we delivered",
-        "description": "We developed a comprehensive healthcare website with integrated patient portal, online appointment booking, and easy access to medical services information. The platform is fully responsive, accessible, and optimized for search engines to help patients find the care they need."
+        "description": [
+          "Developed a comprehensive healthcare website",
+          "Enabled online appointment booking functionality",
+          "Provided clear and accessible medical services information",
+          "Ensured full responsiveness across all devices",
+          "Optimized the website for search engines to improve discoverability"
+        ]
       },
       "result": {
         "description": "The new digital platform transformed patient engagement and streamlined hospital operations. Patients can now easily book appointments, access their records, and find information about services, resulting in improved patient satisfaction and operational efficiency.",
@@ -317,29 +397,172 @@
     {
       "id": "godrej",
       "title": "Godrej",
-      "description": "Real estate development with premium residential projects...",
-      "tags": ["Website", "SEO"],
-      "image": "/home/work/godrej.jpg"
+      "description": " Performance marketing for a premium residential project in South Delhi",
+      "tags": [
+        "Performance Marketing",
+        "Real Estate"
+      ],
+      "image": "/home/work/godrej.jpg",
+      "heroImage": {
+        "desktop": "/home/case-study/godrej-desktop.webp",
+        "mobile": "/home/case-study/godrej-mobile.png"
+      },
+      "overview": {
+        "description": "Godrej South Estate is a premium residential project offering luxury 2.5, 3 & 4 BHK homes in South Delhi. We executed a focused, project-level digital strategy to generate qualified enquiries and support the on-ground sales team through performance-driven campaigns.",
+        "industry": "Real Estate & Residential Development",
+        "services": [
+          "Performance Marketing",
+          "Lead Generation",
+          "Campaign Optimization",
+          "Landing Page Alignment"
+        ]
+      },
+      "challenges": [
+        "Targeting high-intent luxury home buyers in a competitive South Delhi market",
+        "Reducing low-quality and irrelevant enquiries",
+        "Maintaining efficient CPLs in a premium real estate segment",
+        "Aligning ad messaging with real sales conversations"
+      ],
+      "servicesDelivered": {
+        "title": "Services we delivered",
+        "description": [
+          "Executed Meta and Google Ads campaigns",
+          "Used location-focused premium messaging",
+          "Applied audience filtering to reduce low-intent enquiries",
+          "Continuously optimised campaigns for better performance",
+          "Aligned campaigns with landing pages",
+          "Refined messaging based on sales team feedback",
+          "Improved overall lead quality and site visit intent"
+        ]
+      },
+      "result": {
+        "description": "The performance-driven approach delivered consistent enquiry volumes while improving lead quality and sales efficiency. Ongoing optimisation helped balance scale with relevance in a premium market.",
+        "metrics": [
+          "Mid to high hundreds of leads during active campaign phases",
+          "CPL maintained between ₹1,500 – ₹2,000",
+          "Improved lead quality after creative and audience optimisation",
+          "Better sales conversation quality with fewer irrelevant enquiries"
+        ]
+      }
     },
     {
       "id": "m3m-panipat",
       "title": "M3M Panipat",
-      "description": "Industrial and manufacturing solutions...",
-      "tags": ["Website", "SEO"],
-      "image": "/home/work/m3m-panipat.webp"
+      "description": " Performance marketing for a Tier-2 real estate project",
+      "tags": [
+        "Performance Marketing",
+        "Real Estate"
+      ],
+      "image": "/home/work/m3m-panipat.webp",
+      "heroImage": {
+        "desktop": "/home/case-study/m3m-desktop.webp",
+        "mobile": "/home/case-study/m3m-mobile.webp"
+      },
+      "overview": {
+        "description": "M3M City of Dreams is a residential development in Sector 36, Panipat. We executed a project-level digital strategy focused on generating consistent local and investor enquiries through clarity-led messaging and performance-driven campaigns tailored for a Tier-2 market.",
+        "industry": "Real Estate & Residential Development",
+        "services": [
+          "Performance Marketing",
+          "Lead Generation",
+          "Funnel Optimization",
+          "Sales Support Creatives"
+        ]
+      },
+      "challenges": [
+        "Driving consistent enquiries in a Tier-2 real estate market",
+        "Balancing investor and end-user messaging",
+        "Filtering serious buyers from low-intent leads",
+        "Improving lead-to-call conversion speed"
+      ],
+      "servicesDelivered": {
+        "title": "Services we delivered",
+        "description": [
+          "Localized Meta and Google Ads creatives",
+          "Audience targeting for Panipat and surrounding regions",
+          "Price-band visibility shown upfront to improve lead intent",
+          "Campaigns optimized for call-driven enquiries",
+          "Funnel optimisation based on lead behaviour",
+          "Sales follow-up creatives to support conversions"
+        ]
+      },
+      "result": {
+        "description": "The structured performance approach delivered steady enquiry flow and faster conversions. Clear pricing cues and location-focused communication helped improve investor interest and sales velocity.",
+        "metrics": [
+          "Consistent lead flow during campaign periods",
+          "CPL maintained between ₹1,200 – ₹1,800",
+          "Faster lead-to-call connect compared to NCR markets",
+          "Higher investor interest driven by transparent pricing cues"
+        ]
+      }
+    },
+    {
+      "id": "sbp",
+      "title": "SBP – Derabassi, Mohali",
+      "description": " Project-level performance marketing for a regional real estate market focused on steady enquiries and site visit intent",
+      "tags": [
+        "Performance Marketing",
+        "Real Estate"
+      ],
+      "image": "/home/work/sbp.png",
+      "heroImage": {
+        "desktop": "/home/case-study/sbp-desktop.webp",
+        "mobile": "/home/case-study/sbp-mobile.webp"
+      },
+      "overview": {
+        "description": "SBP is a mid-segment residential development in Derabassi, Mohali, serving buyers across the Tricity belt. We executed a project-level marketing and performance strategy focused on generating consistent enquiries and improving site visit intent through clarity-led communication and targeted campaigns.",
+        "industry": "Real Estate & Residential Development",
+        "services": [
+          "Performance Marketing",
+          "Lead Generation",
+          "Campaign Optimization",
+          "Sales Support Creatives"
+        ]
+      },
+      "challenges": [
+        "Generating steady enquiries in a regional real estate market",
+        "Filtering non-serious and low-intent enquiries",
+        "Maintaining stable CPLs over time",
+        "Improving lead quality for better sales connect rates"
+      ],
+      "servicesDelivered": {
+        "title": "Services we delivered",
+        "description": [
+          "Executed Meta and Google Ads campaigns",
+          "Used location and price-led communication",
+          "Applied high-intent audience targeting across local and nearby cities",
+          "Optimised campaigns continuously to improve CPL stability",
+          "Created sales support creatives for follow-ups",
+          "Refined messaging to reduce non-serious enquiries"
+        ]
+      },
+      "result": {
+        "description": "The performance-focused approach delivered consistent enquiry flow with improved lead quality. Clear, simple messaging and faster optimisation cycles helped sales teams achieve better connect rates and reduced low-intent calls.",
+        "metrics": [
+          "Steady monthly enquiry flow during active phases",
+          "CPL maintained between ₹1,000 – ₹2,000",
+          "Improved lead quality after messaging refinement",
+          "Fewer low-intent calls and better sales connect rates"
+        ]
+      }
     },
     {
       "id": "ska-orion",
       "title": "SKA Orion",
       "description": "Premium residential real estate project...",
-      "tags": ["Website", "SEO"],
+      "tags": [
+        "Website",
+        "SEO"
+      ],
       "image": "/home/work/SKA orion.jpg"
     },
     {
       "id": "tarc",
       "title": "TARC",
       "description": "Real estate development and construction...",
-      "tags": ["Website", "SEO"],
+      "tags": [
+        "Website",
+        "SEO"
+      ],
       "image": "/home/work/TARC.jpg"
     }
   ]

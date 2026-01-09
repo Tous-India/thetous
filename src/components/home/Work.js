@@ -22,6 +22,7 @@ import Img11 from "../../../public/home/work/1742644830.webp";
 import Img12 from "../../../public/home/work/1742807329.webp";
 import Img13 from "../../../public/home/work/silvago.png";
 
+
 // Project data with case study links
 const projects = [
   // { title: "M3M Panipat", image: Img9, link: "#" },

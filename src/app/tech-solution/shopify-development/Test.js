@@ -1375,7 +1375,7 @@ const WebDevelopment = () => {
                                   </div>
                                 </div>
                                 <div className="flex items-center gap-3">
-                                  <span className="text-2xl">🔥</span>
+                                  <span className="text-2xl"></span>
                                   <div>
                                     <p className="font-semibold text-sm">
                                       2 658 kcal

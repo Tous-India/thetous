@@ -4,7 +4,7 @@ import "./style.css";
 
 const Quote = () => {
   const [currentStep, setCurrentStep] = useState(1);
-  const totalSteps = 5;
+  const totalSteps = 2;
 
   const [formData, setFormData] = useState({
     // Step 1: Contact Details
@@ -18,23 +18,21 @@ const Quote = () => {
     services: [],
     otherService: "",
 
-    // Step 3: Conditional Fields - Website/App
-    projectType: "",
-    approxPages: "",
-    referenceWebsites: [""],
-    contentReady: "",
+    // // Step 3: Conditional Fields - Website/App
+    // projectType: "",
+    // approxPages: "",
+    // referenceWebsites: [""],
+    // contentReady: "",
 
-    // Step 3: Conditional Fields - Marketing
-    marketingPlatforms: [],
-    monthlyAdBudget: "",
-    brandStage: "",
+    // // Step 3: Conditional Fields - Marketing
+    // marketingPlatforms: [],
+    // monthlyAdBudget: "",
+    // brandStage: "",
 
     // Step 4: Budget & Expectations
     budget: "",
     expectations: "",
 
-    // Step 5: Qualification & Consent
-    agreeToContact: false,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -82,14 +80,6 @@ const Quote = () => {
     { value: "Other", icon: "ri-more-line", label: "Other" },
   ];
 
-  // Marketing platforms
-  const marketingPlatforms = [
-    "Meta Ads",
-    "Google Ads",
-    "SEO",
-    "Influencer Marketing",
-  ];
-
   // Handle input change
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -116,30 +106,6 @@ const Quote = () => {
     }
   };
 
-  // Handle reference website URLs
-  const handleReferenceUrlChange = (index, value) => {
-    const newUrls = [...formData.referenceWebsites];
-    newUrls[index] = value;
-    setFormData((prev) => ({
-      ...prev,
-      referenceWebsites: newUrls,
-    }));
-  };
-
-  const addReferenceUrl = () => {
-    setFormData((prev) => ({
-      ...prev,
-      referenceWebsites: [...prev.referenceWebsites, ""],
-    }));
-  };
-
-  const removeReferenceUrl = (index) => {
-    setFormData((prev) => ({
-      ...prev,
-      referenceWebsites: prev.referenceWebsites.filter((_, i) => i !== index),
-    }));
-  };
-
   // Validation for each step
   const validateStep = (step) => {
     const newErrors = {};
@@ -163,54 +129,9 @@ const Quote = () => {
           !formData.otherService.trim()
         )
           newErrors.otherService = "Please specify the service";
-        break;
-
-      case 3:
-        // Validation for conditional fields
-        const hasWebsiteService =
-          formData.services.some(
-            (s) =>
-              s.includes("Website") ||
-              s.includes("Shopify") ||
-              s.includes("Web App")
-          ) || formData.services.includes("Custom Web App / Dashboard");
-
-        const hasMarketingService =
-          formData.services.some(
-            (s) => s.includes("Marketing") || s === "SEO"
-          ) ||
-          formData.services.includes("Digital Marketing (Meta / Google Ads)");
-
-        if (hasWebsiteService) {
-          if (!formData.projectType)
-            newErrors.projectType = "Project type is required";
-          if (!formData.approxPages)
-            newErrors.approxPages = "Please select number of pages";
-          if (!formData.contentReady)
-            newErrors.contentReady = "Please select content status";
-        }
-
-        if (hasMarketingService) {
-          if (formData.marketingPlatforms.length === 0)
-            newErrors.marketingPlatforms =
-              "Please select at least one platform";
-          if (!formData.monthlyAdBudget)
-            newErrors.monthlyAdBudget = "Please select ad budget range";
-          if (!formData.brandStage)
-            newErrors.brandStage = "Please select brand stage";
-        }
-        break;
-
-      case 4:
         if (!formData.budget) newErrors.budget = "Budget selection is required";
         if (!formData.expectations.trim())
           newErrors.expectations = "Please describe your expectations";
-        break;
-
-      case 5:
-        if (!formData.agreeToContact)
-          newErrors.agreeToContact =
-            "You must agree to be contacted to proceed";
         break;
     }
 
@@ -235,7 +156,8 @@ const Quote = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validateStep(5)) {
+    if (!validateStep(2)) {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
       return;
     }
 
@@ -283,19 +205,6 @@ const Quote = () => {
       setIsSubmitting(false);
     }
   };
-
-  // Check if service requires conditional fields
-  const showWebsiteFields = formData.services.some(
-    (s) =>
-      s.includes("Website") ||
-      s.includes("Shopify") ||
-      s.includes("Web App") ||
-      s === "Custom Web App / Dashboard"
-  );
-
-  const showMarketingFields =
-    formData.services.some((s) => s.includes("Marketing") || s === "SEO") ||
-    formData.services.includes("Digital Marketing (Meta / Google Ads)");
 
   // Render step content
   const renderStepContent = () => {
@@ -388,9 +297,9 @@ const Quote = () => {
       case 2:
         return (
           <div className="step-content">
-            <h2 className="step-title">Services Required</h2>
+            <h2 className="step-title">Services & Budget</h2>
             <p className="step-description">
-              {"Select all services you're interested in"}
+              {"Select all services you're interested in and your budget range"}
             </p>
 
             <div className="services-grid">
@@ -433,348 +342,84 @@ const Quote = () => {
                 )}
               </div>
             )}
-          </div>
-        );
 
-      case 3:
-        return (
-          <div className="step-content">
-            <h2 className="step-title">Project Details</h2>
-            <p className="step-description">
-              {"Tell us more about your project requirements"}
-            </p>
+            <div className="budget-section mt-5">
+              <h3 className="section-subtitle">Budget Expectation</h3>
+              <p className="step-description">
+                {"Select your budget range for this project"}
+              </p>
 
-            {showWebsiteFields && (
-              <div className="conditional-section">
-                <h3 className="section-subtitle">
-                  <i className="ri-code-box-line"></i> Website / App Details
-                </h3>
-
-                <div className="form-grid">
-                  <div className="form-group full-width">
-                    <label>
-                      Project Type <span className="required">*</span>
-                    </label>
-                    <select
-                      name="projectType"
-                      value={formData.projectType}
+              <div className="budget-options">
+                {[
+                  { value: "₹10k - ₹25k", label: "₹10,000 - ₹25,000" },
+                  { value: "₹25k - ₹50k", label: "₹25,000 - ₹50,000" },
+                  { value: "₹50k - ₹1L", label: "₹50,000 - ₹1,00,000" },
+                  { value: "₹1L+", label: "₹1,00,000+" },
+                ].map((option) => (
+                  <label
+                    key={option.value}
+                    className={`budget-card ${
+                      formData.budget === option.value ? "selected" : ""
+                    }`}
+                  >
+                    <input
+                      type="radio"
+                      name="budget"
+                      value={option.value}
+                      checked={formData.budget === option.value}
                       onChange={handleInputChange}
-                      className={errors.projectType ? "error" : ""}
-                    >
-                      <option value="">Select project type</option>
-                      <option value="Business Website">Business Website</option>
-                      <option value="E-commerce">E-commerce</option>
-                      <option value="Portfolio">Portfolio</option>
-                      <option value="Web App / SaaS">Web App / SaaS</option>
-                    </select>
-                    {errors.projectType && (
-                      <span className="error-message">
-                        {errors.projectType}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="form-group">
-                    <label>
-                      Approximate Pages <span className="required">*</span>
-                    </label>
-                    <select
-                      name="approxPages"
-                      value={formData.approxPages}
-                      onChange={handleInputChange}
-                      className={errors.approxPages ? "error" : ""}
-                    >
-                      <option value="">Select range</option>
-                      <option value="1-5">1-5 pages</option>
-                      <option value="6-10">6-10 pages</option>
-                      <option value="10+">10+ pages</option>
-                    </select>
-                    {errors.approxPages && (
-                      <span className="error-message">
-                        {errors.approxPages}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="form-group">
-                    <label>
-                      Do You Have Content Ready?{" "}
-                      <span className="required">*</span>
-                    </label>
-                    <select
-                      name="contentReady"
-                      value={formData.contentReady}
-                      onChange={handleInputChange}
-                      className={errors.contentReady ? "error" : ""}
-                    >
-                      <option value="">Select status</option>
-                      <option value="Yes">Yes</option>
-                      <option value="No">No</option>
-                      <option value="Partial">Partial</option>
-                    </select>
-                    {errors.contentReady && (
-                      <span className="error-message">
-                        {errors.contentReady}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="form-group full-width">
-                    <label>Reference Websites (Optional)</label>
-                    {formData.referenceWebsites.map((url, index) => (
-                      <div key={index} className="reference-url-input">
-                        <input
-                          type="url"
-                          value={url}
-                          onChange={(e) =>
-                            handleReferenceUrlChange(index, e.target.value)
-                          }
-                          placeholder="https://example.com"
-                        />
-                        {formData.referenceWebsites.length > 1 && (
-                          <button
-                            type="button"
-                            onClick={() => removeReferenceUrl(index)}
-                            className="remove-url-btn"
-                          >
-                            <i className="ri-close-line"></i>
-                          </button>
-                        )}
-                      </div>
-                    ))}
-                    <button
-                      type="button"
-                      onClick={addReferenceUrl}
-                      className="add-url-btn"
-                    >
-                      <i className="ri-add-line"></i> Add another reference
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {showMarketingFields && (
-              <div className="conditional-section mt-4">
-                <h3 className="section-subtitle">
-                  <i className="ri-megaphone-line"></i> Marketing Details
-                </h3>
-
-                <div className="form-grid">
-                  <div className="form-group full-width">
-                    <label>
-                      Platforms Required <span className="required">*</span>
-                    </label>
-                    <div className="checkbox-grid">
-                      {marketingPlatforms.map((platform) => (
-                        <label key={platform} className="checkbox-label">
-                          <input
-                            type="checkbox"
-                            checked={formData.marketingPlatforms.includes(
-                              platform
-                            )}
-                            onChange={() =>
-                              handleMultiSelect("marketingPlatforms", platform)
-                            }
-                          />
-                          <span>{platform}</span>
-                        </label>
-                      ))}
+                    />
+                    <div className="budget-content">
+                      <i className="ri-money-rupee-circle-line"></i>
+                      <span>{option.label}</span>
+                      {formData.budget === option.value && (
+                        <i className="ri-check-line check-icon"></i>
+                      )}
                     </div>
-                    {errors.marketingPlatforms && (
-                      <span className="error-message">
-                        {errors.marketingPlatforms}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="form-group">
-                    <label>
-                      Monthly Ad Budget Range{" "}
-                      <span className="required">*</span>
-                    </label>
-                    <select
-                      name="monthlyAdBudget"
-                      value={formData.monthlyAdBudget}
-                      onChange={handleInputChange}
-                      className={errors.monthlyAdBudget ? "error" : ""}
-                    >
-                      <option value="">Select budget range</option>
-                      <option value="₹10k - ₹25k">₹10k - ₹25k</option>
-                      <option value="₹25k - ₹50k">₹25k - ₹50k</option>
-                      <option value="₹50k - ₹1L">₹50k - ₹1L</option>
-                      <option value="₹1L - ₹2.5L">₹1L - ₹2.5L</option>
-                      <option value="₹2.5L+">₹2.5L+</option>
-                    </select>
-                    {errors.monthlyAdBudget && (
-                      <span className="error-message">
-                        {errors.monthlyAdBudget}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="form-group">
-                    <label>
-                      Brand Stage <span className="required">*</span>
-                    </label>
-                    <select
-                      name="brandStage"
-                      value={formData.brandStage}
-                      onChange={handleInputChange}
-                      className={errors.brandStage ? "error" : ""}
-                    >
-                      <option value="">Select brand stage</option>
-                      <option value="New Brand">New Brand</option>
-                      <option value="Running but not profitable">
-                        Running but not profitable
-                      </option>
-                      <option value="Scaling">Scaling</option>
-                    </select>
-                    {errors.brandStage && (
-                      <span className="error-message">{errors.brandStage}</span>
-                    )}
-                  </div>
-                </div>
+                  </label>
+                ))}
               </div>
-            )}
 
-            {!showWebsiteFields && !showMarketingFields && (
-              <div className="info-message">
-                <i className="ri-information-line"></i>
-                <p>
-                  {
-                    "No additional details required for the selected services. Click Next to continue."
-                  }
-                </p>
-              </div>
-            )}
-          </div>
-        );
+              {errors.budget && (
+                <span className="error-message">{errors.budget}</span>
+              )}
 
-      case 4:
-        return (
-          <div className="step-content">
-            <h2 className="step-title">Budget Expectation</h2>
-            <p className="step-description">
-             {" Select your budget range for this project"}
-            </p>
-
-            <div className="budget-options">
-              {[
-                { value: "₹10k - ₹25k", label: "₹10,000 - ₹25,000" },
-                { value: "₹25k - ₹50k", label: "₹25,000 - ₹50,000" },
-                { value: "₹50k - ₹1L", label: "₹50,000 - ₹1,00,000" },
-                { value: "₹1L+", label: "₹1,00,000+" },
-              ].map((option) => (
-                <label
-                  key={option.value}
-                  className={`budget-card ${
-                    formData.budget === option.value ? "selected" : ""
-                  }`}
-                >
-                  <input
-                    type="radio"
-                    name="budget"
-                    value={option.value}
-                    checked={formData.budget === option.value}
-                    onChange={handleInputChange}
-                  />
-                  <div className="budget-content">
-                    <i className="ri-money-rupee-circle-line"></i>
-                    <span>{option.label}</span>
-                    {formData.budget === option.value && (
-                      <i className="ri-check-line check-icon"></i>
-                    )}
-                  </div>
+              <div className="form-group full-width mt-4">
+                <label>
+                  Describe Your Expectations <span className="required">*</span>
                 </label>
-              ))}
-            </div>
-
-            {errors.budget && (
-              <span className="error-message">{errors.budget}</span>
-            )}
-
-            <div className="form-group full-width mt-4">
-              <label>
-                Describe Your Expectations <span className="required">*</span>
-              </label>
-              <textarea
-                name="expectations"
-                value={formData.expectations}
-                onChange={handleInputChange}
-                rows="6"
-                placeholder="Tell us about your vision, specific requirements, or any challenges you're facing..."
-                className={errors.expectations ? "error" : ""}
-              ></textarea>
-              {errors.expectations && (
-                <span className="error-message">{errors.expectations}</span>
-              )}
-            </div>
-          </div>
-        );
-
-      case 5:
-        return (
-          <div className="step-content">
-            <h2 className="step-title">Final Step</h2>
-            <p className="step-description">
-              {"Review and confirm your submission"}
-            </p>
-
-            <div className="summary-section">
-              <h3>
-                <i className="ri-file-list-3-line"></i> Quick Summary
-              </h3>
-              <div className="summary-grid">
-                <div className="summary-item">
-                  <strong>Name:</strong> {formData.fullName}
-                </div>
-                <div className="summary-item">
-                  <strong>Email:</strong> {formData.email}
-                </div>
-                <div className="summary-item">
-                  <strong>Services:</strong> {formData.services.join(", ")}
-                </div>
-                <div className="summary-item">
-                  <strong>Budget:</strong> {formData.budget}
-                </div>
+                <textarea
+                  name="expectations"
+                  value={formData.expectations}
+                  onChange={handleInputChange}
+                  rows="6"
+                  placeholder="Tell us about your vision, specific requirements, or any challenges you're facing..."
+                  className={errors.expectations ? "error" : ""}
+                ></textarea>
+                {errors.expectations && (
+                  <span className="error-message">{errors.expectations}</span>
+                )}
               </div>
             </div>
 
-            <div className="consent-section">
-              <label className="checkbox-label consent-label">
-                <input
-                  type="checkbox"
-                  name="agreeToContact"
-                  checked={formData.agreeToContact}
-                  onChange={handleInputChange}
-                />
-                <span>
-                  I agree to be contacted by The Tous{" "}
-                  <span className="required">*</span>
-                </span>
-              </label>
-              {errors.agreeToContact && (
-                <span className="error-message">{errors.agreeToContact}</span>
-              )}
-            </div>
-
-            {submitStatus && (
+            {(submitStatus || Object.keys(errors).length > 0) && (
               <div
                 className={`alert ${
-                  submitStatus.type === "success"
+                  submitStatus?.type === "success"
                     ? "alert-success"
                     : "alert-error"
                 }`}
               >
                 <i
                   className={
-                    submitStatus.type === "success"
+                    submitStatus?.type === "success"
                       ? "ri-checkbox-circle-line"
                       : "ri-error-warning-line"
                   }
                 ></i>
-                <span>{submitStatus.message}</span>
+                <span>
+                  {submitStatus?.message || "Required fields are missing"}
+                </span>
               </div>
             )}
           </div>
@@ -844,7 +489,7 @@ const Quote = () => {
               </button>
             )}
 
-            {currentStep < totalSteps ? (
+            {currentStep === 1 ? (
               <button
                 type="button"
                 onClick={nextStep}

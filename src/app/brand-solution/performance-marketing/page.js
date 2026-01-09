@@ -4,7 +4,7 @@ import Link from "next/link";
 import "./style.css";
 import Image from "next/image";
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
-const ShopifyDevelopment = () => {
+const PerformanceMarketing = () => {
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);
   const [activeTab, setActiveTab] = useState("customized");
@@ -37,7 +37,7 @@ const ShopifyDevelopment = () => {
         },
         body: JSON.stringify({
           ...formData,
-          services: "Shopify Development",
+          services: "Performance Marketing",
         }),
       });
 
@@ -64,34 +64,34 @@ const ShopifyDevelopment = () => {
 
   const faqs = [
     {
-      question: "How long does it take to build a Shopify store?",
+      question: "What is performance marketing and how does it differ from traditional marketing?",
       answer:
-        "A standard Shopify store typically takes 2-4 weeks to launch. Custom Shopify Plus stores or complex migrations may require 6-8 weeks. We'll provide a detailed timeline during our initial consultation based on your specific requirements.",
+        "Performance marketing is a results-driven digital marketing approach where you only pay for measurable actions like clicks, leads, sales, or conversions. Unlike traditional marketing with fixed costs, performance marketing ensures every rupee spent is tracked, optimized, and directly tied to ROI—making it more cost-effective and accountable.",
     },
     {
-      question: "Can you migrate my existing store to Shopify?",
+      question: "Which performance marketing channels do you specialize in?",
       answer:
-        "Yes, we specialize in seamless migrations from platforms like WooCommerce, Magento, BigCommerce, and custom solutions to Shopify. We ensure zero data loss, preserve SEO rankings, and maintain URL structures during the migration process.",
+        "We specialize in Google Ads (Search, Display, Shopping, Performance Max), Meta Ads (Facebook & Instagram), LinkedIn Ads, YouTube Ads, programmatic advertising, affiliate marketing, and influencer partnerships. We select the right mix of channels based on your target audience, industry, and business goals.",
     },
     {
-      question: "Do you build custom Shopify themes or use templates?",
+      question: "How do you measure the success of performance marketing campaigns?",
       answer:
-        "We offer both options. For faster launches, we customize premium themes to match your brand. For unique requirements, we build fully custom Shopify themes from scratch that perfectly align with your brand identity and conversion goals.",
+        "We track key performance indicators (KPIs) including Cost Per Acquisition (CPA), Return on Ad Spend (ROAS), Click-Through Rate (CTR), Conversion Rate, Customer Lifetime Value (CLV), and overall ROI. You'll receive transparent, real-time dashboards showing exactly how your campaigns are performing.",
     },
     {
-      question: "What Shopify apps and integrations do you work with?",
+      question: "What's the minimum budget required for performance marketing campaigns?",
       answer:
-        "We integrate popular apps for email marketing, inventory management, shipping, accounting, and more. We also develop custom Shopify apps when off-the-shelf solutions don't meet your specific business needs.",
+        "While budgets vary by industry and goals, we recommend a minimum monthly ad spend of ₹50,000-₹1,00,000 to gather meaningful data and optimize effectively. We'll work with your budget to create a strategic plan that maximizes results within your spending capacity.",
     },
     {
-      question: "Do you provide ongoing Shopify maintenance and support?",
+      question: "How quickly can I see results from performance marketing?",
       answer:
-        "Yes, we offer comprehensive maintenance packages including theme updates, app management, performance optimization, security monitoring, and technical support to keep your Shopify store running smoothly 24/7.",
+        "Initial results like traffic and impressions appear within days of launching campaigns. Meaningful conversion data typically emerges within 2-4 weeks, while optimal performance and positive ROI usually develop after 2-3 months of continuous testing, optimization, and refinement based on data insights.",
     },
     {
-      question: "Can you help with Shopify SEO and conversion optimization?",
+      question: "Do you provide performance marketing services for B2B and B2C businesses?",
       answer:
-        "Absolutely. We implement SEO best practices, optimize product pages, improve site speed, and use conversion rate optimization techniques to ensure your Shopify store ranks well and converts visitors into customers.",
+        "Yes, we serve both B2B and B2C clients across industries including e-commerce, SaaS, healthcare, education, real estate, finance, and professional services. Our strategies are customized to your business model, sales cycle, and target audience—whether you're driving online sales or generating qualified leads.",
     },
   ];
 
@@ -163,7 +163,7 @@ const ShopifyDevelopment = () => {
 
   return (
     <React.Fragment>
-      <main className=" shopify-devlopment-main-page">
+      <main className=" performance-marketing-main-page">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           {/* Hero Section */}
           <section className="py-24 hero-web-dev">
@@ -230,17 +230,16 @@ const ShopifyDevelopment = () => {
               {/* Right Column - Content */}
               <div className="col-md-6 col-lg-3 col-sm-12 right-banner">
                 <h1 className="main-section-heading" id="noLine">
-                  Need a website that brings you business ?
+                  Performance marketing that delivers real results
                 </h1>
                 <p className="mb-6">
                   <strong>
-                    We make fast, SEO friendly, mobile responsive, website that
-                    turn vision into real business.
+                    We drive measurable growth through data-driven performance marketing—pay only for real results, not empty promises.
                   </strong>
                 </p>
 
                 <Link href="/quote" className="inline-block c_button_black">
-                  Start Your Shopify Store
+                  Get Your Free Marketing Audit
                 </Link>
               </div>
             </div>
@@ -249,14 +248,15 @@ const ShopifyDevelopment = () => {
           {/* Services Overview */}
           <section className="py-24 max-w-7xl mx-auto what-we-offer-web-dev">
             <h3 className="main-section-heading mb-12" id="devHeading">
-              Our Shopify Development Services
+              Our Performance Marketing Services
             </h3>
             <div className="grid  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 content-wrapper">
-              {/* Service 1: Custom Shopify Store Development */}
+              {/* Service 1: Paid Search Advertising (PPC) */}
               <div className="content-div">
                 <div
-                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${activeService === 0 ? "!border-b-0 active-gradient" : ""
-                    }`}
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 0 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
                   <button
                     onClick={() =>
@@ -276,16 +276,17 @@ const ShopifyDevelopment = () => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={1.5}
-                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                           />
                         </svg>
                         <h3 className="inner-heading">
-                          Custom Shopify Store Development
+                          Paid Search Advertising (PPC)
                         </h3>
                       </div>
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 0 ? "rotate-180" : ""
-                          }`}
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 0 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -301,27 +302,24 @@ const ShopifyDevelopment = () => {
                   </button>
                 </div>
                 <div
-                  className={`overflow-hidden transition-all duration-300   ${activeService === 0 ? "max-h-96 para-div" : "max-h-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300   ${
+                    activeService === 0 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Build your brand-new Shopify store from scratch with
-                      custom themes, optimized product pages, and seamless
-                      checkout flows. We create conversion-focused designs that
-                      reflect your brand identity, integrate with payment
-                      gateways, implement abandoned cart recovery, and set up
-                      analytics tracking to maximize your revenue from day one.
+                      Dominate search results with high-intent keyword targeting through Google Ads and Bing Ads. We create compelling ad copy, optimize bidding strategies, conduct A/B testing, implement conversion tracking, and continuously refine campaigns to lower your cost-per-acquisition while maximizing qualified traffic and conversions that drive real revenue growth.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Service 2: Shopify Theme Customization */}
+              {/* Service 2: Social Media Advertising */}
               <div className="content-div ">
                 <div id="boxHeight"
-                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${activeService === 1 ? "!border-b-0 active-gradient" : ""
-                    }`}
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 1 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
                   <button
                     onClick={() =>
@@ -341,16 +339,17 @@ const ShopifyDevelopment = () => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={1.5}
-                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                            d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
                           />
                         </svg>
                         <h3 className="inner-heading">
-                          Shopify Theme Customization
+                          Social Media Advertising
                         </h3>
                       </div>
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 1 ? "rotate-180" : ""
-                          }`}
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 1 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -366,28 +365,24 @@ const ShopifyDevelopment = () => {
                   </button>
                 </div>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${activeService === 1 ? "max-h-96 para-div" : "max-h-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300 ${
+                    activeService === 1 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Transform existing Shopify themes to perfectly match your
-                      brand with custom Liquid coding, advanced features, and
-                      unique design elements. We modify templates, add custom
-                      sections, implement interactive elements, optimize mobile
-                      responsiveness, and ensure your store stands out from
-                      competitors while maintaining fast load times and
-                      conversion optimization.
+                      Reach your ideal customers on Facebook, Instagram, LinkedIn, and YouTube with precision-targeted campaigns. We leverage advanced audience segmentation, retargeting strategies, dynamic product ads, creative testing, and platform-specific best practices to generate high-quality leads, drive e-commerce sales, and build brand awareness that converts.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Service 3: Shopify Plus Development */}
+              {/* Service 3: Conversion Rate Optimization (CRO) */}
               <div className="content-div">
                 <div
-                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${activeService === 2 ? "!border-b-0 active-gradient" : ""
-                    }`}
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 2 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
                   <button
                     onClick={() =>
@@ -407,16 +402,17 @@ const ShopifyDevelopment = () => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={1.5}
-                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                           />
                         </svg>
                         <h3 className="inner-heading">
-                          Shopify Plus Development
+                          Conversion Rate Optimization (CRO)
                         </h3>
                       </div>
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 2 ? "rotate-180" : ""
-                          }`}
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 2 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -432,28 +428,24 @@ const ShopifyDevelopment = () => {
                   </button>
                 </div>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${activeService === 2 ? "max-h-96 para-div" : "max-h-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300 ${
+                    activeService === 2 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Enterprise-level Shopify Plus solutions for high-volume
-                      businesses with advanced automation, wholesale channels,
-                      and B2B capabilities. We implement Shopify Scripts for
-                      custom discounts, build headless commerce architectures,
-                      create multi-storefront experiences, integrate with ERP
-                      systems, and leverage Shopify Flow for complex automation
-                      workflows that scale with your growth.
+                      Turn more visitors into customers without increasing ad spend. We analyze user behavior through heatmaps, session recordings, and funnel analysis, then conduct systematic A/B testing on landing pages, CTAs, forms, and checkout flows. Our data-driven optimization increases conversion rates, reduces bounce rates, and maximizes ROI from existing traffic.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Service 4: Shopify Migration Services */}
+              {/* Service 4: Retargeting & Remarketing */}
               <div className="content-div">
                 <div
-                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${activeService === 3 ? "!border-b-0 active-gradient" : ""
-                    }`}
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 3 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
                   <button
                     onClick={() =>
@@ -473,14 +465,15 @@ const ShopifyDevelopment = () => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={1.5}
-                            d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                           />
                         </svg>
-                        <h3 className="inner-heading">Migration to Shopify</h3>
+                        <h3 className="inner-heading">Retargeting & Remarketing</h3>
                       </div>
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 3 ? "rotate-180" : ""
-                          }`}
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 3 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -497,18 +490,13 @@ const ShopifyDevelopment = () => {
                 </div>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300  ${activeService === 3 ? "max-h-96 para-div" : "max-h-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300  ${
+                    activeService === 3 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Seamlessly migrate from WooCommerce, Magento, BigCommerce,
-                      or custom platforms to Shopify without losing data or SEO
-                      rankings. We handle complete product transfers, customer
-                      data migration, URL redirects, order history preservation,
-                      review imports, and ensure zero downtime during the
-                      switch. Your store launches on Shopify with everything
-                      intact and improved performance.
+                      Re-engage visitors who didn't convert on their first visit with strategic retargeting campaigns across Google Display Network, Facebook, Instagram, and beyond. We create personalized ad sequences based on user behavior, implement dynamic product remarketing, recover abandoned carts, and nurture prospects through the sales funnel to drive conversions and maximize customer acquisition.
                     </p>
                   </div>
                 </div>
@@ -518,25 +506,21 @@ const ShopifyDevelopment = () => {
 
           {/* Process Section */}
           <h3 className="main-section-heading mb-5" id="devHeading">
-            Our Shopify Development Process
+            Our Performance Marketing Process
           </h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 our-process-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-4 gap-12 content-wrapper">
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">01</span>
-                  <h3 className="inner-heading">Discovery & Planning</h3>
+                  <h3 className="inner-heading">Strategy & Audit</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${expandedProcesses[0] ? "expanded" : ""
-                        }`}
+                      className={`process-text ${
+                        expandedProcesses[0] ? "expanded" : ""
+                      }`}
                     >
-                      We analyze your business goals, target audience, and
-                      product catalog to create a Shopify strategy that drives
-                      conversions. We define your store structure, choose the
-                      right apps, plan integrations, and establish design
-                      requirements that align with your brand vision and sales
-                      objectives.
+                      We start with a comprehensive marketing audit to understand your business goals, target audience, competitive landscape, and current performance. We analyze your customer journey, identify growth opportunities, define KPIs, and create a data-driven performance marketing strategy tailored to maximize ROI and achieve your specific revenue objectives.
                     </p>
                     <button
                       onClick={() =>
@@ -553,18 +537,14 @@ const ShopifyDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">02</span>
-                  <h3 className="inner-heading">Design & Setup</h3>
+                  <h3 className="inner-heading">Campaign Setup & Launch</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${expandedProcesses[1] ? "expanded" : ""
-                        }`}
+                      className={`process-text ${
+                        expandedProcesses[1] ? "expanded" : ""
+                      }`}
                     >
-                      Our designers create stunning, mobile-responsive
-                      storefronts that reflect your brand and optimize for
-                      conversions. We design custom product pages, collections,
-                      checkout flows, and landing pages, then set up your
-                      Shopify store with the theme, essential apps, and initial
-                      configurations for a seamless launch.
+                      We build high-converting campaigns across selected channels—Google Ads, Meta Ads, LinkedIn, and more. This includes in-depth keyword research, audience targeting, compelling ad creative development, landing page optimization, pixel implementation, conversion tracking setup, and establishing automated bidding strategies that ensure optimal performance from day one.
                     </p>
                     <button
                       onClick={() =>
@@ -581,18 +561,14 @@ const ShopifyDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">03</span>
-                  <h3 className="inner-heading">Development & Testing</h3>
+                  <h3 className="inner-heading">Testing & Optimization</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${expandedProcesses[2] ? "expanded" : ""
-                        }`}
+                      className={`process-text ${
+                        expandedProcesses[2] ? "expanded" : ""
+                      }`}
                     >
-                      With 6+ years of Shopify expertise and 57+ successful
-                      launches, we build your store with custom features,
-                      integrate payment gateways, configure shipping, and set up
-                      automation. We rigorously test across devices, browsers,
-                      and payment scenarios to ensure flawless functionality
-                      before your store goes live.
+                      We continuously test and optimize every campaign element—ad copy, creatives, targeting, bidding, and landing pages. Through rigorous A/B testing, performance analysis, and data-driven insights, we identify what works best, eliminate underperforming elements, scale winning strategies, and progressively lower your cost-per-acquisition while increasing conversion rates and revenue.
                     </p>
                     <button
                       onClick={() =>
@@ -609,18 +585,14 @@ const ShopifyDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">04</span>
-                  <h3 className="inner-heading">Launch & Optimization</h3>
+                  <h3 className="inner-heading">Reporting & Scaling</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${expandedProcesses[3] ? "expanded" : ""
-                        }`}
+                      className={`process-text ${
+                        expandedProcesses[3] ? "expanded" : ""
+                      }`}
                     >
-                      We launch your Shopify store, configure analytics
-                      tracking, and implement SEO best practices. Post-launch,
-                      we monitor performance, optimize conversion rates,
-                      fine-tune app configurations, and provide ongoing support
-                      to ensure your store continues generating sales and
-                      growing with your business needs.
+                      You receive transparent, real-time reporting dashboards tracking all KPIs—ROAS, CPA, conversion rates, and revenue attribution. We provide actionable insights, identify scaling opportunities, recommend budget allocation strategies, and systematically expand successful campaigns to new audiences, keywords, and channels—ensuring sustainable, profitable growth month over month.
                     </p>
                     <button
                       onClick={() =>
@@ -643,14 +615,14 @@ const ShopifyDevelopment = () => {
           <section className="py-24 max-w-7xl mx-auto why-choose-us-web-dev">
             <div className="mb-12">
               <h3 className="main-section-heading" id="devHeading">
-                Why Choose The Tous for Shopify Development
+                Why Choose The Tous for Performance Marketing
               </h3>
               <p className="why-para">
-                What makes us the best Shopify development partner
+                What makes us your ideal performance marketing partner
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6 content-wrapper">
-              {/* Card 1: Shopify Expertise */}
+              {/* Card 1: Data-Driven Approach */}
               <div className="bg-gray-100 rounded-0 p-8 hover:bg-gray-100 transition-colors inner-div">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-black rounded-0 flex items-center justify-center mb-2">
@@ -664,26 +636,22 @@ const ShopifyDevelopment = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                       />
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Certified Shopify Experts</h3>
+                <h3 className="inner-heading">Data-Driven Marketing Experts</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  57+ Shopify stores launched since 2018
+                  200+ campaigns optimized with proven ROI
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${expandedWhyChoose[0] ? "expanded" : ""
-                      }`}
+                    className={`why-text ${
+                      expandedWhyChoose[0] ? "expanded" : ""
+                    }`}
                   >
-                    Our team includes certified Shopify developers with deep
-                    expertise in Liquid, theme customization, app integration,
-                    and conversion optimization. We stay updated with the latest
-                    Shopify features and best practices to deliver stores that
-                    leverage the platform&apos;s full potential for your
-                    business growth.
+                    We make decisions based on data, not guesswork. Our certified performance marketers use advanced analytics, attribution modeling, and conversion tracking to identify what drives results. Every campaign is continuously monitored, tested, and optimized using real-time insights—ensuring your marketing budget delivers maximum returns and measurable business growth.
                   </p>
                   <button
                     onClick={() =>
@@ -696,7 +664,7 @@ const ShopifyDevelopment = () => {
                 </div>
               </div>
 
-              {/* Card 2: Conversion Focused */}
+              {/* Card 2: ROI-Focused Strategies */}
               <div className="bg-gray-100 rounded-0 p-8 hover:bg-gray-100 transition-colors inner-div">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-black rounded-0 flex items-center justify-center mb-2">
@@ -710,26 +678,22 @@ const ShopifyDevelopment = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Conversion-Optimized Design</h3>
+                <h3 className="inner-heading">ROI-Focused Strategies</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  Average 3.2% conversion rate across our stores
+                  Average 4.5X ROAS across client campaigns
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${expandedWhyChoose[1] ? "expanded" : ""
-                      }`}
+                    className={`why-text ${
+                      expandedWhyChoose[1] ? "expanded" : ""
+                    }`}
                   >
-                    We design every element with conversion in mind—from
-                    persuasive product pages and trust badges to streamlined
-                    checkouts and cart recovery systems. Our Shopify stores are
-                    built using proven e-commerce psychology principles that
-                    turn browsers into buyers and maximize your average order
-                    value.
+                    Your success is measured by results, not vanity metrics. We focus relentlessly on what matters most—cost per acquisition, return on ad spend, and revenue growth. Our performance marketing strategies are engineered to deliver positive ROI, lower customer acquisition costs, and increase lifetime customer value through scientific testing and proven optimization methodologies.
                   </p>
                   <button
                     onClick={() =>
@@ -742,7 +706,7 @@ const ShopifyDevelopment = () => {
                 </div>
               </div>
 
-              {/* Card 3: Fast & Scalable */}
+              {/* Card 3: Multi-Channel Expertise */}
               <div className="bg-gray-100 rounded-0 p-8 hover:bg-gray-100 transition-colors inner-div">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-black rounded-0 flex items-center justify-center mb-2">
@@ -756,25 +720,22 @@ const ShopifyDevelopment = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                        d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
                       />
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Lightning-Fast Performance</h3>
+                <h3 className="inner-heading">Multi-Channel Expertise</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  90+ PageSpeed scores on all stores
+                  Certified partners across major ad platforms
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${expandedWhyChoose[2] ? "expanded" : ""
-                      }`}
+                    className={`why-text ${
+                      expandedWhyChoose[2] ? "expanded" : ""
+                    }`}
                   >
-                    Speed directly impacts sales. We optimize images, minify
-                    code, leverage lazy loading, and implement best practices to
-                    ensure your Shopify store loads in under 2 seconds. Fast
-                    stores rank higher in Google, reduce bounce rates, and
-                    convert more visitors into paying customers.
+                    We master every major performance marketing channel—Google Ads, Meta (Facebook & Instagram), LinkedIn, YouTube, programmatic display, and emerging platforms. Our holistic approach creates synergy across channels, ensuring your brand message reaches the right audience at the right time, driving coordinated campaigns that amplify results and maximize customer touchpoints.
                   </p>
                   <button
                     onClick={() =>
@@ -787,7 +748,7 @@ const ShopifyDevelopment = () => {
                 </div>
               </div>
 
-              {/* Card 4: End-to-End Support */}
+              {/* Card 4: Transparent Reporting */}
               <div className="bg-gray-100 rounded-0 p-8 hover:bg-gray-100 transition-colors inner-div">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-black rounded-0 flex items-center justify-center mb-2">
@@ -801,26 +762,22 @@ const ShopifyDevelopment = () => {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                        d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                       />
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Complete Shopify Solutions</h3>
+                <h3 className="inner-heading">Transparent Reporting & Communication</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  Design, development, and ongoing optimization
+                  Real-time dashboards and dedicated account management
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${expandedWhyChoose[3] ? "expanded" : ""
-                      }`}
+                    className={`why-text ${
+                      expandedWhyChoose[3] ? "expanded" : ""
+                    }`}
                   >
-                    From initial strategy to post-launch support, we handle
-                    everything—theme design, app integration, product setup, SEO
-                    optimization, marketing automation, and continuous
-                    performance monitoring. You get a dedicated partner who
-                    understands your business and helps your Shopify store grow
-                    month after month.
+                    No black boxes or hidden metrics. You get full transparency with real-time access to campaign dashboards showing every click, conversion, and rupee spent. Our detailed monthly reports break down performance, insights, and recommendations. Plus, you have a dedicated account manager who understands your business and is available to answer questions and strategize for growth.
                   </p>
                   <button
                     onClick={() =>
@@ -843,36 +800,34 @@ const ShopifyDevelopment = () => {
                   Our Track Record
                 </p>
                 <h2 className="main-section-heading" id="devHeading">
-                  Proven Results in Shopify Development
+                  Proven Results in Performance Marketing
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
-                  Since 2018, we&apos;ve helped e-commerce brands launch and
-                  grow successful Shopify stores that generate consistent
-                  revenue and scale effortlessly.
+                  Since 2018, we&apos;ve helped businesses across industries drive measurable growth through data-driven performance marketing campaigns that consistently deliver positive ROI and sustainable revenue growth.
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">57+</div>
-                  <p className="inner-heading">Shopify Stores Launched</p>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">₹10Cr+</div>
+                  <p className="inner-heading">Ad Spend Managed</p>
                   <p className="text-sm text-gray-500">
-                    Custom and Plus stores delivered since 2018
+                    Across 200+ campaigns since 2018
                   </p>
                 </div>
                 <div className="text-center">
                   <div className="text-6xl md:text-7xl font-bold mb-3">
-                    3.2%
+                    5.5X
                   </div>
-                  <p className="inner-heading">Average Conversion Rate</p>
+                  <p className="inner-heading">Average ROAS</p>
                   <p className="text-sm text-gray-500">
-                    Above industry standard of 2.5-3%
+                    Return on ad spend across client portfolios
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">5+</div>
-                  <p className="inner-heading">Shopify Specialists</p>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">85%</div>
+                  <p className="inner-heading">Client Retention Rate</p>
                   <p className="text-sm text-gray-500">
-                    Certified developers, designers, and strategists
+                    Long-term partnerships built on results
                   </p>
                 </div>
               </div>
@@ -880,7 +835,7 @@ const ShopifyDevelopment = () => {
           </section>
 
           <section className="py-24 max-w-7xl mx-auto mt-5 web-dev-tabs">
-            <h3 className="main-section-heading mb-4">Our Shopify Portfolio</h3>
+            <h3 className="main-section-heading mb-4">Our Performance Marketing Portfolio</h3>
             <div className="mb-12">
               {/* Tab Navigation */}
               <div className="flex items-center justify-start gap-4 flex-wrap transition-all duration-500 mb-5">
@@ -888,10 +843,11 @@ const ShopifyDevelopment = () => {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-500 ${activeTab === tab.id
+                    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-500 ${
+                      activeTab === tab.id
                         ? "bg-black text-white duration-500 px-3"
                         : "bg-gray-100 text-gray-600 hover:bg-gray-200 duration-500 px-3"
-                      }`}
+                    }`}
                   >
                     {tab.label}
                   </button>
@@ -983,10 +939,10 @@ const ShopifyDevelopment = () => {
                               activeTab === "customized"
                                 ? "/silvago.mp4"
                                 : activeTab === "tailored"
-                                  ? "/luxeliv.mp4"
-                                  : activeTab === "coaches"
-                                    ? "/relaxer.mp4"
-                                    : "/pearlsnpastels.mp4"
+                                ? "/luxeliv.mp4"
+                                : activeTab === "coaches"
+                                ? "/relaxer.mp4"
+                                : "/pearlsnpastels.mp4"
                             }
                             type="video/mp4"
                           />
@@ -1007,7 +963,7 @@ const ShopifyDevelopment = () => {
                   {/* Left Column - Pain Points */}
                   <div className="col-md-6 col-lg-6 col-sm-12 cta-left">
                     <h2 className="main-section-heading mb-4" id="devHeading">
-                      Is Your E-Commerce Store Struggling?
+                      Is Your Marketing Failing to Deliver Results?
                     </h2>
                     <ul className="space-y-3 mb-8">
                       <li className="flex items-start">
@@ -1023,7 +979,7 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Your current platform limits growth and customization
+                          Your current marketing campaigns have unclear ROI
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1039,7 +995,7 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          High cart abandonment rates due to slow checkout
+                          High cost per acquisition eating into profit margins
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1055,7 +1011,7 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Difficulty managing inventory across multiple channels
+                          Difficulty tracking which channels actually drive sales
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1071,7 +1027,7 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Your store design doesn&apos;t reflect your brand
+                          Your ads generate traffic but few actual conversions
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1087,7 +1043,7 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Poor mobile experience hurting sales conversion
+                          Inconsistent lead quality affecting sales team efficiency
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1103,7 +1059,7 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Limited marketing automation and recovery tools
+                          No clear strategy for scaling successful campaigns
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1119,7 +1075,7 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Need to expand internationally with multi-currency
+                          Wasting budget on underperforming ad creatives and audiences
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1135,7 +1091,7 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Struggling with platform technical issues and downtime
+                          Lack of expertise across multiple advertising platforms
                         </span>
                       </li>
                     </ul>
@@ -1143,7 +1099,7 @@ const ShopifyDevelopment = () => {
                       href="/contact"
                       className="inline-block c_button_black mt-4"
                     >
-                      Get Started
+                      Book a Marketing Audit
                     </Link>
                   </div>
 
@@ -1180,8 +1136,9 @@ const ShopifyDevelopment = () => {
                         {faq.question}
                       </span>
                       <svg
-                        className={`w-6 h-6 flex-shrink-0 transition-transform duration-300 ${activeFaq === index ? "rotate-180" : ""
-                          }`}
+                        className={`w-6 h-6 flex-shrink-0 transition-transform duration-300 ${
+                          activeFaq === index ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1195,10 +1152,11 @@ const ShopifyDevelopment = () => {
                       </svg>
                     </button>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${activeFaq === index
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        activeFaq === index
                           ? "max-h-96 opacity-100 pb-4"
                           : "max-h-0 opacity-0.75"
-                        }`}
+                      }`}
                     >
                       <p className="text-gray-600 text-lg leading-relaxed">
                         {faq.answer}
@@ -1217,9 +1175,9 @@ const ShopifyDevelopment = () => {
           <div className="row">
             <div className="col-12">
               <div className="p">
-                Ready to launch your high-converting Shopify store?
+                Ready to drive measurable growth with performance marketing?
               </div>
-              <Link href="/contact">Get Your Free Quote</Link>
+              <Link href="/contact">Get Your Free Marketing Audit</Link>
             </div>
           </div>
         </div>
@@ -1228,4 +1186,4 @@ const ShopifyDevelopment = () => {
   );
 };
 
-export default ShopifyDevelopment;
+export default PerformanceMarketing;

@@ -454,6 +454,11 @@
   transition: all 0.3s ease;
   position: relative;
   background: #fff;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
 }
 
 .budget-card:hover .budget-content {
@@ -478,7 +483,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: #333;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif !important;
 }
 
 .budget-content .check-icon {
@@ -735,7 +740,7 @@
   }
 
   .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 0.75rem;
   }
 
@@ -752,7 +757,7 @@
   }
 
   .budget-options {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .checkbox-grid {
@@ -763,9 +768,9 @@
     grid-template-columns: 1fr;
   }
 
-  .form-navigation {
+  /* .form-navigation {
     flex-direction: column;
-  }
+  } */
 
   .ml-auto {
     margin-left: 0;
@@ -795,6 +800,9 @@
   .quote-main-page {
     margin-bottom: -1rem !important;
 
+  }
+  .budget-content{
+    min-height: 193px;
   }
 
   .services-grid {

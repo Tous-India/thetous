@@ -179,7 +179,12 @@ const CaseStudyPage = ({ params }) => {
                     ) : (
                       Array.isArray(project.challenges) &&
                       project.challenges.map((challenge, index) => (
-                        <p key={index}>{challenge}</p>
+                        <ul style={{ listStyleType: "disc" }}>
+                          <li key={index}>
+                            {challenge}
+                          </li>
+                          {/* <p key={index}>{challenge}</p> */}
+                        </ul>
                       ))
                     )}
                   </div>
@@ -188,7 +193,27 @@ const CaseStudyPage = ({ params }) => {
               <div className="row2 services row">
                 <div className="inner-div">
                   <h5>{project.servicesDelivered.title}</h5>
-                  <p>{project.servicesDelivered.description}</p>
+                  {/* <p>{project.servicesDelivered.description}</p> */}
+                  <ul
+                    style={{
+                      listStyleType: "disc",
+                      paddingLeft: "20px",
+                      marginTop: "10px",
+                    }}
+                  >
+                    {project.servicesDelivered.description.map((service, index) => (
+                      <li
+                        key={index}
+                        style={{
+                          marginBottom: "6px",
+                          fontSize: "15px",
+                          lineHeight: "1.6",
+                        }}
+                      >
+                        {service}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
               <div className="result">

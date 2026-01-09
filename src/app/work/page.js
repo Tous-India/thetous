@@ -16,6 +16,7 @@ import dhirsons from "../../../public/work/dhirsons.webp";
 import crossraod from "../../../public/home/work/1731492317.webp";
 import godrej from "../../../public/home/work/godrej.jpg";
 import m3mPanipat from "../../../public/home/work/m3m-panipat.webp";
+import sbp from "../../../public/home/work/sbp.png";
 import skaOrion from "../../../public/home/work/SKA orion.jpg";
 import tarc from "../../../public/home/work/TARC.jpg";
 
@@ -31,6 +32,7 @@ const imageMap = {
   "/home/work/silvago.png": silvago,
   "/home/work/godrej.jpg": godrej,
   "/home/work/m3m-panipat.webp": m3mPanipat,
+  "/home/work/sbp.png": sbp,
   "/home/work/SKA orion.jpg": skaOrion,
   "/home/work/TARC.jpg": tarc,
 };

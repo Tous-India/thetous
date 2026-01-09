@@ -1640,6 +1640,7 @@ footer {
           display: flex;
           align-items: center;
           justify-content: start;
+          align-self: center;
           padding: 0;
           margin: 0;
           width: 65%;
