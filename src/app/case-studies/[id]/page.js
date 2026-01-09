@@ -109,11 +109,12 @@ const CaseStudyPage = ({ params }) => {
                 srcSet={project.heroImage.mobile}
               />
               <Image
+                src={projectImage}
                 alt={project.title}
                 width={1920}
                 height={600}
-                src={projectImage}
                 className="img-fluid"
+                 priority
               />
             </picture>
 
@@ -179,8 +180,8 @@ const CaseStudyPage = ({ params }) => {
                     ) : (
                       Array.isArray(project.challenges) &&
                       project.challenges.map((challenge, index) => (
-                        <ul style={{ listStyleType: "disc" }}>
-                          <li key={index}>
+                        <ul key={index} style={{ listStyleType: "disc" }}>
+                          <li >
                             {challenge}
                           </li>
                           {/* <p key={index}>{challenge}</p> */}
