@@ -6,25 +6,6 @@ import Image from "next/image";
 import caseStudiesData from "@/data/caseStudies.json";
 import { notFound } from "next/navigation";
 
-/* ================= IMAGES ================= */
-import prozvofit from "../../../../public/home/work/1726132161.webp";
-import silvago from "../../../../public/home/work/1731492367.webp";
-import luxeliv from "../../../../public/home/work/1731492385.webp";
-import executive from "../../../../public/work/executive.webp";
-import ohmypet from "../../../../public/work/ohmypet.webp";
-import dhirsons from "../../../../public/work/dhirsons.webp";
-import crossraod from "../../../../public/home/work/1731492317.webp";
-
-const imageMap = {
-  "/home/work/1726132161.webp": prozvofit,
-  "/home/work/1731492367.webp": silvago,
-  "/home/work/1731492385.webp": luxeliv,
-  "/work/executive.webp": executive,
-  "/work/ohmypet.webp": ohmypet,
-  "/work/dhirsons.webp": dhirsons,
-  "/home/work/1731492317.webp": crossraod,
-};
-
 const CaseStudyPage = ({ params }) => {
   const { id } = React.use(params);
 
@@ -85,7 +66,8 @@ const CaseStudyPage = ({ params }) => {
     );
   }
 
-  const projectImage = imageMap[project.image];
+  const heroDesktop = project.heroImage?.desktop;
+  const heroMobile = project.heroImage?.mobile;
 
   return (
     <main className="case-studies-page py-5">
@@ -99,24 +81,26 @@ const CaseStudyPage = ({ params }) => {
               </h1>
             </div>
 
-            <picture className="">
-              <source
-                media="(min-width: 601px)"
-                srcSet={project.heroImage.desktop}
-              />
-              <source
-                media="(max-width: 600px)"
-                srcSet={project.heroImage.mobile}
-              />
-              <Image
-                src={projectImage}
-                alt={project.title}
-                width={1920}
-                height={600}
-                className="img-fluid"
-                 priority
-              />
-            </picture>
+            {heroDesktop && heroMobile && (
+              <>
+                <Image
+                  src={heroDesktop}
+                  alt={project.title}
+                  width={1920}
+                  height={650}
+                  className="img-fluid rounded-[2rem] d-none d-md-block"
+                  priority
+                />
+                <Image
+                  src={heroMobile}
+                  alt={project.title}
+                  width={1000}
+                  height={800}
+                  className="img-fluid rounded-[1rem] d-block d-md-none"
+                  priority
+                />
+              </>
+            )}
 
             <section className="project-overview">
               <div className="row1">
@@ -278,14 +262,16 @@ const CaseStudyPage = ({ params }) => {
                 <div className="image-div">
                   {project.result.images && project.result.images.length > 0 ? (
                     project.result.images.map((image, index) => (
-                      <Image
-                        src={image}
-                        key={index}
-                        alt={`${project.title} result ${index + 1}`}
-                        width={400}
-                        height={400}
-                        className="img-fluid"
-                      />
+                      image && (
+                        <Image
+                          src={image}
+                          key={index}
+                          alt={`${project.title} result ${index + 1}`}
+                          width={400}
+                          height={400}
+                          className="img-fluid"
+                        />
+                      )
                     ))
                   ) : (
                     <p>No image present</p>
