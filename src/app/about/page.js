@@ -57,7 +57,7 @@ const page = () => {
           <div className="row">
             <div className="col-12">
               <div className="p">
-                Together, let&apos;s have a quantifiable effect on your company.
+                Together, let's have a quantifiable effect on your company.
               </div>
               <Link href="/quote">Design A Quote</Link>
             </div>
