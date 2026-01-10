@@ -1,0 +1,501 @@
+.contact-page-main {
+  margin-top: -3rem;
+  background-color: white;
+  box-shadow: 0px 10px 10px -10px gray;
+  position: relative;
+  border-radius: 0 0 30px 30px;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  z-index: 1;
+  margin-bottom: -3rem !important;
+  iframe {
+    height: 300px;
+  }
+  .container-fluid {
+    background-color: white;
+    padding: 0 0rem !important;
+    margin-bottom: -1rem !important;
+    position: relative;
+    z-index: 1;
+
+    .buttonDiv {
+      display: flex;
+      justify-content: end;
+
+      button {
+        color: #fff;
+        background-color: #000;
+        border: 2px solid #000;
+        border-radius: 1px;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s;
+        text-transform: uppercase !important;
+        margin-top: 1rem;
+
+        &:hover {
+          background-color: white;
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+
+    form {
+      h3 {
+        font-weight: 600;
+        font-size: 2.5vw;
+        padding: 0 !important;
+        margin-bottom: 1rem;
+        font-family: "Lato";
+      }
+    }
+
+    .row {
+      .type-number {
+        border: 2px solid rgb(235 235 235);
+        padding: 5px 10px;
+        border-radius: 5px;
+        outline: none;
+
+        &::placeholder {
+          color: black;
+          opacity: 1;
+        }
+      }
+
+      textarea {
+        border: 2px solid rgb(235 235 235);
+        padding: 5px 10px;
+        border-radius: 5px;
+        outline: none;
+
+        &::placeholder {
+          color: black;
+          opacity: 1;
+        }
+      }
+
+      .first-form-row {
+        > div {
+          input {
+            border: 2px solid rgb(235 235 235);
+            padding: 5px 10px;
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+
+            &::placeholder {
+              color: black;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .row {
+      #mainContact .row-two-contact form h3 {
+        font-weight: 600;
+        font-size: 2vw !important;
+        padding: 0 !important;
+        font-family: "Lato";
+      }
+
+      #mainContact iframe {
+        border-radius: 5px;
+        height: 14rem;
+      }
+
+      #mainContact form .buttonDiv {
+        display: flex;
+        justify-content: end;
+      }
+
+      #mainContact form .buttonDiv i {
+        transform: rotate(-45deg);
+        margin: 0 0.5rem;
+      }
+
+      #mainContact form .buttonDiv button {
+        border-radius: 0px !important;
+        font-size: 1.25rem !important;
+        font-weight: 500;
+        background-color: #000000;
+        color: white;
+        transition: 0.3s;
+      }
+
+      #mainContact form .buttonDiv button:hover {
+        background-color: white;
+        color: #000000;
+      }
+
+      .select-contact label {
+        font-size: 0.8rem;
+      }
+
+      .checkbox-div-contactPage {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0rem 0 1rem 0;
+      }
+
+      .checkbox-div-contactPage > div {
+        margin: 0 0.25rem;
+      }
+
+      .checkbox-div-contactPage .checkbox.style-f {
+        display: inline-block;
+        position: relative;
+        padding-left: 0px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .checkbox-div-contactPage .checkbox.style-f:hover .checkbox__checkmark {
+        background-color: white !important;
+        border: 1px solid gray !important;
+      }
+
+      .checkbox-div-contactPage .checkbox.style-f input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .checkbox-div-contactPage
+        .checkbox.style-f
+        input:checked
+        ~ .checkbox__checkmark {
+        background-color: #ffffff;
+        border: none;
+      }
+
+      .checkbox-div-contactPage
+        .checkbox.style-f
+        input:checked
+        ~ .checkbox__checkmark:after {
+        transform: scale(1);
+        border: none;
+      }
+
+      .checkbox-div-contactPage
+        .checkbox.style-f
+        input:checked
+        ~ .checkbox__body {
+        font-weight: normal;
+        color: white;
+        border: none;
+        outline: none;
+      }
+
+      .checkbox-div-contactPage
+        .checkbox.style-f:hover
+        input
+        ~ .checkbox__checkmark {
+        background-color: #ffffff;
+        border: none;
+      }
+
+      .checkbox-div-contactPage
+        .checkbox.style-f:hover
+        input:checked
+        ~ .checkbox__checkmark {
+        background-color: #ffffff;
+        border: none !important;
+      }
+
+      .checkbox-div-contactPage .checkbox.style-f .checkbox__checkmark {
+        position: relative;
+        height: 1.75rem;
+        width: 9rem;
+        background-color: #ffffff;
+        transition: background-color 0.25s ease;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      .checkbox-div-contactPage > div .checkbox__checkmark {
+        height: 1.75rem !important;
+      }
+
+      .checkbox-div-contactPage .checkbox.style-f .checkbox__checkmark:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 1.75rem;
+        width: 9rem;
+        display: block;
+        background-color: black;
+        border-radius: 5px;
+        transform: scale(0);
+        transition: transform 0.25s ease;
+      }
+
+      .checkbox-div-contactPage .checkbox.style-f .checkbox__body {
+        color: #707070;
+        line-height: 1.4;
+        font-size: 12px;
+        transition: font-weight 0.25s ease;
+      }
+
+      .checkbox-div-contactPage .checkboxes__item label {
+        position: relative;
+      }
+
+      .checkbox-div-contactPage .checkboxes__item label .checkbox__body {
+        position: absolute;
+        left: 15px;
+        top: 5px;
+      }
+
+      /* CheckBox2 */
+
+      .checkbox-div-contactPage
+        .divOne-2
+        .checkbox.style-f
+        .checkbox__checkmark {
+        position: relative;
+        height: 1.25rem;
+        width: 12rem;
+        background-color: #ffffff;
+        transition: background-color 0.25s ease;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      .checkbox-div-contactPage
+        .divOne-2
+        .checkbox.style-f
+        .checkbox__checkmark:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 1.75rem;
+        width: 12rem;
+        display: block;
+        background-color: black;
+        border-radius: 5px;
+        transform: scale(0);
+        transition: transform 0.25s ease;
+      }
+
+      /* CheckBox3 */
+
+      .checkbox-div-contactPage
+        .divOne-3
+        .checkbox.style-f
+        .checkbox__checkmark {
+        position: relative;
+        height: 2rem;
+        width: 8rem;
+        background-color: #ffffff;
+        transition: background-color 0.25s ease;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      .checkbox-div-contactPage
+        .divOne-3
+        .checkbox.style-f
+        .checkbox__checkmark:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 1.75rem;
+        width: 8rem;
+        display: block;
+        background-color: black;
+        border-radius: 5px;
+        transform: scale(0);
+        transition: transform 0.25s ease;
+      }
+
+      /* CheckBox4 */
+
+      .checkbox-div-contactPage
+        .divOne-4
+        .checkbox.style-f
+        .checkbox__checkmark {
+        position: relative;
+        height: 2rem;
+        width: 6.25rem;
+        background-color: #ffffff;
+        transition: background-color 0.25s ease;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      .checkbox-div-contactPage
+        .divOne-4
+        .checkbox.style-f
+        .checkbox__checkmark:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 1.75rem;
+        width: 6.25rem;
+        display: block;
+        background-color: black;
+        border-radius: 5px;
+        transform: scale(0);
+        transition: transform 0.25s ease;
+      }
+
+      /* CheckBox5 */
+
+      .checkbox-div-contactPage
+        .divOne-5
+        .checkbox.style-f
+        .checkbox__checkmark {
+        position: relative;
+        height: 2rem;
+        width: 3.25rem;
+        background-color: #ffffff;
+        transition: background-color 0.25s ease;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      .checkbox-div-contactPage
+        .divOne-5
+        .checkbox.style-f
+        .checkbox__checkmark:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 1.75rem;
+        width: 3.25rem;
+        display: block;
+        background-color: black;
+        border-radius: 5px;
+        transform: scale(0);
+        transition: transform 0.25s ease;
+      }
+
+      /* CheckBox6 */
+
+      .checkbox-div-contactPage
+        .divOne-6
+        .checkbox.style-f
+        .checkbox__checkmark {
+        position: relative;
+        height: 2rem;
+        width: 9rem;
+        background-color: #ffffff;
+        transition: background-color 0.25s ease;
+        border-radius: 6px;
+        border: 1px solid gray;
+      } 
+
+      .checkbox-div-contactPage
+        .divOne-6
+        .checkbox.style-f
+        .checkbox__checkmark:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 1.75rem;
+        width: 9rem;
+        display: block;
+        background-color: black;
+        border-radius: 5px;
+        transform: scale(0);
+        transition: transform 0.25s ease;
+      }
+
+      /* CheckBox7 */
+
+      .checkbox-div-contactPage
+        .divOne-7
+        .checkbox.style-f
+        .checkbox__checkmark {
+        position: relative;
+        height: 2rem;
+        width: 4.5rem;
+        background-color: #ffffff;
+        transition: background-color 0.25s ease;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      .checkbox-div-contactPage
+        .divOne-7
+        .checkbox.style-f
+        .checkbox__checkmark:after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 1.75rem;
+        width: 4.5rem;
+        display: block;
+        background-color: black;
+        border-radius: 5px;
+        transform: scale(0);
+        transition: transform 0.25s ease;
+      }
+    }
+
+    .row {
+      .right {
+        justify-content: start !important;
+        padding: 1.5rem;
+
+        h3 {
+          font-size: 1.75rem;
+          font-weight: 600;
+          font-family: "Lato";
+          margin-bottom: 1rem;
+        }
+
+        .contact-info-section {
+          p {
+            margin-bottom: 0.8rem;
+          }
+
+          .contact-phones,
+          .contact-email,
+          .contact-address {
+            line-height: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .contact-page-main {
+    margin-bottom: -1rem !important;
+    .container-fluid {
+      > .row {
+        margin-top: 0px !important;
+      }
+    }
+
+    form {
+      padding: 20px !important;
+    }
+  }
+  .aboutCta{
+    
+  }
+
+  .contact-page-main .container-fluid .row .right {
+    border-radius: 0 0 30px 30px !important;
+    margin-bottom: -1rem;
+    margin: 0 0 -3rem !important;
+    background: white;
+  }
+}
