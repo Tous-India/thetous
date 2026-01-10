@@ -1,0 +1,115 @@
+.blog-main-page {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0rem 0rem 2rem 2rem;
+  box-shadow: 0px 10px 10px -5px gray;
+  margin-bottom: -2rem !important;
+  position: relative;
+  z-index: 0;
+
+  .bs-container {
+    .row {
+      > div {
+        padding-left: 1.5rem;
+        h1 {
+          font-size: 5vw;
+          font-weight: 600;
+          font-family: "Poppins";
+          padding: 1rem 0 0 0;
+          text-align: start;
+        }
+        h5 {
+          margin-left: -2px;
+          a {
+            color: black;
+            font-weight: 300;
+            font-weight: 2vw;
+          }
+        }
+      }
+    }
+  }
+
+  .bs-container3 {
+    margin: 0rem auto 0rem auto;
+    padding: 0 0rem !important;
+    position: relative;
+
+    z-index: 1;
+    .bs-2-row-1 {
+      padding: 0;
+    }
+    > .row {
+      padding: 0 1.5rem;
+      .row {
+        margin-top: 0 !important;
+        padding-top: 0px !important;
+        > div {
+          margin-top: 0 !important;
+        }
+      }
+      .contact-cols-4 {
+        .blog_section {
+          box-shadow: 0px 0px 20px -10px gray;
+          border-radius: 20px;
+          margin-top: 0rem;
+          margin-bottom: 4rem;
+          width: 100%;
+          h3 {
+            font-family: "Poppins";
+            font-weight: 500;
+          }
+          a {
+            h6 {
+              font-family: "Poppins";
+              font-weight: 500;
+            }
+          }
+        }
+        display: flex;
+        align-items: start;
+        justify-content: center;
+      }
+      > div {
+        .blog_titl_style {
+          font-size: 1.4rem !important;
+          font-weight: 600;
+        }
+        .row {
+          a {
+            color: black;
+            font-weight: 300;
+            font-weight: 1.5rem;
+            font-weight: 700;
+            font-family: "Poppins";
+          }
+          h5 {
+            font-weight: 400;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            font-family: "Poppins";
+          }
+          .blog_titl_style {
+            font-size: 1.4rem !important;
+          }
+          .buttonBlog {
+            padding: 1rem 0rem;
+            a {
+              background-color: rgb(0, 0, 0);
+              color: white;
+              /* border: 1px solid white; */
+              padding: 0.5rem 1.4rem;
+              transition: 0.3s;
+              border-radius: 29px;
+              font-weight: 400;
+              &:hover {
+                background-color: white;
+                border: 1px solid rgb(35, 34, 34);
+                color: #000000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
