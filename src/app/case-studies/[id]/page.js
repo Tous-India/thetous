@@ -7,12 +7,27 @@ import caseStudiesData from "@/data/caseStudies.json";
 import { notFound } from "next/navigation";
 
 const CaseStudyPage = ({ params }) => {
-  const { id } = React.use(params);
+  const [id, setId] = React.useState(null);
+
+  React.useEffect(() => {
+    const getParams = async () => {
+      const resolvedParams = await params;
+      setId(resolvedParams.id);
+    };
+    getParams();
+  }, [params]);
 
   // Scroll to top when component mounts or id changes
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (id) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   }, [id]);
+
+  // Show loading state while id is being resolved
+  if (!id) {
+    return null; // or a loading spinner
+  }
 
   // Find the project data based on the id
   const project = caseStudiesData.caseStudies.find((item) => item.id === id);
@@ -261,18 +276,18 @@ const CaseStudyPage = ({ params }) => {
                 </div>
                 <div className="image-div">
                   {project.result.images && project.result.images.length > 0 ? (
-                    project.result.images.map((image, index) => (
-                      image && (
+                    project.result.images.map((image, index) =>
+                      image ? (
                         <Image
-                          src={image}
                           key={index}
+                          src={image}
                           alt={`${project.title} result ${index + 1}`}
                           width={400}
                           height={400}
                           className="img-fluid"
                         />
-                      )
-                    ))
+                      ) : null
+                    )
                   ) : (
                     <p>No image present</p>
                   )}

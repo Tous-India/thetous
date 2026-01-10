@@ -803,7 +803,7 @@ const PerformanceMarketing = () => {
                   Proven Results in Performance Marketing
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
-                  Since 2018, we&apos;ve helped businesses across industries drive measurable growth through data-driven performance marketing campaigns that consistently deliver positive ROI and sustainable revenue growth.
+                  Since 2018, we have helped businesses across industries drive measurable growth through data-driven performance marketing campaigns that consistently deliver positive ROI and sustainable revenue growth.
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
