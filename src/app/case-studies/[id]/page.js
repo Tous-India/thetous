@@ -1,33 +1,18 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, use } from "react";
 import "./style.css";
 import Image from "next/image";
 import caseStudiesData from "@/data/caseStudies.json";
 import { notFound } from "next/navigation";
 
 const CaseStudyPage = ({ params }) => {
-  const [id, setId] = React.useState(null);
-
-  React.useEffect(() => {
-    const getParams = async () => {
-      const resolvedParams = await params;
-      setId(resolvedParams.id);
-    };
-    getParams();
-  }, [params]);
+  const { id } = use(params);
 
   // Scroll to top when component mounts or id changes
   useEffect(() => {
-    if (id) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [id]);
-
-  // Show loading state while id is being resolved
-  if (!id) {
-    return null; // or a loading spinner
-  }
 
   // Find the project data based on the id
   const project = caseStudiesData.caseStudies.find((item) => item.id === id);
