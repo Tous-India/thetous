@@ -496,7 +496,7 @@ const PerformanceMarketing = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Re-engage visitors who didn't convert on their first visit with strategic retargeting campaigns across Google Display Network, Facebook, Instagram, and beyond. We create personalized ad sequences based on user behavior, implement dynamic product remarketing, recover abandoned carts, and nurture prospects through the sales funnel to drive conversions and maximize customer acquisition.
+                      Re-engage visitors who didn&apos;t convert on their first visit with strategic retargeting campaigns across Google Display Network, Facebook, Instagram, and beyond. We create personalized ad sequences based on user behavior, implement dynamic product remarketing, recover abandoned carts, and nurture prospects through the sales funnel to drive conversions and maximize customer acquisition.
                     </p>
                   </div>
                 </div>

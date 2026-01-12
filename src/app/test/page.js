@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "./style.css";
+import "../work/style.css";
 import WorkCard from "@/components/WorkCard";
 import caseStudiesData from "@/data/caseStudies.json";
 
