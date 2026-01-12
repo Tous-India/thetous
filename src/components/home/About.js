@@ -11,7 +11,7 @@ const ABOUT_DATA = {
   },
   leftSection: {
     card1: {
-      title: "99+ Projects Delivered",
+      title: "345+ Projects Delivered",
       iconUrl:
         "https://cdn.prod.website-files.com/66eab063c614790046e87eef/68dd737c5c8c9b1c39ed366b_Stat%20Icon.svg",
       description:
