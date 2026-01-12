@@ -572,6 +572,9 @@
 }
 
 @media (max-width: 720px) {
+  .performance-marketing-main-page .what-we-offer-web-dev .content-wrapper .border-div{
+    min-height: 200px;
+  }
   .webDevCta {
     .row {
       .col-12 {
@@ -789,7 +792,7 @@
   .performance-marketing-main-page .hero-web-dev .video-container .video-sound-toggle{
     width: 28px;
     height: 28px;
-    bottom: 9.9rem;
+    bottom: 12rem;
     right: 0.5rem;
   }
   #devHeading{

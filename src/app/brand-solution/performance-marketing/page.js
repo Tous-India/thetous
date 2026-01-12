@@ -180,7 +180,7 @@ const PerformanceMarketing = () => {
                     className="w-100 h-auto rounded-lg"
                   >
                     <source
-                      src="/Tous-Web-shopify -video.mp4"
+                      src="/Tous-performance-marketing -video.mp4"
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.

@@ -587,7 +587,7 @@ const ShopifyDevelopment = () => {
                       className={`process-text ${expandedProcesses[2] ? "expanded" : ""
                         }`}
                     >
-                      With 6+ years of Shopify expertise and 57+ successful
+                      With 6+ years of Shopify expertise and 108+ successful
                       launches, we build your store with custom features,
                       integrate payment gateways, configure shipping, and set up
                       automation. We rigorously test across devices, browsers,
@@ -671,7 +671,7 @@ const ShopifyDevelopment = () => {
                 </div>
                 <h3 className="inner-heading">Certified Shopify Experts</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  57+ Shopify stores launched since 2018
+                  108+ Shopify stores launched since 2018
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -853,7 +853,7 @@ const ShopifyDevelopment = () => {
               </div>
               <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">57+</div>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">108+</div>
                   <p className="inner-heading">Shopify Stores Launched</p>
                   <p className="text-sm text-gray-500">
                     Custom and Plus stores delivered since 2018

@@ -172,7 +172,7 @@ const Header = () => {
                             Media Planning & Media Buying
                           </Link>
                           <Link
-                            href="/brand-solution"
+                            href="/brand-solution/performance-marketing"
                             className="sub-list-elem-4"
                             onMouseOver={() =>
                               handleMenuItemEnter(performanceMarketing)
@@ -387,7 +387,7 @@ const Header = () => {
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/brand-solution">
+                                  <Link href="/brand-solution/performance-marketing">
                                     Performance Marketing{" "}
                                   </Link>
                                 </li>
