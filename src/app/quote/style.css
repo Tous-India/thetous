@@ -775,6 +775,7 @@
 
   .step-circle {
     width: 32px;
+    margin-top: 5px;
     height: 32px;
     font-size: 0.85rem;
   }

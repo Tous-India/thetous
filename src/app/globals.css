@@ -1878,6 +1878,7 @@ p {
   
   .quote-main-page {
     padding-top: 2rem;
+    margin-bottom: -1rem !important;
   }
 
   .with {
