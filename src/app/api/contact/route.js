@@ -86,11 +86,7 @@ export async function POST(request) {
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
           <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
             <div style="text-align: center; margin-bottom: 20px;">
-<<<<<<< HEAD
-              <img src="https://blog.thetous.com/wp-content/uploads/2025/12/black-the-tous-1.png" alt="The Tous Logo" style="max-width: 200px; height: auto;" />
-=======
               <img src="https://blog.thetous.com/wp-content/uploads/2026/01/logo.webp" alt="The Tous Logo" style="max-width: 200px; height: auto;" />
->>>>>>> 81ec84421aadbf8c2aff897f020e2acbc9cded1c
             </div>
             <h2 style="color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px;">Thank You for Reaching Out!</h2>
 

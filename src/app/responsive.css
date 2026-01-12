@@ -482,10 +482,7 @@
   .parent-fo-header {
     .para-div {
       z-index: -5;
-<<<<<<< HEAD
-=======
       border-radius: 0 !important;
->>>>>>> 81ec84421aadbf8c2aff897f020e2acbc9cded1c
     }
     header {
       z-index: -2;
@@ -743,10 +740,7 @@
   .blog-section-home {
     /* padding-bottom: 0.75rem; */
     margin-top: 2rem;
-<<<<<<< HEAD
-=======
     margin-bottom: 0 !important;
->>>>>>> 81ec84421aadbf8c2aff897f020e2acbc9cded1c
     .container-fluid {
       .imgDiv {
         display: none;
@@ -968,11 +962,7 @@
 
   .home-page-main {
     padding: 0 5px;
-<<<<<<< HEAD
-    margin-bottom: -3rem !important ;
-=======
     margin-bottom: -1rem !important ;
->>>>>>> 81ec84421aadbf8c2aff897f020e2acbc9cded1c
   }
 
   .homepage-about-section {
@@ -1239,10 +1229,6 @@
 
 @media (max-width: 540px) {
   body {
-<<<<<<< HEAD
-    margin-bottom: 42rem;
-=======
     margin-bottom: 39rem;
->>>>>>> 81ec84421aadbf8c2aff897f020e2acbc9cded1c
   }
 }
