@@ -19,6 +19,7 @@
     "gsap": "^3.13.0",
     "lenis": "^1.3.11",
     "lucide-react": "^0.556.0",
+<<<<<<< HEAD
     "next": "15.5.9",
     "nodemailer": "^7.0.12",
     "react": "19.1.0",
@@ -28,14 +29,32 @@
     "remixicon": "^4.6.0",
     "swiper": "^12.0.2",
     "swr": "^2.3.8",
+=======
+    "next": "^15.5.9",
+    "nodemailer": "^7.0.12",
+    "react": "^19.1.0",
+    "react-bootstrap": "^2.10.10",
+    "react-countup": "^6.5.3",
+    "react-dom": "^19.1.0",
+    "remixicon": "^4.6.0",
+    "swiper": "^12.0.2",
+>>>>>>> 81ec84421aadbf8c2aff897f020e2acbc9cded1c
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+<<<<<<< HEAD
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.4.0"
+=======
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17"
+>>>>>>> 81ec84421aadbf8c2aff897f020e2acbc9cded1c
   }
 }
