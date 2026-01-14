@@ -935,7 +935,7 @@ const PerformanceMarketing = () => {
               {/* Tab Navigation */}
 
               <Swiper
-                className="flex items-center justify-start gap-4 flex-wrap transition-all duration-500 mb-5 mySwiper"
+                className="flex items-center justify-start! gap-4 flex-wrap transition-all duration-500 mb-5 mySwiper"
                 loop={true}
                 breakpoints={{
                   0: {

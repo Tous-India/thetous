@@ -875,9 +875,8 @@ const WebDevelopment = () => {
                 }}
               >
                 {portfolioTabs.map((tab) => (
-                  <SwiperSlide  key={tab.id}>
+                  <SwiperSlide key={tab.id}>
                     <button
-                     
                       onClick={() => setActiveTab(tab.id)}
                       className={`px-2 py-2 rounded-full text-sm font-medium transition-all duration-500 w-full ${
                         activeTab === tab.id
