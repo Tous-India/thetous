@@ -957,9 +957,8 @@ const PerformanceMarketing = () => {
                 }}
               >
                 {portfolioTabs.map((tab) => (
-                  <SwiperSlide>
+                  <SwiperSlide key={tab.id}>
                     <button
-                      key={tab.id}
                       onClick={() => setActiveTab(tab.id)}
                       className={`px-2 py-2 rounded-full text-sm font-medium transition-all duration-500 w-full ${
                         activeTab === tab.id
