@@ -230,7 +230,7 @@ const ShopifyDevelopment = () => {
 
               {/* Right Column - Content */}
               <div className="col-md-6 col-lg-3 col-sm-12 right-banner">
-                <h1 className="main-section-heading" id="noLine">
+                <h1 className="main-section-heading mb-3!" id="noLine">
                   Need a website that brings you business ?
                 </h1>
                 <p className="mb-6">
@@ -864,7 +864,7 @@ const ShopifyDevelopment = () => {
                 <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
                   Our Track Record
                 </p>
-                <h2 className="main-section-heading" id="devHeading">
+                <h2 className="main-section-heading mt-0!" id="devHeading">
                   Proven Results in Shopify Development
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
@@ -909,23 +909,22 @@ const ShopifyDevelopment = () => {
               {/* Tab Navigation */}
               <Swiper
                 className="flex items-center justify-start! gap-4 flex-wrap transition-all duration-500 mb-5 mySwiper"
-                loop={true}
                 breakpoints={{
                   0: {
                     slidesPerView: 2.5,
-                    spaceBetween: 10,
+                    spaceBetween: 15,
                   },
                   640: {
                     slidesPerView: 2.5,
-                    spaceBetween: 10,
+                    spaceBetween: 15,
                   },
                   768: {
                     slidesPerView: 3,
-                    spaceBetween: 20,
+                    spaceBetween: 15,
                   },
                   1024: {
                     slidesPerView: 6,
-                    spaceBetween: 10,
+                    spaceBetween: 15,
                   },
                 }}
               >
@@ -1053,7 +1052,7 @@ const ShopifyDevelopment = () => {
                 <div className="row">
                   {/* Left Column - Pain Points */}
                   <div className="col-md-6 col-lg-6 col-sm-12 cta-left">
-                    <h2 className="main-section-heading mb-4" id="devHeading">
+                    <h2 className="main-section-heading mb-4 mt-5" id="devHeading">
                       Is Your E-Commerce Store Struggling?
                     </h2>
                     <ul className="space-y-3 mb-8">

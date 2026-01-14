@@ -476,7 +476,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: #333;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato" !important;
 }
 
 .budget-content .check-icon {
@@ -749,15 +749,20 @@
   }
 
   .budget-options {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
-
+  .budget-content{
+    padding: 20px 0;
+  }
+  .budget-content span {
+    font-size: 14px;
+  }
   .checkbox-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .summary-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .form-navigation {
@@ -791,7 +796,7 @@
 
 @media (max-width: 480px) {
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .quote-form {

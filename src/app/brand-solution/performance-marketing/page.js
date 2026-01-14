@@ -256,7 +256,7 @@ const PerformanceMarketing = () => {
           </section>
 
           {/* Services Overview */}
-          <section className="py-24 max-w-7xl mx-auto what-we-offer-web-dev">
+          <section className="py-24 max-w-7xl mx-auto what-we-offer-web-dev mt-5">
             <h3 className="main-section-heading mb-12" id="devHeading">
               Our Performance Marketing Services
             </h3>
@@ -936,23 +936,22 @@ const PerformanceMarketing = () => {
 
               <Swiper
                 className="flex items-center justify-start! gap-4 flex-wrap transition-all duration-500 mb-5 mySwiper"
-                loop={true}
                 breakpoints={{
                   0: {
                     slidesPerView: 2.5,
-                    spaceBetween: 10,
+                    spaceBetween: 15,
                   },
                   640: {
                     slidesPerView: 2.5,
-                    spaceBetween: 10,
+                    spaceBetween: 15,
                   },
                   768: {
                     slidesPerView: 3,
-                    spaceBetween: 20,
+                    spaceBetween: 15,
                   },
                   1024: {
                     slidesPerView: 6,
-                    spaceBetween: 10,
+                    spaceBetween: 15,
                   },
                 }}
               >

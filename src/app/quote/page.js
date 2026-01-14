@@ -289,7 +289,7 @@ const Quote = () => {
               {"Select all services you're interested in and your budget range"}
             </p>
 
-            <div className="services-grid">
+            <div className="services-grid sm:grid-cols-2">
               {serviceOptions.map((service) => (
                 <div
                   key={service.value}

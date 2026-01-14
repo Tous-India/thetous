@@ -1917,6 +1917,8 @@ p {
   .swiper-slide {
     button {
       font-size: 13px;
+      border: 1px solid rgb(189, 189, 189);
+      padding: 10px 5px !important;
     }
   }
   .work-main-page,
