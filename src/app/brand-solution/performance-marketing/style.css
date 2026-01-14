@@ -1,14 +1,13 @@
 .performance-marketing-main-page {
-  
   .c_button_black {
     color: #fff;
     background-color: #000;
     border: 2px solid #000;
     border-radius: 1px;
-    padding: 0.5rem .7rem;
+    padding: 0.5rem 0.7rem;
     transition: all 0.3s;
     font-family: "Poppins";
-    font-size:.8rem;
+    font-size: 0.8rem;
     font-weight: 500;
     border: 2px solid #000;
     text-transform: uppercase;
@@ -55,7 +54,6 @@
     }
     .video-container {
       position: relative;
-      overflow: hidden;
       border-radius: 10px;
       video {
         display: block;
@@ -164,7 +162,6 @@
     .main-section-heading {
       margin-bottom: 2rem;
       margin-top: 3rem;
-
     }
     .inner-heading {
       font-size: 1rem;
@@ -379,7 +376,7 @@
   .faq-web-dev {
     background-color: white;
     padding-bottom: 3rem;
-    >div{
+    > div {
       background-color: #fafafa;
       padding: 1rem 1rem;
     }
@@ -403,7 +400,6 @@
   }
 
   .web-dev-tabs {
-  
     .inner-heading {
       font-size: 16px;
       line-height: 25px !important;
@@ -537,7 +533,7 @@
   border-radius: 0 0 2rem 2rem;
   padding: 3rem 0;
   position: relative;
-  z-index:5;
+  z-index: 5;
   margin-bottom: -2rem !important;
   .row {
     align-items: center;
@@ -572,8 +568,14 @@
 }
 
 @media (max-width: 720px) {
-  .performance-marketing-main-page .what-we-offer-web-dev .content-wrapper .border-div{
+  .performance-marketing-main-page
+    .what-we-offer-web-dev
+    .content-wrapper
+    .border-div {
     min-height: 200px;
+  }
+  .performance-marketing-main-page {
+    padding-top: 1rem;
   }
   .webDevCta {
     .row {
@@ -691,7 +693,11 @@
     }
   }
 
-  .performance-marketing-main-page .stats-web-dev .numbers > div .inner-heading {
+  .performance-marketing-main-page
+    .stats-web-dev
+    .numbers
+    > div
+    .inner-heading {
     font-size: 1.15rem;
   }
 
@@ -789,13 +795,16 @@
   .performance-marketing-main-page .what-we-offer-web-dev .inner-heading {
     line-height: 23px;
   }
-  .performance-marketing-main-page .hero-web-dev .video-container .video-sound-toggle{
+  .performance-marketing-main-page
+    .hero-web-dev
+    .video-container
+    .video-sound-toggle {
     width: 28px;
     height: 28px;
     bottom: 12rem;
     right: 0.5rem;
   }
-  #devHeading{
+  #devHeading {
     font-size: 1.6rem !important;
   }
 }
@@ -806,13 +815,8 @@
   }
 } */
 
-@media only screen 
-  and (device-width: 430px) 
-  and (device-height: 932px) 
-  and (-webkit-device-pixel-ratio: 3) {
-  
-  #boxHeight{
-    padding-bottom:2.95rem;
+@media only screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) {
+  #boxHeight {
+    padding-bottom: 2.95rem;
   }
 }
-

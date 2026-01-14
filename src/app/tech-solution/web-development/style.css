@@ -9,7 +9,7 @@
     padding: 0.5rem 1rem;
     transition: all 0.3s;
     font-family: "Poppins";
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 500;
     border: 2px solid #000;
     text-transform: uppercase;
@@ -413,7 +413,6 @@
     }
   }
 
-
   .stats-web-dev {
     padding: 2rem 1rem;
 
@@ -430,14 +429,14 @@
     }
 
     .numbers {
-      >div {
+      > div {
         .inner-heading {
           margin-bottom: 10px;
           font-weight: 600;
           color: black;
         }
 
-        >div {
+        > div {
           background: linear-gradient(to right, #00dbde, #fc00ff);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -558,7 +557,8 @@
       line-height: 50px;
     }
 
-    p {}
+    p {
+    }
 
     .span {
       font-weight: 600;
@@ -584,7 +584,6 @@
 
   background-color: white;
   padding-top: 3rem;
-   
 }
 
 /* Case Study Cards */
@@ -626,9 +625,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-      rgba(0, 219, 222, 0.1),
-      rgba(252, 0, 255, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 219, 222, 0.1),
+    rgba(252, 0, 255, 0.1)
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -683,6 +684,10 @@
 }
 
 @media (max-width: 720px) {
+  .web-devlopment-main-page {
+    background-color: #fff;
+    padding-top: 1rem;
+  }
   .webDevCta {
     .row {
       .col-12 {
@@ -719,17 +724,17 @@
   }
 
   .web-devlopment-main-page {
-    >div {
+    > div {
       padding: 15px !important;
     }
   }
-  .web-devlopment-main-page .why-choose-us-web-dev .main-section-heading{
+  .web-devlopment-main-page .why-choose-us-web-dev .main-section-heading {
     margin-bottom: 25px;
   }
 
   .web-dev-tabs {
     .mb-12 {
-      >.flex {
+      > .flex {
         gap: 1.5rem !important;
         justify-content: center;
       }
@@ -804,7 +809,7 @@
 
     .numbers {
       .text-center {
-        >div {
+        > div {
           font-size: 3.5rem;
         }
 
@@ -816,7 +821,7 @@
     }
   }
 
-  .web-devlopment-main-page .stats-web-dev .numbers>div .inner-heading {
+  .web-devlopment-main-page .stats-web-dev .numbers > div .inner-heading {
     font-size: 1.15rem;
   }
 
@@ -863,16 +868,15 @@
     height: 28px;
     bottom: 12rem;
     right: 0.5rem;
-
   }
 
   #devHeading {
     font-size: 1.6rem !important;
   }
-  .left-div{
+  .left-div {
     padding: 0 !important;
   }
-  .faq-web-dev button{
+  .faq-web-dev button {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
   }

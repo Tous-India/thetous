@@ -4,6 +4,7 @@ import Link from "next/link";
 import "./style.css";
 import Image from "next/image";
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
+import { Swiper, SwiperSlide } from "swiper/react";
 const ShopifyDevelopment = () => {
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);
@@ -255,8 +256,9 @@ const ShopifyDevelopment = () => {
               {/* Service 1: Custom Shopify Store Development */}
               <div className="content-div">
                 <div
-                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${activeService === 0 ? "!border-b-0 active-gradient" : ""
-                    }`}
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 0 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
                   <button
                     onClick={() =>
@@ -284,8 +286,9 @@ const ShopifyDevelopment = () => {
                         </h3>
                       </div>
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 0 ? "rotate-180" : ""
-                          }`}
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 0 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -301,8 +304,9 @@ const ShopifyDevelopment = () => {
                   </button>
                 </div>
                 <div
-                  className={`overflow-hidden transition-all duration-300   ${activeService === 0 ? "max-h-96 para-div" : "max-h-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300   ${
+                    activeService === 0 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
@@ -319,9 +323,11 @@ const ShopifyDevelopment = () => {
 
               {/* Service 2: Shopify Theme Customization */}
               <div className="content-div ">
-                <div id="boxHeight"
-                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${activeService === 1 ? "!border-b-0 active-gradient" : ""
-                    }`}
+                <div
+                  id="boxHeight"
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 1 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
                   <button
                     onClick={() =>
@@ -349,8 +355,9 @@ const ShopifyDevelopment = () => {
                         </h3>
                       </div>
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 1 ? "rotate-180" : ""
-                          }`}
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 1 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -366,8 +373,9 @@ const ShopifyDevelopment = () => {
                   </button>
                 </div>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${activeService === 1 ? "max-h-96 para-div" : "max-h-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300 ${
+                    activeService === 1 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
@@ -386,8 +394,9 @@ const ShopifyDevelopment = () => {
               {/* Service 3: Shopify Plus Development */}
               <div className="content-div">
                 <div
-                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${activeService === 2 ? "!border-b-0 active-gradient" : ""
-                    }`}
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 2 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
                   <button
                     onClick={() =>
@@ -415,8 +424,9 @@ const ShopifyDevelopment = () => {
                         </h3>
                       </div>
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 2 ? "rotate-180" : ""
-                          }`}
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 2 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -432,8 +442,9 @@ const ShopifyDevelopment = () => {
                   </button>
                 </div>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${activeService === 2 ? "max-h-96 para-div" : "max-h-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300 ${
+                    activeService === 2 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
@@ -452,8 +463,9 @@ const ShopifyDevelopment = () => {
               {/* Service 4: Shopify Migration Services */}
               <div className="content-div">
                 <div
-                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${activeService === 3 ? "!border-b-0 active-gradient" : ""
-                    }`}
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 3 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
                   <button
                     onClick={() =>
@@ -479,8 +491,9 @@ const ShopifyDevelopment = () => {
                         <h3 className="inner-heading">Migration to Shopify</h3>
                       </div>
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${activeService === 3 ? "rotate-180" : ""
-                          }`}
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 3 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -497,8 +510,9 @@ const ShopifyDevelopment = () => {
                 </div>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300  ${activeService === 3 ? "max-h-96 para-div" : "max-h-0"
-                    }`}
+                  className={`overflow-hidden transition-all duration-300  ${
+                    activeService === 3 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
@@ -528,8 +542,9 @@ const ShopifyDevelopment = () => {
                   <h3 className="inner-heading">Discovery & Planning</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${expandedProcesses[0] ? "expanded" : ""
-                        }`}
+                      className={`process-text ${
+                        expandedProcesses[0] ? "expanded" : ""
+                      }`}
                     >
                       We analyze your business goals, target audience, and
                       product catalog to create a Shopify strategy that drives
@@ -556,8 +571,9 @@ const ShopifyDevelopment = () => {
                   <h3 className="inner-heading">Design & Setup</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${expandedProcesses[1] ? "expanded" : ""
-                        }`}
+                      className={`process-text ${
+                        expandedProcesses[1] ? "expanded" : ""
+                      }`}
                     >
                       Our designers create stunning, mobile-responsive
                       storefronts that reflect your brand and optimize for
@@ -584,8 +600,9 @@ const ShopifyDevelopment = () => {
                   <h3 className="inner-heading">Development & Testing</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${expandedProcesses[2] ? "expanded" : ""
-                        }`}
+                      className={`process-text ${
+                        expandedProcesses[2] ? "expanded" : ""
+                      }`}
                     >
                       With 6+ years of Shopify expertise and 108+ successful
                       launches, we build your store with custom features,
@@ -612,8 +629,9 @@ const ShopifyDevelopment = () => {
                   <h3 className="inner-heading">Launch & Optimization</h3>
                   <div className="process-text-wrapper">
                     <p
-                      className={`process-text ${expandedProcesses[3] ? "expanded" : ""
-                        }`}
+                      className={`process-text ${
+                        expandedProcesses[3] ? "expanded" : ""
+                      }`}
                     >
                       We launch your Shopify store, configure analytics
                       tracking, and implement SEO best practices. Post-launch,
@@ -675,8 +693,9 @@ const ShopifyDevelopment = () => {
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${expandedWhyChoose[0] ? "expanded" : ""
-                      }`}
+                    className={`why-text ${
+                      expandedWhyChoose[0] ? "expanded" : ""
+                    }`}
                   >
                     Our team includes certified Shopify developers with deep
                     expertise in Liquid, theme customization, app integration,
@@ -721,8 +740,9 @@ const ShopifyDevelopment = () => {
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${expandedWhyChoose[1] ? "expanded" : ""
-                      }`}
+                    className={`why-text ${
+                      expandedWhyChoose[1] ? "expanded" : ""
+                    }`}
                   >
                     We design every element with conversion in mind—from
                     persuasive product pages and trust badges to streamlined
@@ -767,8 +787,9 @@ const ShopifyDevelopment = () => {
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${expandedWhyChoose[2] ? "expanded" : ""
-                      }`}
+                    className={`why-text ${
+                      expandedWhyChoose[2] ? "expanded" : ""
+                    }`}
                   >
                     Speed directly impacts sales. We optimize images, minify
                     code, leverage lazy loading, and implement best practices to
@@ -812,8 +833,9 @@ const ShopifyDevelopment = () => {
                 </p>
                 <div className="why-text-wrapper">
                   <p
-                    className={`why-text ${expandedWhyChoose[3] ? "expanded" : ""
-                      }`}
+                    className={`why-text ${
+                      expandedWhyChoose[3] ? "expanded" : ""
+                    }`}
                   >
                     From initial strategy to post-launch support, we handle
                     everything—theme design, app integration, product setup, SEO
@@ -853,7 +875,9 @@ const ShopifyDevelopment = () => {
               </div>
               <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">108+</div>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">
+                    108+
+                  </div>
                   <p className="inner-heading">Shopify Stores Launched</p>
                   <p className="text-sm text-gray-500">
                     Custom and Plus stores delivered since 2018
@@ -883,20 +907,45 @@ const ShopifyDevelopment = () => {
             <h3 className="main-section-heading mb-4">Our Shopify Portfolio</h3>
             <div className="mb-12">
               {/* Tab Navigation */}
-              <div className="flex items-center justify-start gap-4 flex-wrap transition-all duration-500 mb-5">
+              <Swiper
+                className="flex items-center justify-start! gap-4 flex-wrap transition-all duration-500 mb-5 mySwiper"
+                loop={true}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                  },
+                  640: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                  },
+                  768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 10,
+                  },
+                }}
+              >
                 {portfolioTabs.map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-500 ${activeTab === tab.id
-                        ? "bg-black text-white duration-500 px-3"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200 duration-500 px-3"
+                  <SwiperSlide>
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveTab(tab.id)}
+                      className={`px-2 py-2 rounded-full text-sm font-medium transition-all duration-500 w-full ${
+                        activeTab === tab.id
+                          ? "bg-black text-white duration-500 px-3"
+                          : "bg-gray-100 text-gray-600 hover:bg-gray-200 duration-500 px-3"
                       }`}
-                  >
-                    {tab.label}
-                  </button>
+                    >
+                      {tab.label}
+                    </button>
+                  </SwiperSlide>
                 ))}
-              </div>
+              </Swiper>
+              
 
               {/* Content Area */}
               <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -983,10 +1032,10 @@ const ShopifyDevelopment = () => {
                               activeTab === "customized"
                                 ? "/silvago.mp4"
                                 : activeTab === "tailored"
-                                  ? "/luxeliv.mp4"
-                                  : activeTab === "coaches"
-                                    ? "/relaxer.mp4"
-                                    : "/pearlsnpastels.mp4"
+                                ? "/luxeliv.mp4"
+                                : activeTab === "coaches"
+                                ? "/relaxer.mp4"
+                                : "/pearlsnpastels.mp4"
                             }
                             type="video/mp4"
                           />
@@ -1164,7 +1213,9 @@ const ShopifyDevelopment = () => {
           </section>
 
           {/* FAQs */}
-          <h3 className="main-section-heading mb-4" id="devHeading">Frequently Asked Questions</h3>
+          <h3 className="main-section-heading mb-4" id="devHeading">
+            Frequently Asked Questions
+          </h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">
@@ -1180,8 +1231,9 @@ const ShopifyDevelopment = () => {
                         {faq.question}
                       </span>
                       <svg
-                        className={`w-6 h-6 flex-shrink-0 transition-transform duration-300 ${activeFaq === index ? "rotate-180" : ""
-                          }`}
+                        className={`w-6 h-6 flex-shrink-0 transition-transform duration-300 ${
+                          activeFaq === index ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -1195,10 +1247,11 @@ const ShopifyDevelopment = () => {
                       </svg>
                     </button>
                     <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${activeFaq === index
+                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                        activeFaq === index
                           ? "max-h-96 opacity-100 pb-4"
                           : "max-h-0 opacity-0.75"
-                        }`}
+                      }`}
                     >
                       <p className="text-gray-600 text-lg leading-relaxed">
                         {faq.answer}

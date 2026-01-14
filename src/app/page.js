@@ -12,7 +12,8 @@ import Lenis from "lenis";
 import Testimonials from "@/components/home/Testimonials";
 import Marquee from "@/components/home/Marquee";
 import WhyWeUs from "@/components/home/WhyWeUs";
-
+import "swiper/css";
+import "swiper/css/navigation";
 export default function Index() {
   useEffect(() => {
     AOS.init();

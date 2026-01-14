@@ -1,9 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 import "./style.css";
 import Image from "next/image";
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+//
+//
+//
 const PerformanceMarketing = () => {
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);
@@ -64,7 +69,8 @@ const PerformanceMarketing = () => {
 
   const faqs = [
     {
-      question: "What is performance marketing and how does it differ from traditional marketing?",
+      question:
+        "What is performance marketing and how does it differ from traditional marketing?",
       answer:
         "Performance marketing is a results-driven digital marketing approach where you only pay for measurable actions like clicks, leads, sales, or conversions. Unlike traditional marketing with fixed costs, performance marketing ensures every rupee spent is tracked, optimized, and directly tied to ROI—making it more cost-effective and accountable.",
     },
@@ -74,12 +80,14 @@ const PerformanceMarketing = () => {
         "We specialize in Google Ads (Search, Display, Shopping, Performance Max), Meta Ads (Facebook & Instagram), LinkedIn Ads, YouTube Ads, programmatic advertising, affiliate marketing, and influencer partnerships. We select the right mix of channels based on your target audience, industry, and business goals.",
     },
     {
-      question: "How do you measure the success of performance marketing campaigns?",
+      question:
+        "How do you measure the success of performance marketing campaigns?",
       answer:
         "We track key performance indicators (KPIs) including Cost Per Acquisition (CPA), Return on Ad Spend (ROAS), Click-Through Rate (CTR), Conversion Rate, Customer Lifetime Value (CLV), and overall ROI. You'll receive transparent, real-time dashboards showing exactly how your campaigns are performing.",
     },
     {
-      question: "What's the minimum budget required for performance marketing campaigns?",
+      question:
+        "What's the minimum budget required for performance marketing campaigns?",
       answer:
         "While budgets vary by industry and goals, we recommend a minimum monthly ad spend of ₹50,000-₹1,00,000 to gather meaningful data and optimize effectively. We'll work with your budget to create a strategic plan that maximizes results within your spending capacity.",
     },
@@ -89,7 +97,8 @@ const PerformanceMarketing = () => {
         "Initial results like traffic and impressions appear within days of launching campaigns. Meaningful conversion data typically emerges within 2-4 weeks, while optimal performance and positive ROI usually develop after 2-3 months of continuous testing, optimization, and refinement based on data insights.",
     },
     {
-      question: "Do you provide performance marketing services for B2B and B2C businesses?",
+      question:
+        "Do you provide performance marketing services for B2B and B2C businesses?",
       answer:
         "Yes, we serve both B2B and B2C clients across industries including e-commerce, SaaS, healthcare, education, real estate, finance, and professional services. Our strategies are customized to your business model, sales cycle, and target audience—whether you're driving online sales or generating qualified leads.",
     },
@@ -234,7 +243,8 @@ const PerformanceMarketing = () => {
                 </h1>
                 <p className="mb-6">
                   <strong>
-                    We drive measurable growth through data-driven performance marketing—pay only for real results, not empty promises.
+                    We drive measurable growth through data-driven performance
+                    marketing—pay only for real results, not empty promises.
                   </strong>
                 </p>
 
@@ -308,7 +318,13 @@ const PerformanceMarketing = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Dominate search results with high-intent keyword targeting through Google Ads and Bing Ads. We create compelling ad copy, optimize bidding strategies, conduct A/B testing, implement conversion tracking, and continuously refine campaigns to lower your cost-per-acquisition while maximizing qualified traffic and conversions that drive real revenue growth.
+                      Dominate search results with high-intent keyword targeting
+                      through Google Ads and Bing Ads. We create compelling ad
+                      copy, optimize bidding strategies, conduct A/B testing,
+                      implement conversion tracking, and continuously refine
+                      campaigns to lower your cost-per-acquisition while
+                      maximizing qualified traffic and conversions that drive
+                      real revenue growth.
                     </p>
                   </div>
                 </div>
@@ -316,7 +332,8 @@ const PerformanceMarketing = () => {
 
               {/* Service 2: Social Media Advertising */}
               <div className="content-div ">
-                <div id="boxHeight"
+                <div
+                  id="boxHeight"
                   className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
                     activeService === 1 ? "!border-b-0 active-gradient" : ""
                   }`}
@@ -371,7 +388,13 @@ const PerformanceMarketing = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Reach your ideal customers on Facebook, Instagram, LinkedIn, and YouTube with precision-targeted campaigns. We leverage advanced audience segmentation, retargeting strategies, dynamic product ads, creative testing, and platform-specific best practices to generate high-quality leads, drive e-commerce sales, and build brand awareness that converts.
+                      Reach your ideal customers on Facebook, Instagram,
+                      LinkedIn, and YouTube with precision-targeted campaigns.
+                      We leverage advanced audience segmentation, retargeting
+                      strategies, dynamic product ads, creative testing, and
+                      platform-specific best practices to generate high-quality
+                      leads, drive e-commerce sales, and build brand awareness
+                      that converts.
                     </p>
                   </div>
                 </div>
@@ -434,7 +457,13 @@ const PerformanceMarketing = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Turn more visitors into customers without increasing ad spend. We analyze user behavior through heatmaps, session recordings, and funnel analysis, then conduct systematic A/B testing on landing pages, CTAs, forms, and checkout flows. Our data-driven optimization increases conversion rates, reduces bounce rates, and maximizes ROI from existing traffic.
+                      Turn more visitors into customers without increasing ad
+                      spend. We analyze user behavior through heatmaps, session
+                      recordings, and funnel analysis, then conduct systematic
+                      A/B testing on landing pages, CTAs, forms, and checkout
+                      flows. Our data-driven optimization increases conversion
+                      rates, reduces bounce rates, and maximizes ROI from
+                      existing traffic.
                     </p>
                   </div>
                 </div>
@@ -468,7 +497,9 @@ const PerformanceMarketing = () => {
                             d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                           />
                         </svg>
-                        <h3 className="inner-heading">Retargeting & Remarketing</h3>
+                        <h3 className="inner-heading">
+                          Retargeting & Remarketing
+                        </h3>
                       </div>
                       <svg
                         className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
@@ -496,7 +527,13 @@ const PerformanceMarketing = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Re-engage visitors who didn&apos;t convert on their first visit with strategic retargeting campaigns across Google Display Network, Facebook, Instagram, and beyond. We create personalized ad sequences based on user behavior, implement dynamic product remarketing, recover abandoned carts, and nurture prospects through the sales funnel to drive conversions and maximize customer acquisition.
+                      Re-engage visitors who didn&apos;t convert on their first
+                      visit with strategic retargeting campaigns across Google
+                      Display Network, Facebook, Instagram, and beyond. We
+                      create personalized ad sequences based on user behavior,
+                      implement dynamic product remarketing, recover abandoned
+                      carts, and nurture prospects through the sales funnel to
+                      drive conversions and maximize customer acquisition.
                     </p>
                   </div>
                 </div>
@@ -520,7 +557,13 @@ const PerformanceMarketing = () => {
                         expandedProcesses[0] ? "expanded" : ""
                       }`}
                     >
-                      We start with a comprehensive marketing audit to understand your business goals, target audience, competitive landscape, and current performance. We analyze your customer journey, identify growth opportunities, define KPIs, and create a data-driven performance marketing strategy tailored to maximize ROI and achieve your specific revenue objectives.
+                      We start with a comprehensive marketing audit to
+                      understand your business goals, target audience,
+                      competitive landscape, and current performance. We analyze
+                      your customer journey, identify growth opportunities,
+                      define KPIs, and create a data-driven performance
+                      marketing strategy tailored to maximize ROI and achieve
+                      your specific revenue objectives.
                     </p>
                     <button
                       onClick={() =>
@@ -544,7 +587,13 @@ const PerformanceMarketing = () => {
                         expandedProcesses[1] ? "expanded" : ""
                       }`}
                     >
-                      We build high-converting campaigns across selected channels—Google Ads, Meta Ads, LinkedIn, and more. This includes in-depth keyword research, audience targeting, compelling ad creative development, landing page optimization, pixel implementation, conversion tracking setup, and establishing automated bidding strategies that ensure optimal performance from day one.
+                      We build high-converting campaigns across selected
+                      channels—Google Ads, Meta Ads, LinkedIn, and more. This
+                      includes in-depth keyword research, audience targeting,
+                      compelling ad creative development, landing page
+                      optimization, pixel implementation, conversion tracking
+                      setup, and establishing automated bidding strategies that
+                      ensure optimal performance from day one.
                     </p>
                     <button
                       onClick={() =>
@@ -568,7 +617,14 @@ const PerformanceMarketing = () => {
                         expandedProcesses[2] ? "expanded" : ""
                       }`}
                     >
-                      We continuously test and optimize every campaign element—ad copy, creatives, targeting, bidding, and landing pages. Through rigorous A/B testing, performance analysis, and data-driven insights, we identify what works best, eliminate underperforming elements, scale winning strategies, and progressively lower your cost-per-acquisition while increasing conversion rates and revenue.
+                      We continuously test and optimize every campaign
+                      element—ad copy, creatives, targeting, bidding, and
+                      landing pages. Through rigorous A/B testing, performance
+                      analysis, and data-driven insights, we identify what works
+                      best, eliminate underperforming elements, scale winning
+                      strategies, and progressively lower your
+                      cost-per-acquisition while increasing conversion rates and
+                      revenue.
                     </p>
                     <button
                       onClick={() =>
@@ -592,7 +648,13 @@ const PerformanceMarketing = () => {
                         expandedProcesses[3] ? "expanded" : ""
                       }`}
                     >
-                      You receive transparent, real-time reporting dashboards tracking all KPIs—ROAS, CPA, conversion rates, and revenue attribution. We provide actionable insights, identify scaling opportunities, recommend budget allocation strategies, and systematically expand successful campaigns to new audiences, keywords, and channels—ensuring sustainable, profitable growth month over month.
+                      You receive transparent, real-time reporting dashboards
+                      tracking all KPIs—ROAS, CPA, conversion rates, and revenue
+                      attribution. We provide actionable insights, identify
+                      scaling opportunities, recommend budget allocation
+                      strategies, and systematically expand successful campaigns
+                      to new audiences, keywords, and channels—ensuring
+                      sustainable, profitable growth month over month.
                     </p>
                     <button
                       onClick={() =>
@@ -651,7 +713,13 @@ const PerformanceMarketing = () => {
                       expandedWhyChoose[0] ? "expanded" : ""
                     }`}
                   >
-                    We make decisions based on data, not guesswork. Our certified performance marketers use advanced analytics, attribution modeling, and conversion tracking to identify what drives results. Every campaign is continuously monitored, tested, and optimized using real-time insights—ensuring your marketing budget delivers maximum returns and measurable business growth.
+                    We make decisions based on data, not guesswork. Our
+                    certified performance marketers use advanced analytics,
+                    attribution modeling, and conversion tracking to identify
+                    what drives results. Every campaign is continuously
+                    monitored, tested, and optimized using real-time
+                    insights—ensuring your marketing budget delivers maximum
+                    returns and measurable business growth.
                   </p>
                   <button
                     onClick={() =>
@@ -693,7 +761,13 @@ const PerformanceMarketing = () => {
                       expandedWhyChoose[1] ? "expanded" : ""
                     }`}
                   >
-                    Your success is measured by results, not vanity metrics. We focus relentlessly on what matters most—cost per acquisition, return on ad spend, and revenue growth. Our performance marketing strategies are engineered to deliver positive ROI, lower customer acquisition costs, and increase lifetime customer value through scientific testing and proven optimization methodologies.
+                    Your success is measured by results, not vanity metrics. We
+                    focus relentlessly on what matters most—cost per
+                    acquisition, return on ad spend, and revenue growth. Our
+                    performance marketing strategies are engineered to deliver
+                    positive ROI, lower customer acquisition costs, and increase
+                    lifetime customer value through scientific testing and
+                    proven optimization methodologies.
                   </p>
                   <button
                     onClick={() =>
@@ -735,7 +809,13 @@ const PerformanceMarketing = () => {
                       expandedWhyChoose[2] ? "expanded" : ""
                     }`}
                   >
-                    We master every major performance marketing channel—Google Ads, Meta (Facebook & Instagram), LinkedIn, YouTube, programmatic display, and emerging platforms. Our holistic approach creates synergy across channels, ensuring your brand message reaches the right audience at the right time, driving coordinated campaigns that amplify results and maximize customer touchpoints.
+                    We master every major performance marketing channel—Google
+                    Ads, Meta (Facebook & Instagram), LinkedIn, YouTube,
+                    programmatic display, and emerging platforms. Our holistic
+                    approach creates synergy across channels, ensuring your
+                    brand message reaches the right audience at the right time,
+                    driving coordinated campaigns that amplify results and
+                    maximize customer touchpoints.
                   </p>
                   <button
                     onClick={() =>
@@ -767,7 +847,9 @@ const PerformanceMarketing = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Transparent Reporting & Communication</h3>
+                <h3 className="inner-heading">
+                  Transparent Reporting & Communication
+                </h3>
                 <p className="text-sm text-gray-500 mb-3">
                   Real-time dashboards and dedicated account management
                 </p>
@@ -777,7 +859,13 @@ const PerformanceMarketing = () => {
                       expandedWhyChoose[3] ? "expanded" : ""
                     }`}
                   >
-                    No black boxes or hidden metrics. You get full transparency with real-time access to campaign dashboards showing every click, conversion, and rupee spent. Our detailed monthly reports break down performance, insights, and recommendations. Plus, you have a dedicated account manager who understands your business and is available to answer questions and strategize for growth.
+                    No black boxes or hidden metrics. You get full transparency
+                    with real-time access to campaign dashboards showing every
+                    click, conversion, and rupee spent. Our detailed monthly
+                    reports break down performance, insights, and
+                    recommendations. Plus, you have a dedicated account manager
+                    who understands your business and is available to answer
+                    questions and strategize for growth.
                   </p>
                   <button
                     onClick={() =>
@@ -803,12 +891,17 @@ const PerformanceMarketing = () => {
                   Proven Results in Performance Marketing
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
-                  Since 2018, we&apos;ve helped businesses across industries drive measurable growth through data-driven performance marketing campaigns that consistently deliver positive ROI and sustainable revenue growth.
+                  Since 2018, we&apos;ve helped businesses across industries
+                  drive measurable growth through data-driven performance
+                  marketing campaigns that consistently deliver positive ROI and
+                  sustainable revenue growth.
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">₹10Cr+</div>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">
+                    ₹10Cr+
+                  </div>
                   <p className="inner-heading">Ad Spend Managed</p>
                   <p className="text-sm text-gray-500">
                     Across 200+ campaigns since 2018
@@ -835,24 +928,50 @@ const PerformanceMarketing = () => {
           </section>
 
           <section className="py-24 max-w-7xl mx-auto mt-5 web-dev-tabs">
-            <h3 className="main-section-heading mb-4">Our Performance Marketing Portfolio</h3>
+            <h3 className="main-section-heading mb-4">
+              Our Performance Marketing Portfolio
+            </h3>
             <div className="mb-12">
               {/* Tab Navigation */}
-              <div className="flex items-center justify-start gap-4 flex-wrap transition-all duration-500 mb-5">
+
+              <Swiper
+                className="flex items-center justify-start gap-4 flex-wrap transition-all duration-500 mb-5 mySwiper"
+                loop={true}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                  },
+                  640: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                  },
+                  768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 6,
+                    spaceBetween: 10,
+                  },
+                }}
+              >
                 {portfolioTabs.map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-500 ${
-                      activeTab === tab.id
-                        ? "bg-black text-white duration-500 px-3"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200 duration-500 px-3"
-                    }`}
-                  >
-                    {tab.label}
-                  </button>
+                  <SwiperSlide>
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveTab(tab.id)}
+                      className={`px-2 py-2 rounded-full text-sm font-medium transition-all duration-500 w-full ${
+                        activeTab === tab.id
+                          ? "bg-black text-white duration-500 px-3"
+                          : "bg-gray-100 text-gray-600 hover:bg-gray-200 duration-500 px-3"
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  </SwiperSlide>
                 ))}
-              </div>
+              </Swiper>
 
               {/* Content Area */}
               <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -1011,7 +1130,8 @@ const PerformanceMarketing = () => {
                           />
                         </svg>
                         <span>
-                          Difficulty tracking which channels actually drive sales
+                          Difficulty tracking which channels actually drive
+                          sales
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1043,7 +1163,8 @@ const PerformanceMarketing = () => {
                           />
                         </svg>
                         <span>
-                          Inconsistent lead quality affecting sales team efficiency
+                          Inconsistent lead quality affecting sales team
+                          efficiency
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1075,7 +1196,8 @@ const PerformanceMarketing = () => {
                           />
                         </svg>
                         <span>
-                          Wasting budget on underperforming ad creatives and audiences
+                          Wasting budget on underperforming ad creatives and
+                          audiences
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1091,7 +1213,8 @@ const PerformanceMarketing = () => {
                           />
                         </svg>
                         <span>
-                          Lack of expertise across multiple advertising platforms
+                          Lack of expertise across multiple advertising
+                          platforms
                         </span>
                       </li>
                     </ul>
@@ -1120,7 +1243,9 @@ const PerformanceMarketing = () => {
           </section>
 
           {/* FAQs */}
-          <h3 className="main-section-heading mb-4" id="devHeading">Frequently Asked Questions</h3>
+          <h3 className="main-section-heading mb-4" id="devHeading">
+            Frequently Asked Questions
+          </h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">

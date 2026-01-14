@@ -55,7 +55,6 @@
     }
     .video-container {
       position: relative;
-      overflow: hidden;
       border-radius: 10px;
       video {
         display: block;
@@ -757,6 +756,9 @@
 }
 
 @media (max-width: 720px) {
+  .shopify-devlopment-main-page{
+    padding-top: 1rem;
+  }
   .shopify-cta-section {
     .shopify-contact-form {
       padding: 1.5rem;

@@ -18,21 +18,9 @@ const Quote = () => {
     services: [],
     otherService: "",
 
-    // // Step 3: Conditional Fields - Website/App
-    // projectType: "",
-    // approxPages: "",
-    // referenceWebsites: [""],
-    // contentReady: "",
-
-    // // Step 3: Conditional Fields - Marketing
-    // marketingPlatforms: [],
-    // monthlyAdBudget: "",
-    // brandStage: "",
-
     // Step 4: Budget & Expectations
     budget: "",
     expectations: "",
-
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -156,8 +144,7 @@ const Quote = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validateStep(2)) {
-      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    if (!validateStep(currentStep)) {
       return;
     }
 
@@ -402,7 +389,7 @@ const Quote = () => {
               </div>
             </div>
 
-            {(submitStatus || Object.keys(errors).length > 0) && (
+            {submitStatus && (
               <div
                 className={`alert ${
                   submitStatus?.type === "success"
@@ -417,9 +404,7 @@ const Quote = () => {
                       : "ri-error-warning-line"
                   }
                 ></i>
-                <span>
-                  {submitStatus?.message || "Required fields are missing"}
-                </span>
+                <span>{submitStatus?.message}</span>
               </div>
             )}
           </div>
@@ -436,7 +421,9 @@ const Quote = () => {
         <div className="quote-header">
           <h1>Get Your Custom Quote</h1>
           <p>
-            {"Fill out this form and we'll create a tailored proposal for your project"}
+            {
+              "Fill out this form and we'll create a tailored proposal for your project"
+            }
           </p>
         </div>
 
