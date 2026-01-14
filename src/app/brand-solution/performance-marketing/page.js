@@ -238,7 +238,7 @@ const PerformanceMarketing = () => {
 
               {/* Right Column - Content */}
               <div className="col-md-6 col-lg-3 col-sm-12 right-banner">
-                <h1 className="main-section-heading" id="noLine">
+                <h1 className="main-section-heading mt-5! mb-2! " id="noLine">
                   Performance marketing that delivers real results
                 </h1>
                 <p className="mb-6">

@@ -206,7 +206,7 @@ const WebDevelopment = () => {
               </div>
               {/* Left Column - Content */}
               <div className="col-md-6 col-lg-3 col-sm-12 left-banner ">
-                <h1 className="main-section-heading" id="noLine">
+                <h1 className="main-section-heading mt-5! mb-1!" id="noLine">
                   Build Your Custom Web/Mobile App
                 </h1>
                 <p className="mb-6">• CRM • Web Apps</p>
