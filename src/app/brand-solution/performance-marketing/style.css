@@ -268,7 +268,7 @@
 
     .why-para {
       margin-bottom: 2rem;
-      margin-top: 1rem;
+      margin-top: -1rem;
     }
     button {
       font-size: 14px;

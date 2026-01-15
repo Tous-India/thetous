@@ -206,7 +206,7 @@ const WebDevelopment = () => {
               </div>
               {/* Left Column - Content */}
               <div className="col-md-6 col-lg-3 col-sm-12 left-banner ">
-                <h1 className="main-section-heading mt-5! mb-1!" id="noLine">
+                <h1 className="main-section-heading mt-5! mb-3!" id="noLine">
                   Build Your Custom Web/Mobile App
                 </h1>
                 <p className="mb-6">• CRM • Web Apps</p>
@@ -636,11 +636,9 @@ const WebDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">
-                  E-Commerce Focused Development
-                </h3>
+                <h3 className="inner-heading">Web App–Focused Development</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  57+ e-commerce websites delivered since 2018
+                  42+ high-performance web applications delivered since 2018
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -648,11 +646,17 @@ const WebDevelopment = () => {
                       expandedWhyChoose[0] ? "expanded" : ""
                     }`}
                   >
-                    We specialize in building online stores that actually
-                    convert. Our e-commerce sites integrate payment gateways,
-                    inventory systems, and cart recovery tools that directly
-                    impact your bottom line. Real clients have seen order growth
-                    from 150-184% within months of launch.
+                    We specialize in building high-performance web applications
+                    designed to streamline operations, enhance user experience,
+                    and support long-term scalability. Our web apps are
+                    engineered with secure authentication, real-time data
+                    handling, API integrations, and cloud-ready architectures to
+                    meet modern business demands. From custom dashboards and
+                    SaaS platforms to enterprise web portals, our solutions are
+                    built to perform under real-world usage. Businesses using
+                    our web applications have achieved 120–180% improvements in
+                    workflow efficiency and user engagement within months of
+                    deployment.
                   </p>
                   <button
                     onClick={() =>
@@ -1018,7 +1022,7 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your website looks fine but orders aren&apos;t coming in
+                        Your web application looks fine, but users aren’t completing key actions
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1034,7 +1038,7 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Customers abandon carts before completing purchase
+                        Users drop off midway due to poor app flow or confusing UX
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1050,7 +1054,7 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your site is slow, hurting both SEO and conversions
+                        Your web app is slow, affecting performance, SEO, and user retention
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1066,7 +1070,7 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Managing inventory and orders feels complicated
+                        Managing data, users, or workflows feels manual and inefficient
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1081,7 +1085,7 @@ const WebDevelopment = () => {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span>Mobile users struggle to navigate and buy</span>
+                      <span>Mobile users struggle with navigation and responsiveness</span>
                     </li>
                     <li className="flex items-start">
                       <svg
@@ -1096,24 +1100,7 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your website can&apos;t handle growing traffic or
-                        catalog
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>
-                        Payment gateway integration is unreliable or insecure
+                        Your application can’t scale with increasing users or traffic
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1129,7 +1116,23 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        You lack automation for customer follow-ups and recovery
+                       API or payment integrations are unreliable or insecure
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span>
+                        You lack automation for notifications, workflows, or user engagement
                       </span>
                     </li>
                   </ul>

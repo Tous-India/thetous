@@ -753,7 +753,7 @@ const PerformanceMarketing = () => {
                 </div>
                 <h3 className="inner-heading">ROI-Focused Strategies</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  Average 4.5X ROAS across client campaigns
+                  Average ~8-9X ROAS across client campaigns
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -909,7 +909,7 @@ const PerformanceMarketing = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-6xl md:text-7xl font-bold mb-3">
-                    5.5X
+                    ~8-9X
                   </div>
                   <p className="inner-heading">Average ROAS</p>
                   <p className="text-sm text-gray-500">
