@@ -181,7 +181,7 @@ const Header = () => {
                             Performance Marketing
                           </Link>
                           <Link
-                            href="/brand-solution"
+                            href="/brand-solution/google-ads"
                             className="sub-list-elem-5"
                             onMouseOver={() => handleMenuItemEnter(payPerClick)}
                           >
@@ -217,11 +217,20 @@ const Header = () => {
                             Web & App Development
                           </Link>
                           <Link
-                            href="/tech-solution/shopify-development"
+                            href="/tech-solution/ecommerce-development"
                             className="sub-list-elem-d2-2"
                             onMouseOver={() => handleMenuItemEnter(ecommerce)}
                           >
                             E-Commerce Development
+                          </Link>
+                             <Link
+                            href="/tech-solution/shopify-development"
+                            className="sub-list-elem-d2-4"
+                            onMouseOver={() =>
+                              handleMenuItemEnter(whatsappMarketing)
+                            }
+                          >
+                            Shopify Development
                           </Link>
                           <Link
                             href="/tech-solution"
@@ -230,15 +239,7 @@ const Header = () => {
                           >
                             Automation
                           </Link>
-                          <Link
-                            href="/tech-solution"
-                            className="sub-list-elem-d2-4"
-                            onMouseOver={() =>
-                              handleMenuItemEnter(whatsappMarketing)
-                            }
-                          >
-                            Website Designing
-                          </Link>
+                       
                           <Link
                             href="/tech-solution"
                             className="sub-list-elem-d2-5"
@@ -392,7 +393,7 @@ const Header = () => {
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/brand-solution">
+                                  <Link href="/brand-solution/google-ads">
                                     Google Ads{" "}
                                   </Link>
                                 </li>
@@ -441,18 +442,19 @@ const Header = () => {
                                   </Link>
                                 </li>
                                 <li>
-                                  <Link href="/tech-solution/shopify-development">
+                                  <Link href="/tech-solution/ecommerce-development">
                                     E-Commerce Development
                                   </Link>
                                 </li>
                                 <li>
+                                  <Link href="/tech-solution/shopify-development">
+                                    Shopify Development
+                                  </Link>
+                                </li> 
+                                <li>
                                   <Link href="/tech-solution">Automation</Link>
                                 </li>
-                                <li>
-                                  <Link href="/tech-solution">
-                                    Website Designing
-                                  </Link>
-                                </li>
+                                
                                 <li>
                                   <Link href="/tech-solution">
                                     Whatsapp Marketing
