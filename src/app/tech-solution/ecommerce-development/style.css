@@ -756,6 +756,9 @@
     .image-content {
       display: flex;
       gap: 10px;
+      > div {
+        width: 33%;
+      }
     }
     > p {
       text-align: center;
@@ -797,7 +800,7 @@
     .wordpress {
       a {
         img {
-          width: 41%;
+          width: 45%;
         }
       }
     }
@@ -838,8 +841,13 @@
   .e-commerce-devlopment-main-page .main-section-heading {
     font-size: 2rem;
     font-weight: 600;
-    /* margin-top: 2rem !important; */
-    margin-bottom: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .e-commerce-devlopment-main-page
+    .what-we-offer-web-dev
+    .content-wrapper
+    .border-div {
+    height: 12rem;
   }
 
   .e-commerce-devlopment-main-page {
