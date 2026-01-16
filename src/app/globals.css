@@ -576,7 +576,12 @@ select {
 .work-home-section {
   padding: 10px 0rem !important;
   margin-top: 1rem;
-
+  .swiper-button-prev {
+    display: none;
+  }
+  .swiper-button-next {
+    display: none;
+  }
   .add-your-project {
     padding: 10px 20px;
     position: relative;
@@ -1745,7 +1750,6 @@ footer {
     width: 3rem !important;
     height: 3rem;
     margin: 5px;
-
   }
 }
 
