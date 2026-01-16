@@ -231,7 +231,7 @@ const WebDevelopment = () => {
 
           {/* Build with  */}
 
-          <section className="build-with-section pb-5">
+          <section className="build-with-section py-5">
             <h3 className="main-section-heading text-center " id="devHeading">
               Platforms{" "}
             </h3>
