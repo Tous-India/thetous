@@ -1028,7 +1028,7 @@ const PerformanceMarketing = () => {
                     </div>
 
                     <Link
-                      href="/contact"
+                      href="/quote"
                       className="inline-block c_button_black mt-4"
                     >
                       Build Your Store
@@ -1217,7 +1217,7 @@ const PerformanceMarketing = () => {
                       </li>
                     </ul>
                     <Link
-                      href="/contact"
+                      href="/quote"
                       className="inline-block c_button_black mt-4"
                     >
                       Book a Marketing Audit
@@ -1300,7 +1300,7 @@ const PerformanceMarketing = () => {
               <div className="p">
                 Ready to drive measurable growth with performance marketing?
               </div>
-              <Link href="/contact">Get Your Free Marketing Audit</Link>
+              <Link href="/quote">Get Your Free Marketing Audit</Link>
             </div>
           </div>
         </div>

@@ -218,24 +218,49 @@ const WebDevelopment = () => {
               </div>
             </div>
           </section>
-          {/* Services Overview - 6 Item Accordion */}
+
+          {/* Services Overview */}
           <section className="py-24 max-w-7xl mx-auto what-we-offer-web-dev">
             <h3 className="main-section-heading mb-12" id="devHeading">
-              Our Web Development Services
+               Our Web Development Services
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 content-wrapper">
-              {/* Service 1: Web Application Development */}
-              <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
-                <button
-                  onClick={() =>
-                    setActiveService(activeService === 2 ? null : 2)
-                  }
-                  className="w-full text-left p-6  transition-colors"
+            <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 content-wrapper">
+              {/* Service 1: Custom Shopify Store Development */}
+              <div className="content-div">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 0 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
+                  <button
+                    onClick={() =>
+                      setActiveService(activeService === 0 ? null : 0)
+                    }
+                    className="w-full text-left p-6 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <svg
+                          className="svg mb-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                          />
+                        </svg>
+                        <h3 className="inner-heading">
+                          Custom Web App Development
+                        </h3>
+                      </div>
                       <svg
-                        className="svg mb-4"
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 0 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -243,34 +268,16 @@ const WebDevelopment = () => {
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
                         />
                       </svg>
-                      <h3 className="inner-heading">
-                        Custom Web App Development
-                      </h3>
                     </div>
-                    <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 2 ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
+                  </button>
+                </div>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 2 ? "max-h-96" : "max-h-0"
+                  className={`overflow-hidden transition-all duration-300   ${
+                    activeService === 0 ? "max-h-96 para-div" : "max-h-0"
                   }`}
                 >
                   <div className="px-6 pb-6">
@@ -289,18 +296,43 @@ const WebDevelopment = () => {
                 </div>
               </div>
 
-              {/* Service 2: Mobile App Development */}
-              <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
-                <button
-                  onClick={() =>
-                    setActiveService(activeService === 3 ? null : 3)
-                  }
-                  className="w-full text-left p-6 transition-colors"
+              {/* Service 2: Shopify Theme Customization */}
+              <div className="content-div ">
+                <div
+                  id="boxHeight"
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 1 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
+                  <button
+                    onClick={() =>
+                      setActiveService(activeService === 1 ? null : 1)
+                    }
+                    className="w-full text-left p-6 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <svg
+                          className="svg mb-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                          />
+                        </svg>
+                        <h3 className="inner-heading">
+                          Mobile App Development
+                        </h3>
+                      </div>
                       <svg
-                        className="svg mb-4"
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 1 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -308,32 +340,16 @@ const WebDevelopment = () => {
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
                         />
                       </svg>
-                      <h3 className="inner-heading">Mobile App Development</h3>
                     </div>
-                    <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 3 ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
+                  </button>
+                </div>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 3 ? "max-h-96" : "max-h-0"
+                    activeService === 1 ? "max-h-96 para-div" : "max-h-0"
                   }`}
                 >
                   <div className="px-6 pb-6">
@@ -352,18 +368,42 @@ const WebDevelopment = () => {
                 </div>
               </div>
 
-              {/* Service 3: Custom E-Commerce Development */}
-              <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
-                <button
-                  onClick={() =>
-                    setActiveService(activeService === 0 ? null : 0)
-                  }
-                  className="w-full text-left p-6 transition-colors"
+              {/* Service 3: Shopify Plus Development */}
+              <div className="content-div">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 2 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
+                  <button
+                    onClick={() =>
+                      setActiveService(activeService === 2 ? null : 2)
+                    }
+                    className="w-full text-left p-6 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <svg
+                          className="svg mb-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                          />
+                        </svg>
+                        <h3 className="inner-heading">
+                          Custom E-Commerce Development
+                        </h3>
+                      </div>
                       <svg
-                        className="svg mb-4"
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 2 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -371,38 +411,20 @@ const WebDevelopment = () => {
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
                         />
                       </svg>
-                      <h3 className="inner-heading">
-                        Custom E-Commerce Development
-                      </h3>
                     </div>
-                    <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 0 ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
+                  </button>
+                </div>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 0 ? "max-h-96" : "max-h-0"
+                    activeService === 2 ? "max-h-96 para-div" : "max-h-0"
                   }`}
                 >
                   <div className="px-6 pb-6">
-                    <p className="">
+                    <p>
                       Build high-converting online stores with Shopify,
                       WooCommerce, or custom platforms. We integrate secure
                       payment gateways (Razorpay, Stripe, PayPal), automated
@@ -416,18 +438,42 @@ const WebDevelopment = () => {
                 </div>
               </div>
 
-              {/* Service 4: Corporate Website Development */}
-              <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
-                <button
-                  onClick={() =>
-                    setActiveService(activeService === 1 ? null : 1)
-                  }
-                  className="w-full text-left p-6 transition-colors"
+              {/* Service 4: Shopify Migration Services */}
+              <div className="content-div">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 3 ? "border-b-0! active-gradient" : ""
+                  }`}
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
+                  <button
+                    onClick={() =>
+                      setActiveService(activeService === 3 ? null : 3)
+                    }
+                    className="w-full text-left p-6 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <svg
+                          className="svg mb-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                          />
+                        </svg>
+                        <h3 className="inner-heading">
+                          Business Website Development
+                        </h3>
+                      </div>
                       <svg
-                        className="svg mb-4"
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 3 ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -435,34 +481,17 @@ const WebDevelopment = () => {
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
                         />
                       </svg>
-                      <h3 className="inner-heading">
-                        Business Website Development
-                      </h3>
                     </div>
-                    <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 1 ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
+                  </button>
+                </div>
+
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 1 ? "max-h-96" : "max-h-0"
+                  className={`overflow-hidden transition-all duration-300  ${
+                    activeService === 3 ? "max-h-96 para-div" : "max-h-0"
                   }`}
                 >
                   <div className="px-6 pb-6">
@@ -483,6 +512,8 @@ const WebDevelopment = () => {
               </div>
             </div>
           </section>
+
+           
           {/* Process Section */}
           <h3 className="main-section-heading" id="devHeading">
             Our Development Process
@@ -951,7 +982,7 @@ const WebDevelopment = () => {
                     </div>
 
                     <Link
-                      href="/contact"
+                      href="/quote"
                       className="inline-block c_button_black mt-4"
                     >
                       Start Your Project
@@ -1022,7 +1053,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your web application looks fine, but users aren’t completing key actions
+                        Your web application looks fine, but users aren’t
+                        completing key actions
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1038,7 +1070,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Users drop off midway due to poor app flow or confusing UX
+                        Users drop off midway due to poor app flow or confusing
+                        UX
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1054,7 +1087,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your web app is slow, affecting performance, SEO, and user retention
+                        Your web app is slow, affecting performance, SEO, and
+                        user retention
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1070,37 +1104,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Managing data, users, or workflows feels manual and inefficient
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Mobile users struggle with navigation and responsiveness</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg
-                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>
-                        Your application can’t scale with increasing users or traffic
+                        Managing data, users, or workflows feels manual and
+                        inefficient
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1116,7 +1121,7 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                       API or payment integrations are unreliable or insecure
+                        Mobile users struggle with navigation and responsiveness
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1132,12 +1137,46 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        You lack automation for notifications, workflows, or user engagement
+                        Your application can’t scale with increasing users or
+                        traffic
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span>
+                        API or payment integrations are unreliable or insecure
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg
+                        className="w-5 h-5 mt-1 mr-3 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      <span>
+                        You lack automation for notifications, workflows, or
+                        user engagement
                       </span>
                     </li>
                   </ul>
                   <Link
-                    href="/contact"
+                    href="/quote"
                     className="inline-block c_button_black mt-4"
                   >
                     Get Started

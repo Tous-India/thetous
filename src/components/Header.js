@@ -5,6 +5,7 @@ import Logo from "../../public/black-the-tous.png";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import whatsapp from "../../public/whatsapp.png";
+import phone from "../../public/phone-call.png";
 // brand
 import copywriter from "../../public/services/brand/meta-ads.webp"; //default
 import socialMedia from "../../public/services/brand/social-media-management.webp";
@@ -223,7 +224,7 @@ const Header = () => {
                           >
                             E-Commerce Development
                           </Link>
-                             <Link
+                          <Link
                             href="/tech-solution/shopify-development"
                             className="sub-list-elem-d2-4"
                             onMouseOver={() =>
@@ -239,7 +240,7 @@ const Header = () => {
                           >
                             Automation
                           </Link>
-                       
+
                           <Link
                             href="/tech-solution"
                             className="sub-list-elem-d2-5"
@@ -450,11 +451,11 @@ const Header = () => {
                                   <Link href="/tech-solution/shopify-development">
                                     Shopify Development
                                   </Link>
-                                </li> 
+                                </li>
                                 <li>
                                   <Link href="/tech-solution">Automation</Link>
                                 </li>
-                                
+
                                 <li>
                                   <Link href="/tech-solution">
                                     Whatsapp Marketing
@@ -562,6 +563,15 @@ const Header = () => {
         <Link href="/quote" id="quoteFloatingButton">
           Get Quote
         </Link>
+
+        <a href="tel:8901440322" id="phoneFloatingButton" rel={null}>
+          <Image
+            src={phone}
+            alt="The Tous - Phone Number"
+            width={100}
+            height={100}
+          />
+        </a>
       </header>
     </div>
   );

@@ -1001,7 +1001,7 @@ const ShopifyDevelopment = () => {
                     </div>
 
                     <Link
-                      href="/contact"
+                      href="/quote"
                       className="inline-block c_button_black mt-4"
                     >
                       Build Your Store
@@ -1186,7 +1186,7 @@ const ShopifyDevelopment = () => {
                       </li>
                     </ul>
                     <Link
-                      href="/contact"
+                      href="/quote"
                       className="inline-block c_button_black mt-4"
                     >
                       Get Started
@@ -1269,7 +1269,7 @@ const ShopifyDevelopment = () => {
               <div className="p">
                 Ready to launch your high-converting Shopify store?
               </div>
-              <Link href="/contact">Get Your Free Quote</Link>
+              <Link href="/quote">Get Your Free Quote</Link>
             </div>
           </div>
         </div>

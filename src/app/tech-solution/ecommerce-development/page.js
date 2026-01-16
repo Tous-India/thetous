@@ -5,6 +5,11 @@ import Image from "next/image";
 import "./style.css";
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import wodpressicon from "../../../../public/services/wordpress.png";
+import shopfiyicon from "../../../../public/services/shopify.png";
+import customicon from "../../../../public/services/settings.png";
+
 const WebDevelopment = () => {
   const videoRef = React.useRef(null);
   const [activeFaq, setActiveFaq] = useState(null);
@@ -15,34 +20,36 @@ const WebDevelopment = () => {
   const [isMuted, setIsMuted] = useState(true);
   const faqs = [
     {
-      question: "What's the typical timeline for a project?",
+      question:
+        "What’s the Typical Timeline for an E-Commerce Development Project?",
       answer:
-        "Project timelines vary based on complexity and scope. A standard website typically takes 4-6 weeks, while complex web applications may require 8-12 weeks or more. We'll provide a detailed timeline during our initial consultation.",
+        "The timeline depends on your store’s size and complexity. A standard eCommerce website usually takes 4–8 weeks, while more advanced or custom eCommerce solutions may take 8–12 weeks, including design, development, testing, and launch.",
     },
     {
-      question: "What is your pricing model?",
+      question: "What Is Your Pricing Model for E-Commerce Development?",
       answer:
-        "We offer flexible pricing based on project scope and requirements. This includes fixed-price projects for defined scopes, hourly rates for ongoing work, and retainer packages for long-term partnerships. Contact us for a custom quote.",
+        "Our pricing is project-based and transparent, tailored to your requirements, platform (Shopify, WooCommerce, or custom), features, and integrations. We provide a clear cost breakdown before starting—no hidden charges.",
     },
     {
-      question: "Do you provide ongoing support after launch?",
+      question: "Do You Provide Ongoing Support After Store Launch?",
       answer:
-        "Yes, we offer comprehensive post-launch support including maintenance, updates, security patches, and technical assistance. Support packages can be customized based on your needs.",
+        "Yes. We offer ongoing eCommerce support and maintenance, including performance optimization, security updates, feature enhancements, and technical support to ensure your store runs smoothly post-launch.",
     },
     {
-      question: "Can you work with our existing tech stack?",
+      question:
+        "Can You Work With Our Existing E-Commerce Platform or Tech Stack?",
       answer:
-        "Absolutely. We're experienced with a wide range of technologies and can integrate with your existing systems, or recommend the best solutions for your specific requirements.",
+        "Absolutely. We can enhance, migrate, or optimize existing eCommerce websites built on Shopify, WooCommerce, or custom platforms while ensuring minimal downtime and data security.",
     },
     {
-      question: "What's included in your development process?",
+      question: "What’s Included in Your E-Commerce Development Process?",
       answer:
-        "Our process includes discovery and planning, UI/UX design, development, testing and QA, deployment, and post-launch support. You'll have regular check-ins and full transparency throughout.",
+        "Our eCommerce development process includes strategy planning, UI/UX design, store development, payment and shipping integration, SEO setup, testing, and deployment, ensuring a complete, ready-to-sell online store.",
     },
     {
-      question: "Do you offer revisions during development?",
+      question: "Do You Offer Revisions During E-Commerce Development?",
       answer:
-        "Yes, we include revision rounds at key milestones to ensure the final product meets your expectations. The number of revisions depends on your project package.",
+        "Yes. We include multiple revision rounds during design and development to ensure the final store aligns perfectly with your business goals and brand expectations.",
     },
   ];
 
@@ -158,7 +165,7 @@ const WebDevelopment = () => {
                     className="w-100 h-auto rounded-lg"
                   >
                     <source
-                      src="/The-Tous-Web-&-App-development.mp4"
+                      src="/Tous-Web-shopify -video.mp4"
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -207,10 +214,13 @@ const WebDevelopment = () => {
               {/* Left Column - Content */}
               <div className="col-md-6 col-lg-3 col-sm-12 left-banner ">
                 <h1 className="main-section-heading mt-5! mb-3!" id="noLine">
-                  Build Your E-Commerce Store Now
+                  Build High-Converting E-Commerce Stores That Scale
                 </h1>
-                <p className="mb-6">• CRM • Web Apps</p>
-                <p>• Mobile Apps • Enterprise Portals</p>
+                <p className="mb-6">
+                  We build secure, high-performance eCommerce websites that
+                  convert, scale effortlessly, and drive measurable business
+                  growth.
+                </p>
 
                 <Link href="/quote" className="inline-block c_button_black">
                   Start a Project
@@ -218,271 +228,73 @@ const WebDevelopment = () => {
               </div>
             </div>
           </section>
-          {/* Services Overview - 6 Item Accordion */}
-          <section className="py-24 max-w-7xl mx-auto what-we-offer-web-dev">
-            <h3 className="main-section-heading mb-12" id="devHeading">
-              Our Web Development Services
+
+          {/* Build with  */}
+
+          <section className="build-with-section pb-5">
+            <h3 className="main-section-heading text-center " id="devHeading">
+              Platforms{" "}
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 content-wrapper">
-              {/* Service 1: Web Application Development */}
-              <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
-                <button
-                  onClick={() =>
-                    setActiveService(activeService === 2 ? null : 2)
-                  }
-                  className="w-full text-left p-6  transition-colors"
+            <p>
+              <span>
+                {" "}
+                We develop high-performing eCommerce websites using proven
+                platforms and custom technologies—chosen based on your business
+                goals, scalability needs, and budget.
+              </span>
+              <br />
+              <strong>
+                Click on any platform below to learn more about our development
+                approach and use cases.
+              </strong>
+            </p>
+            <div className="image-content">
+              <div className="wordpress">
+                <Link
+                  href="/tech-solution/shopify-development"
+                  className="inline-block "
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <svg
-                        className="svg mb-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                        />
-                      </svg>
-                      <h3 className="inner-heading">
-                        Custom Web App Development
-                      </h3>
-                    </div>
-                    <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 2 ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 2 ? "max-h-96" : "max-h-0"
-                  }`}
-                >
-                  <div className="px-6 pb-6">
-                    <p>
-                      Complex web applications and SaaS platforms built with
-                      React, Next.js, Node.js, and modern frameworks. We develop
-                      custom dashboards, booking systems, CRM tools, project
-                      management platforms, and member portals that handle
-                      thousands of concurrent users. Your web app will feature
-                      real-time data synchronization, role-based access control,
-                      API integrations, automated workflows, and responsive
-                      interfaces that work flawlessly across devices while
-                      maintaining enterprise-grade security and performance.
-                    </p>
-                  </div>
-                </div>
+                  <Image
+                    src={wodpressicon}
+                    width={100}
+                    height={100}
+                    alt="Shopify Development"
+                  />
+                  Wordpress
+                </Link>
               </div>
-
-              {/* Service 2: Mobile App Development */}
-              <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
-                <button
-                  onClick={() =>
-                    setActiveService(activeService === 3 ? null : 3)
-                  }
-                  className="w-full text-left p-6 transition-colors"
+              <div className="shopify">
+                <Link
+                  href="/tech-solution/shopify-development"
+                  className="inline-block"
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <svg
-                        className="svg mb-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                        />
-                      </svg>
-                      <h3 className="inner-heading">Mobile App Development</h3>
-                    </div>
-                    <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 3 ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 3 ? "max-h-96" : "max-h-0"
-                  }`}
-                >
-                  <div className="px-6 pb-6">
-                    <p>
-                      Native iOS and Android applications built with React
-                      Native, Flutter, or native technologies. We create mobile
-                      experiences that seamlessly integrate with your web
-                      platform, featuring offline functionality, push
-                      notifications, GPS location services, and device-native
-                      features. From consumer apps to enterprise solutions, our
-                      mobile development ensures smooth performance, intuitive
-                      interfaces, and consistent brand experience across all
-                      devices while meeting App Store and Play Store guidelines.
-                    </p>
-                  </div>
-                </div>
+                  <Image
+                    src={shopfiyicon}
+                    width={100}
+                    height={100}
+                    alt="Shopify Development"
+                  />
+                  Shopify
+                </Link>
               </div>
-
-              {/* Service 3: Custom E-Commerce Development */}
-              <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
-                <button
-                  onClick={() =>
-                    setActiveService(activeService === 0 ? null : 0)
-                  }
-                  className="w-full text-left p-6 transition-colors"
+              <div className="custom">
+                <Link
+                  href="/tech-solution/web-development"
+                  className="inline-block "
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <svg
-                        className="svg mb-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                      <h3 className="inner-heading">
-                        Custom E-Commerce Development
-                      </h3>
-                    </div>
-                    <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 0 ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 0 ? "max-h-96" : "max-h-0"
-                  }`}
-                >
-                  <div className="px-6 pb-6">
-                    <p className="">
-                      Build high-converting online stores with Shopify,
-                      WooCommerce, or custom platforms. We integrate secure
-                      payment gateways (Razorpay, Stripe, PayPal), automated
-                      inventory management, cart recovery systems, and
-                      multi-channel selling capabilities. Your e-commerce site
-                      will handle transactions smoothly, scale with growth, and
-                      provide customers with seamless shopping experiences that
-                      drive repeat purchases and reduce cart abandonment.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Service 4: Corporate Website Development */}
-              <div className="content-div border-2 border-gray-200 rounded-0 overflow-hidden">
-                <button
-                  onClick={() =>
-                    setActiveService(activeService === 1 ? null : 1)
-                  }
-                  className="w-full text-left p-6 transition-colors"
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <svg
-                        className="svg mb-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                        />
-                      </svg>
-                      <h3 className="inner-heading">
-                        Business Website Development
-                      </h3>
-                    </div>
-                    <svg
-                      className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
-                        activeService === 1 ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    activeService === 1 ? "max-h-96" : "max-h-0"
-                  }`}
-                >
-                  <div className="px-6 pb-6">
-                    <p>
-                      Professional B2B and corporate websites designed to
-                      establish credibility and generate qualified leads. We
-                      create polished digital presences with intuitive
-                      navigation, compelling service presentations, integrated
-                      contact forms, and strategic CTAs. Perfect for consulting
-                      firms, manufacturers, service providers, and professional
-                      organizations looking to attract enterprise clients,
-                      showcase expertise, and convert website visitors into
-                      business opportunities through thoughtful design and
-                      persuasive content architecture.
-                    </p>
-                  </div>
-                </div>
+                  {" "}
+                  <Image
+                    src={customicon}
+                    width={100}
+                    height={100}
+                    alt="Shopify Development"
+                  />
+                  Custom
+                </Link>
               </div>
             </div>
           </section>
+
           {/* Process Section */}
           <h3 className="main-section-heading" id="devHeading">
             Our Development Process
@@ -492,18 +304,17 @@ const WebDevelopment = () => {
               <div className="grid md:grid-cols-4 gap-12 content-wrapper">
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">01</span>
-                  <h3 className="inner-heading">Discover & Strategy</h3>
+                  <h3 className="inner-heading">01. Strategy & Planning</h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
                         expandedProcesses[0] ? "expanded" : ""
                       }`}
                     >
-                      Our strategists analyze your market position, competitor
-                      landscape, and customer journey to identify conversion
-                      opportunities. We define technical requirements, map user
-                      flows, and establish clear project milestones that align
-                      development with your business objectives.
+                      We begin with an in-depth analysis of your business goals,
+                      target audience, product catalog, and competitive
+                      landscape. Based on this, we prepare a strategy that
+                      drives maximum conversions and ROI.
                     </p>
                     <button
                       onClick={() =>
@@ -520,18 +331,16 @@ const WebDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">02</span>
-                  <h3 className="inner-heading">Design & Prototype</h3>
+                  <h3 className="inner-heading">02. Design & UX</h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
                         expandedProcesses[1] ? "expanded" : ""
                       }`}
                     >
-                      Our 15+ design specialists craft user-centered experiences
-                      through wireframes, interactive prototypes, and visual
-                      mockups. We validate designs with usability testing,
-                      ensuring every element serves both aesthetic and
-                      conversion goals before a single line of code is written.
+                      Our designers create responsive, SEO-optimized eCommerce
+                      UI tailored to your brand, with intuitive navigation,
+                      persuasive product pages, and strategic calls-to-action.
                     </p>
                     <button
                       onClick={() =>
@@ -548,18 +357,18 @@ const WebDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">03</span>
-                  <h3 className="inner-heading">Develop & Test</h3>
+                  <h3 className="inner-heading">
+                    03. Development & Integration
+                  </h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
                         expandedProcesses[2] ? "expanded" : ""
                       }`}
                     >
-                      With 7+ years of development expertise and 42+ successful
-                      launches, our team builds robust, scalable solutions using
-                      modern frameworks. We conduct rigorous QA testing across
-                      devices, browsers, and real-world scenarios to ensure
-                      flawless performance before launch.
+                      We develop your store with clean, scalable code, integrate
+                      payment systems, connect analytics tools, and ensure
+                      seamless workflow automation across systems.
                     </p>
                     <button
                       onClick={() =>
@@ -576,19 +385,17 @@ const WebDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">04</span>
-                  <h3 className="inner-heading">Launch & Support</h3>
+                  <h3 className="inner-heading">04. Testing & Launch</h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
                         expandedProcesses[3] ? "expanded" : ""
                       }`}
                     >
-                      We manage seamless deployment, configure analytics
-                      tracking, and monitor performance metrics closely
-                      post-launch. Our dedicated support team remains available
-                      to address issues, implement optimizations, and ensure
-                      your website continues delivering results as your business
-                      grows.
+                      Every store is rigorously tested — including performance,
+                      security, cross-device responsiveness, and checkout flows
+                      — before launch. Post-launch monitoring ensures continuous
+                      growth.
                     </p>
                     <button
                       onClick={() =>
@@ -607,45 +414,395 @@ const WebDevelopment = () => {
             </div>
           </section>
 
-          {/* Build with  */}
-
-          <section className="build-with-section py-5">
-            <h3 className="main-section-heading text-center " id="devHeading">
-              Build With{" "}
+          {/* Services Overview */}
+          <section className="py-24 max-w-7xl mx-auto what-we-offer-web-dev">
+            <h3 className="main-section-heading mb-12" id="devHeading">
+              Our E-Commerce Development Services
             </h3>
-            <div className="flex justify-center gap-5">
-              <div className="wordpress">
-                <Link
-                  href="/tech-solution/shopify-development"
-                  className="inline-block c_button_black"
+            <div className="grid  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 content-wrapper">
+              {/* Service 1: Custom Shopify Store Development */}
+              <div className="content-div">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 0 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
-                  Wordpress
-                </Link>
-              </div>
-              <div className="shopify">
-                <Link
-                  href="/tech-solution/shopify-development"
-                  className="inline-block c_button_black"
+                  <button
+                    onClick={() =>
+                      setActiveService(activeService === 0 ? null : 0)
+                    }
+                    className="w-full text-left p-6 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <svg
+                          className="svg mb-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                          />
+                        </svg>
+                        <h3 className="inner-heading">
+                          Custom E-Commerce Store Development
+                        </h3>
+                      </div>
+                      <svg
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 0 ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  className={`overflow-hidden transition-all duration-300   ${
+                    activeService === 0 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
                 >
-                  Shopify
-                </Link>
+                  <div className="px-6 pb-6">
+                    <p>
+                      We build custom eCommerce websites designed around your business model, products, and customers. From intuitive UI/UX to secure checkout and scalable architecture, our stores are optimized for performance, conversions, and long-term growth.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="custom">
-                <Link
-                  href="/tech-solution/shopify-development"
-                  className="inline-block c_button_black"
+
+              {/* Service 2: Shopify Theme Customization */}
+              <div className="content-div ">
+                <div
+                  id="boxHeight"
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 1 ? "!border-b-0 active-gradient" : ""
+                  }`}
                 >
-                  Custom
-                </Link>
+                  <button
+                    onClick={() =>
+                      setActiveService(activeService === 1 ? null : 1)
+                    }
+                    className="w-full text-left p-6 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <svg
+                          className="svg mb-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
+                          />
+                        </svg>
+                        <h3 className="inner-heading">
+                          E-Commerce Store Migration
+                        </h3>
+                      </div>
+                      <svg
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 1 ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    activeService === 1 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
+                >
+                  <div className="px-6 pb-6">
+                    <p>
+                     We ensure smooth and secure eCommerce migrations from any platform without data loss. Products, customers, orders, SEO URLs, and integrations are transferred seamlessly with minimal downtime and zero impact on sales.
+                    </p>
+                  </div>
+                </div>
               </div>
+
+              {/* Service 3: Shopify Plus Development */}
+              <div className="content-div">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 2 ? "!border-b-0 active-gradient" : ""
+                  }`}
+                >
+                  <button
+                    onClick={() =>
+                      setActiveService(activeService === 2 ? null : 2)
+                    }
+                    className="w-full text-left p-6 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <svg
+                          className="svg mb-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                          />
+                        </svg>
+                        <h3 className="inner-heading">
+                          Payment Integrations
+                        </h3>
+                      </div>
+                      <svg
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 2 ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    activeService === 2 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
+                >
+                  <div className="px-6 pb-6">
+                    <p>
+                      We integrate secure and reliable payment gateways to enable smooth transactions across multiple payment methods. Our payment solutions ensure fast checkout, data security, and compliance, improving customer trust and conversion rates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 4: Shopify Migration Services */}
+              <div className="content-div">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 3 ? "!border-b-0 active-gradient" : ""
+                  }`}
+                >
+                  <button
+                    onClick={() =>
+                      setActiveService(activeService === 3 ? null : 3)
+                    }
+                    className="w-full text-left p-6 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <svg
+                          className="svg mb-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
+                          />
+                        </svg>
+                        <h3 className="inner-heading">Third-Party Integrations</h3>
+                      </div>
+                      <svg
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 3 ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300  ${
+                    activeService === 3 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
+                >
+                  <div className="px-6 pb-6">
+                    <p>
+                     We connect your eCommerce store with CRM, ERP, marketing tools, analytics, and automation platforms to streamline operations, improve customer engagement, and support data-driven decision-making.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* Service 5: Shopify Migration Services */}
+              <div className="content-div">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 4 ? "!border-b-0 active-gradient" : ""
+                  }`}
+                >
+                  <button
+                    onClick={() =>
+                      setActiveService(activeService === 4 ? null : 4)
+                    }
+                    className="w-full text-left p-6 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <svg
+                          className="svg mb-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M8 7h10M8 11h8m-8 4h6M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm17 6l3-3m0 0l-3-3m3 3H17"
+                          />
+                        </svg>
+                        <h3 className="inner-heading">Logistics & Shipping Integration</h3>
+                      </div>
+                      <svg
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 4 ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300  ${
+                    activeService === 4 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
+                >
+                  <div className="px-6 pb-6">
+                    <p>
+                      We integrate shipping, logistics, and order fulfillment systems to automate shipping rates, tracking, and order updates. This helps reduce manual effort and deliver a seamless post-purchase experience for customers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service 6: Shopify Migration Services */}
+              <div className="content-div">
+                <div
+                  className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
+                    activeService === 5 ? "!border-b-0 active-gradient" : ""
+                  }`}
+                >
+                  <button
+                    onClick={() =>
+                      setActiveService(activeService === 5 ? null : 5)
+                    }
+                    className="w-full text-left p-6 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <svg
+                          className="svg mb-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                          />
+                        </svg>
+                        <h3 className="inner-heading">E-Commerce Support & Optimization</h3>
+                      </div>
+                      <svg
+                        className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
+                          activeService === 5 ? "rotate-180" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300  ${
+                    activeService === 5 ? "max-h-96 para-div" : "max-h-0"
+                  }`}
+                >
+                  <div className="px-6 pb-6">
+                    <p>
+                      We provide ongoing support, performance optimization, and feature enhancements to keep your eCommerce store fast, secure, and conversion-ready as your business scales.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/*  */}
             </div>
           </section>
-
           {/* Why Choose Us */}
           <section className="py-24 max-w-7xl mx-auto why-choose-us-web-dev">
             <div className="mb-12">
               <h3 className="main-section-heading" id="devHeading">
-                Why Choose The Tous for Web Development
+                Why Choose Us for Your E-Commerce Website Development?
               </h3>
               <p className="why-para">
                 What sets us apart from other development agencies
@@ -671,9 +828,9 @@ const WebDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Web App–Focused Development</h3>
+                <h3 className="inner-heading">Results-Driven Architecture</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  42+ high-performance web applications delivered since 2018
+                  142+ high-performance web applications delivered since 2018
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -681,17 +838,9 @@ const WebDevelopment = () => {
                       expandedWhyChoose[0] ? "expanded" : ""
                     }`}
                   >
-                    We specialize in building high-performance web applications
-                    designed to streamline operations, enhance user experience,
-                    and support long-term scalability. Our web apps are
-                    engineered with secure authentication, real-time data
-                    handling, API integrations, and cloud-ready architectures to
-                    meet modern business demands. From custom dashboards and
-                    SaaS platforms to enterprise web portals, our solutions are
-                    built to perform under real-world usage. Businesses using
-                    our web applications have achieved 120–180% improvements in
-                    workflow efficiency and user engagement within months of
-                    deployment.
+                    We focus on fast load times, search engine visibility, and
+                    high conversion rates, ensuring your store ranks and
+                    performs well
                   </p>
                   <button
                     onClick={() =>
@@ -723,7 +872,9 @@ const WebDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Built for Speed & Performance</h3>
+                <h3 className="inner-heading">
+                  SEO & Mobile-First Optimization
+                </h3>
                 <p className="text-sm text-gray-500 mb-3">
                   90+ PageSpeed scores consistently
                 </p>
@@ -733,11 +884,9 @@ const WebDevelopment = () => {
                       expandedWhyChoose[1] ? "expanded" : ""
                     }`}
                   >
-                    Speed is revenue. We build lightning-fast websites using
-                    Next.js, optimized images, and efficient code that loads in
-                    under 2 seconds. Every millisecond counts—faster sites rank
-                    higher in Google, reduce bounce rates, and convert more
-                    visitors into customers.
+                    Every store follows the latest eCommerce SEO best practices,
+                    with keyword-rich URLs, metadata, structured data, and
+                    mobile readiness for improved rankings.
                   </p>
                   <button
                     onClick={() =>
@@ -769,7 +918,7 @@ const WebDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Grows With Your Business</h3>
+                <h3 className="inner-heading">Continuous Support & Growth</h3>
                 <p className="text-sm text-gray-500 mb-3">
                   Technologies major brands trust
                 </p>
@@ -779,11 +928,9 @@ const WebDevelopment = () => {
                       expandedWhyChoose[2] ? "expanded" : ""
                     }`}
                   >
-                    Your business won&apos;t stay the same size forever. We
-                    build scalable solutions using React, Node.js, and cloud
-                    infrastructure that handle traffic spikes effortlessly.
-                    Whether you&apos;re adding 100 products or 10,000 customers,
-                    your website architecture won&apos;t break under pressure.
+                    We don’t just build your store — we support you with
+                    performance tuning, feature enhancements, and analytics
+                    insights to sustain long-term revenue growth.
                   </p>
                   <button
                     onClick={() =>
@@ -815,9 +962,7 @@ const WebDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">
-                  End-to-End Development Partner
-                </h3>
+                <h3 className="inner-heading">Scalable & Secure Development</h3>
                 <p className="text-sm text-gray-500 mb-3">
                   15+ specialists across design, dev, and marketing
                 </p>
@@ -827,11 +972,10 @@ const WebDevelopment = () => {
                       expandedWhyChoose[3] ? "expanded" : ""
                     }`}
                   >
-                    You get a complete team, not just developers. Our integrated
-                    approach combines strategy, design, development, SEO, and
-                    ongoing support under one roof. No coordination headaches,
-                    no vendor juggling—just a single partnership that delivers
-                    measurable results.
+                    Our eCommerce websites are built with scalable architecture
+                    and enterprise-grade security, ensuring smooth performance
+                    during high traffic, secure transactions, and the
+                    flexibility to grow as your business expands.
                   </p>
                   <button
                     onClick={() =>
@@ -853,7 +997,7 @@ const WebDevelopment = () => {
                   Our Track Record
                 </p>
                 <h2 className="main-section-heading" id="devHeading">
-                  Proven Track Record in Web Development
+                  Proven Track Record in E-Commerce Development
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
                   Since 2018, we&apos;ve partnered with businesses across India
@@ -863,7 +1007,7 @@ const WebDevelopment = () => {
               </div>
               <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">42+</div>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">142+</div>
                   <p className="inner-heading">Web/Mobile Apps Delivered</p>
                   <p className="text-sm text-gray-500">
                     E-commerce & corporate sites launched since 2018
@@ -986,7 +1130,7 @@ const WebDevelopment = () => {
                     </div>
 
                     <Link
-                      href="/contact"
+                      href="/quote"
                       className="inline-block c_button_black mt-4"
                     >
                       Start Your Project
@@ -1041,7 +1185,7 @@ const WebDevelopment = () => {
                 {/* Right Column - Client Logos */}
                 <div className="col-md-6 col-lg-6 col-sm-12 left-div">
                   <h2 className="main-section-heading mb-4" id="devHeading">
-                    Does This Sound Like Your Business?
+                    Does This Sound Like Your E-Commerce Business?
                   </h2>
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-start">
@@ -1057,8 +1201,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your web application looks fine, but users aren’t
-                        completing key actions
+                        Your online store looks good, but visitors aren’t
+                        converting into buyers
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1074,8 +1218,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Users drop off midway due to poor app flow or confusing
-                        UX
+                        Customers abandon carts due to confusing navigation or
+                        checkout flow
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1091,8 +1235,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your web app is slow, affecting performance, SEO, and
-                        user retention
+                        Your eCommerce website is slow, hurting SEO rankings and
+                        sales
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1108,8 +1252,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Managing data, users, or workflows feels manual and
-                        inefficient
+                        Managing products, inventory, and orders feels manual
+                        and time-consuming
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1125,7 +1269,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Mobile users struggle with navigation and responsiveness
+                        Mobile shoppers struggle with usability and checkout
+                        experience
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1141,8 +1286,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your application can’t scale with increasing users or
-                        traffic
+                        Your store can’t handle growth in traffic, products, or
+                        orders
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1158,7 +1303,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        API or payment integrations are unreliable or insecure
+                        Payment gateways or shipping integrations are unreliable
+                        or insecure
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1174,13 +1320,13 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        You lack automation for notifications, workflows, or
-                        user engagement
+                        You lack automation for order updates, cart recovery,
+                        and customer engagement
                       </span>
                     </li>
                   </ul>
                   <Link
-                    href="/contact"
+                    href="/quote"
                     className="inline-block c_button_black mt-4"
                   >
                     Get Started
@@ -1192,7 +1338,7 @@ const WebDevelopment = () => {
                       src={painPoints}
                       width={500}
                       height={500}
-                      alt="Web Development Challenges"
+                      alt="E-Commerce Development Challenges"
                     />
                   </div>
                 </div>

@@ -180,20 +180,27 @@
   }
 
   .what-we-offer-web-dev {
-    margin-bottom: 3rem;
-
+    margin-bottom: 4.5rem;
+    .main-section-heading {
+      margin-bottom: 2rem;
+      margin-top: 3rem;
+    }
     .inner-heading {
       font-size: 1rem;
       font-weight: 500;
+      line-height: 26px;
     }
-
+    .flex-shrink-0 {
+      opacity: 0.5;
+      width: 15px;
+      height: 15px;
+    }
     .content-wrapper {
-      .content-div {
-        border: 1px solid rgb(219, 219, 219);
-        padding: 1rem;
-        position: relative;
+      .border-div {
         transition: all 0.3s ease;
-
+        border: 1px solid rgb(219, 219, 219);
+        position: relative;
+        padding: 1.5rem;
         &:hover {
           border-color: transparent;
           box-shadow: 0 0 0 2px transparent;
@@ -201,20 +208,36 @@
             linear-gradient(135deg, #00dbde, #fc00ff) border-box;
           border: 2px solid transparent;
         }
+        &.active-gradient {
+          border-color: transparent;
+          box-shadow: 0 0 0 2px transparent;
+          background: linear-gradient(white, white) padding-box,
+            linear-gradient(135deg, #00dbde, #fc00ff) border-box;
+          border: 2px solid transparent;
+          transition: none;
+        }
+      }
+      .para-div {
+        background: linear-gradient(#fff, #fff) padding-box padding-box,
+          linear-gradient(135deg, #00dbde, #fc00ff) border-box;
+        border: 2px solid rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0);
 
+        border-top: none;
+        padding: 1rem;
+      }
+      .content-div {
         .svg {
-          height: 40px;
-          width: 40px;
+          height: 30px;
+          width: 30px;
           margin-bottom: 10px;
           transition: all 0.3s ease;
         }
-
         &:hover .svg {
           color: #00dbde;
         }
       }
     }
-
     p {
       font-size: 13px;
       margin-top: 5px;
@@ -683,22 +706,103 @@
   }
 }
 
+.build-with-section {
+  .image-content {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+  }
+  > p {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    span {
+    }
+    strong {
+      display: block;
+      margin-top: 1rem;
+    }
+  }
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(to right, #00dbde, #fc00ff) border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 3rem;
+    gap: 1rem;
+    font-family: "Lato";
+    font-weight: 600;
 
-
-
-.build-with-section{
-  .main-section-heading{
-    &::after{
+    img {
+      width: 50%;
+    }
+  }
+  .main-section-heading {
+    &::after {
       left: 46.5%;
     }
   }
 }
 
-
-
-
-
 @media (max-width: 720px) {
+  .build-with-section {
+    .image-content {
+      display: flex;
+      gap: 10px;
+    }
+    > p {
+      text-align: center;
+      margin-bottom: 2rem;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      span {
+      }
+      strong {
+        display: block;
+        margin-top: 1rem;
+      }
+    }
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid transparent;
+      background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, #00dbde, #fc00ff) border-box;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 1rem;
+      gap: 1rem;
+      font-family: "Lato";
+      font-weight: 600;
+      img {
+        width: 50%;
+      }
+    }
+
+    .main-section-heading {
+      &::after {
+        left: 40.5%;
+      }
+    }
+    .wordpress {
+      a {
+        img {
+          width: 41%;
+        }
+      }
+    }
+  }
+
   .e-commerce-devlopment-main-page {
     background-color: #fff;
     padding-top: 1rem;
@@ -743,7 +847,9 @@
       padding: 15px !important;
     }
   }
-  .e-commerce-devlopment-main-page .why-choose-us-web-dev .main-section-heading {
+  .e-commerce-devlopment-main-page
+    .why-choose-us-web-dev
+    .main-section-heading {
     margin-bottom: 25px;
   }
 
@@ -836,11 +942,18 @@
     }
   }
 
-  .e-commerce-devlopment-main-page .stats-web-dev .numbers > div .inner-heading {
+  .e-commerce-devlopment-main-page
+    .stats-web-dev
+    .numbers
+    > div
+    .inner-heading {
     font-size: 1.15rem;
   }
 
-  .e-commerce-devlopment-main-page .why-choose-us-web-dev .content-wrapper .inner-div {
+  .e-commerce-devlopment-main-page
+    .why-choose-us-web-dev
+    .content-wrapper
+    .inner-div {
     padding: 1rem;
   }
 
@@ -878,7 +991,10 @@
     line-height: 23px;
   }
 
-  .e-commerce-devlopment-main-page .hero-web-dev .video-container .video-sound-toggle {
+  .e-commerce-devlopment-main-page
+    .hero-web-dev
+    .video-container
+    .video-sound-toggle {
     width: 28px;
     height: 28px;
     bottom: 12rem;
