@@ -174,7 +174,7 @@ const Quote = () => {
         });
         // Reset form
         setTimeout(() => {
-          window.location.href = "/thank-you";
+          window.location.href = "/";
         }, 3000);
       } else {
         setSubmitStatus({
