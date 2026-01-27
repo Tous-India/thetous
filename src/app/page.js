@@ -1,4 +1,5 @@
 "use client";
+import usePageTitle from "@/hooks/usePageTitle";
 import { useEffect } from "react";
 import Banner from "@/components/home/Banner";
 import Work from "@/components/home/Work";
@@ -28,7 +29,8 @@ export default function Index() {
     }
 
     rafId = requestAnimationFrame(raf);
-
+      usePageTitle("Best Digital Marketing Agency");
+    
     return () => {
       if (rafId) {
         cancelAnimationFrame(rafId);
