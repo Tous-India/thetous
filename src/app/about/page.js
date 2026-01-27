@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import usePageTitle from "@/hooks/usePageTitle";
 
-const page = () => {
+const About = () => {
   usePageTitle("About – Strategy-Led Digital Marketing Agency");
   return (
     <div className="about-page-main">
@@ -70,7 +70,7 @@ const page = () => {
   );
 };
 
-export default page;
+export default About;
 
 const AboutTest = () => {
   const [activeTab, setActiveTab] = useState(0);
