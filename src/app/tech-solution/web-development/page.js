@@ -2,10 +2,14 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import usePageTitle from "@/hooks/usePageTitle";
+
 import "./style.css";
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 const WebDevelopment = () => {
+    usePageTitle("Web Development Agency for Growing Online Businesses");
+  
   const videoRef = React.useRef(null);
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);

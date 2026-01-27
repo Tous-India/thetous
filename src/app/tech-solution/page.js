@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import "./style.css";
 import Image from "next/image";
+import usePageTitle from "@/hooks/usePageTitle";
 import Link from "next/link";
 import biodreama from "../../../public/client/biodreama.png";
 import cozzet from "../../../public/client/cozzet.png";
@@ -15,6 +17,7 @@ import dhison from "../../../public/services/brand/1742808668.webp";
 import madhu from "../../../public/services/brand/1742808302.png";
 
 const TechSolution = () => {
+  usePageTitle("Tech Solutions – Web Development, UI/UX & E-Commerce");
   return (
     <div className="about-page-main">
       <div className="container bs-container mt-4">

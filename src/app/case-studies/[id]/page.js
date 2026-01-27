@@ -1,4 +1,5 @@
 "use client";
+import usePageTitle from "@/hooks/usePageTitle";
 
 import React, { useEffect } from "react";
 import "./style.css";
@@ -26,6 +27,8 @@ const imageMap = {
 };
 
 const CaseStudyPage = ({ params }) => {
+    usePageTitle("Our Case Studies – Brand Growth Through Strategy & Execution");
+  
   const { id } = React.use(params);
 
   // Scroll to top when component mounts or id changes

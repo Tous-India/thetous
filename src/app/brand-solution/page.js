@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import "./style.css";
+import usePageTitle from "@/hooks/usePageTitle";
 import Image from "next/image";
 import Link from "next/link";
 import biodreama from "../../../public/client/biodreama.png";
@@ -15,6 +17,7 @@ import dhison from "../../../public/services/brand/1742808668.webp";
 import madhu from "../../../public/services/brand/1742808302.png";
 
 const BrandSolution = () => {
+  usePageTitle("Brand Solutions – Strategy, Identity & Creative Design");
   return (
     <div>
       <div className="brand-page-main">

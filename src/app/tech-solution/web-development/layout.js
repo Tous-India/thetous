@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Web & Mobile App Development Services | The Tous",
+  // title: "Web & Mobile App Development Services",
   description: "Professional web and mobile app development services. Build custom web apps, CRM systems, mobile apps, and e-commerce platforms. 57+ successful projects delivered by The Tous.",
   openGraph: {
     title: "Web & Mobile App Development Services | The Tous",

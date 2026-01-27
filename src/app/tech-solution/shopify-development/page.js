@@ -3,9 +3,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 import "./style.css";
 import Image from "next/image";
+import usePageTitle from "@/hooks/usePageTitle";
+
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 const ShopifyDevelopment = () => {
+    usePageTitle("Shopify Stores Designed for Growth & Conversions");
+  
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);
   const [activeTab, setActiveTab] = useState("customized");

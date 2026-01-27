@@ -5,11 +5,14 @@ import "./style.css";
 import Image from "next/image";
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
+import usePageTitle from "@/hooks/usePageTitle";
 
 //
 //
 //
 const PerformanceMarketing = () => {
+    usePageTitle("Google Ads Management Services That Drive Sales");
+  
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);
   const [activeTab, setActiveTab] = useState("customized");

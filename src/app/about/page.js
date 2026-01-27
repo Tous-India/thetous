@@ -4,8 +4,10 @@ import "./style.css";
 import Link from "next/link";
 // import AboutTest from "@/components/AboutTest";
 import Image from "next/image";
+import usePageTitle from "@/hooks/usePageTitle";
 
 const page = () => {
+  usePageTitle("About – Strategy-Led Digital Marketing Agency");
   return (
     <div className="about-page-main">
       <div className="container aboutRow">

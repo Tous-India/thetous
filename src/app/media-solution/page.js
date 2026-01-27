@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import "./style.css";
 import Image from "next/image";
+import usePageTitle from "@/hooks/usePageTitle";
 import Link from "next/link";
 import biodreama from "../../../public/client/biodreama.png";
 import cozzet from "../../../public/client/cozzet.png";
@@ -15,6 +17,7 @@ import ohmypety from "../../../public/services/brand/1742807329.webp";
 import executive from "../../../public/services/brand/1742644830.webp";
 
 const MediaSolution = () => {
+  usePageTitle("Media Solutions – Media Planning, Buying & Campaign Execution");
   return (
     <div className="media-page-main">
       <div className="container bs-container mt-5">

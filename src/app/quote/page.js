@@ -1,8 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import "./style.css";
+import usePageTitle from "@/hooks/usePageTitle";
 
 const Quote = () => {
+    usePageTitle("Request a Quote or Digital Strategy Consultation");
+  
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 2;
 

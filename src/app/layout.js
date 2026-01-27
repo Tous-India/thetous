@@ -31,10 +31,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "The Tous - Best Digital Marketing Agency",
-  description: "Best Digital Marketing Agency",
-  icons: {
-    icon: "/tousfavicon.webp",
+  title: {
+    default: "The Tous",
+    template: "%s | The Tous",
   },
 };
 

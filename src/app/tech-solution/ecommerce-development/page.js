@@ -5,12 +5,15 @@ import Image from "next/image";
 import "./style.css";
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
+import usePageTitle from "@/hooks/usePageTitle";
 
 import wodpressicon from "../../../../public/services/wordpress.png";
 import shopfiyicon from "../../../../public/services/shopify.png";
 import customicon from "../../../../public/services/settings.png";
 
 const WebDevelopment = () => {
+    usePageTitle("Build an Ecommerce Store That Converts Visitors Into Buyers");
+  
   const videoRef = React.useRef(null);
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);

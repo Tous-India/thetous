@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "./style.css";
+import usePageTitle from "@/hooks/usePageTitle";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -81,7 +82,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }
   };
-
+  usePageTitle("Contact – Start Your Digital Growth Journey");
   return (
     <div className="contact-page-main">
       <div className="container-fluid">

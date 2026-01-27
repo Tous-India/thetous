@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
 import "./style.css";
 import WorkCard from "@/components/WorkCard";
 import caseStudiesData from "@/data/caseStudies.json";
+import usePageTitle from "@/hooks/usePageTitle";
 
 /* ================= IMAGES ================= */
 
@@ -39,24 +39,25 @@ const imageMap = {
 
 /* ================= DATA ================= */
 
-export const workData = {
+const workData = {
   brandSolution: caseStudiesData.caseStudies.map((study) => ({
     id: study.id,
     image: imageMap[study.image],
     title: study.title,
     desc: study.description,
     tags: study.tags,
-    disabled: study.id === 'ska-orion' || study.id === 'tarc',
+    disabled: study.id === "ska-orion" || study.id === "tarc",
   })),
 };
 
-/* ================= MAIN COMPONENT ================= */
+/* ================= PAGE ================= */
 
-const Work = () => {
+export default function Work() {
+  usePageTitle("Our Work – Case Studies & Success Stories in Digital Marketing");
+
   return (
     <div className="work-main-page">
       <section>
-        {/* Heading */}
         <div className="container bs-container my-5">
           <div className="row">
             <div className="col-md-6 d-flex flex-column brand-strategy-div">
@@ -70,17 +71,14 @@ const Work = () => {
           </div>
         </div>
 
-        {/* Work Cards */}
         <div className="container container-2">
           <div className="row">
             {workData.brandSolution.map((item) => (
-              <WorkCard key={item.title} item={item} />
+              <WorkCard key={item.id} item={item} />
             ))}
           </div>
         </div>
       </section>
     </div>
   );
-};
-
-export default Work;
+}
