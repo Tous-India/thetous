@@ -16,6 +16,7 @@ import WhyWeUs from "@/components/home/WhyWeUs";
 import "swiper/css";
 import "swiper/css/navigation";
 export default function Index() {
+  usePageTitle("Best Digital Marketing Agency");
   useEffect(() => {
     AOS.init();
   }, []);
@@ -29,7 +30,7 @@ export default function Index() {
     }
 
     rafId = requestAnimationFrame(raf);
-      usePageTitle("Best Digital Marketing Agency");
+      
     
     return () => {
       if (rafId) {

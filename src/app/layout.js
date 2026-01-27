@@ -32,7 +32,6 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "The Tous",
     template: "%s | The Tous",
   },
 };
