@@ -40,6 +40,7 @@
   }
  .wordpress{ 
     a {
+      padding: 3rem 0;
       img {
         width: 25%;
       }
