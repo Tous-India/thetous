@@ -91,10 +91,10 @@ const Footer = () => {
                 </span>
                 <span>
                   {" | "}
-                  <Link href={"/"}>Privacy Policy</Link>
+                  <Link href={"/privacy-policy"}>Privacy Policy</Link>
                 </span>
                 <span>
-                  {" | "} <Link href={"/"}>Term & Conditions</Link>
+                  {" | "} <Link href={"/terms-conditions"}>Term & Conditions</Link>
                 </span>
               </h6>
             </div>

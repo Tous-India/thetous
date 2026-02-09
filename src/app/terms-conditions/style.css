@@ -1,0 +1,87 @@
+/* ================================
+   Terms & Conditions Page Styles
+   Extends About Page CSS
+================================ */
+
+.terms-page-main {
+    background-color: #fff;
+    padding-bottom: 3rem;
+    border-radius: 0 0 30px 30px;
+    z-index: 1;
+    isolation: isolate;
+    margin-bottom: -3.5rem;
+}
+
+/* Headings hierarchy */
+.terms-page-main h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: "Lato";
+    color: #2e2e2e;
+}
+
+/* Paragraph readability */
+.terms-page-main p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #535353;
+}
+
+/* Lists (if needed later) */
+.terms-page-main ul {
+    padding-left: 18px;
+    margin-bottom: 1rem;
+}
+
+.terms-page-main ul li {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #535353;
+    list-style: disc;
+}
+
+/* Decorative underline fix */
+.terms-page-main .content-div p:last-child::after {
+    width: 20%;
+}
+
+/* Links */
+.terms-page-main a {
+    color: #000;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.terms-page-main a:hover {
+    text-decoration: underline;
+}
+
+/* CTA consistency */
+.terms-page-main .aboutCta .p {
+    font-size: 2.5rem;
+}
+
+/* ================================
+   Mobile Adjustments
+================================ */
+@media (max-width: 480px) {
+    .terms-page-main h3 {
+        font-size: 1.2rem;
+        margin-top: 0 !important;
+    }
+
+    .terms-page-main h1 {
+        padding-top: 0.1rem !important;
+    }
+
+    .terms-page-main p,
+    .terms-page-main ul li {
+        font-size: 13px;
+    }
+
+    .terms-page-main .aboutCta .p {
+        font-size: 1.8rem;
+    }
+}
