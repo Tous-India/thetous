@@ -38,14 +38,14 @@
       background-color: black;
     }
   }
- .wordpress{ 
+ /* .wordpress{ 
     a {
       padding: 3rem 0;
       img {
         width: 25%;
       }
     }
- }
+ } */
   .main-section-heading {
     color: #242424;
     margin: 0;
@@ -718,6 +718,16 @@
     display: flex;
     gap: 3rem;
     justify-content: center;
+    > div {
+      width: 25%;
+      a{
+        img{
+          height: auto;
+          width: 50%;
+          object-fit: contain;
+        }
+      }
+    }
   }
   > p {
     text-align: center;
