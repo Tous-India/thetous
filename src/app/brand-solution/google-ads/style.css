@@ -475,6 +475,218 @@
   padding-top: 3rem;
 }
 
+/* Real Estate Spotlight Section */
+.re-spotlight-section {
+  background-color: #f9f9f9;
+  padding: 3.5rem 0;
+  margin: 3rem 0;
+}
+
+.re-spotlight-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.re-spotlight-header {
+  position: sticky;
+  top: 6rem;
+}
+
+.re-spotlight-tag {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #00dbde 0%, #fc00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.re-spotlight-heading {
+  font-family: "Lato", sans-serif !important;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #242424;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.re-spotlight-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  border-radius: 2px;
+}
+
+.re-spotlight-subtext {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  color: #434343 !important;
+  margin: 0 !important;
+}
+
+/* Vertical Accordion Cards */
+.re-spotlight-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.re-spotlight-card {
+  background: #ffffff;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  border-left: 3px solid #e0e0e0;
+}
+
+.re-spotlight-card:hover {
+  border-left-color: #00dbde;
+}
+
+.re-spotlight-card.active {
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(to bottom, #00dbde, #fc00ff) 1;
+}
+
+.re-spotlight-card-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 1.25rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.re-spotlight-card-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.re-spotlight-card-num {
+  font-family: "Lato", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #d0d0d0;
+  min-width: 30px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.re-spotlight-card.active .re-spotlight-card-num {
+  background: linear-gradient(135deg, #00dbde 0%, #fc00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.re-spotlight-card-title {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #242424;
+  margin: 0;
+  text-align: left;
+  line-height: 26px;
+}
+
+.re-spotlight-card-icon {
+  width: 15px;
+  height: 15px;
+  color: #242424;
+  opacity: 0.5;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.re-spotlight-card-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.re-spotlight-card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+  padding: 0 1.25rem 0 3.5rem;
+}
+
+.re-spotlight-card-body.expanded {
+  max-height: 350px;
+  padding: 0 1.25rem 1.25rem 3.5rem;
+}
+
+.re-spotlight-card-body p {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  color: #434343 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .re-spotlight-section {
+    padding: 2.5rem 0;
+    margin: 2rem 0;
+  }
+
+  .re-spotlight-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .re-spotlight-header {
+    position: static;
+  }
+
+  .re-spotlight-heading {
+    font-size: 1.5rem;
+  }
+
+  .re-spotlight-card-header {
+    padding: 1rem;
+  }
+
+  .re-spotlight-card-body {
+    padding: 0 1rem 0 3rem;
+  }
+
+  .re-spotlight-card-body.expanded {
+    padding: 0 1rem 1rem 3rem;
+  }
+
+  .re-spotlight-card-num {
+    font-size: 1.1rem;
+    min-width: 25px;
+  }
+
+  .re-spotlight-card-title {
+    font-size: 0.875rem;
+  }
+}
+
 /* Case Study Cards */
 .google-ads-main-page .group .border-2 {
   transition: all 0.3s ease;

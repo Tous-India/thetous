@@ -26,6 +26,7 @@ const PerformanceMarketing = () => {
   });
   const [formStatus, setFormStatus] = useState("");
   const [isMuted, setIsMuted] = useState(true);
+  const [activeRealEstate, setActiveRealEstate] = useState(null);
   const videoRef = React.useRef(null);
 
   const handleFormChange = (e) => {
@@ -883,6 +884,69 @@ const PerformanceMarketing = () => {
                     Long-term partnerships built on results
                   </p>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Real Estate Developer Section */}
+          <section className="re-spotlight-section">
+            <div className="re-spotlight-container">
+              <div className="re-spotlight-header">
+                <span className="re-spotlight-tag">INDUSTRY SPOTLIGHT</span>
+                <h2 className="re-spotlight-heading">
+                  Google Ads for Real Estate Developers
+                </h2>
+                <p className="re-spotlight-subtext">
+                  Google Ads management exclusively optimized for real estate developers — turning ad spend into qualified buyer leads and site visit bookings.
+                </p>
+              </div>
+
+              <div className="re-spotlight-grid">
+                {[
+                  {
+                    num: "01",
+                    title: "High-Intent Search Campaigns",
+                    content: "Targeted Search campaigns with exhaustive keyword research covering project-specific terms, locality searches, and builder brand queries — structured for maximum lead quality."
+                  },
+                  {
+                    num: "02",
+                    title: "Display, YouTube & Performance Max",
+                    content: "Multi-channel campaigns across Display, YouTube, and Performance Max — reaching buyers on Search, Maps, Gmail, and Discovery with project walkthroughs and testimonials."
+                  },
+                  {
+                    num: "03",
+                    title: "Advanced Audience & Location Targeting",
+                    content: "Location-based bid adjustments, income-tier layering, and custom intent audiences built from property portal visitors — paired with conversion-optimized landing pages."
+                  },
+                  {
+                    num: "04",
+                    title: "Transparent Tracking & Reporting",
+                    content: "Up to 50% lower CPA with transparent dashboards tracking every lead source, campaign metric, and weekly optimization reports with actionable insights."
+                  }
+                ].map((card, index) => (
+                  <div key={index} className={`re-spotlight-card ${activeRealEstate === index ? "active" : ""}`}>
+                    <button
+                      onClick={() => setActiveRealEstate(activeRealEstate === index ? null : index)}
+                      className="re-spotlight-card-header"
+                    >
+                      <div className="re-spotlight-card-left">
+                        <span className="re-spotlight-card-num">{card.num}</span>
+                        <h3 className="re-spotlight-card-title">{card.title}</h3>
+                      </div>
+                      <svg
+                        className={`re-spotlight-card-icon ${activeRealEstate === index ? "rotate" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    <div className={`re-spotlight-card-body ${activeRealEstate === index ? "expanded" : ""}`}>
+                      <p>{card.content}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>

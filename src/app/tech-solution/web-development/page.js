@@ -17,6 +17,7 @@ const WebDevelopment = () => {
   const [expandedProcesses, setExpandedProcesses] = useState({});
   const [expandedWhyChoose, setExpandedWhyChoose] = useState({});
   const [isMuted, setIsMuted] = useState(true);
+  const [activeRealEstate, setActiveRealEstate] = useState(null);
   const faqs = [
     {
       question: "What's the typical timeline for a project?",
@@ -886,6 +887,69 @@ const WebDevelopment = () => {
               </div>
             </div>
           </section>
+          {/* Real Estate Developer Section */}
+          <section className="re-spotlight-section">
+            <div className="re-spotlight-container">
+              <div className="re-spotlight-header">
+                <span className="re-spotlight-tag">INDUSTRY SPOTLIGHT</span>
+                <h2 className="re-spotlight-heading">
+                  Web Development for Real Estate Developers
+                </h2>
+                <p className="re-spotlight-subtext">
+                  We build high-performance websites for real estate developers, builders, and property firms — designed to convert visitors into genuine property inquiries.
+                </p>
+              </div>
+
+              <div className="re-spotlight-grid">
+                {[
+                  {
+                    num: "01",
+                    title: "Custom Property Listing Portals",
+                    content: "Property listing portals with advanced search filters, virtual tour integration, interactive floor plans, and lead capture forms optimized for maximum conversion."
+                  },
+                  {
+                    num: "02",
+                    title: "Conversion-Optimized Real Estate UX",
+                    content: "Strategic CTAs, WhatsApp integration, EMI calculators, and RERA-compliant project pages — all designed around real buyer behavior to maximize site visit bookings."
+                  },
+                  {
+                    num: "03",
+                    title: "RERA-Compliant Project Pages",
+                    content: "Transparent project pages with RERA registration details, approved layouts, location maps, and neighborhood insights that build buyer trust and drive qualified inquiries."
+                  },
+                  {
+                    num: "04",
+                    title: "SEO-Ready Architecture & CRM Integration",
+                    content: "Schema markup for property listings, CRM integration for instant lead routing, and analytics tracking — so you know exactly which pages drive inquiries."
+                  }
+                ].map((card, index) => (
+                  <div key={index} className={`re-spotlight-card ${activeRealEstate === index ? "active" : ""}`}>
+                    <button
+                      onClick={() => setActiveRealEstate(activeRealEstate === index ? null : index)}
+                      className="re-spotlight-card-header"
+                    >
+                      <div className="re-spotlight-card-left">
+                        <span className="re-spotlight-card-num">{card.num}</span>
+                        <h3 className="re-spotlight-card-title">{card.title}</h3>
+                      </div>
+                      <svg
+                        className={`re-spotlight-card-icon ${activeRealEstate === index ? "rotate" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    <div className={`re-spotlight-card-body ${activeRealEstate === index ? "expanded" : ""}`}>
+                      <p>{card.content}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
           <section className="py-24 max-w-7xl mx-auto mt-5 mb-5 web-dev-tabs">
             <h3 className="main-section-heading">Our Projects</h3>
             <div className="mb-12">

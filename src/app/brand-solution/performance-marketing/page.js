@@ -26,6 +26,7 @@ const PerformanceMarketing = () => {
   });
   const [formStatus, setFormStatus] = useState("");
   const [isMuted, setIsMuted] = useState(true);
+  const [activeRealEstate, setActiveRealEstate] = useState(null);
   const videoRef = React.useRef(null);
 
   const handleFormChange = (e) => {
@@ -926,6 +927,69 @@ const PerformanceMarketing = () => {
                     Long-term partnerships built on results
                   </p>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Real Estate Developer Section */}
+          <section className="re-spotlight-section">
+            <div className="re-spotlight-container">
+              <div className="re-spotlight-header">
+                <span className="re-spotlight-tag">INDUSTRY SPOTLIGHT</span>
+                <h2 className="re-spotlight-heading">
+                  Performance Marketing for Real Estate Developers
+                </h2>
+                <p className="re-spotlight-subtext">
+                  Performance marketing built for real estate developers who need qualified buyer leads and measurable site visit bookings — not vanity metrics.
+                </p>
+              </div>
+
+              <div className="re-spotlight-grid">
+                {[
+                  {
+                    num: "01",
+                    title: "Hyper-Targeted Buyer Campaigns",
+                    content: "Google Ads, Meta, and YouTube campaigns targeted by location, income, property preferences, and buying stage — ensuring every rupee reaches serious property buyers."
+                  },
+                  {
+                    num: "02",
+                    title: "Real Estate Sales Funnel Mastery",
+                    content: "End-to-end funnel tracking from ad click to site visit, with lead scoring, CRM integration, and retargeting sequences that convert cold prospects into walk-ins."
+                  },
+                  {
+                    num: "03",
+                    title: "Conversion-Optimized Landing Pages",
+                    content: "Dedicated landing pages with project highlights, pricing, RERA details, and A/B tested CTAs — paired with WhatsApp chat and virtual tour embeds for maximum engagement."
+                  },
+                  {
+                    num: "04",
+                    title: "Data-Driven Lead Optimization",
+                    content: "Up to 60% lower cost per qualified lead with weekly performance reports, lead quality analysis, and budget optimization recommendations backed by real data."
+                  }
+                ].map((card, index) => (
+                  <div key={index} className={`re-spotlight-card ${activeRealEstate === index ? "active" : ""}`}>
+                    <button
+                      onClick={() => setActiveRealEstate(activeRealEstate === index ? null : index)}
+                      className="re-spotlight-card-header"
+                    >
+                      <div className="re-spotlight-card-left">
+                        <span className="re-spotlight-card-num">{card.num}</span>
+                        <h3 className="re-spotlight-card-title">{card.title}</h3>
+                      </div>
+                      <svg
+                        className={`re-spotlight-card-icon ${activeRealEstate === index ? "rotate" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    <div className={`re-spotlight-card-body ${activeRealEstate === index ? "expanded" : ""}`}>
+                      <p>{card.content}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </section>
