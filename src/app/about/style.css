@@ -1,0 +1,281 @@
+/**
+ * ----------------------------------------
+ * animation smooth-updown
+ * ----------------------------------------
+ */
+@-webkit-keyframes smooth-updown {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes smooth-updown {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.about-page-main {
+  background-color: rgb(255, 255, 255);
+  margin-top: -2rem;
+  border-radius: 0 0 32px 32px;
+  .aboutRow {
+    padding: 0 1rem;
+    height: fit-content;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  
+    > .row {
+      align-items: start;
+      .content-div {
+        padding-left: 0;
+        h1 {
+          position: relative;
+          font-size: 2.5rem;
+          font-weight: 600;
+          font-family: "Lato";
+          padding: 1rem 0 0 0;
+          text-align: start;
+        }
+        ul {
+          padding: 0 0px 0 15px;
+          width: 100%;
+          margin-bottom: 5px;
+          li {
+            font-size: 12px;
+            list-style: disc;
+          }
+        }
+        p {
+          color: #535353;
+          font-family: "Poppins";
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.5;
+          position: relative;
+          width: 100%;
+          margin: 5px 0;
+          &:last-child {
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -1.8rem;
+              left: 0.1rem;
+              height: 0.2rem;
+              width: 30%;
+              background: linear-gradient(to right, #00dbde, #fc00ff);
+              border-radius: 4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about-Page-right {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(242, 134, 134, 0);
+      position: absolute;
+      right: 0;
+      top: 0rem;
+      content: "";
+      z-index: 1;
+    }
+    iframe {
+      width: 100%;
+      height: 23rem;
+      position: relative;
+    }
+  }
+  .aboutCta {
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    margin-top: 5rem;
+    border-radius: 0 0 2rem 2rem;
+    padding: 3rem 0;
+    position: relative; 
+    z-index: 5;
+    margin-bottom: -3.25rem !important;
+    .row {
+      align-items: center;
+      justify-content: center;
+      .col-12 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .p {
+          font-size: 3rem;
+          font-weight: 600;
+          color: white;
+          width: 80%;
+          margin-bottom: 2rem;
+        }
+        a {
+          background-color: white;
+          color: black;
+          padding: 1rem 2rem;
+          font-weight: 400;
+          transition: 0.3s;
+          &:hover {
+            background-color: rgb(0, 0, 0);
+            padding: 1rem 2rem;
+            color: rgb(255, 255, 255);
+          }
+        }
+      }
+    }
+  }
+
+ 
+
+  .About-page-tabs {
+    font-family: "Poppins" !important;
+    .container {
+      padding: 0;
+    }
+
+    .left-col {
+      position: relative;
+      height: 20rem;
+      padding: 0;
+      h3 {
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        width: 80%;
+        font-family: "Poppins";
+        line-height: 40px;
+      }
+      .headings {
+        color: rgb(46, 46, 46);
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      p {
+        color: #7c7c7c;
+        padding-left: 0rem;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        font-family: "Poppins" !important;
+        width: 80%;
+      }
+      .main-tabs-section {
+        width: 100%;
+      }
+      .tab-contentd-div {
+        position: relative;
+        height: 200px;
+      }
+      .tabs-button-div {
+      }
+    }
+    .righ-col {
+      position: relative;
+      height: 20rem;
+
+      .img-div {
+        overflow: hidden;
+      }
+      img {
+        width: 80%;
+        object-fit: contain;
+        border-radius: 10px;  
+      }
+    }
+
+    a {
+      background-color: black;
+      transition: 0.3s;
+      color: white;
+      padding: 8px 20px;
+      border: 1px solid black;
+      text-transform: capitalize;
+      /* font-size: 14px;  */
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page-main .aboutCta{
+    margin-bottom: -1rem !important;
+  }
+  .about-page-main .About-page-tabs .righ-col img{
+    width: 100%;
+  }
+  .about-page-main .About-page-tabs .left-col .tab-contentd-div {
+    height: 240px;
+    position: relative;
+  }
+
+  .about-page-main .About-page-tabs .left-col h3 {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    font-family: "Poppins";
+    font-weight: 600;
+    line-height: 35px;
+    font-size: 1.5rem;
+  }
+
+  .about-page-main {
+    margin-bottom: -1rem !important;
+    .aboutRow {
+      padding: 10px;
+      height: fit-content;
+    }
+    .About-page-tabs {
+      padding: 0px 10px;
+
+      .left-col {
+        p {
+          width: 100%;
+        }
+      }
+      .righ-col {
+        margin-top: -1rem;
+      }
+      .container {
+        padding: 1rem;
+      }
+    }
+
+    .aboutCta {
+      .row {
+        .col-12 {
+          .p {
+            width: 100%;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
