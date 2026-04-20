@@ -21,8 +21,6 @@ const Quote = () => {
     services: [],
     otherService: "",
 
-    // Step 4: Budget & Expectations
-    budget: "",
     expectations: "",
   });
 
@@ -120,7 +118,6 @@ const Quote = () => {
           !formData.otherService.trim()
         )
           newErrors.otherService = "Please specify the service";
-        if (!formData.budget) newErrors.budget = "Budget selection is required";
         if (!formData.expectations.trim())
           newErrors.expectations = "Please describe your expectations";
         break;
@@ -287,9 +284,9 @@ const Quote = () => {
       case 2:
         return (
           <div className="step-content">
-            <h2 className="step-title">Services & Budget</h2>
+            <h2 className="step-title">Services & Expectations</h2>
             <p className="step-description">
-              {"Select all services you're interested in and your budget range"}
+              {"Select all services you're interested in and describe your expectations"}
             </p>
 
             <div className="services-grid sm:grid-cols-2">
@@ -333,63 +330,21 @@ const Quote = () => {
               </div>
             )}
 
-            <div className="budget-section mt-5">
-              <h3 className="section-subtitle">Budget Expectation</h3>
-              <p className="step-description">
-                {"Select your budget range for this project"}
-              </p>
-
-              <div className="budget-options">
-                {[
-                  { value: "₹10k - ₹25k", label: "₹10,000 - ₹25,000" },
-                  { value: "₹25k - ₹50k", label: "₹25,000 - ₹50,000" },
-                  { value: "₹50k - ₹1L", label: "₹50,000 - ₹1,00,000" },
-                  { value: "₹1L+", label: "₹1,00,000+" },
-                ].map((option) => (
-                  <label
-                    key={option.value}
-                    className={`budget-card ${
-                      formData.budget === option.value ? "selected" : ""
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="budget"
-                      value={option.value}
-                      checked={formData.budget === option.value}
-                      onChange={handleInputChange}
-                    />
-                    <div className="budget-content">
-                      <i className="ri-money-rupee-circle-line"></i>
-                      <span>{option.label}</span>
-                      {formData.budget === option.value && (
-                        <i className="ri-check-line check-icon"></i>
-                      )}
-                    </div>
-                  </label>
-                ))}
-              </div>
-
-              {errors.budget && (
-                <span className="error-message">{errors.budget}</span>
+            <div className="form-group full-width mt-5">
+              <label>
+                Describe Your Expectations <span className="required">*</span>
+              </label>
+              <textarea
+                name="expectations"
+                value={formData.expectations}
+                onChange={handleInputChange}
+                rows="6"
+                placeholder="Tell us about your vision, specific requirements, or any challenges you're facing..."
+                className={errors.expectations ? "error" : ""}
+              ></textarea>
+              {errors.expectations && (
+                <span className="error-message">{errors.expectations}</span>
               )}
-
-              <div className="form-group full-width mt-4">
-                <label>
-                  Describe Your Expectations <span className="required">*</span>
-                </label>
-                <textarea
-                  name="expectations"
-                  value={formData.expectations}
-                  onChange={handleInputChange}
-                  rows="6"
-                  placeholder="Tell us about your vision, specific requirements, or any challenges you're facing..."
-                  className={errors.expectations ? "error" : ""}
-                ></textarea>
-                {errors.expectations && (
-                  <span className="error-message">{errors.expectations}</span>
-                )}
-              </div>
             </div>
 
             {submitStatus && (

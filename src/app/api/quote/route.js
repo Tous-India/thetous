@@ -14,7 +14,7 @@ export async function POST(request) {
       services, otherService,
       projectType, approxPages, referenceWebsites, contentReady,
       marketingPlatforms, monthlyAdBudget, brandStage,
-      budget, expectations, timestamp, leadSource,
+      expectations, timestamp, leadSource,
     } = formData;
 
     if (!fullName || !email || !phone) {
@@ -42,23 +42,21 @@ export async function POST(request) {
 
     const calculateLeadScore = () => {
       let score = 0;
-      if (budget === "₹1L+") score += 70;
-      else if (budget === "₹50k - ₹1L") score += 55;
-      else if (budget === "₹25k - ₹50k") score += 35;
-      else if (budget === "₹10k - ₹25k") score += 20;
-      if (services.length >= 3) score += 30;
-      else if (services.length >= 2) score += 15;
+      if (services.length >= 4) score += 60;
+      else if (services.length >= 3) score += 45;
+      else if (services.length >= 2) score += 30;
+      else score += 15;
       return score;
     };
 
     const leadScore = calculateLeadScore();
-    const leadPriority = leadScore >= 70 ? " HOT" : leadScore >= 40 ? "🟡 WARM" : "🔵 COLD";
+    const leadPriority = leadScore >= 50 ? "🔴 HOT" : leadScore >= 30 ? "🟡 WARM" : "🔵 COLD";
     const servicesList = services.map((s) => (s === "Other" ? `Other: ${strip(otherService)}` : strip(s))).join(", ");
 
     const adminMailOptions = {
       from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
       to: "grow@thetous.com",
-      subject: `${leadPriority} New Quote Request from ${safeFullName} - ${budget}`,
+      subject: `${leadPriority} New Quote Request from ${safeFullName}`,
       html: `<!DOCTYPE html><html><head><style>
         body{font-family:'Poppins',Arial,sans-serif;line-height:1.6;color:#333}
         .container{max-width:700px;margin:0 auto;background:#f5f5f5}
@@ -114,10 +112,6 @@ export async function POST(request) {
               <div class="info-item"><div class="info-label">Brand Stage</div><div class="info-value">${strip(brandStage)}</div></div>
             </div></div>` : ""}
             <div class="section">
-              <div class="section-title">💰 Budget</div>
-              <div class="info-grid"><div class="info-item"><div class="info-label">Budget Range</div><div class="info-value" style="font-size:18px;font-weight:700;color:#4caf50">${strip(budget)}</div></div></div>
-            </div>
-            <div class="section">
               <div class="section-title">📝 Expectations</div>
               <div class="expectations-box"><div class="info-label">Client Expectations</div><div class="info-value">${safeExpectations}</div></div>
             </div>
@@ -133,7 +127,7 @@ export async function POST(request) {
               <a href="https://wa.me/${safePhone.replace(/\D/g, "")}" class="cta-button" style="background:#25D366;margin-left:10px">💬 WhatsApp</a>
             </div>
           </div>
-          <div class="footer"><p>Quote request from The Tous website. Score based on budget and services.</p></div>
+          <div class="footer"><p>Quote request from The Tous website. Score based on number of services.</p></div>
         </div>
       </body></html>`,
     };
