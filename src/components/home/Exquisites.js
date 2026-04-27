@@ -76,19 +76,15 @@ const Exquisites = () => {
                   <li>
                     <h2 className="inner-heading">{card.title}</h2>
                   </li>
-                  <li style={{ fontSize: "13px", color: "#777", fontStyle: "italic", marginBottom: "0.25rem" }}>
+                  <li style={{ fontSize: "13px", color: "#777", fontStyle: "italic", marginBottom: "0.5rem" }}>
                     {card.oneliner}
                   </li>
-                  <li style={{ textAlign: "left" }}>
-                    <div style={{ margin: "0.5rem 0 0 0" }}>
-                      {card.points.map((point, i) => (
-                        <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "6px", fontSize: "12px", lineHeight: "1.8", opacity: 0.7 }}>
-                          <span style={{ flexShrink: 0, marginTop: "1px" }}>•</span>
-                          <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{point}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </li>
+                  {card.points.map((point, i) => (
+                    <li key={i} style={{ display: "flex", alignItems: "center", justifyContent: "flex-start", gap: "6px", fontSize: "12px", color: "#444", opacity: 1, lineHeight: "2", textAlign: "left", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                      <span style={{ flexShrink: 0, fontSize: "14px" }}>•</span>
+                      <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{point}</span>
+                    </li>
+                  ))}
                   <li style={{ marginTop: "1.5rem" }}>
                     <Link
                       href={card.href}
