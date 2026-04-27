@@ -7,7 +7,7 @@ const Banner = () => {
     <section className="home-banner-main-section">
       <div className="container">
         <div className="row-div">
-          <div className="inner-div">
+          <div className="inner-div" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
             <h1 style={{ fontFamily: "'Poppins', sans-serif" }}>
               High-converting websites and Shopify stores for D2C and B2B brands.
             </h1>
@@ -19,12 +19,12 @@ const Banner = () => {
               color: "#555",
               maxWidth: "600px",
               lineHeight: "1.7",
-              margin: "1.2rem 0 2rem 0",
+              margin: "1.2rem auto 2rem auto",
             }}>
               Custom web development, Shopify builds, and CRM solutions — designed to load fast, convert visitors, and scale with your business.
             </p>
 
-            <div className="banner-ctas" style={{ display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" }}>
+            <div className="banner-ctas" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap" }}>
               <Link
                 href="/contact"
                 style={{
