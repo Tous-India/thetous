@@ -1636,7 +1636,7 @@ footer {
       }
 
       > p {
-        line-height: 28px;
+        line-height: 20px !important;
         color: rgb(98, 98, 98);
         font-size: 13px;
       }
@@ -1670,10 +1670,15 @@ footer {
         }
 
         p {
+          font-size: 12px !important;
+          line-height: 20px !important;
+
           span {
+            font-size: 12px !important;
           }
 
           strong {
+            font-size: 13px !important;
           }
         }
       }
