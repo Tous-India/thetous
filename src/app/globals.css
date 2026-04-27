@@ -1818,6 +1818,10 @@ footer {
             width: 20%;
           }
 
+          p {
+            line-height: 20px !important;
+          }
+
           h5 {
             text-transform: capitalize;
             color: #000;

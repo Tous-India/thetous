@@ -80,7 +80,7 @@ const WhyWeUs = () => {
                     fontSize: "13px",
                     fontFamily: "'Poppins', sans-serif",
                     color: "#555",
-                    lineHeight: "20px",
+                    lineHeight: "20px !important",
                     margin: 0,
                   }}>
                     {step.description}
