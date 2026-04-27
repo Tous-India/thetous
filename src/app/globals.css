@@ -1638,6 +1638,7 @@ footer {
       > p {
         line-height: 28px;
         color: rgb(98, 98, 98);
+        font-size: 13px;
       }
 
       .client-info-div {
