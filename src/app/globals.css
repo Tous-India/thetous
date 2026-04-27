@@ -506,7 +506,7 @@ select {
       font-size: 4vw;
       position: relative;
       width: 100%;
-      text-align: start;
+      text-align: center;
       font-weight: 600;
       display: flex;
       align-items: center;
@@ -1016,8 +1016,8 @@ select {
 }
 
 .sliders-home-page {
-  margin-top: 4rem;
-  margin-bottom: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 
   > .homeClients {
     position: relative;
@@ -1846,7 +1846,7 @@ footer {
 }
 
 p {
-  line-height: 20px !important;
+  line-height: 30px !important;
 
   strong {
     line-height: 20px !important;
