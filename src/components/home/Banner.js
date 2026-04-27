@@ -8,7 +8,7 @@ const Banner = () => {
       <div className="container">
         <div className="row-div">
           <div className="inner-div" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <h1 style={{ fontFamily: "'Poppins', sans-serif" }}>
+            <h1 style={{ fontFamily: "'Poppins', sans-serif", marginTop: "2.5rem" }}>
               High-converting websites and Shopify stores for D2C and B2B brands.
             </h1>
 
