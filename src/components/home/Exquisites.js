@@ -76,7 +76,7 @@ const Exquisites = () => {
                   <li>
                     <h2 className="inner-heading">{card.title}</h2>
                   </li>
-                  <li style={{ fontSize: "13px", color: "#777", fontStyle: "italic", marginBottom: "0.5rem", textAlign: "left" }}>
+                  <li style={{ fontSize: "13px", color: "#777", fontStyle: "italic", marginBottom: "0.5rem", textAlign: "center" }}>
                     {card.oneliner}
                   </li>
                   {card.points.map((point, i) => (
