@@ -24,7 +24,7 @@ const Banner = () => {
               Custom web development, Shopify builds, and CRM solutions — designed to load fast, convert visitors, and scale with your business.
             </p>
 
-            <div className="banner-ctas" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap" }}>
+            <div className="banner-ctas" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1rem", width: "100%", maxWidth: "360px" }}>
               <Link
                 href="/contact"
                 style={{
@@ -36,8 +36,10 @@ const Banner = () => {
                   fontWeight: 600,
                   fontSize: "1rem",
                   textDecoration: "none",
-                  display: "inline-block",
-                  whiteSpace: "nowrap",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "100%",
                   position: "static",
                   top: "auto",
                 }}
@@ -53,11 +55,11 @@ const Banner = () => {
                   fontWeight: 600,
                   fontSize: "1rem",
                   textDecoration: "none",
-                  display: "inline-flex",
+                  display: "flex",
                   alignItems: "center",
+                  justifyContent: "center",
                   gap: "4px",
-                  borderBottom: "1px solid #000",
-                  paddingBottom: "2px",
+                  width: "100%",
                   position: "static",
                   top: "auto",
                 }}
