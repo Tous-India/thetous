@@ -6,23 +6,25 @@ const cards = [
   {
     icon: "ri-code-s-slash-line",
     title: "Custom Web Development",
+    oneliner: "For brands that need more than a template.",
     points: [
-      "Conversion-focused websites for D2C and B2B brands",
-      "Built on modern stacks — Next.js, React, Node.js",
-      "Fast, SEO-ready, and mobile-first",
-      "Custom design — no templates, no shortcuts",
+      "Built on Next.js, React, and Node",
+      "Mobile-first, SEO-ready, fast loading",
+      "CMS integration (Sanity, Strapi, WordPress)",
+      "Lead forms, analytics, and tracking setup",
     ],
     href: "/tech-solution/web-development",
     col: "first",
   },
   {
-    icon: "ri-store-3-line",
+    icon: "ri-shopping-bag-line",
     title: "Shopify Development",
+    oneliner: "From new stores to full migrations.",
     points: [
-      "Full Shopify store builds and migrations",
-      "Custom themes and app integrations",
-      "Checkout optimization for higher conversions",
-      "Headless Shopify for brands that need full control",
+      "Custom themes built from scratch",
+      "Migration from WooCommerce, Magento, or other platforms",
+      "Checkout, app, and payment gateway integrations",
+      "Speed and conversion optimization",
     ],
     href: "/tech-solution/shopify-development",
     col: "second",
@@ -30,11 +32,12 @@ const cards = [
   {
     icon: "ri-dashboard-line",
     title: "Custom CRM & Web Apps",
+    oneliner: "Built for your team's exact workflow.",
     points: [
-      "Internal tools and dashboards built for your workflow",
-      "CRMs tailored to your sales and ops process",
-      "Scalable web apps that grow with your business",
-      "For teams that have outgrown off-the-shelf tools",
+      "Internal dashboards and admin panels",
+      "Sales, inventory, and operations CRMs",
+      "Role-based access and reporting",
+      "Integrates with tools you already use",
     ],
     href: "/tech-solution/web-development",
     col: "third",
@@ -72,6 +75,9 @@ const Exquisites = () => {
                   </li>
                   <li>
                     <h2 className="inner-heading">{card.title}</h2>
+                  </li>
+                  <li style={{ fontSize: "13px", color: "#777", fontStyle: "italic", marginBottom: "0.25rem" }}>
+                    {card.oneliner}
                   </li>
                   <li style={{ textAlign: "left" }}>
                     <ul style={{ paddingLeft: "1.2rem", margin: "0.5rem 0 0 0" }}>
