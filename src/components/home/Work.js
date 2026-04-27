@@ -108,7 +108,7 @@ const Work = () => {
                 {projects.map((project, index) => (
                   <SwiperSlide key={index}>
                     <Link href={`/work/${project.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
-                      <h4>{project.title}</h4>
+                      <h4 style={{ textAlign: "center" }}>{project.title}</h4>
                       <div className="inner-div">
                         <Image
                           src={project.image}
