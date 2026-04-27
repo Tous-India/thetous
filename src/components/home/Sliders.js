@@ -77,21 +77,7 @@ const bottomSliderImages = [
   kb,
 ];
 
-const sliderConfigs = [
-  {
-    className: "swiper-container swiper--top",
-    images: topSliderImages,
-    autoplay: AUTOPLAY_CONFIG,
-  },
-  {
-    className: "swiper-container swiper--bottom",
-    images: bottomSliderImages,
-    autoplay: {
-      ...AUTOPLAY_CONFIG,
-      reverseDirection: true,
-    },
-  },
-];
+const allImages = [...topSliderImages, ...bottomSliderImages];
 
 const Sliders = () => {
   return (
@@ -104,26 +90,23 @@ const Sliders = () => {
         <div className="container-fluid">
           <div className="row justify-content-center">
             <main>
-              {sliderConfigs.map((config, index) => (
-                <Swiper
-                  key={index}
-                  className={config.className}
-                  autoplay={config.autoplay}
-                  {...SWIPER_CONFIG}
-                >
-                  {config.images.map((image, imgIndex) => (
-                    <SwiperSlide key={imgIndex}>
-                      <Image
-                        src={image}
-                        {...IMAGE_CONFIG}
-                        alt=""
-                        width={""}
-                        height={""}
-                      />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              ))}
+              <Swiper
+                className="swiper-container swiper--top"
+                autoplay={AUTOPLAY_CONFIG}
+                {...SWIPER_CONFIG}
+              >
+                {allImages.map((image, imgIndex) => (
+                  <SwiperSlide key={imgIndex}>
+                    <Image
+                      src={image}
+                      {...IMAGE_CONFIG}
+                      alt=""
+                      width={""}
+                      height={""}
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </main>
           </div>
         </div>
