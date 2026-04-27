@@ -6,24 +6,36 @@ const cards = [
   {
     icon: "ri-code-s-slash-line",
     title: "Custom Web Development",
-    description:
-      "Conversion-focused websites for D2C and B2B brands. Built on modern stacks (Next.js, React, Node). Fast, SEO-ready, mobile-first.",
+    points: [
+      "Conversion-focused websites for D2C and B2B brands",
+      "Built on modern stacks — Next.js, React, Node.js",
+      "Fast, SEO-ready, and mobile-first",
+      "Custom design — no templates, no shortcuts",
+    ],
     href: "/tech-solution/web-development",
     col: "first",
   },
   {
     icon: "ri-store-3-line",
     title: "Shopify Development",
-    description:
-      "Full Shopify store builds and migrations. Custom themes, app integrations, checkout optimization, and headless setups for brands that need more than a template.",
+    points: [
+      "Full Shopify store builds and migrations",
+      "Custom themes and app integrations",
+      "Checkout optimization for higher conversions",
+      "Headless Shopify for brands that need full control",
+    ],
     href: "/tech-solution/shopify-development",
     col: "second",
   },
   {
     icon: "ri-dashboard-line",
     title: "Custom CRM & Web Apps",
-    description:
-      "Internal tools, dashboards, and CRMs built for your team's exact workflow. We've shipped web apps for businesses that outgrew off-the-shelf tools.",
+    points: [
+      "Internal tools and dashboards built for your workflow",
+      "CRMs tailored to your sales and ops process",
+      "Scalable web apps that grow with your business",
+      "For teams that have outgrown off-the-shelf tools",
+    ],
     href: "/tech-solution/web-development",
     col: "third",
   },
@@ -61,9 +73,9 @@ const Exquisites = () => {
                   <li>
                     <h2 className="inner-heading">{card.title}</h2>
                   </li>
-                  <li style={{ fontSize: "0.95rem", color: "#555", lineHeight: "1.7", marginTop: "0.5rem" }}>
-                    {card.description}
-                  </li>
+                  {card.points.map((point, i) => (
+                    <li key={i}>{point}</li>
+                  ))}
                   <li style={{ marginTop: "1.5rem" }}>
                     <Link
                       href={card.href}
