@@ -126,6 +126,7 @@ const Work = () => {
                         lineHeight: "1.6",
                         marginTop: "0.6rem",
                         padding: "0 4px",
+                        textAlign: "center",
                       }}>
                         {project.description}
                       </p>
