@@ -3,58 +3,53 @@ import Link from "next/link";
 import Image from "next/image";
 import "swiper/css/pagination";
 import "swiper/css";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Images
-
-import Img1 from "../../../public/home/work/SKA orion.jpg";
-import Img2 from "../../../public/home/work/TARC.jpg";
 import Img3 from "../../../public/home/work/1742808668.webp";
 import Img4 from "../../../public/home/work/1731492385.webp";
-import Img5 from "../../../public/home/work/1731492367.webp";
 import Img6 from "../../../public/home/work/1726133585.webp";
-import Img7 from "../../../public/home/work/1731492317.webp";
-import Img8 from "../../../public/home/work/1731492299.webp";
-import Img9 from "../../../public/home/work/m3m-panipat.webp";
-import Img10 from "../../../public/home/work/godrej.jpg";
 import Img11 from "../../../public/home/work/1742644830.webp";
 import Img12 from "../../../public/home/work/1742807329.webp";
 import Img13 from "../../../public/home/work/silvago.png";
 
-
-// Project data with case study links
 const projects = [
-  // { title: "M3M Panipat", image: Img9, link: "#" },
-  { title: "M3M Panipat", image: Img9},
-  { title: "Godrej", image: Img10},
-  { title: "Silvago", image: Img13},
-  // {
-  //   title: "Dhirsons Jewellery House",
-  //   image: Img3,
-  //   link: "/case-studies/dhirsons-jewellery-house",
-  // },
-  { title: "Luxeliv", image: Img4},
-  // { title: "Silvago", image: Img5, link: "/case-studies/silvago" },
-  // { title: "Prozvofit", image: Img6, link: "/case-studies/prozvofit" },
-  // {
-  //   title: "Crossroads Hospital",
-  //   image: Img7,
-  //   link: "/case-studies/crossroads-hospital",
-  // },
-  // { title: "Drym Foods", image: Img8, link: "/" },
-  { title: "SKA Orion", image: Img1},
-  { title: "TARC", image: Img2},
-  // {
-  //   title: "Executive Cars",
-  //   image: Img11,
-  //   link: "/case-studies/executive-cars",
-  // },
-  // {
-  //   title: "Oh My Pet Grooming",
-  //   image: Img12,
-  //   link: "/case-studies/oh-my-pet-grooming",
-  // },
+  {
+    title: "Silvago",
+    slug: "silvago",
+    description: "Premium silver jewelry D2C brand. Built custom Shopify store with 200+ SKUs and mobile-optimized checkout.",
+    image: Img13,
+  },
+  {
+    title: "Dhirsons Jewellery House",
+    slug: "dhirsons-jewellery-house",
+    description: "Legacy jewellery brand moving online. Full e-commerce build with product configurator and WhatsApp checkout integration.",
+    image: Img3,
+  },
+  {
+    title: "Luxeliv",
+    slug: "luxeliv",
+    description: "Luxury lifestyle brand. Designed and developed a high-converting product landing page with editorial-style layout.",
+    image: Img4,
+  },
+  {
+    title: "Prozvofit",
+    slug: "prozvofit",
+    description: "D2C fitness supplement brand. Built Shopify store with subscription model, upsell flows, and performance tracking.",
+    image: Img6,
+  },
+  {
+    title: "Executive Cars",
+    slug: "executive-cars",
+    description: "Premium car rental service. Built a booking-focused website with real-time availability and CRM integration.",
+    image: Img11,
+  },
+  {
+    title: "Oh My Pet Grooming",
+    slug: "oh-my-pet-grooming",
+    description: "Pet grooming service brand. Built appointment booking system, local SEO setup, and Google Ads landing pages.",
+    image: Img12,
+  },
 ];
 
 const Work = () => {
@@ -62,7 +57,6 @@ const Work = () => {
     <div
       className="work-home-section"
       data-aos="fade-up"
-      // data-aos-anchor-placement="bottom-bottom"
       data-aos-offset="100"
       data-aos-duration="2000"
     >
@@ -82,17 +76,16 @@ const Work = () => {
                 </Link>
               </div>
               <h4>
-                The Tous work by combining creativity, data-driven insights, and
-                effective strategies. We create digital solutions that engage,
-                convert, and elevate your brand’s presence online.
+                Websites, Shopify stores, and web apps we&apos;ve shipped for real brands — with results to show for it.
               </h4>
-              <Link href={"/quote"} className="add-your-project">
+              <Link href="/quote" className="add-your-project">
                 Add Your Project <i className="ri-arrow-right-up-line"></i>
               </Link>
             </div>
           </div>
         </div>
       </div>
+
       <div className="container-fluid">
         <div className="row mt-4">
           <div className="col-12">
@@ -100,46 +93,43 @@ const Work = () => {
               <Swiper
                 className="mySwiper"
                 speed={1500}
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
+                autoplay={{ delay: 2500, disableOnInteraction: false }}
                 freeMode={true}
-                pagination={{
-                  clickable: true,
-                }}
+                pagination={{ clickable: true }}
                 loop={true}
                 navigation={true}
                 breakpoints={{
-                  0: {
-                    slidesPerView: 1.25,
-                    spaceBetween: 10,
-                  },
-                  720: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                  },
-                  1024: {
-                    slidesPerView: 3.25,
-                    spaceBetween: 10,
-                  },
+                  0: { slidesPerView: 1.25, spaceBetween: 10 },
+                  720: { slidesPerView: 2, spaceBetween: 10 },
+                  1024: { slidesPerView: 3.25, spaceBetween: 10 },
                 }}
                 modules={[Autoplay]}
               >
                 {projects.map((project, index) => (
                   <SwiperSlide key={index}>
-                    <h4>{project.title}</h4>
-                    <div className="inner-div">
-                      {/* <Link href={project.link}> */}
+                    <Link href={`/work/${project.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
+                      <h4>{project.title}</h4>
+                      <div className="inner-div">
                         <Image
                           src={project.image}
                           alt={project.title}
-                          width={"100%"}
-                          height={"100%"}
+                          width={600}
+                          height={400}
                           priority
+                          style={{ width: "100%", height: "100%", objectFit: "cover" }}
                         />
-                      {/* </Link> */}
-                    </div>
+                      </div>
+                      <p style={{
+                        fontFamily: "'Poppins', sans-serif",
+                        fontSize: "12px",
+                        color: "#555",
+                        lineHeight: "1.6",
+                        marginTop: "0.6rem",
+                        padding: "0 4px",
+                      }}>
+                        {project.description}
+                      </p>
+                    </Link>
                   </SwiperSlide>
                 ))}
               </Swiper>
