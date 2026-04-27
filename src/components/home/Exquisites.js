@@ -80,13 +80,14 @@ const Exquisites = () => {
                     {card.oneliner}
                   </li>
                   <li style={{ textAlign: "left" }}>
-                    <ul style={{ paddingLeft: "1.2rem", margin: "0.5rem 0 0 0" }}>
+                    <div style={{ margin: "0.5rem 0 0 0" }}>
                       {card.points.map((point, i) => (
-                        <li key={i} style={{ listStyleType: "disc", fontSize: "12px", lineHeight: "1.8", opacity: 0.7, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                          {point}
-                        </li>
+                        <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: "6px", fontSize: "12px", lineHeight: "1.8", opacity: 0.7 }}>
+                          <span style={{ flexShrink: 0, marginTop: "1px" }}>•</span>
+                          <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{point}</span>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </li>
                   <li style={{ marginTop: "1.5rem" }}>
                     <Link
