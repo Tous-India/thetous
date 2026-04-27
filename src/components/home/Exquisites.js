@@ -1,18 +1,41 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
-import ts from "../../../public/ts.png";
-import ms from "../../../public/ms.png";
-import bs from "../../../public/bs.png";
+const cards = [
+  {
+    icon: "ri-code-s-slash-line",
+    title: "Custom Web Development",
+    description:
+      "Conversion-focused websites for D2C and B2B brands. Built on modern stacks (Next.js, React, Node). Fast, SEO-ready, mobile-first.",
+    href: "/tech-solution/web-development",
+    col: "first",
+  },
+  {
+    icon: "ri-store-3-line",
+    title: "Shopify Development",
+    description:
+      "Full Shopify store builds and migrations. Custom themes, app integrations, checkout optimization, and headless setups for brands that need more than a template.",
+    href: "/tech-solution/shopify-development",
+    col: "second",
+  },
+  {
+    icon: "ri-dashboard-line",
+    title: "Custom CRM & Web Apps",
+    description:
+      "Internal tools, dashboards, and CRMs built for your team's exact workflow. We've shipped web apps for businesses that outgrew off-the-shelf tools.",
+    href: "/tech-solution/web-development",
+    col: "third",
+  },
+];
+
 const Exquisites = () => {
   return (
     <div className="exquisites-home-page">
       <div className="container">
         <div className="heading-div">
           <div id="word-heading" className="work-heading-home row-div">
-            <h2 className="main-section-heading">Exquisites</h2>
+            <h2 className="main-section-heading">What We Build</h2>
             <Link href="/contact">
               <button>
                 <span className="btn-span-1">Contact Us</span>
@@ -23,62 +46,47 @@ const Exquisites = () => {
             </Link>
           </div>
           <h4>
-            Unlock your brand&apos;s potential with tailored digital marketing
-            strategies. We deliver results that resonate and drive growth.
+            We build websites, Shopify stores, and custom web apps that are fast, scalable, and designed to convert.
           </h4>
         </div>
+
         <div className="row justify-content-center">
-          <div className="col-lg-4 col-sm-12 first">
-            <Link className="inner-div" href={"/brand-solution"}>
-              <ul>
-                <li>
-                  <Image src={bs} alt="Service1" width={70} height={70} />
-                </li>
-                <li>
-                  <h2 className="inner-heading">Brand Solutions</h2>
-                </li>
-                <li>Social Media Management</li>
-                <li>Original Content & Copywriting</li>
-                <li>Video Editing & Animation</li>
-                <li>Model & Product Photography</li>
-                <li>New Brand Launch & Rebranding</li>
-              </ul>
-            </Link>
-          </div>
-          <div className="col-lg-4 col-sm-12 second">
-            <Link className="inner-div" href={"/tech-solution"}>
-              <ul>
-                <li>
-                  <Image src={ts} alt="Service1" width={70} height={70} />
-                </li>
-                <li>
-                  <h2 className="inner-heading">Tech Solutions</h2>
-                </li>
-                <li>Custom Web Development</li>
-                <li>Web Personalization</li>
-                <li>E-Commerce</li>
-                <li>Email Marketing</li>
-                <li>UI/UX</li>
-              </ul>
-            </Link>
-          </div>
-          <div className="col-lg-4 col-sm-12 third">
-            <Link className="inner-div" href={"/media-solution"}>
-              <ul>
-                <li>
-                  <Image src={ms} alt="Service1" width={70} height={70} />
-                </li>
-                <li>
-                  <h2 className="inner-heading">Media Solutions</h2>
-                </li>
-                <li>Media Buying</li>
-                <li>Media Planning</li>
-                <li>Performance Marketing</li>
-                <li>Search Engine Optimization</li>
-                <li>Conversation Rate Optimization</li>
-              </ul>
-            </Link>
-          </div>
+          {cards.map((card) => (
+            <div key={card.col} className={`col-lg-4 col-sm-12 ${card.col}`}>
+              <div className="inner-div">
+                <ul>
+                  <li style={{ fontSize: "3rem", lineHeight: 1 }}>
+                    <i className={card.icon}></i>
+                  </li>
+                  <li>
+                    <h2 className="inner-heading">{card.title}</h2>
+                  </li>
+                  <li style={{ fontSize: "0.95rem", color: "#555", lineHeight: "1.7", marginTop: "0.5rem" }}>
+                    {card.description}
+                  </li>
+                  <li style={{ marginTop: "1.5rem" }}>
+                    <Link
+                      href={card.href}
+                      style={{
+                        fontFamily: "'Poppins', sans-serif",
+                        fontWeight: 600,
+                        fontSize: "0.9rem",
+                        color: "#000",
+                        textDecoration: "none",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "4px",
+                        borderBottom: "1px solid #000",
+                        paddingBottom: "2px",
+                      }}
+                    >
+                      Learn more <i className="ri-arrow-right-line"></i>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
