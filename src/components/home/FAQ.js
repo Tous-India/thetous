@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const faqs = [
   {
@@ -36,6 +36,63 @@ const faqs = [
   },
 ];
 
+const FAQItem = ({ faq, isOpen, onToggle }) => {
+  const contentRef = useRef(null);
+
+  return (
+    <div style={{ borderBottom: "1px solid #e5e5e5", padding: "1rem 0" }}>
+      <button
+        onClick={onToggle}
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          background: "none",
+          border: "none",
+          padding: 0,
+          cursor: "pointer",
+          textAlign: "left",
+          gap: "1rem",
+        }}
+      >
+        <span style={{ fontSize: "15px", fontWeight: 600, color: "#000", lineHeight: "1.5" }}>
+          {faq.q}
+        </span>
+        <i
+          className="ri-add-line"
+          style={{
+            fontSize: "1.2rem",
+            flexShrink: 0,
+            color: "#000",
+            transition: "transform 0.3s ease",
+            transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+          }}
+        ></i>
+      </button>
+
+      <div
+        ref={contentRef}
+        style={{
+          maxHeight: isOpen ? contentRef.current?.scrollHeight + "px" : "0px",
+          overflow: "hidden",
+          transition: "max-height 0.35s ease",
+        }}
+      >
+        <p style={{
+          margin: "0.75rem 0 0 0",
+          fontSize: "13px",
+          color: "#555",
+          lineHeight: "1.8",
+          paddingRight: "2rem",
+        }}>
+          {faq.a}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -44,53 +101,17 @@ const FAQ = () => {
   return (
     <div style={{ padding: "4rem 0", fontFamily: "'Poppins', sans-serif" }}>
       <div className="container">
-        <h2 className="main-section-heading" style={{ marginBottom: "2rem" }}>
+        <h2 className="main-section-heading" style={{ marginBottom: "2rem", textAlign: "center" }}>
           Frequently Asked Questions
         </h2>
-        <div style={{ maxWidth: "780px" }}>
+        <div style={{ maxWidth: "780px", margin: "0 auto" }}>
           {faqs.map((faq, i) => (
-            <div
+            <FAQItem
               key={i}
-              style={{
-                borderBottom: "1px solid #e5e5e5",
-                padding: "1rem 0",
-              }}
-            >
-              <button
-                onClick={() => toggle(i)}
-                style={{
-                  width: "100%",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  background: "none",
-                  border: "none",
-                  padding: 0,
-                  cursor: "pointer",
-                  textAlign: "left",
-                  gap: "1rem",
-                }}
-              >
-                <span style={{ fontSize: "15px", fontWeight: 600, color: "#000", lineHeight: "1.5" }}>
-                  {faq.q}
-                </span>
-                <i
-                  className={openIndex === i ? "ri-subtract-line" : "ri-add-line"}
-                  style={{ fontSize: "1.2rem", flexShrink: 0, color: "#000" }}
-                ></i>
-              </button>
-              {openIndex === i && (
-                <p style={{
-                  margin: "0.75rem 0 0 0",
-                  fontSize: "13px",
-                  color: "#555",
-                  lineHeight: "1.8",
-                  paddingRight: "2rem",
-                }}>
-                  {faq.a}
-                </p>
-              )}
-            </div>
+              faq={faq}
+              isOpen={openIndex === i}
+              onToggle={() => toggle(i)}
+            />
           ))}
         </div>
       </div>
