@@ -38,6 +38,8 @@ const Banner = () => {
                   textDecoration: "none",
                   display: "inline-block",
                   whiteSpace: "nowrap",
+                  position: "static",
+                  top: "auto",
                 }}
               >
                 Book a Free Strategy Call
@@ -56,6 +58,8 @@ const Banner = () => {
                   gap: "4px",
                   borderBottom: "1px solid #000",
                   paddingBottom: "2px",
+                  position: "static",
+                  top: "auto",
                 }}
               >
                 See Our Work <i className="ri-arrow-right-line"></i>
@@ -66,7 +70,7 @@ const Banner = () => {
               fontFamily: "'Poppins', sans-serif",
               fontSize: "0.82rem",
               color: "#999",
-              marginTop: "1.5rem",
+              marginTop: "2rem",
               letterSpacing: "0.01em",
             }}>
               60+ websites delivered since 2018 · D2C · B2B · Ecommerce
