@@ -76,11 +76,11 @@ const Exquisites = () => {
                   <li>
                     <h2 className="inner-heading">{card.title}</h2>
                   </li>
-                  <li style={{ fontSize: "13px", color: "#777", fontStyle: "italic", marginBottom: "0.5rem" }}>
+                  <li style={{ fontSize: "13px", color: "#777", fontStyle: "italic", marginBottom: "0.5rem", textAlign: "left" }}>
                     {card.oneliner}
                   </li>
                   {card.points.map((point, i) => (
-                    <li key={i} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "6px", fontSize: "12px", color: "#444", opacity: 1, lineHeight: "2", textAlign: "center" }}>
+                    <li key={i} style={{ display: "flex", alignItems: "center", justifyContent: "flex-start", gap: "6px", fontSize: "12px", color: "#444", opacity: 1, lineHeight: "2", textAlign: "left" }}>
                       <span style={{ flexShrink: 0, fontSize: "14px" }}>•</span>
                       <span>{point}</span>
                     </li>
