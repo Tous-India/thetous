@@ -82,7 +82,7 @@ const Exquisites = () => {
                   <li style={{ textAlign: "left" }}>
                     <ul style={{ paddingLeft: "1.2rem", margin: "0.5rem 0 0 0" }}>
                       {card.points.map((point, i) => (
-                        <li key={i} style={{ listStyleType: "disc", fontSize: "14px", lineHeight: "1.8", opacity: 0.7, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                        <li key={i} style={{ listStyleType: "disc", fontSize: "12px", lineHeight: "1.8", opacity: 0.7, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
                           {point}
                         </li>
                       ))}
