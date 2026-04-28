@@ -15,6 +15,7 @@ import nestloom from "../../../public/home/clients/nest.webp";
 import silvago from "../../../public/home/clients/silvago.webp";
 import pearls from "../../../public/home/clients/pearls.webp";
 import kb from "../../../public/home/clients/kb.webp";
+import omp from "../../../public/home/clients/omp.webp";
 
 // Configuration objects
 const IMAGE_CONFIG = {
@@ -59,16 +60,16 @@ const AUTOPLAY_CONFIG = {
 const topSliderImages = [
   luxeliv,
   bioderma,
-  fnp,
   prozvofit,
   luxeliv,
   bioderma,
-  fnp,
   prozvofit,
+  omp,
 ];
 
 const bottomSliderImages = [
   nestloom,
+  omp,
   silvago,
   pearls,
   kb,

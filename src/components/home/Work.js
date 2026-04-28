@@ -64,9 +64,9 @@ const Work = () => {
               <h4>
                 Websites, Shopify stores, and web apps we&apos;ve shipped for real brands — with results to show for it.
               </h4>
-              <Link href="/quote" className="add-your-project">
+              {/* <Link href="/quote" className="add-your-project">
                 Add Your Project <i className="ri-arrow-right-up-line"></i>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

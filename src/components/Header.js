@@ -1,31 +1,31 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../public/black-the-tous.png";
+import Logo from "../../public/black-the-tous-new.png";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import whatsapp from "../../public/whatsapp.png";
 import phone from "../../public/phone-call.png";
 // brand
-import copywriter from "../../public/services/brand/meta-ads.webp"; //default
-import socialMedia from "../../public/services/brand/social-media-management.webp";
-import performanceMarketing from "../../public/services/brand/performance-marketing.webp";
-import payPerClick from "../../public/services/brand/google-ads.webp";
-import seo from "../../public/services/brand/seo.webp";
-// media
-import modelShoot from "../../public/services/media/model-shoot.webp";
-import productShoot from "../../public/services/media/producctt shooot.webp";
-import printMedia from "../../public/services/media/print-media.webp";
-import videoEditing from "../../public/services/media/video generation.webp";
-import graphicDesign from "../../public/services/media/graphic designing.webp";
+// import copywriter from "../../public/services/brand/meta-ads.webp"; //default
+// import socialMedia from "../../public/services/brand/social-media-management.webp";
+// import performanceMarketing from "../../public/services/brand/performance-marketing.webp";
+// import payPerClick from "../../public/services/brand/google-ads.webp";
+// import seo from "../../public/services/brand/seo.webp";
+// // media
+// import modelShoot from "../../public/services/media/model-shoot.webp";
+// import productShoot from "../../public/services/media/producctt shooot.webp";
+// import printMedia from "../../public/services/media/print-media.webp";
+// import videoEditing from "../../public/services/media/video generation.webp";
+// import graphicDesign from "../../public/services/media/graphic designing.webp";
 
-// tech
-import websiteDesign from "../../public/services/tech/website-design.webp";
-import whatsappMarketing from "../../public/services/tech/whatsappmarketing.webp";
-import chatBot from "../../public/services/tech/chatbot.webp";
-import automation from "../../public/services/tech/automation.webp";
-import ecommerce from "../../public/services/tech/ecommerce.webp";
-import webAndApp from "../../public/services/tech/webdev.webp";
+// // tech
+// import websiteDesign from "../../public/services/tech/website-design.webp";
+// import whatsappMarketing from "../../public/services/tech/whatsappmarketing.webp";
+// import chatBot from "../../public/services/tech/chatbot.webp";
+// import automation from "../../public/services/tech/automation.webp";
+// import ecommerce from "../../public/services/tech/ecommerce.webp";
+// import webAndApp from "../../public/services/tech/webdev.webp";
 
 const Header = () => {
   // Phone Menu
@@ -48,9 +48,7 @@ const Header = () => {
 
   // MenuList with Image Change
 
-  const handleMenuItemEnter = (img) => {
-    setImageSrc(img);
-  };
+ 
 
   // Hover on Heading with opacity
 
@@ -218,17 +216,17 @@ const Header = () => {
         </a>
 
         <Link href="/quote" id="quoteFloatingButton">
-          Get Quote
+          Book a Call
         </Link>
 
-        <a href="tel:8901440322" id="phoneFloatingButton" rel={null}>
+        {/* <a href="tel:8901440322" id="phoneFloatingButton" rel={null}>
           <Image
             src={phone}
             alt="The Tous - Phone Number"
             width={100}
             height={100}
           />
-        </a>
+        </a> */}
       </header>
     </div>
   );
