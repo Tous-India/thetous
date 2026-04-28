@@ -7,23 +7,50 @@ const Banner = () => {
     <section className="home-banner-main-section">
       <div className="container">
         <div className="row-div">
-          <div className="inner-div" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-            <h1 style={{ fontFamily: "'Poppins', sans-serif", marginTop: "5rem" }}>
-              High-converting websites and Shopify stores for D2C and B2B brands.
+          <div
+            className="inner-div"
+            style={{
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <h1
+              style={{ fontFamily: "'Poppins', sans-serif", marginTop: "5rem" }}
+            >
+              High-converting websites and Shopify stores for D2C and B2B
+              brands.
             </h1>
 
-            <p className="banner-sub" style={{
-              fontFamily: "'Poppins', sans-serif",
-              fontSize: "1.1rem",
-              fontWeight: 400,
-              color: "#555",
-              maxWidth: "600px",
-              margin: "1.2rem auto 2rem auto",
-            }}>
-              Custom web development, Shopify builds, and CRM solutions — designed to load fast, convert visitors, and scale with your business.
+            <p
+              className="banner-sub"
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "1.1rem",
+                fontWeight: 400,
+                color: "#555",
+                maxWidth: "600px",
+                margin: "1.2rem auto 2rem auto",
+              }}
+            >
+              Custom web development, Shopify builds, and CRM solutions —
+              designed to load fast, convert visitors, and scale with your
+              business.
             </p>
 
-            <div className="banner-ctas" style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "1rem", width: "100%", maxWidth: "360px" }}>
+            <div
+              className="banner-ctas"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "1rem",
+                width: "100%",
+                maxWidth: "360px",
+              }}
+            >
               <Link
                 href="/contact"
                 style={{
@@ -67,14 +94,16 @@ const Banner = () => {
               </Link>
             </div>
 
-            <p style={{
-              fontFamily: "'Poppins', sans-serif",
-              fontSize: "0.82rem",
-              color: "rgb(81 81 81)",
-              marginTop: "0rem",
-              letterSpacing: "0.01em",
-            }}>
-              150+ websites delivered since 2018 · D2C · B2B · Ecommerce
+            <p
+              style={{
+                fontFamily: "'Poppins', sans-serif",
+                fontSize: "0.82rem",
+                color: "rgb(81 81 81)",
+                marginTop: "0rem",
+                letterSpacing: "0.01em",
+              }}
+            >
+              150+ websites delivered since 2018 <br />· D2C · B2B · Ecommerce
             </p>
           </div>
         </div>

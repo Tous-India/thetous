@@ -27,7 +27,7 @@ const projects = [
   {
     title: "Prozvofit",
     slug: "prozvofit",
-    description: "D2C fitness supplement brand. Built Shopify store with subscription model, upsell flows, and performance tracking.",
+    description: "B2B fitness equipments brand. Built on laravel with lead management system.",
     image: Img6,
   },
   {
@@ -93,16 +93,15 @@ const Work = () => {
               >
                 {projects.map((project, index) => (
                   <SwiperSlide key={index}>
-                    <Link href={`/work/${project.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
+                    <Link href={`/case-studies/${project.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
                       <h4 className="work-project-heading" style={{ textAlign: "center" }}>{project.title}</h4>
                       <div className="inner-div">
                         <Image
                           src={project.image}
                           alt={project.title}
-                          width={600}
-                          height={400}
+                          fill
                           priority
-                          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                          style={{ objectFit: "cover" }}
                         />
                       </div>
                       <p style={{

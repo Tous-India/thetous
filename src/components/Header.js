@@ -207,7 +207,7 @@ const Header = () => {
         {/* Cta floating button whatapp */}
 
         <a
-          href="https://wa.link/vj2khp"
+          href="https://wa.link/wfv5k1"
           id="whatsappFloatingButton"
           rel={null}
           // rel="noopener noreferrer"
@@ -215,7 +215,7 @@ const Header = () => {
           <Image src={whatsapp} alt="whatsapp" width={100} height={100} />
         </a>
 
-        <Link href="/quote" id="quoteFloatingButton">
+        <Link href="/book-a-call" id="quoteFloatingButton">
           Book a Call
         </Link>
 

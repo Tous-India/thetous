@@ -52,18 +52,18 @@ export default function Index() {
       <About />
       <Marquee speed={15}>
         <div className="flex items-center gap-8 px-4">
-          <span className="text-black text-2xl font-semibold whitespace-nowrap">
+          <h4 className="text-black text-2xl font-semibold whitespace-nowrap">
             Your ecommerce Success Starts Here
-          </span>
-          <span className="text-black">
+          </h4>
+          <h4 className="text-black">
             <i className="ri-asterisk"></i>
-          </span>
-          <span className="text-black text-2xl font-semibold whitespace-nowrap">
+          </h4>
+          <h4 className="text-black text-2xl font-semibold whitespace-nowrap">
             Reach Out for a Custom Strategy
-          </span>
-          <span className="text-black">
+          </h4>
+          <h4 className="text-black">
             <i className="ri-asterisk"></i>
-          </span>
+          </h4>
         </div>
       </Marquee>
       

@@ -711,7 +711,7 @@
       font-weight: 600 !important;
     }
     p {
-      line-height: 1.8 !important;
+      line-height: 25px !important;
     }
     .heading-div {
       > h4 {
@@ -1080,7 +1080,9 @@
       }
     }
   }
-
+  .homepage-about-section  .container >div{
+        margin-bottom: -5rem;
+  }
   .homepage-about-section .container .row .mid .inner-div .first-div p {
     margin-bottom: 1.5rem;
   }
@@ -1275,7 +1277,7 @@
     font-size: 1.5rem;
   }
   .home-page-Testimonials {
-    padding: 3rem 0 2rem 0;
+    padding: -1rem 0 2rem 0;
     padding-bottom: 0px;
     h2 {
       font-size: 1.75rem;
@@ -1290,8 +1292,8 @@
   }
 
   .main-marquee-file {
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
+    margin-top: 0rem;
+    margin-bottom: -1rem;
     span {
       font-weight: 500;
       font-size: 2rem;

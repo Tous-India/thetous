@@ -73,7 +73,7 @@ const Quote = () => {
       <div className="container">
         <div className="quote-header">
           <h1>Let&apos;s Talk About Your Project</h1>
-          <p>
+          <p className="lg:w-[55%] ms-auto me-auto">
             Tell us a bit about what you&apos;re working on. We&apos;ll get back within one business day to schedule a 30-minute strategy call.
           </p>
         </div>
