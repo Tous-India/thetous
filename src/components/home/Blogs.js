@@ -134,8 +134,8 @@ const Blogs = () => {
                         </div>
                       </div>
                       <div className="col-3 col-md-3">
-                        <div className="imgDiv">
-                          {blog.featuredImage ? (
+                        {blog.featuredImage && (
+                          <div className="imgDiv">
                             <Image
                               src={blog.featuredImage}
                               alt={blog.title}
@@ -143,16 +143,8 @@ const Blogs = () => {
                               height={300}
                               priority={index === 0}
                             />
-                          ) : (
-                            <div
-                              style={{
-                                width: "300px",
-                                height: "300px",
-                                background: "#f0f0f0",
-                              }}
-                            />
-                          )}
-                        </div>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>

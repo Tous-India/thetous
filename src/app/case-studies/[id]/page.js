@@ -4,6 +4,7 @@ import usePageTitle from "@/hooks/usePageTitle";
 import React, { useEffect } from "react";
 import "./style.css";
 import Image from "next/image";
+import Link from "next/link";
 import caseStudiesData from "@/data/caseStudies.json";
 import { notFound } from "next/navigation";
 
@@ -67,7 +68,7 @@ const CaseStudyPage = ({ params }) => {
                   Coming Soon
                 </h2>
 
-                <a
+                <Link
                   href="/work"
                   style={{
                     padding: "0.75rem 2rem",
@@ -79,7 +80,7 @@ const CaseStudyPage = ({ params }) => {
                   }}
                 >
                   View Other Case Studies
-                </a>
+                </Link>
               </div>
             </div>
           </div>
