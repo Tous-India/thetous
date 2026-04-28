@@ -72,7 +72,7 @@ export default function Index() {
       <Testimonials />
       <FAQ />
       <CTA />
-      {/* <Blogs /> */}
+      <Blogs />
       {/* </main> */}
     </div>
   );
