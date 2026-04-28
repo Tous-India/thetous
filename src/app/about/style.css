@@ -96,7 +96,7 @@
           margin: 5px 0;
           line-height: 25px !important;
           strong {
-            font-size: 16px;
+            font-size: 20px;
           }
         }
       }
@@ -311,6 +311,7 @@
   font-weight: 600;
   color: #000;
   margin: 0;
+  line-height: 20px !important;
 }
 
 .about-team-note {

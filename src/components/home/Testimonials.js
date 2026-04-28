@@ -10,8 +10,8 @@ import Image from "next/image";
 // image
 
 import kb from "../../../public/client/kbvista.webp";
-import silvago from "../../../public/client/silvago_logo.webp";
-import omp from "../../../public/client/omp.webp";
+import silvago from "../../../public/client/1silvago_logo.webp";
+import omp from "../../../public/client/omp-c.webp";
 
 // TODO: Replace these 3 with real verified testimonials (real name, designation, company, specific outcome)
 const testimonialsData = [

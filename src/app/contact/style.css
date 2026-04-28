@@ -475,6 +475,39 @@
   }
 }
 
+.contact-services-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin: 1rem 0 0.6rem 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-services-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-service-btn {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: #555;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.contact-service-btn.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
 @media (max-width: 720px) {
   .contact-page-main {
     margin-bottom: -1rem !important;
@@ -489,7 +522,7 @@
     }
   }
   .aboutCta{
-    
+
   }
 
   .contact-page-main .container-fluid .row .right {
@@ -497,5 +530,28 @@
     margin-bottom: -1rem;
     margin: 0 0 -3rem !important;
     background: white;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-page-main .container-fluid .row .first-form-row > div {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .contact-page-main .container-fluid .row .first-form-row > div input {
+    width: 100% !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-page-main .container-fluid form .type-number {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .contact-page-main .container-fluid form textarea {
+    width: 100% !important;
+    margin-top: 0 !important;
   }
 }

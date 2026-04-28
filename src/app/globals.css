@@ -58,7 +58,7 @@ a {
 body {
   overflow-x: hidden;
   /* Add bottom margin equal to footer height for reveal effect - responsive */
-  margin-bottom: 33rem;
+  margin-bottom: 37rem;
   background-color: rgb(0, 0, 0);
   box-shadow: 0px 25px 20px -2px rgb(0, 0, 0);
   border-radius: 30px 30px !important;
@@ -77,7 +77,11 @@ input,
 textarea,
 select {
   font-family: "Poppins", sans-serif !important;
-  font-size: 14px;
+  font-size: 16px !important;
+}
+
+p {
+  line-height: 1.8 !important;
 }
 
 .home-page-main {
@@ -361,6 +365,12 @@ select {
                   .accordion-header {
                     box-shadow: unset;
                     border: none;
+                    button {
+                      a {
+                        color: #070707;
+                        font-weight: 500;
+                      }
+                    }
                   }
 
                   .accordion-button:not(.collapsed) {
@@ -1345,6 +1355,7 @@ footer {
   width: 100%;
   z-index: -1;
   overflow: visible;
+  padding-top: 200px;
 
   a {
     color: white;
@@ -1618,7 +1629,7 @@ footer {
       }
 
       > p {
-        line-height: 25px !important;
+        line-height: 1.8 !important;
         color: rgb(98, 98, 98);
         font-size: 14px;
       }
@@ -1653,7 +1664,7 @@ footer {
 
         p {
           font-size: 12px !important;
-          line-height: 20px !important;
+          line-height: 1.8 !important;
 
           span {
             font-size: 12px !important;
@@ -1808,7 +1819,7 @@ footer {
           }
 
           p {
-            line-height: 20px !important;
+            line-height: 1.8 !important;
           }
 
           h5 {
@@ -1842,11 +1853,7 @@ footer {
 }
 
 p {
-  line-height: 30px !important;
-
-  strong {
-    line-height: 20px !important;
-  }
+  line-height: 1.8 !important;
 }
 
 .main-section-heading {
@@ -1996,7 +2003,7 @@ p {
         font-size: 3rem !important;
       }
     }
-      .footer-ul{
+    .footer-ul {
       padding-left: 20px !important;
     }
   }
