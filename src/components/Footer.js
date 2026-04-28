@@ -31,13 +31,13 @@ const Footer = () => {
                   <Link href="/about">About</Link>
                 </li>
                 <li>
-                  <Link href="/brand-solution">Brand Solution</Link>
+                  <Link href="/tech-solution/web-development">Custom Web Development</Link>
                 </li>
                 <li>
-                  <Link href="/media-solution">Media Solution</Link>
+                  <Link href="/tech-solution/shopify-development">Shopify Development</Link>
                 </li>
                 <li>
-                  <Link href="/tech-solution">Tech Solution</Link>
+                  <Link href="/tech-solution/web-development">Custom CRM &amp; Web Apps</Link>
                 </li>
 
                 <li>

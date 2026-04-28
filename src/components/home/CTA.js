@@ -7,9 +7,11 @@ const CTA = () => {
         margin: "3rem 0 5rem 0",
         fontFamily: "'Poppins', sans-serif",
         textAlign: "center",
-        backgroundImage: "linear-gradient(120deg, #a6c0fe, #f68084)",
+        backgroundColor: "black",
         padding: "3rem",
-        borderRadius: "0px 0px 30px 30px",
+        borderRadius: "30px",
+        width:"90%",
+        margin:"0 auto"
       }}
     >
       <div className="container">
