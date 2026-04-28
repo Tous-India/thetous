@@ -36,39 +36,93 @@ const faqs = [
   },
 ];
 
-const FAQItem = ({ faq, isOpen, onToggle }) => {
+const FAQItem = ({ faq, index, isOpen, onToggle }) => {
   const contentRef = useRef(null);
 
   return (
-    <div style={{ borderBottom: "1px solid #e5e5e5", padding: "1rem 0" }}>
+    <div
+      style={{
+        position: "relative",
+        border: "1px solid #e5e5e5",
+        borderRadius: "0px",
+        marginBottom: "0.75rem",
+        overflow: "hidden",
+        background: "#fff",
+      }}
+    >
+      {/* Gradient left accent bar */}
+      <span
+        style={{
+          position: "absolute",
+          left: 0,
+          top: 0,
+          bottom: 0,
+          width: "4px",
+          background: "linear-gradient(to bottom, #00dbde, #fc00ff)",
+          opacity: isOpen ? 1 : 0,
+          transition: "opacity 0.3s ease",
+        }}
+      />
+
       <button
         onClick={onToggle}
         style={{
           width: "100%",
           display: "flex",
-          justifyContent: "space-between",
           alignItems: "center",
           background: "none",
           border: "none",
-          padding: 0,
+          padding: "1.1rem 1.25rem",
           cursor: "pointer",
           textAlign: "left",
           gap: "1rem",
         }}
       >
-        <span style={{ fontSize: "15px", fontWeight: 600, color: "#000", lineHeight: "1.5" }}>
+        {/* Number */}
+        <span
+          style={{
+            fontFamily: "'Lato', sans-serif",
+            fontSize: "1rem",
+            fontWeight: 700,
+            minWidth: "2rem",
+            flexShrink: 0,
+            background: isOpen
+              ? "linear-gradient(to right, #00dbde, #fc00ff)"
+              : "none",
+            WebkitBackgroundClip: isOpen ? "text" : "unset",
+            WebkitTextFillColor: isOpen ? "transparent" : "#bbb",
+            color: isOpen ? "transparent" : "#bbb",
+            transition: "color 0.3s ease",
+          }}
+        >
+          {String(index + 1).padStart(2, "0")}
+        </span>
+
+        {/* Question */}
+        <span
+          style={{
+            flex: 1,
+            fontSize: "15px",
+            fontWeight: 600,
+            color: "#111",
+            lineHeight: "1.5",
+            fontFamily: "'Poppins', sans-serif",
+          }}
+        >
           {faq.q}
         </span>
+
+        {/* Chevron */}
         <i
-          className="ri-add-line"
+          className="ri-arrow-down-s-line"
           style={{
             fontSize: "1.2rem",
             flexShrink: 0,
-            color: "#000",
+            color: "#777",
             transition: "transform 0.3s ease",
-            transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+            transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
           }}
-        ></i>
+        />
       </button>
 
       <div
@@ -79,13 +133,16 @@ const FAQItem = ({ faq, isOpen, onToggle }) => {
           transition: "max-height 0.35s ease",
         }}
       >
-        <p style={{
-          margin: "0.75rem 0 0 0",
-          fontSize: "13px",
-          color: "#555",
-          lineHeight: "1.8",
-          paddingRight: "2rem",
-        }}>
+        <p
+          style={{
+            margin: 0,
+            padding: "0 1.25rem 1.1rem 4.25rem",
+            fontSize: "13px",
+            color: "#555",
+            lineHeight: "1.8",
+            fontFamily: "'Poppins', sans-serif",
+          }}
+        >
           {faq.a}
         </p>
       </div>
@@ -99,15 +156,19 @@ const FAQ = () => {
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <div style={{ padding: "4rem 0", fontFamily: "'Poppins', sans-serif" }}>
+    <div style={{ margin: "3rem 0", fontFamily: "'Poppins', sans-serif" }}>
       <div className="container">
-        <h2 className="main-section-heading" style={{ marginBottom: "2rem", textAlign: "center" }}>
-          Frequently Asked Questions
-        </h2>
         <div style={{ maxWidth: "780px", margin: "0 auto" }}>
+          <h2
+            className="main-section-heading faq-section-heading"
+            style={{ marginBottom: "2rem" }}
+          >
+            Frequently Asked Questions
+          </h2>
           {faqs.map((faq, i) => (
             <FAQItem
               key={i}
+              index={i}
               faq={faq}
               isOpen={openIndex === i}
               onToggle={() => toggle(i)}

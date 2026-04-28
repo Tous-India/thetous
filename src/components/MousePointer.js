@@ -23,8 +23,8 @@ const MousePointer = () => {
     });
     setIsHovered(false);
 
-    let xTo = gsap.quickTo(".flair", "x", { duration: 0.6, ease: "power3" }),
-      yTo = gsap.quickTo(".flair", "y", { duration: 0.6, ease: "power3" });
+    let xTo = gsap.quickTo(".flair", "x", { duration: 0.2, ease: "power3" }),
+      yTo = gsap.quickTo(".flair", "y", { duration: 0.2, ease: "power3" });
 
     const handleMouseMove = (e) => {
       xTo(e.clientX);

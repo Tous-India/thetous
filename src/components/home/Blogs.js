@@ -25,10 +25,11 @@ const Blogs = () => {
     }));
   };
 
-  const { data: blogs = [], isLoading: loading } = useQuery({
+  const { data: blogs = [], isLoading: loading, isError } = useQuery({
     queryKey: ["blogs"],
     queryFn: fetchLatestBlogs,
-    staleTime: 1000 * 60 * 5, // 5 minutes
+    staleTime: 1000 * 60 * 5,
+    retry: 0,
   });
 
   const stripHtml = (html) => {
@@ -92,25 +93,6 @@ const Blogs = () => {
     }
     return null;
   };
-
-  if (loading) {
-    return (
-      <div className="blog-section-home last-section-of-every-page">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="heading-div">
-                <div id="word-heading" className="work-heading-home row-div">
-                  <h2>Blogs</h2>
-                </div>
-              </div>
-              <p>Loading blogs...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div

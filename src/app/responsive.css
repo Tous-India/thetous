@@ -472,7 +472,7 @@
     margin: 0;
     box-sizing: border-box;
   }
-
+ 
   .desktop-menu {
     display: none;
   }
@@ -565,7 +565,8 @@
   .home-banner-main-section {
     .row-div {
       h1 {
-        font-size: 10vw !important;
+        font-size: 8vw !important;
+        font-weight: 700;
         text-align: center;
         span {
           &:last-child {
@@ -659,19 +660,31 @@
   }
   /* Home Banner end  */
 
+
+.about-page-main .aboutCta .row .col-12 .p {
+  
+    font-size: 2.5rem !important;
+   width: 100% !important;
+    line-height: 45px;
+}
+
+
+
   #word-heading {
     padding: 0 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     h2 {
-      width: 55%;
-      font-size: 2rem;
+      width: 60%;
+      font-size: 1.5rem;
       font-weight: 700;
+      margin-bottom: -0.5rem;
     }
     a {
       width: 50%;
       text-align: end !important;
+      margin-top: 0;
     }
   }
   .swiper-main-div .last-slide-of-all .inner-div {
@@ -713,12 +726,10 @@
     #word-heading {
       padding: 0 0px;
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
       flex-direction: column;
       h2 {
-        width: 55%;
-        font-size: 2rem;
+        width: 60%;
+        font-size: 1.75rem;
         font-weight: 700;
       }
       a {
@@ -726,15 +737,27 @@
         text-align: end !important;
       }
     }
+    button {
+      display: flex;
+      align-items: center;
+    }
     .btn-span-1 {
-      padding: 5px 20px;
+      padding: 5px 16px;
     }
     .btn-span-2 {
-      padding: 10px 12px;
+      width: 2rem;
+      height: 2rem;
+      padding: 0;
       margin: 0;
     }
   }
 
+  .sliders-home-page > .homeClients:before {
+    display: none;
+  }
+  .sliders-home-page > .homeClients:after {
+    display: none;
+  }
   /* work-home-section end */
 
   .blog-section-home {
@@ -771,16 +794,21 @@
     .heading-div {
       margin-top: 1rem;
       padding: 10px 10px;
-      .btn-span-2 {
-        padding: 10px 12px;
-        margin: 0;
+      button {
+        display: flex;
+        align-items: center;
       }
       .btn-span-1 {
-        padding: 5px 20px;
+        padding: 5px 16px;
+      }
+      .btn-span-2 {
+        width: 2rem;
+        height: 2rem;
+        padding: 0;
+        margin: 0;
       }
       a {
         width: 60% !important;
-        text-align: end !important;
         text-align: end !important;
       }
     }
@@ -806,11 +834,17 @@
     .heading-div {
       margin-bottom: 0rem;
       padding: 0px 0;
+      button {
+        display: flex;
+        align-items: center;
+      }
       .btn-span-1 {
-        padding: 5px 20px;
+        padding: 5px 16px;
       }
       .btn-span-2 {
-        padding: 10px 12px;
+        width: 2rem;
+        height: 2rem;
+        padding: 0;
         margin: 0;
       }
       > h4 {
@@ -862,11 +896,19 @@
       }
     }
   }
+  .exquisites-home-page .container .row > div ul li {
+    font-size: 16px !important;
+    .ri-code-s-slash-line,
+    .ri-shopping-bag-line,
+    .ri-dashboard-line {
+      font-size: 40px;
+    }
+  }
 
   /* Home Exquisites-home-page start */
 
   .sliders-home-page {
-    margin-top: 4rem;
+    margin-top: 0rem;
     margin-bottom: 2rem;
   }
 
@@ -966,6 +1008,22 @@
   }
 
   .homepage-about-section {
+    img {
+      width: 100% !important;
+    }
+    .firstPara{
+      margin-top: 1.5rem !important;
+    }
+    .figures {
+      justify-content: space-between;
+      span {
+        font-size: 14px;
+      }
+    }
+    .secondPara {
+      margin: 0 0 1.5rem 0 !important;
+    }
+
     margin-top: 2rem;
     .container {
       .row {
@@ -987,10 +1045,10 @@
         padding: 0;
         h2 {
           color: #333;
-          width: 55%;
+          width: 65%;
           padding-left: 0;
           font-family: "Poppins";
-          font-size: 2rem;
+          font-size: 1.75rem;
           font-weight: 700;
         }
         h4 {
@@ -1007,6 +1065,16 @@
       }
     }
   }
+
+  .home-page-Testimonials {
+    .slide {
+      margin: 0.75rem;
+      .innerDiv {
+        padding: 20px !important;
+      }
+    }
+  }
+
   .homepage-about-section .container .row .mid .inner-div .first-div p {
     margin-bottom: 1.5rem;
   }
@@ -1061,10 +1129,14 @@
   .about-page-main .aboutRow > .row > div:first-child {
     padding-left: 0.75rem !important;
   }
+  .about-page-main .aboutRow > .row .content-div p{
+    width: 100% !important;
+  }
   .about-page-main .aboutRow > .row > div:first-child h1 {
     font-size: 10vw !important  ;
     font-weight: 700;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
   }
   .about-page-main .about-Page-right iframe {
     height: 18rem !important;
@@ -1146,6 +1218,13 @@
     overflow-x: clip !important;
   }
 
+  .home-banner-main-section {
+    height: 70vh;
+    h1 {
+      margin-top: 0rem !important;
+    }
+  }
+
   .home-page-why-we-us-section {
     margin-top: 2rem;
     .container {
@@ -1156,7 +1235,8 @@
           margin-top: 0px;
           .innerDiv {
             padding: 10px;
-            height: 10rem;
+            height: auto;
+            min-height: 15rem;
             h5 {
               font-size: 18px;
             }
@@ -1168,7 +1248,8 @@
       padding: 0;
       margin-bottom: 0;
       h2 {
-        font-size: 2rem;
+        width: 60%;
+        font-size: 1.75rem;
         font-weight: 700;
         margin-bottom: 0;
       }
@@ -1184,11 +1265,14 @@
     }
   }
 
+  .faq-section-heading.main-section-heading {
+    font-size: 1.5rem;
+  }
   .home-page-Testimonials {
     padding: 3rem 0 2rem 0;
     padding-bottom: 0px;
     h2 {
-      font-size: 2rem;
+      font-size: 1.75rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
     }

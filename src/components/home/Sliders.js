@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
@@ -31,7 +32,7 @@ const SWIPER_CONFIG = {
   effect: "slide",
   breakpoints: {
     0: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.75,
       spaceBetween: 10,
     },
     480: {
@@ -80,6 +81,11 @@ const bottomSliderImages = [
 const allImages = [...topSliderImages, ...bottomSliderImages];
 
 const Sliders = () => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return <div className="sliders-home-page" data-aos="fade-up" data-aos-duration="2000" />;
+
   return (
     <div
       className="sliders-home-page"

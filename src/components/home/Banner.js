@@ -18,7 +18,6 @@ const Banner = () => {
               fontWeight: 400,
               color: "#555",
               maxWidth: "600px",
-              lineHeight: "1.7",
               margin: "1.2rem auto 2rem auto",
             }}>
               Custom web development, Shopify builds, and CRM solutions — designed to load fast, convert visitors, and scale with your business.
@@ -71,21 +70,21 @@ const Banner = () => {
             <p style={{
               fontFamily: "'Poppins', sans-serif",
               fontSize: "0.82rem",
-              color: "#999",
-              marginTop: "2rem",
+              color: "rgb(81 81 81)",
+              marginTop: "0rem",
               letterSpacing: "0.01em",
             }}>
-              60+ websites delivered since 2018 · D2C · B2B · Ecommerce
+              150+ websites delivered since 2018 · D2C · B2B · Ecommerce
             </p>
           </div>
         </div>
       </div>
 
-      <Link href="#about-section-homepage" className="cta-link">
+      {/* <Link href="#about-section-homepage" className="cta-link">
         <span>
           The Tous <i className="ri-corner-right-down-fill"></i>
         </span>
-      </Link>
+      </Link> */}
     </section>
   );
 };

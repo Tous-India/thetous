@@ -12,6 +12,7 @@ import "aos/dist/aos.css";
 import Lenis from "lenis";
 import Testimonials from "@/components/home/Testimonials";
 import FAQ from "@/components/home/FAQ";
+import CTA from "@/components/home/CTA";
 import Marquee from "@/components/home/Marquee";
 import WhyWeUs from "@/components/home/WhyWeUs";
 import "swiper/css";
@@ -70,7 +71,8 @@ export default function Index() {
       
       <Testimonials />
       <FAQ />
-      <Blogs />
+      <CTA />
+      {/* <Blogs /> */}
       {/* </main> */}
     </div>
   );

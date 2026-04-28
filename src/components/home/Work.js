@@ -6,10 +6,8 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import Img3 from "../../../public/home/work/1742808668.webp";
 import Img4 from "../../../public/home/work/1731492385.webp";
 import Img6 from "../../../public/home/work/1726133585.webp";
-import Img11 from "../../../public/home/work/1742644830.webp";
 import Img12 from "../../../public/home/work/1742807329.webp";
 import Img13 from "../../../public/home/work/silvago.png";
 
@@ -19,12 +17,6 @@ const projects = [
     slug: "silvago",
     description: "Premium silver jewelry D2C brand. Built custom Shopify store with 200+ SKUs and mobile-optimized checkout.",
     image: Img13,
-  },
-  {
-    title: "Dhirsons Jewellery House",
-    slug: "dhirsons-jewellery-house",
-    description: "Legacy jewellery brand moving online. Full e-commerce build with product configurator and WhatsApp checkout integration.",
-    image: Img3,
   },
   {
     title: "Luxeliv",
@@ -37,12 +29,6 @@ const projects = [
     slug: "prozvofit",
     description: "D2C fitness supplement brand. Built Shopify store with subscription model, upsell flows, and performance tracking.",
     image: Img6,
-  },
-  {
-    title: "Executive Cars",
-    slug: "executive-cars",
-    description: "Premium car rental service. Built a booking-focused website with real-time availability and CRM integration.",
-    image: Img11,
   },
   {
     title: "Oh My Pet Grooming",
@@ -127,6 +113,7 @@ const Work = () => {
                         marginTop: "0.6rem",
                         padding: "0 4px",
                         textAlign: "center",
+                        lineHeight:"20px !important"
                       }}>
                         {project.description}
                       </p>

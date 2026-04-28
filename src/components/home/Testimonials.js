@@ -1,3 +1,5 @@
+"use client";
+import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
@@ -8,7 +10,7 @@ import Image from "next/image";
 // image
 
 import kb from "../../../public/client/kbvista.webp";
-import fnp from "../../../public/client/fnp-logo.webp";
+import silvago from "../../../public/client/silvago_logo.webp";
 import omp from "../../../public/client/omp.webp";
 
 // TODO: Replace these 3 with real verified testimonials (real name, designation, company, specific outcome)
@@ -17,19 +19,19 @@ const testimonialsData = [
     id: 1,
     rating: 5,
     className: "slide one",
-    testimonial: "The Tous delivered a modern, high-performing website along with consistent social media creatives. Their understanding of branding and user experience is impressive.",
-    clientName: "Vikas Jain",
-    clientPosition: "Business Owner",
-    clientCompany: "FNP",
-    brandLogo: fnp,
+    testimonial: "We needed a website that matched the premium feel of our jewellery. The Tous nailed it — clean design, fast load times, and a checkout experience our customers actually compliment.",
+    clientName: "Mansi Adlakha",
+    clientPosition: "CEO",
+    clientCompany: "Silvago",
+    brandLogo: silvago,
   },
   {
     id: 2,
     rating: 5,
     className: "slide two",
     testimonial: "Our social media engagement and organic website traffic increased significantly after partnering with The Tous. Their SEO and strategies are practical and result-driven.",
-    clientName: "Neha Kapoor",
-    clientPosition: "Growth Manager",
+    clientName: "Rahul Arora",
+    clientPosition: "CMO",
     clientCompany: "Oh My Pet",
     brandLogo: omp,
   },
@@ -38,14 +40,19 @@ const testimonialsData = [
     rating: 5,
     className: "slide three",
     testimonial: "Working with The Tous feels like having an in-house digital team. Their designs, branding, and content strategy are always on point. Communication and delivery timelines are excellent.",
-    clientName: "Ananya Sharma",
-    clientPosition: "Marketing Head",
+    clientName: "Nitin Khedar",
+    clientPosition: "Owner",
     clientCompany: "KB Vista",
     brandLogo: kb,
   },
 ];
 
 const Testimonials = () => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return <div className="home-page-Testimonials" />;
+
   return (
     <div className="home-page-Testimonials">
       <div className="container">
@@ -74,7 +81,7 @@ const Testimonials = () => {
                   spaceBetween: 20,
                 },
                 1024: {
-                  slidesPerView: 3,
+                  slidesPerView: 2.5,
                   spaceBetween: 10,
                 },
               }}
