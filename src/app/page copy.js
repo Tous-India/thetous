@@ -11,8 +11,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Lenis from "lenis";
 import Testimonials from "@/components/home/Testimonials";
-import FAQ from "@/components/home/FAQ";
-import CTA from "@/components/home/CTA";
 import Marquee from "@/components/home/Marquee";
 import WhyWeUs from "@/components/home/WhyWeUs";
 import "swiper/css";
@@ -32,7 +30,8 @@ export default function Index() {
     }
 
     rafId = requestAnimationFrame(raf);
-
+      
+    
     return () => {
       if (rafId) {
         cancelAnimationFrame(rafId);
@@ -45,10 +44,6 @@ export default function Index() {
     <div className="home-page-main">
       {/* <main> */}
       <Banner />
-      <Sliders />
-      <Exquisites />
-      <Work />
-      <WhyWeUs />
       <About />
       <Marquee speed={15}>
         <div className="flex items-center gap-8 px-4">
@@ -66,13 +61,13 @@ export default function Index() {
           </span>
         </div>
       </Marquee>
-      
+      <Work />
 
-      
+      <Exquisites />
+      <WhyWeUs />
+      <Sliders />
       <Testimonials />
-      <FAQ />
-      <CTA />
-      {/* <Blogs /> */}
+      <Blogs />
       {/* </main> */}
     </div>
   );
