@@ -1,167 +1,39 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import "./style.css";
 import usePageTitle from "@/hooks/usePageTitle";
 
 const Quote = () => {
-    usePageTitle("Request a Quote or Digital Strategy Consultation");
-  
-  const [currentStep, setCurrentStep] = useState(1);
-  const totalSteps = 2;
+  usePageTitle("Request a Quote – The Tous");
 
   const [formData, setFormData] = useState({
-    // Step 1: Contact Details
-    fullName: "",
-    brandName: "",
+    name: "",
     email: "",
-    phone: "",
-    websiteUrl: "",
-
-    // Step 2: Services Required
-    services: [],
-    otherService: "",
-
-    expectations: "",
+    company: "",
+    buildType: "",
+    message: "",
+    timeline: "",
+    budget: "",
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
-  const [errors, setErrors] = useState({});
 
-  // Service options
-  const serviceOptions = [
-    {
-      value: "Website Design & Development",
-      icon: "ri-window-line",
-      label: "Website Design & Development",
-    },
-    {
-      value: "Shopify / E-commerce",
-      icon: "ri-shopping-cart-line",
-      label: "Shopify / E-commerce",
-    },
-    {
-      value: "Website Redesign / Optimization",
-      icon: "ri-refresh-line",
-      label: "Website Redesign",
-    },
-    { value: "SEO", icon: "ri-search-line", label: "SEO" },
-    {
-      value: "Digital Marketing (Meta / Google Ads)",
-      icon: "ri-megaphone-line",
-      label: "Digital Marketing",
-    },
-    {
-      value: "Branding & Identity",
-      icon: "ri-palette-line",
-      label: "Branding & Identity",
-    },
-    {
-      value: "Social Media Management",
-      icon: "ri-share-line",
-      label: "Social Media",
-    },
-    {
-      value: "Custom Web App / Dashboard",
-      icon: "ri-dashboard-line",
-      label: "Web App / Dashboard",
-    },
-    { value: "Other", icon: "ri-more-line", label: "Other" },
-  ];
-
-  // Handle input change
   const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-    // Clear error for this field
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
-    }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Handle multi-select (services, platforms, goals)
-  const handleMultiSelect = (field, value) => {
-    setFormData((prev) => ({
-      ...prev,
-      [field]: prev[field].includes(value)
-        ? prev[field].filter((item) => item !== value)
-        : [...prev[field], value],
-    }));
-    if (errors[field]) {
-      setErrors((prev) => ({ ...prev, [field]: "" }));
-    }
-  };
-
-  // Validation for each step
-  const validateStep = (step) => {
-    const newErrors = {};
-
-    switch (step) {
-      case 1:
-        if (!formData.fullName.trim())
-          newErrors.fullName = "Full name is required";
-        if (!formData.email.trim()) newErrors.email = "Email is required";
-        else if (!/\S+@\S+\.\S+/.test(formData.email))
-          newErrors.email = "Email is invalid";
-        if (!formData.phone.trim())
-          newErrors.phone = "Phone number is required";
-        break;
-
-      case 2:
-        if (formData.services.length === 0)
-          newErrors.services = "Please select at least one service";
-        if (
-          formData.services.includes("Other") &&
-          !formData.otherService.trim()
-        )
-          newErrors.otherService = "Please specify the service";
-        if (!formData.expectations.trim())
-          newErrors.expectations = "Please describe your expectations";
-        break;
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  // Navigation
-  const nextStep = () => {
-    if (validateStep(currentStep)) {
-      setCurrentStep((prev) => Math.min(prev + 1, totalSteps));
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
-  const prevStep = () => {
-    setCurrentStep((prev) => Math.max(prev - 1, 1));
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  // Form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!validateStep(currentStep)) {
-      return;
-    }
-
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     try {
       const response = await fetch("/api/quote", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString(),
-          leadSource: "Website Quote Form",
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
@@ -169,21 +41,24 @@ const Quote = () => {
       if (response.ok) {
         setSubmitStatus({
           type: "success",
-          message:
-            "Thank you! Your quote request has been submitted successfully. We'll get back to you shortly.",
+          message: "Thank you! We'll get back to you within one business day.",
         });
-        // Reset form
-        setTimeout(() => {
-          window.location.href = "/thank-you";
-        }, 3000);
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          buildType: "",
+          message: "",
+          timeline: "",
+          budget: "",
+        });
       } else {
         setSubmitStatus({
           type: "error",
-          message:
-            data.error || "Failed to submit quote request. Please try again.",
+          message: data.error || "Failed to submit. Please try again.",
         });
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus({
         type: "error",
         message: "An error occurred. Please try again later.",
@@ -193,273 +68,167 @@ const Quote = () => {
     }
   };
 
-  // Render step content
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case 1:
-        return (
-          <div className="step-content">
-            <h2 className="step-title">Contact Details</h2>
-            <p className="step-description">
-              {" Let's start with your basic information"}
-            </p>
-
-            <div className="form-grid">
-              <div className="form-group">
-                <label>
-                  Full Name <span className="required">*</span>
-                </label>
-                <input
-                  type="text"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleInputChange}
-                  placeholder="Enter your full name"
-                  className={errors.fullName ? "error" : ""}
-                />
-                {errors.fullName && (
-                  <span className="error-message">{errors.fullName}</span>
-                )}
-              </div>
-
-              <div className="form-group">
-                <label>Business / Brand Name</label>
-                <input
-                  type="text"
-                  name="brandName"
-                  value={formData.brandName}
-                  onChange={handleInputChange}
-                  placeholder="Your business or brand name"
-                />
-              </div>
-
-              <div className="form-group">
-                <label>
-                  Email Address <span className="required">*</span>
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="your@email.com"
-                  className={errors.email ? "error" : ""}
-                />
-                {errors.email && (
-                  <span className="error-message">{errors.email}</span>
-                )}
-              </div>
-
-              <div className="form-group">
-                <label>
-                  Phone / WhatsApp Number <span className="required">*</span>
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  placeholder="+91 XXXXX XXXXX"
-                  className={errors.phone ? "error" : ""}
-                />
-                {errors.phone && (
-                  <span className="error-message">{errors.phone}</span>
-                )}
-              </div>
-
-              <div className="form-group full-width">
-                <label>Website URL (Optional)</label>
-                <input
-                  type="url"
-                  name="websiteUrl"
-                  value={formData.websiteUrl}
-                  onChange={handleInputChange}
-                  placeholder="https://yourwebsite.com"
-                />
-              </div>
-            </div>
-          </div>
-        );
-
-      case 2:
-        return (
-          <div className="step-content">
-            <h2 className="step-title">Services & Expectations</h2>
-            <p className="step-description">
-              {"Select all services you're interested in and describe your expectations"}
-            </p>
-
-            <div className="services-grid sm:grid-cols-2">
-              {serviceOptions.map((service) => (
-                <div
-                  key={service.value}
-                  className={`service-card ${
-                    formData.services.includes(service.value) ? "selected" : ""
-                  }`}
-                  onClick={() => handleMultiSelect("services", service.value)}
-                >
-                  <i className={service.icon}></i>
-                  <span>{service.label}</span>
-                  {formData.services.includes(service.value) && (
-                    <i className="ri-check-line check-icon"></i>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            {errors.services && (
-              <span className="error-message">{errors.services}</span>
-            )}
-
-            {formData.services.includes("Other") && (
-              <div className="form-group mt-4">
-                <label>
-                  Please specify <span className="required">*</span>
-                </label>
-                <input
-                  type="text"
-                  name="otherService"
-                  value={formData.otherService}
-                  onChange={handleInputChange}
-                  placeholder="Describe the service you need"
-                  className={errors.otherService ? "error" : ""}
-                />
-                {errors.otherService && (
-                  <span className="error-message">{errors.otherService}</span>
-                )}
-              </div>
-            )}
-
-            <div className="form-group full-width mt-5">
-              <label>
-                Describe Your Expectations <span className="required">*</span>
-              </label>
-              <textarea
-                name="expectations"
-                value={formData.expectations}
-                onChange={handleInputChange}
-                rows="6"
-                placeholder="Tell us about your vision, specific requirements, or any challenges you're facing..."
-                className={errors.expectations ? "error" : ""}
-              ></textarea>
-              {errors.expectations && (
-                <span className="error-message">{errors.expectations}</span>
-              )}
-            </div>
-
-            {submitStatus && (
-              <div
-                className={`alert ${
-                  submitStatus?.type === "success"
-                    ? "alert-success"
-                    : "alert-error"
-                }`}
-              >
-                <i
-                  className={
-                    submitStatus?.type === "success"
-                      ? "ri-checkbox-circle-line"
-                      : "ri-error-warning-line"
-                  }
-                ></i>
-                <span>{submitStatus?.message}</span>
-              </div>
-            )}
-          </div>
-        );
-
-      default:
-        return null;
-    }
-  };
-
   return (
     <div className="quote-main-page">
       <div className="container">
         <div className="quote-header">
-          <h1>Get Your Custom Quote</h1>
+          <h1>Let&apos;s Talk About Your Project</h1>
           <p>
-            {
-              "Fill out this form and we'll create a tailored proposal for your project"
-            }
+            Tell us a bit about what you&apos;re working on. We&apos;ll get back within one business day to schedule a 30-minute strategy call.
           </p>
         </div>
 
-        {/* Progress indicator */}
-        <div className="progress-indicator">
-          <div className="progress-steps">
-            {Array.from({ length: totalSteps }, (_, i) => i + 1).map((step) => (
-              <div
-                key={step}
-                className={`progress-step ${
-                  step === currentStep
-                    ? "active"
-                    : step < currentStep
-                    ? "completed"
-                    : ""
-                }`}
-              >
-                <div className="step-circle">
-                  {step < currentStep ? (
-                    <i className="ri-check-line"></i>
-                  ) : (
-                    step
-                  )}
-                </div>
-                <div className="step-label">Step {step}</div>
-              </div>
-            ))}
+        {submitStatus && (
+          <div
+            className={`alert ${
+              submitStatus.type === "success" ? "alert-success" : "alert-error"
+            }`}
+          >
+            <i
+              className={
+                submitStatus.type === "success"
+                  ? "ri-checkbox-circle-line"
+                  : "ri-error-warning-line"
+              }
+            ></i>
+            <span>{submitStatus.message}</span>
           </div>
-          <div className="progress-bar">
-            <div
-              className="progress-fill"
-              style={{ width: `${(currentStep / totalSteps) * 100}%` }}
-            ></div>
-          </div>
-        </div>
+        )}
 
-        {/* Form */}
         <form className="quote-form" onSubmit={handleSubmit}>
-          {renderStepContent()}
+          <div className="form-grid">
+            {/* Name + Email */}
+            <div className="form-group">
+              <label>Your name <span className="required">*</span></label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your full name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
 
-          {/* Navigation buttons */}
-          <div className="form-navigation">
-            {currentStep > 1 && (
-              <button
-                type="button"
-                onClick={prevStep}
-                className="btn-secondary"
-              >
-                <i className="ri-arrow-left-line"></i> Previous
-              </button>
-            )}
+            <div className="form-group">
+              <label>Email <span className="required">*</span></label>
+              <input
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+                suppressHydrationWarning
+              />
+            </div>
 
-            {currentStep === 1 ? (
-              <button
-                type="button"
-                onClick={nextStep}
-                className="btn-primary ml-auto"
+            {/* Company */}
+            <div className="form-group full-width">
+              <label>Company / Brand name</label>
+              <input
+                type="text"
+                name="company"
+                placeholder="Your business or brand name"
+                value={formData.company}
+                onChange={handleInputChange}
+              />
+            </div>
+
+            {/* What to build */}
+            <div className="form-group full-width">
+              <label>What are you looking to build? <span className="required">*</span></label>
+              <select
+                name="buildType"
+                value={formData.buildType}
+                onChange={handleInputChange}
+                required
               >
-                Next <i className="ri-arrow-right-line"></i>
-              </button>
-            ) : (
-              <button
-                type="submit"
-                className="btn-primary ml-auto"
-                disabled={isSubmitting}
+                <option value="" disabled>Select an option</option>
+                <option value="New website (custom development)">New website (custom development)</option>
+                <option value="Shopify store (new build)">Shopify store (new build)</option>
+                <option value="Shopify migration / redesign">Shopify migration / redesign</option>
+                <option value="Custom CRM or web app">Custom CRM or web app</option>
+                <option value="Not sure yet — want to discuss">Not sure yet — want to discuss</option>
+              </select>
+            </div>
+
+            {/* Project details */}
+            <div className="form-group full-width">
+              <label>Project details</label>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="What you're building, what stage you're at, any specific challenges. The more we know, the better the call."
+                value={formData.message}
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+
+            {/* Timeline + Budget */}
+            <div className="form-group">
+              <label>Project timeline <span className="required">*</span></label>
+              <select
+                name="timeline"
+                value={formData.timeline}
+                onChange={handleInputChange}
+                required
               >
-                {isSubmitting ? (
-                  <>
-                    <i className="ri-loader-4-line rotating"></i> Submitting...
-                  </>
-                ) : (
-                  <>
-                    Submit Quote Request <i className="ri-send-plane-fill"></i>
-                  </>
-                )}
-              </button>
-            )}
+                <option value="" disabled>Select timeline</option>
+                <option value="ASAP / urgent">ASAP / urgent</option>
+                <option value="Within next month">Within next month</option>
+                <option value="1–3 months out">1–3 months out</option>
+                <option value="Just exploring">Just exploring</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label>Budget range (optional)</label>
+              <select
+                name="budget"
+                value={formData.budget}
+                onChange={handleInputChange}
+              >
+                <option value="" disabled>Select budget</option>
+                <option value="Under ₹1 lakh">Under ₹1 lakh</option>
+                <option value="₹1–3 lakhs">₹1–3 lakhs</option>
+                <option value="₹3–5 lakhs">₹3–5 lakhs</option>
+                <option value="₹5 lakhs+">₹5 lakhs+</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
           </div>
+
+          <div className="form-navigation">
+            <button
+              type="submit"
+              className="btn-primary ml-auto"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? (
+                <>
+                  <i className="ri-loader-4-line rotating"></i> Sending...
+                </>
+              ) : (
+                <>
+                  Send Message <i className="ri-arrow-right-up-long-line"></i>
+                </>
+              )}
+            </button>
+          </div>
+
+          <p style={{ marginTop: "1rem", color: "#777", fontSize: "13px" }}>
+            We&apos;ll get back within one business day. Or{" "}
+            <Link
+              href="https://wa.link/vj2khp"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#000", fontWeight: 600, textDecoration: "underline" }}
+            >
+              WhatsApp us
+            </Link>{" "}
+            for a faster response.
+          </p>
         </form>
       </div>
     </div>

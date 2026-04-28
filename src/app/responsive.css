@@ -711,7 +711,7 @@
       font-weight: 600 !important;
     }
     p {
-      line-height: 25px !important;
+      line-height: 1.8 !important;
     }
     .heading-div {
       > h4 {
@@ -1086,7 +1086,7 @@
   }
   .home-page-Testimonials .slide .innerDiv > p {
     color: #626262;
-    line-height: 28px !important;
+    line-height: 1.8 !important;
   }
   footer {
     padding-top: 3rem;
@@ -1158,7 +1158,7 @@
     width: 100% !important;
     p {
       font-size: 18px !important;
-      line-height: 1.5 !important;
+      line-height: 1.8 !important;
       margin-top: 10px;
       text-align: center !important;
     }
@@ -1265,7 +1265,7 @@
         font-weight: 400 !important;
         margin-bottom: 1.5rem;
         width: 100%;
-        line-height: 1.5 !important;
+        line-height: 1.8 !important;
         margin-bottom: 1.5rem;
       }
     }
