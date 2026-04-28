@@ -35,7 +35,7 @@ const About = () => {
               lineHeight: "1.8",
               margin: "0 0 1.2rem 0",
             }} className="firstPara">
-              We&apos;ve been building websites since 2018. Today we&apos;re a team of 6 — developers, designers, and a founder who still writes code. We&apos;ve delivered 150+ projects for D2C, B2B, and ecommerce brands across India.
+              We&apos;ve been building websites since 2018. Today we&apos;re a team of 7 — developers, designers, and a founder who still writes code. We&apos;ve delivered 150+ projects for D2C, B2B, and ecommerce brands across India.
             </p>
             <p style={{
               fontFamily: "'Poppins', sans-serif",

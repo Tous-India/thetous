@@ -106,7 +106,7 @@ const About = () => {
         <div className="about-section the-team-about">
           <h2 className="about-h2">The Team</h2>
           <p className="about-body about-body-wide">
-            We&apos;re a team of 11 Developers, designers and a founder who
+            We&apos;re a team of 7 Developers, designers and a founder who
             still writes code. We&apos;ve stayed small on purpose — the founder
             is on every project, every client gets senior attention, and
             decisions happen fast.
@@ -127,7 +127,7 @@ const About = () => {
         {/* How we work */}
         <div className="about-section">
           <h2 className="about-h2">How we work</h2>
-          <p>Four principals that shape every project:</p>
+          <p>Four principles that shape every project:</p>
           <div className="about-principles">
             {principles.map((item, i) => (
               <div key={i} className="about-principle">

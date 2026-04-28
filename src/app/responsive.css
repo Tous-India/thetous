@@ -472,7 +472,7 @@
     margin: 0;
     box-sizing: border-box;
   }
- 
+
   .desktop-menu {
     display: none;
   }
@@ -660,15 +660,11 @@
   }
   /* Home Banner end  */
 
-
-.about-page-main .aboutCta .row .col-12 .p {
-  
+  .about-page-main .aboutCta .row .col-12 .p {
     font-size: 2.5rem !important;
-   width: 100% !important;
+    width: 100% !important;
     line-height: 45px;
-}
-
-
+  }
 
   #word-heading {
     padding: 0 0px;
@@ -707,7 +703,15 @@
       font-size: 1rem;
       font-weight: 400 !important;
       margin-top: 1.5rem;
+      margin-bottom: 0rem;
+    }
+    .work-project-heading {
+      margin-top: 0;
       margin-bottom: 1.5rem;
+      font-weight: 600 !important;
+    }
+    p {
+      line-height: 25px !important;
     }
     .heading-div {
       > h4 {
@@ -1013,7 +1017,7 @@
     img {
       width: 100% !important;
     }
-    .firstPara{
+    .firstPara {
       margin-top: 1.5rem !important;
     }
     .figures {
@@ -1131,11 +1135,11 @@
   .about-page-main .aboutRow > .row > div:first-child {
     padding-left: 0.75rem !important;
   }
-  .about-page-main .aboutRow > .row .content-div p{
+  .about-page-main .aboutRow > .row .content-div p {
     width: 100% !important;
   }
   .about-page-main .aboutRow > .row > div:first-child h1 {
-    font-size: 10vw !important  ;
+    font-size: 7.5vw !important  ;
     font-weight: 700;
     padding-top: 1rem;
     margin-bottom: 1rem;
@@ -1309,12 +1313,12 @@
 /* Footer reveal effect responsive adjustments */
 @media (max-width: 768px) {
   body {
-    margin-bottom: 38rem;
+    margin-bottom: 48rem;
   }
 }
 
 @media (max-width: 540px) {
   body {
-    margin-bottom: 39rem;
+    margin-bottom: 48rem;
   }
 }
