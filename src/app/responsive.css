@@ -919,8 +919,8 @@
   }
 
   footer {
+    padding: 3rem 1.25rem 2rem 1rem;
     #footerFisrt {
-      padding: 2rem 1.25rem 2rem 1rem;
       flex-direction: column;
       align-items: start;
       button {
@@ -971,7 +971,7 @@
   }
 
   body {
-    margin-bottom: 48rem;
+    margin-bottom: calc(100vh - 3rem);
   }
   .phone-menu-div {
     .accordion-body {
@@ -1313,12 +1313,12 @@
     margin-top: 0rem !important;
   }
 }
-@media (max-width:400) {
-  
+@media (max-width: 400px) {
   footer {
     padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   body {
-    margin-bottom: 44rem;
+    margin-bottom: calc(100vh - 3rem);
   }
 }
