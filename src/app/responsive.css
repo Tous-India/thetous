@@ -975,8 +975,8 @@
   }
 
   body {
-    margin-bottom: calc(100vh - 13rem);
-    margin-bottom: calc(100dvh - 13rem);
+    margin-bottom: calc(100vh - 11rem);
+    margin-bottom: calc(100dvh - 11rem);
   }
   .phone-menu-div {
     .accordion-body {
@@ -1326,11 +1326,11 @@
 }
 @media (max-width: 400px) {
   footer {
-    padding-top: 4rem;
-    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
   }
   body {
-    margin-bottom: calc(100vh - 3rem);
-    margin-bottom: calc(100dvh - 3rem);
+    margin-bottom: calc(100vh);
+    margin-bottom: calc(100dvh);
   }
 }
