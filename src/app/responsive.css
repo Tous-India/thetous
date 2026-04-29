@@ -983,7 +983,7 @@
   }
 
   body {
-    margin-bottom: calc(100dvh - 17rem);
+    margin-bottom: calc(100svh - 17rem);
   }
   .phone-menu-div {
     .accordion-body {
@@ -1107,7 +1107,7 @@
   }
   footer {
     height: 100vh;
-    height: 100dvh;
+    height: 100svh;
   }
 
   /* Header Css part-2 and last */
@@ -1338,6 +1338,6 @@
     justify-content: flex-end !important;
   }
   body {
-    margin-bottom: 35rem;
+    margin-bottom: calc(100svh - 2rem);
   }
 }
