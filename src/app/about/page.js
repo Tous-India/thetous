@@ -28,6 +28,7 @@ const principles = [
 const team = [
   "Founder & Lead Developer",
   "Full-stack Developer",
+  "Project coordinator",
   "Frontend Developer",
   "Backend Developer",
   "Designer",
@@ -62,11 +63,11 @@ const About = () => {
               convert visitors, and hold up over time. Since then, we&apos;ve
               delivered 150+ projects — from early-stage business websites to
               custom Shopify stores, B2B web platforms, and internal CRMs for
-              businesses that outgrew off-the-shelf tools. Like most agencies,<br/>
-              We&apos;ve experimented along the way. We tried scaling a marketing
-              arm. We took on social media work. We ran ads. What we kept coming
-              back to is what we do best: building things. So that&apos;s what we
-              focus on now.
+              businesses that outgrew off-the-shelf tools. <br /> <br />
+              Like most agencies, We&apos;ve experimented along the way. We
+              tried scaling a marketing arm. We took on social media work. We
+              ran ads. What we kept coming back to is what we do best: building
+              things. So that&apos;s what we focus on now.
             </p>
             <p
               style={{
@@ -106,10 +107,10 @@ const About = () => {
         <div className="about-section the-team-about">
           <h2 className="about-h2">The Team</h2>
           <p className="about-body about-body-wide">
-            We&apos;re a team of 7 Developers, designers and a founder who
-            still writes code. We&apos;ve stayed small on purpose — the founder
-            is on every project, every client gets senior attention, and
-            decisions happen fast.
+            We&apos;re a team of 7 Developers, designers and a founder who still
+            writes code. We&apos;ve stayed small on purpose — the founder is on
+            every project, every client gets senior attention, and decisions
+            happen fast.
           </p>
           <div className="about-team-grid">
             {team.map((role, i) => (
@@ -121,7 +122,6 @@ const About = () => {
               </div>
             ))}
           </div>
-         
         </div>
 
         {/* How we work */}
@@ -208,7 +208,7 @@ const About = () => {
                     color: "#fff",
                   }}
                 >
-                   grow@thetous.com
+                  grow@thetous.com
                 </a>
               </div>
             </div>
