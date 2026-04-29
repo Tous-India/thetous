@@ -69,6 +69,7 @@
     /* transform: translateX(-110%); */
     box-shadow: 0 0 10px gray;
     top: 0;
+    border-radius: 0px !important;
   }
 
   .showPhoneMenu {
@@ -504,6 +505,7 @@
           }
           .menu-div {
             .phone-menu-div {
+              border-radius: 0px !important;
               .inner-div {
                 .row {
                   > div {
@@ -922,7 +924,6 @@
     padding: 3rem 1.25rem 1rem 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     #footerFisrt {
       flex-direction: column;
       align-items: start;
@@ -975,6 +976,7 @@
 
   body {
     margin-bottom: calc(100vh - 13rem);
+    margin-bottom: calc(100dvh - 13rem);
   }
   .phone-menu-div {
     .accordion-body {
@@ -1098,6 +1100,7 @@
   }
   footer {
     height: 100vh;
+    height: 100dvh;
   }
 
   /* Header Css part-2 and last */
@@ -1316,12 +1319,18 @@
     margin-top: 0rem !important;
   }
 }
+@media (min-width: 401px) and (max-width: 480px) {
+  footer {
+    justify-content: flex-end;
+  }
+}
 @media (max-width: 400px) {
   footer {
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
   }
   body {
     margin-bottom: calc(100vh - 3rem);
+    margin-bottom: calc(100dvh - 3rem);
   }
 }
