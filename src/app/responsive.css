@@ -919,7 +919,10 @@
   }
 
   footer {
-    padding: 3rem 1.25rem 2rem 1rem;
+    padding: 3rem 1.25rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     #footerFisrt {
       flex-direction: column;
       align-items: start;
@@ -971,7 +974,7 @@
   }
 
   body {
-    margin-bottom: calc(100vh - 3rem);
+    margin-bottom: calc(100vh - 13rem);
   }
   .phone-menu-div {
     .accordion-body {
