@@ -920,7 +920,7 @@
 
   footer {
     #footerFisrt {
-      padding: 4rem 1.25rem 2rem 1rem;
+      padding: 2rem 1.25rem 2rem 1rem;
       flex-direction: column;
       align-items: start;
       button {
@@ -971,7 +971,7 @@
   }
 
   body {
-    margin-bottom: 45rem;
+    margin-bottom: 48rem;
   }
   .phone-menu-div {
     .accordion-body {
@@ -1246,8 +1246,8 @@
           margin-top: 0px;
           .innerDiv {
             padding: 10px;
-            height: 16rem;
-            min-height: 16rem;
+            height: 17rem;
+            min-height: 17rem;
             h5 {
               font-size: 18px;
             }
@@ -1319,6 +1319,6 @@
     padding-top: 4rem;
   }
   body {
-    margin-bottom: 48rem;
+    margin-bottom: 44rem;
   }
 }
