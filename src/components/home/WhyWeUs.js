@@ -52,7 +52,7 @@ const WhyWeUs = () => {
                   position: "absolute",
                   top: "1rem",
                   left: "1rem",
-                  fontSize: "2.5rem",
+                  fontSize: "2.5rem !important",
                   fontWeight: 800,
                   color: "#000",
                   opacity: 0.07,

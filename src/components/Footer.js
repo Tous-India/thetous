@@ -31,13 +31,19 @@ const Footer = () => {
                   <Link href="/about">About</Link>
                 </li>
                 <li>
-                  <Link href="/tech-solution/web-development">Custom Web Development</Link>
+                  <Link href="/tech-solution/web-development">
+                    Custom Web Development
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/tech-solution/shopify-development">Shopify Development</Link>
+                  <Link href="/tech-solution/shopify-development">
+                    Shopify Development
+                  </Link>
                 </li>
                 <li>
-                  <Link href="/tech-solution/web-development">Custom CRM &amp; Web Apps</Link>
+                  <Link href="/tech-solution/web-development">
+                    Custom CRM &amp; Web Apps
+                  </Link>
                 </li>
 
                 <li>
@@ -86,15 +92,16 @@ const Footer = () => {
               </div>
               <h6 className="mb-0">
                 <span className="footer-copyright-spanDiv">
-                  Copyright © The Tous <span className="year">2025</span>. All
-                  Rights Reserved.
+                  Copyright © 2026 The Tous (A brand of Grid IT Solutions). All
+                  rights reserved.
                 </span>
                 <span>
                   {" | "}
                   <Link href={"/privacy-policy"}>Privacy Policy</Link>
                 </span>
                 <span>
-                  {" | "} <Link href={"/terms-conditions"}>Term & Conditions</Link>
+                  {" | "}{" "}
+                  <Link href={"/terms-conditions"}>Term & Conditions</Link>
                 </span>
               </h6>
             </div>

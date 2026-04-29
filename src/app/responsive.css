@@ -977,7 +977,7 @@
         li {
           line-height: 25px;
           a {
-            font-size: 1.15rem;
+            font-size: 1.15rem !important;
             font-weight: 300;
             color: black;
           }
@@ -1074,14 +1074,14 @@
 
   .home-page-Testimonials {
     .slide {
-      margin: 0.75rem;
       .innerDiv {
-        padding: 20px !important;
+        padding: 22px !important;
+        height: 22rem;
       }
     }
   }
-  .homepage-about-section  .container >div{
-        margin-bottom: -5rem;
+  .homepage-about-section .container > div {
+    margin-bottom: -5rem;
   }
   .homepage-about-section .container .row .mid .inner-div .first-div p {
     margin-bottom: 1.5rem;
@@ -1091,7 +1091,7 @@
     line-height: 1.8 !important;
   }
   footer {
-    padding-top: 3rem;
+    height: 100vh;
   }
 
   /* Header Css part-2 and last */
@@ -1105,7 +1105,7 @@
           text-align: start;
           -webkit-text-stroke-width: 0.65px;
           width: 100%;
-          font-size: 1.5rem;
+          font-size: 1.5rem !important;
           font-weight: 300;
           line-height: 50px;
           display: block;
@@ -1243,8 +1243,8 @@
           margin-top: 0px;
           .innerDiv {
             padding: 10px;
-            height: auto;
-            min-height: 15rem;
+            height: 16rem;
+            min-height: 16rem;
             h5 {
               font-size: 18px;
             }
@@ -1319,8 +1319,24 @@
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 720px) {
+  footer {
+    padding-top: 12rem;
+  }
   body {
-    margin-bottom: 48rem;
+    margin-bottom: 46rem;
+  }
+}
+@media (max-width: 400px) {
+  footer {
+    padding-top: 6rem;
+  }
+  body {
+    margin-bottom: 46rem;
+  }
+}
+@media (max-width: 360px) {
+  footer {
+    padding-top: 0rem;
   }
 }

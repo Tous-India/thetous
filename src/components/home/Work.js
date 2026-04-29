@@ -27,7 +27,7 @@ const projects = [
   {
     title: "Prozvofit",
     slug: "prozvofit",
-    description: "B2B fitness equipments brand. Built on laravel with lead management system.",
+    description: "B2B fitness equipment brand platform built on Laravel with integrated lead management and customer relationship system.",
     image: Img6,
   },
   {

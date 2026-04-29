@@ -58,7 +58,7 @@ a {
 body {
   overflow-x: hidden;
   /* Add bottom margin equal to footer height for reveal effect - responsive */
-  margin-bottom: 33rem;
+  margin-bottom: 30rem;
   background-color: rgb(0, 0, 0);
   box-shadow: 0px 25px 20px -2px rgb(0, 0, 0);
   border-radius: 30px 30px !important;
@@ -617,7 +617,7 @@ p {
 
   h4 {
     color: #333;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400 !important;
     line-height: 1.5;
     margin-top: 1rem;
@@ -711,11 +711,11 @@ p {
 
 .exquisites-home-page {
   margin: 3rem 0;
-  i{
+  i {
     font-size: 2rem;
   }
-  a{
-    i{
+  a {
+    i {
       font-size: 1rem;
     }
   }
@@ -761,7 +761,7 @@ p {
 
     > h4 {
       color: #333;
-      font-size: 14px;
+      font-size: 16px;
       font-family: "Poppins";
       font-weight: 400;
       line-height: 1.5;
@@ -1357,7 +1357,7 @@ p {
 footer {
   background-color: black;
   color: white;
-  padding: 3rem 0 2rem 0;
+  padding: 3rem 0 1rem 0;
   margin: 0;
   /* Fixed positioning for reveal effect */
   position: fixed;
@@ -1514,6 +1514,12 @@ footer {
   h6 {
     font-size: 0.8rem;
     font-weight: 300;
+    a {
+      font-size: 14px !important;
+    }
+    .footer-copyright-spanDiv {
+      font-size: 14px !important;
+    }
   }
 }
 
@@ -1623,7 +1629,7 @@ footer {
       border-radius: 10px;
       background: #f3f3f3;
       border: 1px solid rgb(198, 198, 198);
-
+      height: 18rem;
       img {
         width: 25%;
         height: auto;
@@ -1796,7 +1802,7 @@ footer {
 
     p {
       color: #393939;
-      font-size: 14px;
+      font-size: 16px !important;
       font-family: "Poppins";
       font-weight: 400;
       line-height: 1.5;
@@ -2019,9 +2025,9 @@ p {
     }
   }
 
-  #footerSecond {
+  /* #footerSecond {
     transform: translate(0%, -6.074%) translate3d(0px, 0px, 0px);
-  }
+  } */
 
   .about-page-main .brand-strategy-div p strong:after {
     display: none;
@@ -2130,4 +2136,20 @@ p {
 
 .animate-fadeSlideIn {
   animation: fadeSlideIn 0.5s ease-out forwards;
+}
+.parent-fo-header
+  header
+  .container
+  .row-div
+  .menu-div
+  .phone-menu-div
+  .inner-div
+  .row
+  > div
+  .accordion-header
+  button
+  a {
+  color: #303030;
+  font-weight: 500;
+  font-size: 1.6rem !important;
 }

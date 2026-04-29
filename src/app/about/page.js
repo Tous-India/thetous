@@ -62,8 +62,8 @@ const About = () => {
               convert visitors, and hold up over time. Since then, we&apos;ve
               delivered 150+ projects — from early-stage business websites to
               custom Shopify stores, B2B web platforms, and internal CRMs for
-              businesses that outgrew off-the-shelf tools. Like most agencies,
-              we&apos;ve experimented along the way. We tried scaling a marketing
+              businesses that outgrew off-the-shelf tools. Like most agencies,<br/>
+              We&apos;ve experimented along the way. We tried scaling a marketing
               arm. We took on social media work. We ran ads. What we kept coming
               back to is what we do best: building things. So that&apos;s what we
               focus on now.

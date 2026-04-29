@@ -62,18 +62,22 @@ const Testimonials = () => {
             <Swiper
               className="mySwiper"
               loop={true}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
+              // autoplay={{
+              //   delay: 2500,
+              //   disableOnInteraction: false,
+              // }}
               freeMode={true}
               pagination={{
                 clickable: true,
               }}
               speed={2000}
               breakpoints={{
+                0: {
+                  slidesPerView: 1.25,
+                  spaceBetween: 20,
+                },
                 640: {
-                  slidesPerView: 1,
+                  slidesPerView: 1.25,
                   spaceBetween: 20,
                 },
                 768: {
