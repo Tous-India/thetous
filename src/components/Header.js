@@ -74,10 +74,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li className={`services-item`} id="drop-down-li-item">
-                    Services{" "}
-                    <span>
-                      <i className="ri-arrow-down-s-line"></i>
-                    </span>
+                    Services <i className="ri-arrow-down-s-line"></i>
                     <div className="inner-ul-dropdown">
                       <ul>
                         <li>
@@ -148,7 +145,7 @@ const Header = () => {
                         onClick={menuServiceClick}
                       >
                         {" "}
-                        Services{" "} 
+                        Services{" "}
                         <i
                           className={`ri-arrow-down-s-line ${open ? "rotate-180" : "rotate-0"}`}
                         ></i>
@@ -156,9 +153,15 @@ const Header = () => {
                       <div
                         className={`phone-services-box ${open ? "openclass" : "closeclass"}`}
                       >
-                        <Link href="/tech-solution/web-development">Custom Web Development</Link>
-                        <Link href="/tech-solution/shopify-development">Shopify Development</Link>
-                        <Link href="/tech-solution/web-development">Custom CRM & Web Apps</Link>
+                        <Link href="/tech-solution/web-development">
+                          Custom Web Development
+                        </Link>
+                        <Link href="/tech-solution/shopify-development">
+                          Shopify Development
+                        </Link>
+                        <Link href="/tech-solution/web-development">
+                          Custom CRM & Web Apps
+                        </Link>
                       </div>
                     </div>
 

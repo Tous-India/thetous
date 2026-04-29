@@ -44,6 +44,7 @@ const workData = {
     id: study.id,
     image: imageMap[study.image],
     title: study.title,
+    projectType: study.projectType,
     desc: study.description,
     tags: study.tags,
     disabled: study.id === "ska-orion" || study.id === "tarc",

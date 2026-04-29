@@ -2,8 +2,9 @@
   "caseStudies": [
     {
       "id": "luxeliv",
+      "projectType": "D2C Fashion Website",
       "title": "Luxeliv",
-      "description": " Is an online luxury lifestyle and fashion brand",
+      "description": "D2C luxury fashion brand — marketplace to owned-website revenue shift",
       "tags": [
         "Website",
         "SEO"
@@ -102,8 +103,9 @@
     },
     {
       "id": "dhirsons-jewellery-house",
+      "projectType": "Custom E-Commerce Website",
       "title": "Dhirsons Jewellery House",
-      "description": " Premium Diamond Jewellery Store – Karol Bagh, Delhi",
+      "description": "Premium diamond jewellery store — luxury digital experience for Karol Bagh's finest",
       "tags": [
         "Website",
         "SEO"
@@ -150,8 +152,9 @@
     },
     {
       "id": "oh-my-pet-grooming",
+      "projectType": "Service Booking Website",
       "title": "Oh My Pet Grooming",
-      "description": " Professional pet grooming services at home",
+      "description": "Mobile pet grooming service — booking platform with local SEO and Google Ads",
       "tags": [
         "Website",
         "SEO"
@@ -197,8 +200,9 @@
     },
     {
       "id": "executive-cars",
+      "projectType": "Service Booking Website",
       "title": "Executive Cars",
-      "description": " First-class chauffeur car service in Melbourne you can trust",
+      "description": "Premium chauffeur service in Melbourne — bookings, SEO and digital presence",
       "tags": [
         "Website",
         "SEO",
@@ -247,8 +251,9 @@
     },
     {
       "id": "silvago",
+      "projectType": "Shopify Store",
       "title": "Silvago",
-      "description": " Elegant silver jewellery in minimalist design",
+      "description": "D2C silver jewellery brand — Shopify store with 200+ SKUs and mobile checkout",
       "tags": [
         "Website",
         "SEO",
@@ -297,8 +302,9 @@
     },
     {
       "id": "prozvofit",
+      "projectType": "B2B Website",
       "title": "Prozvofit",
-      "description": " Strength-focused gym equipment manufacturing",
+      "description": "B2B gym equipment brand — lead management website built on Laravel",
       "tags": [
         "Website",
         "SEO",
@@ -348,8 +354,9 @@
     },
     {
       "id": "crossroads-hospital",
+      "projectType": "Custom Website",
       "title": "Crossroads Hospital",
-      "description": " Healthcare website with patient-focused digital experience",
+      "description": "Modern healthcare website — patient portal, appointment booking and digital presence",
       "tags": [
         "Website",
         "SEO"
@@ -396,8 +403,9 @@
     },
     {
       "id": "godrej",
+      "projectType": "Performance Marketing",
       "title": "Godrej",
-      "description": " Premium residential performance marketing in South Delhi",
+      "description": "Luxury 2.5–4 BHK project in South Delhi — qualified lead generation via Meta & Google",
       "tags": [
         "Performance Marketing",
         "Real Estate"
@@ -447,8 +455,9 @@
     },
     {
       "id": "m3m-panipat",
+      "projectType": "Performance Marketing",
       "title": "M3M Panipat",
-      "description": " Performance marketing for a Tier-2 real estate project",
+      "description": "Tier-2 residential project in Panipat — enquiry generation via performance campaigns",
       "tags": [
         "Performance Marketing",
         "Real Estate"
@@ -497,8 +506,9 @@
     },
     {
       "id": "sbp",
+      "projectType": "Performance Marketing",
       "title": "SBP – Derabassi, Mohali",
-      "description": " Performance marketing for regional real estate projects",
+      "description": "Mid-segment residential project in Tricity — enquiries via targeted local campaigns",
       "tags": [
         "Performance Marketing",
         "Real Estate"
@@ -547,8 +557,9 @@
     },
     {
       "id": "ska-orion",
+      "projectType": "Performance Marketing",
       "title": "SKA Orion",
-      "description": "Premium residential real estate project...",
+      "description": "Premium residential real estate project — performance marketing and lead generation",
       "tags": [
         "Website",
         "SEO"
@@ -574,8 +585,9 @@
     },
     {
       "id": "tarc",
+      "projectType": "Performance Marketing",
       "title": "TARC",
-      "description": "Real estate development and construction...",
+      "description": "Real estate development and construction — digital presence and enquiry campaigns",
       "tags": [
         "Website",
         "SEO"

@@ -21,15 +21,17 @@ const Footer = () => {
                 </Link>
               </div>
               <ul className="footer-ul">
-                <li>
-                  <Link href="/">Home</Link>
-                </li>
-                <li>
-                  <Link href="/work">Work</Link>
-                </li>
-                <li>
-                  <Link href="/about">About</Link>
-                </li>
+                <div className="footer-ul-responsive-div">
+                  <li>
+                    <Link href="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link href="/work">Work</Link>
+                  </li>
+                  <li>
+                    <Link href="/about">About</Link>
+                  </li>
+                </div>
                 <li>
                   <Link href="/tech-solution/web-development">
                     Custom Web Development
@@ -48,10 +50,6 @@ const Footer = () => {
 
                 <li>
                   <Link href="https://blog.thetous.com/">Blogs</Link>
-                </li>
-
-                <li>
-                  <Link href="/contact">Contact</Link>
                 </li>
               </ul>
 

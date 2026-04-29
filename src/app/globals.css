@@ -58,7 +58,7 @@ a {
 body {
   overflow-x: hidden;
   /* Add bottom margin equal to footer height for reveal effect - responsive */
-  margin-bottom: 33rem;
+  margin-bottom: 37rem;
   background-color: rgb(0, 0, 0);
   box-shadow: 0px 25px 20px -2px rgb(0, 0, 0);
   border-radius: 30px 30px !important;
@@ -206,7 +206,6 @@ p {
         align-items: center;
         padding-left: 0rem;
         padding-right: 0rem;
-
         .logo-div {
           width: 20%;
 
@@ -221,12 +220,6 @@ p {
           nav {
             #drop-down-li-item {
               overflow: unset !important;
-
-              &:hover {
-                span {
-                  transform: rotate(90deg) !important;
-                }
-              }
             }
 
             > ul {
