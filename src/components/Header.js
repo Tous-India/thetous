@@ -8,24 +8,6 @@ import whatsapp from "../../public/whatsapp.png";
 import phone from "../../public/phone-call.png";
 // brand
 // import copywriter from "../../public/services/brand/meta-ads.webp"; //default
-// import socialMedia from "../../public/services/brand/social-media-management.webp";
-// import performanceMarketing from "../../public/services/brand/performance-marketing.webp";
-// import payPerClick from "../../public/services/brand/google-ads.webp";
-// import seo from "../../public/services/brand/seo.webp";
-// // media
-// import modelShoot from "../../public/services/media/model-shoot.webp";
-// import productShoot from "../../public/services/media/producctt shooot.webp";
-// import printMedia from "../../public/services/media/print-media.webp";
-// import videoEditing from "../../public/services/media/video generation.webp";
-// import graphicDesign from "../../public/services/media/graphic designing.webp";
-
-// // tech
-// import websiteDesign from "../../public/services/tech/website-design.webp";
-// import whatsappMarketing from "../../public/services/tech/whatsappmarketing.webp";
-// import chatBot from "../../public/services/tech/chatbot.webp";
-// import automation from "../../public/services/tech/automation.webp";
-// import ecommerce from "../../public/services/tech/ecommerce.webp";
-// import webAndApp from "../../public/services/tech/webdev.webp";
 
 const Header = () => {
   // Phone Menu
@@ -37,20 +19,18 @@ const Header = () => {
     setShowPhoneMenu(false);
   };
   // Phone Menu
-
   const pathname = usePathname();
   useEffect(() => {
     setShowPhoneMenu(false); // auto close on route change
   }, [pathname]);
-  // showing the list hover on the heading
 
-  //
+  // Phone menu services
 
-  // MenuList with Image Change
+  const [open, setOpen] = useState(false);
 
- 
-
-  // Hover on Heading with opacity
+  const menuServiceClick = () => {
+    setOpen(!open);
+  };
 
   return (
     <div className="parent-fo-header">
@@ -76,10 +56,22 @@ const Header = () => {
               <nav className="desktop-menu">
                 <ul className="ul-nav">
                   <li>
-                    <Link href="/" className={pathname === "/" ? "active-nav" : ""}>Home</Link>
+                    <Link
+                      href="/"
+                      className={pathname === "/" ? "active-nav" : ""}
+                    >
+                      Home
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/about" className={pathname.startsWith("/about") ? "active-nav" : ""}>About</Link>
+                    <Link
+                      href="/about"
+                      className={
+                        pathname.startsWith("/about") ? "active-nav" : ""
+                      }
+                    >
+                      About
+                    </Link>
                   </li>
                   <li className={`services-item`} id="drop-down-li-item">
                     Services{" "}
@@ -89,19 +81,32 @@ const Header = () => {
                     <div className="inner-ul-dropdown">
                       <ul>
                         <li>
-                          <Link href="/tech-solution/web-development">Custom Web Development</Link>
+                          <Link href="/tech-solution/web-development">
+                            Custom Web Development
+                          </Link>
                         </li>
                         <li>
-                          <Link href="/tech-solution/shopify-development">Shopify Development</Link>
+                          <Link href="/tech-solution/shopify-development">
+                            Shopify Development
+                          </Link>
                         </li>
                         <li>
-                          <Link href="/tech-solution/web-development">Custom CRM & Web Apps</Link>
+                          <Link href="/tech-solution/web-development">
+                            Custom CRM & Web Apps
+                          </Link>
                         </li>
                       </ul>
                     </div>
                   </li>
                   <li>
-                    <Link href="/work" className={pathname.startsWith("/work") ? "active-nav" : ""}>Work</Link>
+                    <Link
+                      href="/work"
+                      className={
+                        pathname.startsWith("/work") ? "active-nav" : ""
+                      }
+                    >
+                      Work
+                    </Link>
                   </li>
                   <li>
                     <Link
@@ -137,49 +142,23 @@ const Header = () => {
                       <Link href="/">Home</Link>
                       <Link href="/about">About</Link>
                     </div>
-                    <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4 py-2">
-                      <div
-                        className="accordion"
-                        id="accordionPanelsStayOpenExample"
+                    <div className="col-lg-4 col-md-12 col-sm-12 bs-box px-4">
+                      <p
+                        className={`${open ? "border-b-2 border-gray-300" : "border-0"}`}
+                        onClick={menuServiceClick}
                       >
-                        <div className="accordion-item">
-                          <h2 className="accordion-header">
-                            <button
-                              className="accordion-button collapsed"
-                              type="button"
-                              data-bs-toggle="collapse"
-                              data-bs-target="#panelsStayOpen-collapseOne"
-                              aria-expanded="false"
-                              aria-controls="panelsStayOpen-collapseOne"
-                            >
-                              <Link href="/brand-solution">Services</Link>
-                            </button>
-                          </h2>
-                          <div
-                            id="panelsStayOpen-collapseOne"
-                            className="accordion-collapse collapse"
-                          >
-                            <div className="accordion-body">
-                              <ul>
-                                <li>
-                                  <Link href="/tech-solution/web-development">
-                                    Custom Web Development
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/tech-solution/shopify-development">
-                                    Shopify Development
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link href="/tech-solution/web-development">
-                                    Custom CRM & Web Apps
-                                  </Link>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
+                        {" "}
+                        Services{" "} 
+                        <i
+                          className={`ri-arrow-down-s-line ${open ? "rotate-180" : "rotate-0"}`}
+                        ></i>
+                      </p>
+                      <div
+                        className={`phone-services-box ${open ? "openclass" : "closeclass"}`}
+                      >
+                        <Link href="/tech-solution/web-development">Custom Web Development</Link>
+                        <Link href="/tech-solution/shopify-development">Shopify Development</Link>
+                        <Link href="/tech-solution/web-development">Custom CRM & Web Apps</Link>
                       </div>
                     </div>
 
@@ -227,9 +206,6 @@ const Header = () => {
             height={100}
           />
         </a> */}
-
-          
-
       </header>
     </div>
   );
