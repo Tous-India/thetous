@@ -1413,7 +1413,11 @@ footer {
     display: flex;
     justify-content: start;
     gap: 2rem;
-
+    .footer-ul-responsive-div {
+      width: 20%;
+      display: flex;
+      justify-content: space-between;
+    }
     li {
       line-height: 2.75rem;
 
