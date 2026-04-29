@@ -1333,10 +1333,11 @@
 }
 @media (max-width: 400px) {
   footer {
-    padding-top: 0.5rem;
+    padding-top: 5.5rem;
     padding-bottom: 2rem;
+    justify-content: flex-end !important;
   }
   body {
-  margin-bottom: 44rem;
+    margin-bottom: 35rem;
   }
 }
