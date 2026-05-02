@@ -43,7 +43,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/tech-solution/web-development">
+                  <Link href="/tech-solution/crm-development">
                     Custom CRM &amp; Web Apps
                   </Link>
                 </li>

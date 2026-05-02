@@ -7,7 +7,7 @@
   padding-bottom: 3rem;
   padding-top: 2rem;
   z-index: 1;
-  margin-bottom: -3rem !important;
+  margin-bottom: 0rem !important;
   iframe {
     height: 300px;
   }

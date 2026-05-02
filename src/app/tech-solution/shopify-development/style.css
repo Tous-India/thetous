@@ -182,21 +182,24 @@
         &:hover {
           border-color: transparent;
           box-shadow: 0 0 0 2px transparent;
-          background: linear-gradient(white, white) padding-box,
+          background:
+            linear-gradient(white, white) padding-box,
             linear-gradient(135deg, #00dbde, #fc00ff) border-box;
           border: 2px solid transparent;
         }
         &.active-gradient {
           border-color: transparent;
           box-shadow: 0 0 0 2px transparent;
-          background: linear-gradient(white, white) padding-box,
+          background:
+            linear-gradient(white, white) padding-box,
             linear-gradient(135deg, #00dbde, #fc00ff) border-box;
           border: 2px solid transparent;
           transition: none;
         }
       }
       .para-div {
-        background: linear-gradient(#fff, #fff) padding-box padding-box,
+        background:
+          linear-gradient(#fff, #fff) padding-box padding-box,
           linear-gradient(135deg, #00dbde, #fc00ff) border-box;
         border: 2px solid rgba(0, 0, 0, 0);
         box-shadow: 0 0 0 2px rgba(0, 0, 0, 0);
@@ -234,9 +237,10 @@
     }
     .process-text {
       position: relative;
-      max-height: 2.8em;
+      max-height: 2.6em;
       overflow: hidden;
-      transition: max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+      transition:
+        max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1),
         opacity 0.75s linear;
       margin-bottom: 0.5rem;
       line-height: 1.4;
@@ -244,7 +248,8 @@
     }
     .process-text.expanded {
       max-height: 500px;
-      transition: max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+      transition:
+        max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1),
         opacity 0.75s linear;
     }
     .read-more-btn {
@@ -326,7 +331,8 @@
       position: relative;
       max-height: 1.4em;
       overflow: hidden;
-      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      transition:
+        max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         opacity 0.3s ease;
       margin-bottom: 0.5rem;
       line-height: 1.4;
@@ -334,7 +340,8 @@
     }
     .why-text.expanded {
       max-height: 500px;
-      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+      transition:
+        max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         opacity 0.3s ease;
     }
   }
@@ -368,14 +375,18 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+          font-size: 3rem;
+          padding-bottom: 1rem;
         }
       }
     }
   }
 
   .faq-web-dev {
-    background-color: white;
+    background-color: #fff;
     padding-bottom: 3rem;
+    width: 60%;
+    margin: auto;
     > div {
       background-color: #fafafa;
       padding: 1rem 1rem;
@@ -398,7 +409,12 @@
       }
     }
   }
-
+  .main-section-heading {
+    text-align: center;
+    &::after {
+      left: 45%;
+    }
+  }
   .web-dev-tabs {
     .inner-heading {
       font-size: 16px;
@@ -500,7 +516,8 @@
 .shopify-devlopment-main-page .group .border-2:hover {
   border-color: transparent;
   box-shadow: 0 0 0 2px transparent;
-  background: linear-gradient(white, white) padding-box,
+  background:
+    linear-gradient(white, white) padding-box,
     linear-gradient(135deg, #00dbde, #fc00ff) border-box;
   border: 2px solid transparent;
 }
@@ -534,7 +551,7 @@
   padding: 3rem 0;
   position: relative;
   z-index: 5;
-  margin-bottom: -2rem !important;
+  margin-bottom: 0rem !important;
   .row {
     align-items: center;
     justify-content: center;
@@ -699,6 +716,9 @@
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
+  .shopify-devlopment-main-page .faq-web-dev {
+    width: 100%;
+  }
   .shopify-devlopment-main-page .faq-web-dev .inner-heading {
     line-height: 20px;
   }
@@ -807,6 +827,171 @@
 
 @media only screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) {
   #boxHeight {
-    padding-bottom: 2.95rem;
+    /* padding-bottom: 2.95rem; */
+  }
+}
+
+/* ================= REAL OUTCOMES CASE CARD ================= */
+.real-outcome-card {
+  max-width: 60rem;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.real-outcome-brand {
+  padding: 2rem 2.5rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.real-outcome-eyebrow {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 0.5rem;
+}
+
+.real-outcome-title {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.real-outcome-link {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: #555;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1px;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.real-outcome-link:hover {
+  color: #000;
+  border-bottom-color: #000;
+}
+
+.real-outcome-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.real-outcome-stat {
+  padding: 1.5rem 2.5rem;
+  border-right: 1px solid #f0f0f0;
+}
+
+.real-outcome-stat:last-child {
+  border-right: none;
+}
+
+.real-outcome-stat-value {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 700;
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 0.25rem;
+  line-height: 1.1;
+}
+
+.real-outcome-stat-label {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: #777;
+  margin: 0;
+}
+
+.real-outcome-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  padding: 2rem 2.5rem;
+}
+
+.real-outcome-subhead {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 0.75rem;
+}
+
+.real-outcome-text {
+  font-family: "Poppins", sans-serif;
+  color: #535353;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 0.75rem;
+}
+
+.real-outcome-text:last-child {
+  margin-bottom: 0;
+}
+
+.real-outcome-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.real-outcome-list li {
+  display: flex;
+  align-items: flex-start;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #535353;
+  line-height: 1.5;
+}
+
+.real-outcome-footer {
+  padding: 1.5rem 2.5rem 2rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+@media (max-width: 720px) {
+  .shopify-devlopment-main-page .stats-web-dev .content {
+    margin-top: 3rem;
+  }
+
+  .real-outcome-brand,
+  .real-outcome-stat,
+  .real-outcome-body,
+  .real-outcome-footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .real-outcome-stats {
+    grid-template-columns: 1fr;
+  }
+  .real-outcome-stat {
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .real-outcome-stat:last-child {
+    border-bottom: none;
+  }
+  .real-outcome-body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }

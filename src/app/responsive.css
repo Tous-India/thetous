@@ -274,18 +274,13 @@
     margin-top: 0rem;
   }
 
-  body {
-    margin-bottom: 30rem;
-  }
 }
+
 
 @media (max-width: 1024px) and (min-width: 720px) {
   /* CSS styles for portrait tablets only (example range) */
   html {
     overflow-x: hidden;
-  }
-  body {
-    margin-bottom: 36rem;
   }
   header {
     .container {
@@ -921,11 +916,9 @@
   }
 
   footer {
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 2rem 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: end;
     #footerFisrt {
       flex-direction: column;
       align-items: start;
@@ -982,9 +975,6 @@
     }
   }
 
-  body {
-    margin-bottom: calc(100svh - 17rem);
-  }
   .phone-menu-div {
     .accordion-body {
       ul {
@@ -1104,10 +1094,6 @@
   .home-page-Testimonials .slide .innerDiv > p {
     color: #626262;
     line-height: 1.8 !important;
-  }
-  footer {
-    height: 100vh;
-    height: 100svh;
   }
 
   /* Header Css part-2 and last */
@@ -1326,18 +1312,8 @@
     margin-top: 0rem !important;
   }
 }
-@media (min-width: 401px) and (max-width: 480px) {
-  footer {
-    justify-content: flex-end;
-  }
-}
 @media (max-width: 400px) {
   footer {
-    padding-top: 5.5rem;
-    padding-bottom: 2rem;
-    justify-content: flex-end !important;
-  }
-  body {
-    margin-bottom: calc(100svh - 2rem);
+    padding: 1.5rem 1rem 2rem;
   }
 }

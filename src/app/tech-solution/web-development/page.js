@@ -7,9 +7,81 @@ import usePageTitle from "@/hooks/usePageTitle";
 import "./style.css";
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+const webDevFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What's the typical timeline for a website project?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Business websites typically ship in 4-8 weeks from kickoff, depending on scope and content readiness. Custom-coded PHP or React builds take longer than WordPress, but the performance and scalability gains are worth it.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Why custom code instead of WordPress?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "WordPress comes with trade-offs: plugin dependencies, security updates, performance overhead, and template lock-in. For businesses that need real performance, control, and scalability, custom-coded sites in PHP or React are a better investment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you offer revisions during development?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Two rounds of major design revisions and unlimited minor revisions during the design phase are included. We use clickable prototypes before development starts.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What technologies do you build with?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PHP for content-driven sites. React and Next.js for high-performance frontends. Node.js for backend APIs. MySQL for databases. WordPress as a headless CMS when content management is critical.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What about ongoing support after launch?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "30 days of post-launch support is included. Beyond that, you can engage us for ongoing maintenance and feature additions on a monthly retainer or per-project basis.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can you migrate my existing website?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We've migrated sites across platforms — WordPress, Wix, Squarespace, custom builds — preserving content, products, customer data, and SEO redirects.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you handle SEO and content too?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "On-page SEO, schema markup, and structured data are standard with every build. For ongoing content creation, we partner with specialists, but the technical SEO foundation is always built in.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with international clients?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Our work spans India and the US, with clients across used auto parts, healthcare, manufacturing, and other markets.",
+      },
+    },
+  ],
+};
+
 const WebDevelopment = () => {
-    usePageTitle("Web Development Agency for Growing Online Businesses");
-  
+  usePageTitle("Custom Website Development for B2B Businesses | The Tous");
+
   const videoRef = React.useRef(null);
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);
@@ -20,120 +92,140 @@ const WebDevelopment = () => {
   const [activeRealEstate, setActiveRealEstate] = useState(null);
   const faqs = [
     {
-      question: "What's the typical timeline for a project?",
+      question: "What's the typical timeline for a website project?",
       answer:
-        "Project timelines vary based on complexity and scope. A standard website typically takes 4-6 weeks, while complex web applications may require 8-12 weeks or more. We'll provide a detailed timeline during our initial consultation.",
+        "Business websites typically ship in 4-8 weeks from kickoff, depending on scope and content readiness. Custom-coded PHP or React builds take longer than WordPress, but the performance and scalability gains are worth it. Migration projects vary based on data volume and SEO complexity.",
     },
     {
-      question: "What is your pricing model?",
+      question: "Why custom code instead of WordPress?",
       answer:
-        "We offer flexible pricing based on project scope and requirements. This includes fixed-price projects for defined scopes, hourly rates for ongoing work, and retainer packages for long-term partnerships. Contact us for a custom quote.",
-    },
-    {
-      question: "Do you provide ongoing support after launch?",
-      answer:
-        "Yes, we offer comprehensive post-launch support including maintenance, updates, security patches, and technical assistance. Support packages can be customized based on your needs.",
-    },
-    {
-      question: "Can you work with our existing tech stack?",
-      answer:
-        "Absolutely. We're experienced with a wide range of technologies and can integrate with your existing systems, or recommend the best solutions for your specific requirements.",
-    },
-    {
-      question: "What's included in your development process?",
-      answer:
-        "Our process includes discovery and planning, UI/UX design, development, testing and QA, deployment, and post-launch support. You'll have regular check-ins and full transparency throughout.",
+        "WordPress is great for some projects, but it comes with trade-offs: plugin dependencies, security updates, performance overhead, and template lock-in. For businesses that need real performance, control, and long-term scalability, custom-coded sites in PHP or React are a better investment. We use WordPress as a CMS layer when content updating matters — but we don't build template-based WordPress sites anymore.",
     },
     {
       question: "Do you offer revisions during development?",
       answer:
-        "Yes, we include revision rounds at key milestones to ensure the final product meets your expectations. The number of revisions depends on your project package.",
+        "Yes. Two rounds of major design revisions and unlimited minor revisions during the design phase are included. We use clickable prototypes before development starts, so most clients are happy with the direction before we write a single line of code.",
+    },
+    {
+      question: "What technologies do you build with?",
+      answer:
+        "PHP for content-driven sites and backend logic. React and Next.js for high-performance frontends. Node.js for backend APIs when needed. MySQL for databases. WordPress as a headless CMS when content management is critical. We pick the stack based on the project's needs, not a one-size-fits-all approach.",
+    },
+    {
+      question: "What about ongoing support after launch?",
+      answer:
+        "30 days of post-launch support is included with every project. Beyond that, you can engage us for ongoing maintenance, optimization, and feature additions on a monthly retainer or per-project basis. Most of our clients have been with us for years, not weeks.",
+    },
+    {
+      question: "Can you migrate my existing website?",
+      answer:
+        "Yes. We've migrated sites across platforms — WordPress, Wix, Squarespace, custom builds — preserving content, products, customer data, and SEO redirects. The goal is zero traffic loss during migration.",
+    },
+    {
+      question: "Do you handle SEO and content too?",
+      answer:
+        "Yes. On-page SEO, schema markup, and structured data are standard with every build — not extras. For ongoing content creation and link building, we partner with specialists, but the technical SEO foundation is always built into the website itself.",
+    },
+    {
+      question: "Do you work with international clients?",
+      answer:
+        "Yes. Our work spans India and the US, with clients across used auto parts, healthcare, manufacturing, and other markets. We handle international payment integrations, multi-region SEO, and timezone-friendly communication.",
     },
   ];
 
   const portfolioTabs = [
-    { id: "customized", label: "Silvago" },
-    { id: "tailored", label: "KB Group" },
-    { id: "coaches", label: "Vaqya" },
-    { id: "custom", label: "Shoolin" },
+    { id: "customized", label: "SSR Dies & Moulds" },
+    { id: "tailored", label: "UsedEngines4Cars" },
+    { id: "coaches", label: "Smartrays" },
+    { id: "custom", label: "Svaa" },
+    { id: "boxika", label: "Boxika" },
   ];
 
   const portfolioContent = {
     customized: {
-      title: "Silvago – Mobile App Development",
-      subtitle: "Silver Jewellery & Lifestyle",
+      title: "SSR Dies and Moulds — Plastic OEM Manufacturer Website",
+      subtitle: "Plastic OEM Manufacturing",
       description:
-        "We designed and developed a high-performance mobile shopping app for Silvago, focused on delivering a smooth, premium jewellery-buying experience.",
+        "SSR manufactures plastic casings for geysers, coolers, and consumer appliances — supplying major appliance brands across India. Their target buyers are procurement managers and engineering teams who need detailed product information fast, on any device.",
       features: [
-        "Custom product browsing with clean UI",
-        "Secure checkout flow with offer logic",
-        "Buy 1 Get 1 & promotional rules integration",
-        "Wishlist and order tracking",
-        "Optimized performance for faster load times",
+        "Custom-coded PHP website (no WordPress)",
+        "Product catalog with detailed manufacturing specifications",
+        "Clean information architecture for technical buyers",
+        "Fast load times across desktop and mobile",
+        "On-page SEO and schema markup",
       ],
       impact: [
-        "Improved mobile conversion rate",
-        "Faster browsing and checkout experience",
-        "Better engagement from repeat customers",
+        "A professional digital presence that matches the credibility their offline sales team has built — making it easier for B2B buyers to evaluate them online before reaching out.",
       ],
-      platform: "Android & iOS (Custom Mobile App)",
+      platform: "Custom-Coded Website (PHP)",
     },
     tailored: {
-      title: "KB – Web Application Development",
-      subtitle: "Business Operations / Internal Management",
+      title: "UsedEngines4Cars — US Used Engine Marketplace",
+      subtitle: "Used Engine Marketplace (USA)",
       description:
-        "We developed a scalable web application for KB, tailored to manage internal workflows and operational data efficiently.",
+        "A US-based business serving customers looking for used engines and transmissions. The challenge: capturing detailed inquiry information and ranking organically for high-intent searches in a competitive market across the United States.",
       features: [
-        "Role-based access system",
-        "Centralized data management",
-        "Workflow automation for daily operations",
-        "Clean, responsive interface for desktop use",
-        "Secure authentication and data handling",
+        "WordPress site with detailed engine inquiry forms",
+        "On-page SEO targeting US-based engine search terms",
+        "Mobile-optimized inquiry flow (most traffic is mobile)",
+        "Schema markup for product listings",
+        "Structured for high search visibility in the US market",
       ],
       impact: [
-        "Reduced manual work and errors",
-        "Faster decision-making through organized data",
-        "Improved internal productivity",
+        "Steady stream of organic leads month-on-month from US-based searches. Demonstrates our work isn't limited to the Indian market — we understand international SEO and US buyer behavior.",
       ],
-      platform: "Custom Web Application",
+      platform: "WordPress + SEO Lead Capture",
     },
     coaches: {
-      title: "Vaqya LLC – Analytics Dashboard",
-      subtitle: "Healthcare Analytics (USA)",
+      title: "Smartrays — Commercial Solar Lead Generation",
+      subtitle: "Commercial Solar Panel Solutions",
       description:
-        "We designed and developed an analytics dashboard for Vaqya LLC, focused on delivering meaningful insights for doctors and healthcare teams in the USA.",
+        "Smartrays installs commercial solar panels for businesses across India. They needed a website that would convert site visitors into qualified solar installation inquiries — not just a brochure for an industry where buyers are doing serious research before committing.",
       features: [
-        "Patient analytics and performance metrics",
-        "Referral and treatment tracking",
-        "Visual reports with charts and trends",
-        "Doctor-friendly UI with clear data hierarchy",
-        "Secure and scalable dashboard architecture",
+        "Mobile-responsive WordPress site with custom design",
+        "SEO-optimized service pages targeting commercial solar buyers",
+        "Lead capture forms designed for solar inquiry qualification",
+        "Case study and project showcase sections",
+        "Industry-specific content structure",
       ],
       impact: [
-        "Clear visibility into patient data",
-        "Faster insights for decision-making",
-        "Improved reporting accuracy and usability",
+        "Smartrays continues to refer us to other businesses in their network. The site has been driving consistent inbound inquiries since launch.",
       ],
-      platform: "Advanced Analytics Web Dashboard",
+      platform: "WordPress Lead Generation Site",
     },
     custom: {
-      title: "Shoolin – CRM System Development",
-      subtitle: "Commercial Kitchen Equipment",
+      title: "Svaa — Water Treatment Solutions",
+      subtitle: "Water Treatment & Purification",
       description:
-        "For Shoolin, we built a fully customized CRM to manage leads, customers, and sales operations for a B2B environment.",
+        "Svaa provides water treatment solutions for industrial and commercial clients. They needed a website that builds technical credibility while making it easy for buyers to inquire about specific solutions for their water treatment needs.",
       features: [
-        "Lead and customer management dashboard",
-        "Sales pipeline tracking",
-        "Follow-ups, reminders, and status updates",
-        "Analytics for orders and customer activity",
-        "Clean UI designed for daily operational use",
+        "Custom-coded PHP website built for performance",
+        "Solution-specific pages for different water treatment use cases",
+        "Inquiry flow designed to capture technical buyer details",
+        "Email support integration with the inquiry forms",
+        "Clean, professional design matching B2B service positioning",
       ],
       impact: [
-        "Better lead tracking and follow-ups",
-        "Improved sales team efficiency",
-        "Centralized customer data for faster actions",
+        "Svaa continues to send us referral business and ongoing leads from their network. The site has become a reliable lead source for their water treatment business.",
       ],
-      platform: "Custom CRM Web Application",
+      platform: "Custom-Coded Website (PHP)",
+    },
+    boxika: {
+      title: "Boxika — Corrugated Packaging Manufacturer",
+      subtitle: "Corrugated Packaging Manufacturing",
+      description:
+        "Boxika manufactures corrugated packaging for businesses across multiple sectors. In a commodity industry where most competitor websites look identical, Boxika needed a site that visually stood out and communicated quality and reliability.",
+      features: [
+        "Visually rich WordPress design that stands out in the industry",
+        "Product showcase pages for different packaging categories",
+        "Lead capture forms for bulk packaging inquiries",
+        "Mobile-responsive design for buyers on the go",
+        "Brand-aligned visual storytelling",
+      ],
+      impact: [
+        "A standout website in a commodity industry that has helped Boxika differentiate from competitors. They continue to send us referral business based on the quality of the build.",
+      ],
+      platform: "WordPress Business Website",
     },
   };
 
@@ -146,6 +238,10 @@ const WebDevelopment = () => {
 
   return (
     <React.Fragment>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webDevFaqSchema) }}
+      />
       <main className="web-devlopment-main-page">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           {/* Hero Section */}
@@ -212,13 +308,22 @@ const WebDevelopment = () => {
               {/* Left Column - Content */}
               <div className="col-md-6 col-lg-3 col-sm-12 left-banner ">
                 <h1 className="main-section-heading mt-5! mb-3!" id="noLine">
-                  Build Your Custom Web/Mobile App
+                  Custom-coded websites for businesses that need more than a
+                  template
                 </h1>
-                <p className="mb-6">• CRM • Web Apps</p>
-                <p>• Mobile Apps • Enterprise Portals</p>
+                <p className="mb-6">
+                  PHP and React websites built for performance, SEO, and lead
+                  generation. WordPress as a CMS layer when content control
+                  matters. Designed for B2B businesses, manufacturers, and
+                  service companies that need a site that actually works.
+                </p>
+                <p className="mb-6">
+                  Websites delivered for solar, manufacturing, water treatment,
+                  used auto parts, and packaging brands across India and the US.
+                </p>
 
-                <Link href="/quote" className="inline-block c_button_black">
-                  Start a Project
+                <Link href="/book-a-call" className="inline-block c_button_black">
+                  Book a Discovery Call →
                 </Link>
               </div>
             </div>
@@ -227,7 +332,7 @@ const WebDevelopment = () => {
           {/* Services Overview */}
           <section className="py-24 max-w-7xl mx-auto what-we-offer-web-dev">
             <h3 className="main-section-heading mb-12" id="devHeading">
-               Our Web Development Services
+              Our web development services
             </h3>
             <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 content-wrapper">
               {/* Service 1: Custom Shopify Store Development */}
@@ -258,9 +363,7 @@ const WebDevelopment = () => {
                             d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                           />
                         </svg>
-                        <h3 className="inner-heading">
-                          Custom Web App Development
-                        </h3>
+                        <h3 className="inner-heading">Custom-Coded Websites</h3>
                       </div>
                       <svg
                         className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
@@ -287,15 +390,10 @@ const WebDevelopment = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Complex web applications and SaaS platforms built with
-                      React, Next.js, Node.js, and modern frameworks. We develop
-                      custom dashboards, booking systems, CRM tools, project
-                      management platforms, and member portals that handle
-                      thousands of concurrent users. Your web app will feature
-                      real-time data synchronization, role-based access control,
-                      API integrations, automated workflows, and responsive
-                      interfaces that work flawlessly across devices while
-                      maintaining enterprise-grade security and performance.
+                      PHP and React websites built from scratch for performance,
+                      control, and scale. No template lock-in, no plugin bloat.
+                      We write clean code that loads fast, ranks well, and grows
+                      with your business.
                     </p>
                   </div>
                 </div>
@@ -330,9 +428,7 @@ const WebDevelopment = () => {
                             d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
                           />
                         </svg>
-                        <h3 className="inner-heading">
-                          Mobile App Development
-                        </h3>
+                        <h3 className="inner-heading">WordPress as CMS</h3>
                       </div>
                       <svg
                         className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
@@ -359,15 +455,11 @@ const WebDevelopment = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Native iOS and Android applications built with React
-                      Native, Flutter, or native technologies. We create mobile
-                      experiences that seamlessly integrate with your web
-                      platform, featuring offline functionality, push
-                      notifications, GPS location services, and device-native
-                      features. From consumer apps to enterprise solutions, our
-                      mobile development ensures smooth performance, intuitive
-                      interfaces, and consistent brand experience across all
-                      devices while meeting App Store and Play Store guidelines.
+                      For content-heavy businesses that need easy updates, we
+                      use WordPress as a headless CMS layer paired with
+                      custom-coded frontends. You get the editing flexibility
+                      without the performance and security trade-offs of a
+                      typical WordPress site.
                     </p>
                   </div>
                 </div>
@@ -402,7 +494,7 @@ const WebDevelopment = () => {
                           />
                         </svg>
                         <h3 className="inner-heading">
-                          Custom E-Commerce Development
+                          Website Optimization & Migration
                         </h3>
                       </div>
                       <svg
@@ -430,24 +522,20 @@ const WebDevelopment = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Build high-converting online stores with Shopify,
-                      WooCommerce, or custom platforms. We integrate secure
-                      payment gateways (Razorpay, Stripe, PayPal), automated
-                      inventory management, cart recovery systems, and
-                      multi-channel selling capabilities. Your e-commerce site
-                      will handle transactions smoothly, scale with growth, and
-                      provide customers with seamless shopping experiences that
-                      drive repeat purchases and reduce cart abandonment.
+                      Already have a website that&apos;s slow, hard to maintain,
+                      or built on the wrong platform? We audit, rebuild, and
+                      migrate — preserving your data, content, and SEO rankings
+                      while fixing the technical debt.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Service 4: Shopify Migration Services */}
+              {/* Service 4: Shopify Development */}
               <div className="content-div">
                 <div
                   className={`border-div lg:h-[10rem] border-2 border-gray-200 rounded-0 overflow-hidden ${
-                    activeService === 3 ? "border-b-0! active-gradient" : ""
+                    activeService === 3 ? "!border-b-0 active-gradient" : ""
                   }`}
                 >
                   <button
@@ -468,12 +556,10 @@ const WebDevelopment = () => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={1.5}
-                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                           />
                         </svg>
-                        <h3 className="inner-heading">
-                          Business Website Development
-                        </h3>
+                        <h3 className="inner-heading">Shopify Development</h3>
                       </div>
                       <svg
                         className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
@@ -493,24 +579,23 @@ const WebDevelopment = () => {
                     </div>
                   </button>
                 </div>
-
                 <div
-                  className={`overflow-hidden transition-all duration-300  ${
+                  className={`overflow-hidden transition-all duration-300 ${
                     activeService === 3 ? "max-h-96 para-div" : "max-h-0"
                   }`}
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Professional B2B and corporate websites designed to
-                      establish credibility and generate qualified leads. We
-                      create polished digital presences with intuitive
-                      navigation, compelling service presentations, integrated
-                      contact forms, and strategic CTAs. Perfect for consulting
-                      firms, manufacturers, service providers, and professional
-                      organizations looking to attract enterprise clients,
-                      showcase expertise, and convert website visitors into
-                      business opportunities through thoughtful design and
-                      persuasive content architecture.
+                      Custom Shopify store builds, conversion optimization, and
+                      complete migrations for D2C brands. Custom themes, payment
+                      integration, logistics setup, and on-page SEO — built for
+                      stores that actually sell, not just look pretty.{" "}
+                      <Link
+                        href="/tech-solution/shopify-development"
+                        className="underline"
+                      >
+                        Learn more →
+                      </Link>
                     </p>
                   </div>
                 </div>
@@ -518,28 +603,26 @@ const WebDevelopment = () => {
             </div>
           </section>
 
-           
           {/* Process Section */}
           <h3 className="main-section-heading" id="devHeading">
-            Our Development Process
+            How we build
           </h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 our-process-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-4 gap-12 content-wrapper">
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">01</span>
-                  <h3 className="inner-heading">Discover & Strategy</h3>
+                  <h3 className="inner-heading">Discovery & Strategy</h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
                         expandedProcesses[0] ? "expanded" : ""
                       }`}
                     >
-                      Our strategists analyze your market position, competitor
-                      landscape, and customer journey to identify conversion
-                      opportunities. We define technical requirements, map user
-                      flows, and establish clear project milestones that align
-                      development with your business objectives.
+                      We start by understanding your buyer — not your design
+                      preferences. Who&apos;s visiting your site? What are they
+                      searching for? What action do you want them to take?
+                      Strategy first, then design, then code.
                     </p>
                     <button
                       onClick={() =>
@@ -563,11 +646,10 @@ const WebDevelopment = () => {
                         expandedProcesses[1] ? "expanded" : ""
                       }`}
                     >
-                      Our 15+ design specialists craft user-centered experiences
-                      through wireframes, interactive prototypes, and visual
-                      mockups. We validate designs with usability testing,
-                      ensuring every element serves both aesthetic and
-                      conversion goals before a single line of code is written.
+                      Wireframes, mockups, and clickable prototypes before any
+                      code is written. You see exactly what we&apos;re building,
+                      give feedback early, and we don&apos;t waste weeks coding
+                      the wrong thing.
                     </p>
                     <button
                       onClick={() =>
@@ -584,18 +666,17 @@ const WebDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">03</span>
-                  <h3 className="inner-heading">Develop & Test</h3>
+                  <h3 className="inner-heading">Development & Testing</h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
                         expandedProcesses[2] ? "expanded" : ""
                       }`}
                     >
-                      With 7+ years of development expertise and 42+ successful
-                      launches, our team builds robust, scalable solutions using
-                      modern frameworks. We conduct rigorous QA testing across
-                      devices, browsers, and real-world scenarios to ensure
-                      flawless performance before launch.
+                      Clean PHP or React code, tested across devices, browsers,
+                      and edge cases. SEO structure, schema markup, performance
+                      optimization — all built in from day one, not bolted on
+                      later.
                     </p>
                     <button
                       onClick={() =>
@@ -619,12 +700,10 @@ const WebDevelopment = () => {
                         expandedProcesses[3] ? "expanded" : ""
                       }`}
                     >
-                      We manage seamless deployment, configure analytics
-                      tracking, and monitor performance metrics closely
-                      post-launch. Our dedicated support team remains available
-                      to address issues, implement optimizations, and ensure
-                      your website continues delivering results as your business
-                      grows.
+                      Production deployment, analytics setup, and 30 days of
+                      post-launch support included. We don&apos;t disappear
+                      after handover — most of our clients come back for ongoing
+                      work.
                     </p>
                     <button
                       onClick={() =>
@@ -646,10 +725,10 @@ const WebDevelopment = () => {
           <section className="py-24 max-w-7xl mx-auto why-choose-us-web-dev">
             <div className="mb-12">
               <h3 className="main-section-heading" id="devHeading">
-                Why Choose The Tous for Web Development
+                Why businesses choose The Tous for web development
               </h3>
               <p className="why-para">
-                What sets us apart from other development agencies
+                What makes us different from template agencies
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6 content-wrapper">
@@ -672,9 +751,11 @@ const WebDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Web App–Focused Development</h3>
+                <h3 className="inner-heading">
+                  We write code, not assemble templates
+                </h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  42+ high-performance web applications delivered since 2018
+                  PHP, React, Next.js, Node.js
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -682,17 +763,11 @@ const WebDevelopment = () => {
                       expandedWhyChoose[0] ? "expanded" : ""
                     }`}
                   >
-                    We specialize in building high-performance web applications
-                    designed to streamline operations, enhance user experience,
-                    and support long-term scalability. Our web apps are
-                    engineered with secure authentication, real-time data
-                    handling, API integrations, and cloud-ready architectures to
-                    meet modern business demands. From custom dashboards and
-                    SaaS platforms to enterprise web portals, our solutions are
-                    built to perform under real-world usage. Businesses using
-                    our web applications have achieved 120–180% improvements in
-                    workflow efficiency and user engagement within months of
-                    deployment.
+                    Most agencies stitch together templates and plugins. We
+                    write actual code — which means your site is faster, more
+                    secure, easier to scale, and not locked into someone
+                    else&apos;s framework. WordPress is used only when content
+                    updating matters, and even then as a headless CMS.
                   </p>
                   <button
                     onClick={() =>
@@ -724,9 +799,9 @@ const WebDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Built for Speed & Performance</h3>
+                <h3 className="inner-heading">Performance is non-negotiable</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  90+ PageSpeed scores consistently
+                  90+ PageSpeed scores on our recent builds
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -734,11 +809,10 @@ const WebDevelopment = () => {
                       expandedWhyChoose[1] ? "expanded" : ""
                     }`}
                   >
-                    Speed is revenue. We build lightning-fast websites using
-                    Next.js, optimized images, and efficient code that loads in
-                    under 2 seconds. Every millisecond counts—faster sites rank
-                    higher in Google, reduce bounce rates, and convert more
-                    visitors into customers.
+                    Page speed isn&apos;t a nice-to-have — it&apos;s a ranking
+                    factor and a conversion factor. Our recent custom-coded
+                    sites consistently hit 90+ PageSpeed scores out of the box,
+                    without optimization plugins or caching tricks.
                   </p>
                   <button
                     onClick={() =>
@@ -770,9 +844,11 @@ const WebDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Grows With Your Business</h3>
+                <h3 className="inner-heading">
+                  SEO is built in, not added later
+                </h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  Technologies major brands trust
+                  On-page SEO, schema, structured data — all standard
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -780,11 +856,10 @@ const WebDevelopment = () => {
                       expandedWhyChoose[2] ? "expanded" : ""
                     }`}
                   >
-                    Your business won&apos;t stay the same size forever. We
-                    build scalable solutions using React, Node.js, and cloud
-                    infrastructure that handle traffic spikes effortlessly.
-                    Whether you&apos;re adding 100 products or 10,000 customers,
-                    your website architecture won&apos;t break under pressure.
+                    Every site we build ships with on-page SEO, schema markup,
+                    structured data, and clean URL architecture. Our clients
+                    show up in organic search months after launch, not just
+                    because we promised they would.
                   </p>
                   <button
                     onClick={() =>
@@ -817,10 +892,10 @@ const WebDevelopment = () => {
                   </div>
                 </div>
                 <h3 className="inner-heading">
-                  End-to-End Development Partner
+                  Built for B2B and lead generation
                 </h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  15+ specialists across design, dev, and marketing
+                  Manufacturing, solar, automotive, water, packaging clients
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -828,11 +903,10 @@ const WebDevelopment = () => {
                       expandedWhyChoose[3] ? "expanded" : ""
                     }`}
                   >
-                    You get a complete team, not just developers. Our integrated
-                    approach combines strategy, design, development, SEO, and
-                    ongoing support under one roof. No coordination headaches,
-                    no vendor juggling—just a single partnership that delivers
-                    measurable results.
+                    We build websites that capture qualified inquiries — not
+                    just look pretty. Our B2B clients across manufacturing,
+                    solar, automotive, and industrial sectors trust us because
+                    we understand how technical buyers evaluate vendors online.
                   </p>
                   <button
                     onClick={() =>
@@ -851,37 +925,38 @@ const WebDevelopment = () => {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16 content">
                 <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
-                  Our Track Record
+                  Since 2018
                 </p>
                 <h2 className="main-section-heading" id="devHeading">
-                  Proven Track Record in Web Development
+                  Building websites since 2018
                 </h2>
                 <p className="text-gray-600 max-w-2xl mx-auto">
-                  Since 2018, we&apos;ve partnered with businesses across India
-                  and internationally to deliver high-performance websites that
-                  drive real results.
+                  B2B and service businesses across India and the US trust us to
+                  build websites that drive real business.
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">42+</div>
-                  <p className="inner-heading">Web/Mobile Apps Delivered</p>
-                  <p className="text-sm text-gray-500">
-                    E-commerce & corporate sites launched since 2018
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">7+</div>
-                  <p className="inner-heading">Years of Excellence</p>
-                  <p className="text-sm text-gray-500">
-                    Trusted development partner for growing brands
-                  </p>
-                </div>
-                <div className="text-center">
                   <div className="text-6xl md:text-7xl font-bold mb-3">15+</div>
-                  <p className="inner-heading">Development Specialists</p>
+                  <p className="inner-heading">Websites Delivered</p>
                   <p className="text-sm text-gray-500">
-                    Designers, developers, strategists & support team
+                    Across manufacturing, energy, automotive, and services
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="text-6xl md:text-7xl font-bold mb-3">
+                    Since 2018
+                  </div>
+                  <p className="inner-heading">Building Digital Products</p>
+                  <p className="text-sm text-gray-500">
+                    8 years of agency experience
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="text-6xl md:text-7xl font-bold mb-3">7</div>
+                  <p className="inner-heading">Specialist Team Members</p>
+                  <p className="text-sm text-gray-500">
+                    Design, frontend, backend, and project management
                   </p>
                 </div>
               </div>
@@ -893,10 +968,21 @@ const WebDevelopment = () => {
               <div className="re-spotlight-header">
                 <span className="re-spotlight-tag">INDUSTRY SPOTLIGHT</span>
                 <h2 className="re-spotlight-heading">
-                  Web Development for Real Estate Developers
+                  Web development for B2B manufacturers
                 </h2>
                 <p className="re-spotlight-subtext">
-                  We build high-performance websites for real estate developers, builders, and property firms — designed to convert visitors into genuine property inquiries.
+                  We build websites for manufacturers, OEM suppliers, and B2B
+                  service businesses — designed to convert technical buyers into
+                  qualified inquiries. Manufacturing buyers don&apos;t shop on
+                  Instagram. They Google specific terms, want clear product
+                  specs, expect fast load times, and judge credibility within 5
+                  seconds. Our manufacturing sites are built for that buyer.
+                </p>
+                <br />
+                <p className="re-spotlight-subtext mt-4">
+                  <strong>Recent build:</strong> SSR Dies and Moulds — plastic
+                  OEM manufacturer for geyser and cooler casings. Custom-coded
+                  in PHP, fast load times, ready for production-grade catalogs.
                 </p>
               </div>
 
@@ -904,33 +990,48 @@ const WebDevelopment = () => {
                 {[
                   {
                     num: "01",
-                    title: "Custom Property Listing Portals",
-                    content: "Property listing portals with advanced search filters, virtual tour integration, interactive floor plans, and lead capture forms optimized for maximum conversion."
+                    title: "Industry-specific product catalogs",
+                    content:
+                      "Detailed product pages with technical specs, capacity tables, and downloadable datasheets — structured for buyers who want answers before filling forms.",
                   },
                   {
                     num: "02",
-                    title: "Conversion-Optimized Real Estate UX",
-                    content: "Strategic CTAs, WhatsApp integration, EMI calculators, and RERA-compliant project pages — all designed around real buyer behavior to maximize site visit bookings."
+                    title: "Lead-qualifying inquiry forms",
+                    content:
+                      "Quote request forms designed to capture the technical details that matter (volumes, specs, timelines, certifications), so your sales team isn't wasting time on tire-kickers.",
                   },
                   {
                     num: "03",
-                    title: "RERA-Compliant Project Pages",
-                    content: "Transparent project pages with RERA registration details, approved layouts, location maps, and neighborhood insights that build buyer trust and drive qualified inquiries."
+                    title: "SEO built for industrial searches",
+                    content:
+                      "Keyword research focused on industrial buyer intent, schema markup for products, and clear internal linking. Our manufacturing clients get organic leads months after launch.",
                   },
                   {
                     num: "04",
-                    title: "SEO-Ready Architecture & CRM Integration",
-                    content: "Schema markup for property listings, CRM integration for instant lead routing, and analytics tracking — so you know exactly which pages drive inquiries."
-                  }
+                    title: "Mobile-first technical browsing",
+                    content:
+                      "Manufacturing buyers are on mobile too. Our sites work as well on a phone in a factory as they do on a desktop in an office.",
+                  },
                 ].map((card, index) => (
-                  <div key={index} className={`re-spotlight-card ${activeRealEstate === index ? "active" : ""}`}>
+                  <div
+                    key={index}
+                    className={`re-spotlight-card ${activeRealEstate === index ? "active" : ""}`}
+                  >
                     <button
-                      onClick={() => setActiveRealEstate(activeRealEstate === index ? null : index)}
+                      onClick={() =>
+                        setActiveRealEstate(
+                          activeRealEstate === index ? null : index,
+                        )
+                      }
                       className="re-spotlight-card-header"
                     >
                       <div className="re-spotlight-card-left">
-                        <span className="re-spotlight-card-num">{card.num}</span>
-                        <h3 className="re-spotlight-card-title">{card.title}</h3>
+                        <span className="re-spotlight-card-num">
+                          {card.num}
+                        </span>
+                        <h3 className="re-spotlight-card-title">
+                          {card.title}
+                        </h3>
                       </div>
                       <svg
                         className={`re-spotlight-card-icon ${activeRealEstate === index ? "rotate" : ""}`}
@@ -938,10 +1039,17 @@ const WebDevelopment = () => {
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </button>
-                    <div className={`re-spotlight-card-body ${activeRealEstate === index ? "expanded" : ""}`}>
+                    <div
+                      className={`re-spotlight-card-body ${activeRealEstate === index ? "expanded" : ""}`}
+                    >
                       <p>{card.content}</p>
                     </div>
                   </div>
@@ -951,7 +1059,9 @@ const WebDevelopment = () => {
           </section>
 
           <section className="py-24 max-w-7xl mx-auto mt-5 mb-5 web-dev-tabs">
-            <h3 className="main-section-heading">Our Projects</h3>
+            <h3 className="main-section-heading">
+              Our web development projects
+            </h3>
             <div className="mb-12">
               {/* Tab Navigation */}
 
@@ -1031,7 +1141,7 @@ const WebDevelopment = () => {
                               </svg>
                               <span className="text-gray-700">{feature}</span>
                             </li>
-                          )
+                          ),
                         )}
                       </ul>
                     </div>
@@ -1044,13 +1154,13 @@ const WebDevelopment = () => {
                             <p key={index} className="text-gray-700">
                               • {item}
                             </p>
-                          )
+                          ),
                         )}
                       </div>
                     </div>
 
                     <Link
-                      href="/quote"
+                      href="/book-a-call"
                       className="inline-block c_button_black mt-4"
                     >
                       Start Your Project
@@ -1081,10 +1191,10 @@ const WebDevelopment = () => {
                                   activeTab === "customized"
                                     ? "/silvago.mp4"
                                     : activeTab === "tailored"
-                                    ? "/KB Crm.mp4"
-                                    : activeTab === "coaches"
-                                    ? "/Vaqya.mp4"
-                                    : "/vis.mp4"
+                                      ? "/KB Crm.mp4"
+                                      : activeTab === "coaches"
+                                        ? "/Vaqya.mp4"
+                                        : "/vis.mp4"
                                 }
                                 type="video/mp4"
                               />
@@ -1105,7 +1215,7 @@ const WebDevelopment = () => {
                 {/* Right Column - Client Logos */}
                 <div className="col-md-6 col-lg-6 col-sm-12 left-div">
                   <h2 className="main-section-heading mb-4" id="devHeading">
-                    Does This Sound Like Your Business?
+                    Does this sound like your business?
                   </h2>
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-start">
@@ -1121,8 +1231,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your web application looks fine, but users aren’t
-                        completing key actions
+                        Your current website looks fine but isn&apos;t
+                        generating qualified leads
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1138,8 +1248,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Users drop off midway due to poor app flow or confusing
-                        UX
+                        Your site loads slowly on mobile, hurting both SEO and
+                        conversions
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1155,8 +1265,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your web app is slow, affecting performance, SEO, and
-                        user retention
+                        You&apos;re stuck on a template that limits what you can
+                        build or change
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1172,8 +1282,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Managing data, users, or workflows feels manual and
-                        inefficient
+                        Plugin bloat is making your site slow, insecure, or hard
+                        to maintain
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1189,7 +1299,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Mobile users struggle with navigation and responsiveness
+                        Your B2B buyers leave because product information is
+                        hard to find
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1205,8 +1316,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        Your application can’t scale with increasing users or
-                        traffic
+                        Adding new content to your site requires a developer
+                        every time
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1222,7 +1333,8 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        API or payment integrations are unreliable or insecure
+                        Your site doesn&apos;t reflect the credibility your
+                        business has earned offline
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -1238,16 +1350,16 @@ const WebDevelopment = () => {
                         />
                       </svg>
                       <span>
-                        You lack automation for notifications, workflows, or
-                        user engagement
+                        You need a website that scales with your business, not
+                        against it
                       </span>
                     </li>
                   </ul>
                   <Link
-                    href="/quote"
+                    href="/book-a-call"
                     className="inline-block c_button_black mt-4"
                   >
-                    Get Started
+                    Book a Discovery Call →
                   </Link>
                 </div>
                 <div className="col-md-6 col-lg-6 col-sm-12 right-div">
@@ -1264,8 +1376,8 @@ const WebDevelopment = () => {
             </div>
           </section>
           {/* FAQs */}
-          <h3 className="main-section-heading " id="devHeading">
-            Frequently Asked Questions
+          <h3 className="main-section-heading faq-heading" id="devHeading">
+            Frequently asked questions
           </h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
@@ -1323,7 +1435,7 @@ const WebDevelopment = () => {
               <div className="p">
                 Together, let&apos;s have a quantifiable effect on your company.
               </div>
-              <Link href="/quote">Design A Quote</Link>
+              <Link href="/book-a-call">Design A Quote</Link>
             </div>
           </div>
         </div>

@@ -79,7 +79,7 @@ const Header = () => {
                       <ul>
                         <li>
                           <Link href="/tech-solution/web-development">
-                            Custom Web Development
+                            Website Development
                           </Link>
                         </li>
                         <li>
@@ -88,8 +88,8 @@ const Header = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/tech-solution/web-development">
-                            Custom CRM & Web Apps
+                          <Link href="/tech-solution/crm-development">
+                            CRM & Web Apps
                           </Link>
                         </li>
                       </ul>
@@ -154,13 +154,13 @@ const Header = () => {
                         className={`phone-services-box ${open ? "openclass" : "closeclass"}`}
                       >
                         <Link href="/tech-solution/web-development">
-                          Custom Web Development
+                           Website Development
                         </Link>
                         <Link href="/tech-solution/shopify-development">
                           Shopify Development
                         </Link>
-                        <Link href="/tech-solution/web-development">
-                          Custom CRM & Web Apps
+                        <Link href="/tech-solution/crm-development">
+                           CRM & Web Apps
                         </Link>
                       </div>
                     </div>

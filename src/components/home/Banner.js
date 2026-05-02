@@ -52,7 +52,7 @@ const Banner = () => {
               }}
             >
               <Link
-                href="/contact"
+                href="/book-a-call"
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   background: "#000",

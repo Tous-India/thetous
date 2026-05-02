@@ -2,7 +2,7 @@
 
 .work-main-page {
   background-color: white;
-  margin: -2rem 0 -3.25rem 0 !important;
+  margin: -2rem 0 0rem 0 !important;
   padding: 3rem 0 5rem 0 !important;
   box-shadow: 0px 5px 10px -5px gray;
   position: relative;
@@ -63,11 +63,25 @@
 
 /* ================= WORK CARD ================= */
 
-.work-card a {
+.work-card a,
+.work-card .work-card-static {
   text-decoration: none;
   color: inherit;
   display: block;
   height: 100%;
+}
+
+.work-main-page .container-2 .row {
+  align-items: stretch;
+}
+
+.work-main-page .container-2 .row > div {
+  display: flex;
+}
+
+.work-main-page .container-2 .row > div > a,
+.work-main-page .container-2 .row > div > .work-card-static {
+  width: 100%;
 }
 
 .work-card-inner {
@@ -78,7 +92,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .work-card-inner:hover {
@@ -93,7 +109,7 @@
 
 .work-card .img-div img {
   width: 100%;
-  height: 220px;
+  /* height: 220px; */
   object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
@@ -112,14 +128,16 @@
 }
 
 .work-card .project-type {
-  font-size: 11px;
+  font-size: 15px !important;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: #888;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
   margin-bottom: 0.4rem;
   display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .work-card .title {
@@ -132,12 +150,12 @@
 }
 
 .work-card .desc {
-  font-size: 13px;
   color: #666;
-  margin: 0 0 1.25rem;
-  line-height: 1.6;
-  font-style: italic;
   flex: 1;
+  margin: 0 0 1.25rem;
+  font-size: 14px !important;
+  font-style: normal;
+  line-height: 22px !important;
 }
 
 .work-card .learn-more {
@@ -147,6 +165,8 @@
   border-bottom: 1.5px solid #111;
   padding-bottom: 2px;
   display: inline-block;
+  align-self: flex-start;
+  width: fit-content;
   font-family: "Poppins", sans-serif;
   transition: opacity 0.2s;
 }
@@ -156,7 +176,7 @@
 }
 
 @media (max-width: 720px) {
-  .work-card-inner{
+  .work-card-inner {
     margin-top: 2rem;
   }
   .work-main-page {
@@ -178,5 +198,104 @@
 
   .work-main-page .bs-container {
     margin-top: 0 !important;
+  }
+}
+
+/* ================= WORK HERO ================= */
+.work-main-page .work-hero {
+  padding: 1rem 0 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.work-main-page .work-hero h1 {
+  margin: 0 0 0.75rem;
+}
+
+.work-hero-sub {
+  font-family: "Poppins", sans-serif;
+  color: #535353;
+  font-size: 14px;
+  max-width: 680px;
+  line-height: 1.7;
+  margin: 0 0 0.5rem;
+}
+
+.work-hero-trust {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* ================= TAB BAR ================= */
+.work-tabs-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0 0 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 2rem;
+}
+
+.work-tab-btn {
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  padding: 0.45rem 1rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.work-tab-btn:hover {
+  border-color: #000;
+  color: #000;
+}
+
+.work-tab-btn.active {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.work-tab-count {
+  opacity: 0.6;
+}
+
+/* ================= NO-IMAGE PLACEHOLDER ================= */
+.work-card-no-img {
+  width: 100%;
+  height: 220px;
+  background: #f4f4f4;
+}
+
+/* ================= IN DEVELOPMENT BADGE ================= */
+.work-card-badge {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #3f3f3f;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 2px 10px 2px 10px;
+  margin-bottom: 6px;
+  align-self: flex-start;
+  background-color: #dfffe3;
+}
+
+@media (max-width: 480px) {
+  .work-tabs-bar {
+    gap: 0.4rem;
+  }
+  .work-tab-btn {
+    font-size: 12px;
+    padding: 0.4rem 0.75rem;
   }
 }
