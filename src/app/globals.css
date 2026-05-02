@@ -1957,6 +1957,9 @@ p {
 }
 
 @media (max-width: 720px) {
+  .swiper-main-div .swiper-slide .inner-div {
+    height: 13rem;
+  }
   .swiper-slide {
     button {
       font-size: 13px;
