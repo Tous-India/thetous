@@ -16,7 +16,7 @@ const projects = [
     title: "Silvago",
     slug: "silvago",
     description:
-      "Premium silver jewelry D2C brand. Custom Shopify store with 200+ SKUs &  mobile-optimized checkout.",
+      "Premium silver jewelry D2C brand. Custom Shopify store with 200+ SKUs .",
     image: silvago,
   },
   {

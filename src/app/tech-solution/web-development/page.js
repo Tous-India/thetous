@@ -143,7 +143,8 @@ const WebDevelopment = () => {
 
   const portfolioContent = {
     customized: {
-      title: "SSR Dies and Moulds — Plastic OEM Manufacturer Website",
+      title: "SSR Dies and Moulds —  OEM Manufacturer Website",
+      title: "SSR Dies and Moulds —  OEM Manufacturer Website",
       subtitle: "Plastic OEM Manufacturing",
       description:
         "SSR manufactures plastic casings for geysers, coolers, and consumer appliances — supplying major appliance brands across India. Their target buyers are procurement managers and engineering teams who need detailed product information fast, on any device.",
