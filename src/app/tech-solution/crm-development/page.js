@@ -8,84 +8,85 @@ import usePageTitle from "@/hooks/usePageTitle";
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const shopifyFaqSchema = {
+const crmFaqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name: "How much does a Shopify store cost?",
+      name: "Why build a custom CRM instead of using HubSpot, Zoho, or Salesforce?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our typical Shopify builds range ₹50,000 to ₹2,00,000 depending on scope, custom features, and migration complexity. We provide a fixed quote after a 30-minute discovery call. No hourly billing surprises.",
+        text: "SaaS CRMs are built for the average business. If your business doesn't fit the average — multi-tier workflows, partial deliveries, custom approval flows — they force you to compromise. Custom CRMs are built around your actual workflow, scale without per-user fees, and you own the code and data.",
       },
     },
     {
       "@type": "Question",
-      name: "How long does a Shopify build take?",
+      name: "What's the typical timeline for a custom CRM or web app?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most builds ship in 3-5 weeks from kickoff. Migrations take 4-6 weeks. Conversion-only optimization projects (no rebuild) ship in 1-2 weeks.",
+        text: "Custom CRMs and web applications typically take 8-16 weeks depending on scope. Simple internal tools can ship in 6-8 weeks. Multi-user systems with mobile apps and complex workflows take 12-20 weeks.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you build with custom code or use templates?",
+      name: "Do you build mobile apps for the CRM too?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We start from a clean Shopify theme (Dawn or a premium base) and customize heavily — sections, layouts, product page logic. We don't use generic ready-made templates. Every store gets custom design and code where it matters.",
+        text: "Yes. We build companion mobile apps that connect to the same backend — for field teams, delivery agents, customer portals, and service providers.",
       },
     },
     {
       "@type": "Question",
-      name: "What apps do you typically use?",
+      name: "What technologies do you build with?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "As few as possible. Apps slow stores down. We build features in code where it's cleaner — for example, custom upsells, product bundling, or filtering — and only use apps where they're genuinely better than custom (Klaviyo for email, Judge.me for reviews, Shipway for logistics).",
+        text: "PHP for backend logic. React and Next.js for high-performance frontends and dashboards. Node.js for backend APIs. MySQL or MongoDB for databases. Native mobile apps where required.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you handle SEO and ads after launch?",
+      name: "Will my team be able to manage the system?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SEO yes — every store ships with on-page SEO, schema markup, and a content plan. For paid ads, we focus on conversion optimization within Shopify. If you need full ad management, we partner with specialist agencies.",
+        text: "Yes. We provide training during launch plus written documentation. For ongoing changes, you can engage us for development support or hire your own developers — you own the code.",
       },
     },
     {
       "@type": "Question",
-      name: "What if my store needs work after launch?",
+      name: "What about data security and hosting?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Every Shopify build comes with 30 days of post-launch support included. Beyond that, you can engage us for ongoing optimization on a monthly retainer or project basis.",
+        text: "Your CRM and data are hosted where you choose — your own server, AWS, DigitalOcean, or any cloud provider. We implement encrypted connections, secure authentication, role-based access, and regular backups.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you migrate my existing Shopify or non-Shopify store?",
+      name: "Can you integrate with our existing tools?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We handle migrations from WooCommerce, Magento, Wix, Squarespace, and custom-built sites. Includes products, customers, orders, content, and SEO redirects to preserve search rankings.",
+        text: "Yes. We integrate CRMs with payment gateways, email platforms, ad accounts, accounting tools, shipping partners, and any system with an API.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you work with international brands?",
+      name: "What happens if our requirements change after launch?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We've delivered for clients across India and the US. Multi-currency, multi-language, and international shipping setup is part of our standard scope when needed.",
+        text: "We expect them to. Most of our CRM clients engage us for ongoing development — adding new features, modules, integrations, and reports as their business grows.",
       },
     },
   ],
 };
 const ShopifyDevelopment = () => {
-    usePageTitle("Shopify Development Services for D2C Brands | The Tous");
-  
+  usePageTitle("Custom CRM & Web App Development | The Tous");
+
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);
   const [activeTab, setActiveTab] = useState("customized");
   const [expandedProcesses, setExpandedProcesses] = useState({});
   const [expandedWhyChoose, setExpandedWhyChoose] = useState({});
+  const [activeSpotlight, setActiveSpotlight] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -113,7 +114,7 @@ const ShopifyDevelopment = () => {
         },
         body: JSON.stringify({
           ...formData,
-          services: "Shopify Development",
+          services: "CRM & Web App Development",
         }),
       });
 
@@ -140,141 +141,138 @@ const ShopifyDevelopment = () => {
 
   const faqs = [
     {
-      question: "How much does a Shopify store cost?",
+      question:
+        "Why build a custom CRM instead of using HubSpot, Zoho, or Salesforce?",
       answer:
-        "Our typical Shopify builds range ₹50,000 to ₹2,00,000 depending on scope, custom features, and migration complexity. We provide a fixed quote after a 30-minute discovery call. No hourly billing surprises.",
+        "SaaS CRMs are built for the average business. If your business doesn't fit the average — multi-tier workflows, partial deliveries, custom approval flows, industry-specific data — they force you to compromise. Custom CRMs are built around your actual workflow, scale without per-user fees, and you own the code and data forever.",
     },
     {
-      question: "How long does a Shopify build take?",
+      question: "What's the typical timeline for a custom CRM or web app?",
       answer:
-        "Most builds ship in 3-5 weeks from kickoff. Migrations take 4-6 weeks. Conversion-only optimization projects (no rebuild) ship in 1-2 weeks.",
+        "Custom CRMs and web applications typically take 8-16 weeks depending on scope and complexity. Simple internal tools can ship in 6-8 weeks. Multi-user systems with mobile apps and complex workflows take 12-20 weeks. We give you a fixed timeline after a discovery call.",
     },
     {
-      question: "Do you build with custom code or use templates?",
+      question: "Do you build mobile apps for the CRM too?",
       answer:
-        "We start from a clean Shopify theme (Dawn or a premium base) and customize heavily — sections, layouts, product page logic. We don't use generic ready-made templates. Every store gets custom design and code where it matters.",
+        "Yes, when your business needs it. Field teams, delivery agents, customer portals, and service providers often need mobile access. We build companion mobile apps that connect to the same backend — like the OMP CRM where groomers use a mobile app and customers have a web portal, all on the same data.",
     },
     {
-      question: "What apps do you typically use?",
+      question: "What technologies do you build with?",
       answer:
-        "As few as possible. Apps slow stores down. We build features in code where it's cleaner — for example, custom upsells, product bundling, or filtering — and only use apps where they're genuinely better than custom (Klaviyo for email, Judge.me for reviews, Shipway for logistics).",
+        "PHP for backend logic and content-heavy systems. React and Next.js for high-performance frontends and dashboards. Node.js for backend APIs when needed. MySQL or MongoDB for databases. Native mobile apps where required. We pick the stack based on your project's needs and long-term maintainability.",
     },
     {
-      question: "Do you handle SEO and ads after launch?",
+      question: "Will my team be able to manage the system?",
       answer:
-        "SEO yes — every store ships with on-page SEO, schema markup, and a content plan. For paid ads, we focus on conversion optimization within Shopify. If you need full ad management, we partner with specialist agencies.",
+        "Yes. We provide training during launch, plus written documentation. For ongoing changes, you can either engage us for development support or hire your own developers — since you own the code, there's no vendor lock-in. Most clients prefer to keep us as ongoing partners since we already know the system.",
     },
     {
-      question: "What if my store needs work after launch?",
+      question: "What about data security and hosting?",
       answer:
-        "Every Shopify build comes with 30 days of post-launch support included. Beyond that, you can engage us for ongoing optimization on a monthly retainer or project basis.",
+        "Your CRM and data are hosted where you choose — your own server, AWS, DigitalOcean, or any other cloud provider. We implement standard security practices: encrypted connections, secure authentication, role-based access, regular backups. Your data stays under your control.",
     },
     {
-      question: "Can you migrate my existing Shopify or non-Shopify store?",
+      question: "Can you integrate with our existing tools?",
       answer:
-        "Yes. We handle migrations from WooCommerce, Magento, Wix, Squarespace, and custom-built sites. Includes products, customers, orders, content, and SEO redirects to preserve search rankings.",
+        "Yes. We integrate CRMs with payment gateways (Razorpay, Stripe), email platforms, ad accounts (Meta, Google Ads), accounting tools, shipping partners, and any system with an API. If a tool can connect, we can integrate it.",
     },
     {
-      question: "Do you work with international brands?",
+      question: "What happens if our requirements change after launch?",
       answer:
-        "Yes. We've delivered for clients in the US (UsedEngines4Cars) and across India. Multi-currency, multi-language, and international shipping setup is part of our standard scope when needed.",
+        "We expect them to. Businesses evolve, and so should your systems. Most of our CRM clients engage us for ongoing development — adding new features, modules, integrations, and reports as their business grows. Since we built the original system, we can extend it without breaking what's already working.",
     },
   ];
 
   const portfolioTabs = [
-    { id: "customized", label: "Silvago" },
-    { id: "tailored", label: "Caselulu" },
-    { id: "coaches", label: "Luxeliv" },
-    { id: "custom", label: "Nestloom" },
-    { id: "barebub", label: "Barebub" },
+    { id: "customized", label: "OMP CRM" },
+    { id: "tailored", label: "KB Enterprise" },
+    { id: "coaches", label: "Vaqya Analytics" },
+    { id: "custom", label: "Ujjwal Dental" },
+    { id: "barebub", label: "Real Estate CRM" },
   ];
 
   const portfolioContent = {
     customized: {
-      title: "Silvago — Minimal Silver Jewelry Brand",
-      subtitle: "Industry: Silver Jewelry & Lifestyle, D2C",
-      type: "Custom Shopify Store + Conversion Optimization",
-      url: "https://silvago.in/",
+      title: "OMP CRM + Mobile App — Pet Grooming Services",
+      subtitle: "Industry: Pet Services, B2C",
+      url: null,
       description:
-        "Crafted a clean, aesthetic Shopify storefront for Silvago focused on premium minimal jewelry. Emphasis on elegant visuals, fast browsing, and conversion-focused product discovery.",
+        "OMP runs a pet grooming service business that needed more than a basic CRM. They needed a complete operational system — capturing leads from multiple sources, assigning them to groomers, giving customers self-service access to their booking history, and giving groomers a mobile app to manage their work in the field.",
       deliverables: [
-        "Custom responsive Shopify design aligned with brand identity",
-        "High-impact product imagery, filtering & collection setup",
-        "Setup of key KPIs: traffic sources, cart adds, checkouts & conversions",
-        "Conversion optimization through Microsoft Clarity session analysis",
+        "Lead capture from website, Meta ads, and Google ads",
+        "Groomer assignment and management system",
+        "Customer login portal with booking history and payment records",
+        "Mobile app for groomers to track leads, manage ratings, and update job status",
+        "Multi-user roles with admin, groomer, and customer access levels",
+        "Reporting dashboard for business insights",
       ],
       impact:
-        "Conversion lifted from 0.7% to 2.4% in 4 weeks through targeted UX changes — no redesign needed. Better navigation and product discovery led to stronger engagement and improved key ecommerce metrics.",
-      cta: "Build Your Store →",
+        "A complete operational system that handles lead generation, service delivery, customer self-service, and field team management — all connected to one backend. Replaced multiple disconnected tools with a single integrated platform.",
     },
     tailored: {
-      title: "Caselulu — Mobile Accessories Brand",
-      subtitle: "Industry: Mobile Accessories, D2C",
-      type: "Complete Shopify Rebuild",
+      title: "KB Enterprise CRM — Aviation Spare Parts Management",
+      subtitle: "Industry: B2B Aviation Spare Parts Trading",
       url: null,
       description:
-        "A phone case brand with a Shopify store killed by app bloat. 12+ apps doing the work of clean code, broken variant logic, and a 2.2 second mobile load time. We rebuilt it from the ground up.",
+        "KB Enterprise trades aviation spare parts internationally — a business where a single order might involve 10 items, with 5 in stock and 5 backordered for months. Quotations, invoices, and POs go through multiple revisions. They were running everything on Excel, and tracking 5-month-old data was a constant problem.",
       deliverables: [
-        "Complete Shopify rebuild with custom code replacing 12+ apps",
-        "Fixed variant selection logic (was breaking on multiple devices)",
-        "Removed fake countdown timers, broken upsells, and conversion-killing widgets",
-        "Custom product page architecture for mobile-first browsing",
+        "Custom CRM tracking quotations, POs, invoices, and revisions",
+        "Partial delivery management (track items shipped now vs. items pending)",
+        "Client and order history search across years of data",
+        "Multi-user access with role-based permissions",
+        "Quote-to-invoice workflow with revision history",
       ],
       impact:
-        "Page load time dropped from 2.2 seconds to 1.4 seconds on mobile. Variant bugs eliminated. Cleaner, faster, more profitable store — no client pushback during the rebuild.",
-      cta: "Optimize Your Store →",
+        "Replaced their Excel-based workflow with a system that handles the complexity of international spare parts trading — saving hours of admin time per order, eliminating data loss from version-controlled spreadsheets, and making 5-month-old order history searchable in seconds.",
     },
     coaches: {
-      title: "Luxeliv — Premium Loungewear Brand",
-      subtitle: "Industry: Loungewear & Apparel, D2C",
-      type: "Custom Shopify Store",
-      url: "https://luxeliv.com/",
+      title: "Vaqya LLC — Healthcare Analytics Dashboard",
+      subtitle: "Industry: Healthcare Analytics (USA)",
+      url: null,
       description:
-        "Premium loungewear brand needed a Shopify store that matched the quality of their product. Editorial-style product layouts, high-AOV checkout flow, and a design built for Instagram traffic — where most premium D2C buyers come from.",
+        "Vaqya LLC is a US-based healthcare analytics company that needed a custom dashboard for doctors and healthcare teams. The challenge: deliver meaningful insights through a clean, doctor-friendly interface that handles patient analytics, referral tracking, and treatment data — all in one place.",
       deliverables: [
-        "Editorial product page layouts with lifestyle imagery",
-        "Custom Shopify theme aligned with premium positioning",
-        "Mobile-optimized checkout for Instagram-sourced traffic",
-        "Collection pages designed for category storytelling",
+        "Custom analytics dashboard with patient performance metrics",
+        "Referral and treatment tracking system",
+        "Visual reports with charts and trend analysis",
+        "Doctor-friendly UI with clear data hierarchy",
+        "Secure and scalable dashboard architecture",
+        "Multi-user access for healthcare teams",
       ],
       impact:
-        "A storefront that supports high-AOV positioning and converts premium-intent traffic from Instagram and lifestyle channels.",
-      cta: "Build Your Store →",
+        "Clear visibility into patient data, faster insights for clinical decision-making, and improved reporting accuracy for healthcare teams across the US.",
     },
     custom: {
-      title: "Nestloom — Home Decor & Furnishings",
-      subtitle: "Industry: Home Decor, D2C",
-      type: "Custom Shopify Store",
+      title: "Ujjwal Dental — Patient Management System",
+      subtitle: "Industry: Healthcare, Dental Practice",
       url: null,
       description:
-        "A Panipat-based home decor and furnishings brand needed a Shopify store that stands out in their regional market. Flagship-quality design, clean product photography display, and a structure built for category-heavy browsing.",
+        "Ujjwal Dental is a busy dental practice that needed to move beyond paper records and basic appointment tools. They needed a complete patient management system that tracks visits, treatments, payments, treatment plans, and automated reminders — all in one place.",
       deliverables: [
-        "Custom Shopify design matching premium home decor positioning",
-        "Category architecture for multi-product browsing",
-        "Product detail pages designed for considered purchases",
-        "Mobile-first responsive design",
+        "Patient records with complete visit and treatment history",
+        "Treatment plan management with status tracking",
+        "Payment tracking linked to treatment plans",
+        "Automated appointment reminders for patients",
+        "Multi-user access for dentists and front-desk staff",
       ],
       impact:
-        "A storefront that elevates Nestloom's brand presence and matches the quality of established home decor brands online.",
-      cta: "Build Your Store →",
+        "A central system that handles the full patient lifecycle — from first visit to ongoing treatment plans — replacing scattered records and manual reminder calls with an automated, organized system.",
     },
     barebub: {
-      title: "Barebub — Baby Care Products",
-      subtitle: "Industry: Baby Wipes, Skincare & Hygiene, D2C",
-      type: "End-to-End Shopify Build",
+      title: "Real Estate Lead Management System",
+      subtitle: "Industry: Real Estate (In Development)",
       url: null,
       description:
-        "New baby care brand launching with wipes, skincare, and hygiene products needed a complete Shopify setup ready for day-one operations — payment gateway, logistics, content, and SEO.",
+        "A real estate firm needed a CRM purpose-built for their business — managing leads coming in from multiple sources, distributing them to agents, tracking follow-ups, and providing visibility into business performance. Off-the-shelf CRMs didn't fit their workflow, so we're building one that does.",
       deliverables: [
-        "Complete Shopify store build from scratch",
-        "Payment gateway integration (Razorpay, COD, UPI)",
-        "Logistics integration with shipping partners",
-        "On-page SEO and product schema setup",
-        "Ready for launch with all backend operations configured",
+        "Lead distribution system with rule-based assignment to agents",
+        "Agent follow-up tracking with reminders and status updates",
+        "Business intelligence dashboards for management visibility",
+        "Multi-user access with role-based permissions",
+        "Custom workflows matching real estate sales cycles",
       ],
       impact:
-        "A launch-ready Shopify store with all systems configured for day-one sales operations — not just a storefront, but a complete ecommerce setup.",
-      cta: "Build Your Store →",
+        "Currently in development. Expected to deliver a CRM that handles the specific complexity of real estate lead management — where speed of follow-up and accurate data drive deal closures.",
     },
   };
 
@@ -282,9 +280,9 @@ const ShopifyDevelopment = () => {
     <React.Fragment>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(shopifyFaqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(crmFaqSchema) }}
       />
-      <main className=" shopify-devlopment-main-page">
+      <main className=" crm-devlopment-main-page">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           {/* Hero Section */}
           <section className="py-24 hero-web-dev">
@@ -351,22 +349,21 @@ const ShopifyDevelopment = () => {
               {/* Right Column - Content */}
               <div className="col-md-6 col-lg-3 col-sm-12 right-banner">
                 <h1 className="main-section-heading mb-3!" id="noLine">
-                  High-converting Shopify stores for D2C brands
+                  Custom CRMs and web apps built around your workflow
                 </h1>
                 <p className="mb-6">
                   <strong>
-                    Custom builds, conversion optimization, and complete
-                    migrations. Built for founders who want a store that
-                    actually sells, not just looks pretty.
+                    PHP and React-based CRMs, dashboards, and web applications
+                    for businesses that need more than a SaaS template.
                   </strong>
                 </p>
                 <p className="mb-6">
-                  Shopify stores delivered for jewelry, home decor, baby care,
-                  fashion, and mobile accessories brands.
+                  Custom systems delivered for aviation, healthcare, real
+                  estate, dental, and pet services across India and the US.
                 </p>
 
                 <Link href="/book-a-call" className="inline-block c_button_black">
-                  Book a Strategy Call →
+                  Book a Discovery Call →
                 </Link>
               </div>
             </div>
@@ -375,7 +372,7 @@ const ShopifyDevelopment = () => {
           {/* Services Overview */}
           <section className="py-24 max-w-7xl mx-auto what-we-offer-web-dev">
             <h3 className="main-section-heading mb-12" id="devHeading">
-              Our Shopify development services
+              Our web app and CRM services
             </h3>
             <div className="grid  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 content-wrapper">
               {/* Service 1: Custom Shopify Store Development */}
@@ -407,7 +404,7 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <h3 className="inner-heading">
-                          Custom Shopify Store Builds
+                          Custom CRM Development
                         </h3>
                       </div>
                       <svg
@@ -435,9 +432,13 @@ const ShopifyDevelopment = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      End-to-end Shopify development for D2C brands launching
-                      or rebuilding. Custom theme, payment integration,
-                      logistics setup, on-page SEO, ready to scale.
+                      CRMs built around your actual workflow — not forced into a
+                      SaaS template. Lead capture, customer management,
+                      follow-up tracking, role-based access, and reporting that
+                      matches how your business operates. We&apos;ve built CRMs
+                      for aviation spare parts trading, dental practice
+                      management, real estate lead distribution, and pet
+                      grooming services.
                     </p>
                   </div>
                 </div>
@@ -473,7 +474,7 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <h3 className="inner-heading">
-                          Shopify Conversion Optimization
+                          Web Applications & Dashboards
                         </h3>
                       </div>
                       <svg
@@ -501,10 +502,12 @@ const ShopifyDevelopment = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Already on Shopify but conversion is below 2%? We audit,
-                      fix the broken pieces (bloated apps, slow load times,
-                      weak product pages, leaky checkouts), and ship a faster,
-                      cleaner store.
+                      Custom web apps for businesses that need more than a
+                      website — internal tools, customer portals, analytics
+                      dashboards, and operational platforms. PHP and React-based
+                      applications designed to handle real business complexity,
+                      scale with your growth, and integrate with your existing
+                      systems.
                     </p>
                   </div>
                 </div>
@@ -538,9 +541,7 @@ const ShopifyDevelopment = () => {
                             d="M13 10V3L4 14h7v7l9-11h-7z"
                           />
                         </svg>
-                        <h3 className="inner-heading">
-                          Shopify Migrations
-                        </h3>
+                        <h3 className="inner-heading">Companion Mobile Apps</h3>
                       </div>
                       <svg
                         className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
@@ -567,37 +568,41 @@ const ShopifyDevelopment = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      Moving from WooCommerce, Wix, Magento, or a custom-built
-                      store? We handle complete migration including products,
-                      customers, orders, SEO redirects, and design rebuild.
+                      When your CRM or web app needs to work in the field, we
+                      build companion mobile apps that connect to the same
+                      backend. Field teams, delivery agents, service providers,
+                      or customers — all using the same data, accessible
+                      wherever they are.
                     </p>
                   </div>
                 </div>
               </div>
-
             </div>
           </section>
 
           {/* Process Section */}
           <h3 className="main-section-heading mb-5" id="devHeading">
-            How we build Shopify stores
+            How we build CRMs and web apps
           </h3>
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 our-process-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-4 gap-12 content-wrapper">
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">01</span>
-                  <h3 className="inner-heading">Discovery & Strategy</h3>
+                  <h3 className="inner-heading">
+                    Discovery & Workflow Mapping
+                  </h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
                         expandedProcesses[0] ? "expanded" : ""
                       }`}
                     >
-                      We start by understanding your customer, not just your
-                      design preferences. What are they searching for? Where do
-                      they drop off? What competitors are they comparing you
-                      to? Strategy first, design second.
+                      We start by mapping your actual workflow — not assuming
+                      what you need. Who uses the system? What decisions do they
+                      make? What data flows through? Where are the bottlenecks
+                      today? The system is only as useful as how well it matches
+                      reality.
                     </p>
                     <button
                       onClick={() =>
@@ -614,16 +619,18 @@ const ShopifyDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">02</span>
-                  <h3 className="inner-heading">Build</h3>
+                  <h3 className="inner-heading">Architecture & Prototype</h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
                         expandedProcesses[1] ? "expanded" : ""
                       }`}
                     >
-                      Custom theme, fast load times, mobile-first, on-page SEO,
-                      payment and logistics integration. We build for
-                      performance, not pretty mockups that don&apos;t convert.
+                      System architecture, database design, user roles, and
+                      clickable prototypes before development starts. You see
+                      exactly how the app will work — screens, flows,
+                      permissions — and we make changes on prototypes, not on
+                      production code.
                     </p>
                     <button
                       onClick={() =>
@@ -640,16 +647,18 @@ const ShopifyDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">03</span>
-                  <h3 className="inner-heading">Launch & Track</h3>
+                  <h3 className="inner-heading">Development & Testing</h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
                         expandedProcesses[2] ? "expanded" : ""
                       }`}
                     >
-                      Analytics, heatmaps (Microsoft Clarity), and conversion
-                      tracking set up before launch. So we know what&apos;s
-                      happening from day one, not three months in.
+                      Clean PHP or React code with proper testing — across user
+                      roles, edge cases, and data scenarios. We build for
+                      real-world usage, not just the happy path. Multi-user
+                      access, data validation, and security are standard, not
+                      extras.
                     </p>
                     <button
                       onClick={() =>
@@ -666,16 +675,17 @@ const ShopifyDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">04</span>
-                  <h3 className="inner-heading">Optimize</h3>
+                  <h3 className="inner-heading">Launch & Ongoing Support</h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
                         expandedProcesses[3] ? "expanded" : ""
                       }`}
                     >
-                      First 30 days post-launch are about watching real
-                      behavior and fixing what doesn&apos;t work. Most agencies
-                      stop here. We treat this as the most important phase.
+                      Production deployment, training for your team, and 30 days
+                      of post-launch support included. Most CRM clients stay
+                      with us for ongoing development as their business evolves
+                      and new requirements emerge.
                     </p>
                     <button
                       onClick={() =>
@@ -698,10 +708,10 @@ const ShopifyDevelopment = () => {
           <section className="py-24 max-w-7xl mx-auto why-choose-us-web-dev">
             <div className="mb-12">
               <h3 className="main-section-heading" id="devHeading">
-                Why D2C brands choose The Tous for Shopify
+                Why businesses choose The Tous for custom CRMs and web apps
               </h3>
               <p className="why-para">
-                What makes us different from other Shopify agencies
+                What makes us different from SaaS CRMs and template platforms
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6 content-wrapper">
@@ -724,9 +734,11 @@ const ShopifyDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">We don&apos;t disappear after launch</h3>
+                <h3 className="inner-heading">
+                  Built around your workflow, not a template
+                </h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  30 days post-launch optimization included
+                  5+ custom CRMs delivered across industries
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -734,10 +746,12 @@ const ShopifyDevelopment = () => {
                       expandedWhyChoose[0] ? "expanded" : ""
                     }`}
                   >
-                    Most agencies build the store, hand over keys, and move
-                    on. We monitor real user behavior, A/B test what&apos;s not
-                    working, and keep optimizing — because launch day is the
-                    start, not the finish.
+                    Most businesses don&apos;t fit the SaaS CRM mold. Aviation
+                    spare parts traders need to track 5-month-old partial
+                    deliveries. Dental clinics need patient treatment plans
+                    linked to payment cycles. Real estate firms need lead
+                    distribution to multiple agents. We build systems that match
+                    your business — not the other way around.
                   </p>
                   <button
                     onClick={() =>
@@ -769,9 +783,9 @@ const ShopifyDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Performance is built in, not bolted on</h3>
+                <h3 className="inner-heading">You own the code and the data</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  Sub-1.5 second load times on mobile
+                  No subscription lock-in, no vendor dependency
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -779,9 +793,11 @@ const ShopifyDevelopment = () => {
                       expandedWhyChoose[1] ? "expanded" : ""
                     }`}
                   >
-                    Page speed, mobile UX, SEO structure, and conversion logic
-                    are baked into how we build — not features we add later.
-                    Most of our stores load under 1.5 seconds on mobile.
+                    When we build a CRM for you, you own the code and the
+                    database. No monthly per-user fees that scale with your
+                    team. No risk of a SaaS company changing pricing or shutting
+                    down. Your business logic is yours, hosted where you want,
+                    accessible only by you.
                   </p>
                   <button
                     onClick={() =>
@@ -813,9 +829,11 @@ const ShopifyDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">We say no to bad ideas</h3>
+                <h3 className="inner-heading">
+                  Real complexity handled cleanly
+                </h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  12+ apps removed from Caselulu in our last rebuild
+                  Multi-user roles, partial deliveries, complex workflows
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -823,10 +841,11 @@ const ShopifyDevelopment = () => {
                       expandedWhyChoose[2] ? "expanded" : ""
                     }`}
                   >
-                    If a feature won&apos;t help conversion or operations,
-                    we&apos;ll tell you. We&apos;ve seen Shopify stores killed
-                    by 12+ apps doing what 1 line of code can do better. We
-                    optimize for what works, not what&apos;s trendy.
+                    Most CRMs break under real business complexity. Multi-tier
+                    user roles. Partial order deliveries. Multi-month tracking.
+                    Custom approval flows. We&apos;ve handled all of these in
+                    production for clients across industries — and the systems
+                    still run smoothly.
                   </p>
                   <button
                     onClick={() =>
@@ -858,9 +877,9 @@ const ShopifyDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Real conversion data, not vanity metrics</h3>
+                <h3 className="inner-heading">Ongoing partner, not a vendor</h3>
                 <p className="text-sm text-gray-500 mb-3">
-                  Silvago: 0.7% → 2.4% in 4 weeks
+                  Multi-year client relationships across our CRM portfolio
                 </p>
                 <div className="why-text-wrapper">
                   <p
@@ -868,10 +887,10 @@ const ShopifyDevelopment = () => {
                       expandedWhyChoose[3] ? "expanded" : ""
                     }`}
                   >
-                    We don&apos;t chase visual trends. We watch real session
-                    recordings, identify drop-off points, and fix what&apos;s
-                    actually losing you sales. Numbers above are from a real
-                    client, not industry averages.
+                    Most of our CRM clients have been with us for years, not
+                    weeks. As their business evolves, we evolve the system. New
+                    features, new modules, new integrations — handled by the
+                    same team that built the original.
                   </p>
                   <button
                     onClick={() =>
@@ -883,13 +902,160 @@ const ShopifyDevelopment = () => {
                   </button>
                 </div>
               </div>
-
             </div>
           </section>
 
-          {/* Portfolio Section (moved to position 5) */}
+          {/* Industry Spotlight Section */}
+          <section className="re-spotlight-section">
+            <div className="re-spotlight-container">
+              <div className="re-spotlight-header">
+                <span className="re-spotlight-tag">INDUSTRY SPOTLIGHT</span>
+                <h2 className="re-spotlight-heading">
+                  Custom CRMs for service businesses
+                </h2>
+                <p className="re-spotlight-subtext">
+                  Service businesses — dental practices, pet services, real
+                  estate firms, healthcare providers — often run their
+                  operations on a patchwork of tools, spreadsheets, and
+                  manual processes. We build custom CRMs that bring it all
+                  into one system, designed for the specific way each
+                  business operates.
+                </p>
+                 <p className="re-spotlight-subtext mt-4">
+                <strong>Recent build:</strong> OMP CRM — pet grooming service
+                with custom CRM, customer self-service portal, and field team
+                mobile app — all connected to one system.
+              </p>
+              </div>
+
+              <div className="re-spotlight-grid">
+                {[
+                  {
+                    num: "01",
+                    title: "Lead capture and distribution",
+                    content:
+                      "Multi-channel lead capture (website, ads, calls) feeding into a single system, with automatic distribution to the right team members based on rules you define.",
+                  },
+                  {
+                    num: "02",
+                    title: "Customer and patient management",
+                    content:
+                      "Complete history, treatment plans, payment cycles, follow-up reminders — all in one place. Accessible to the people who need it, hidden from those who don't.",
+                  },
+                  {
+                    num: "03",
+                    title: "Field team and customer apps",
+                    content:
+                      "When your team works in the field or your customers need self-service access, we build companion mobile apps that connect to the same backend.",
+                  },
+                  {
+                    num: "04",
+                    title: "Reporting and analytics dashboards",
+                    content:
+                      "Visual dashboards that show what's actually happening in your business — not vanity metrics, but the numbers that drive decisions.",
+                  },
+                ].map((card, index) => (
+                  <div
+                    key={index}
+                    className={`re-spotlight-card ${
+                      activeSpotlight === index ? "active" : ""
+                    }`}
+                  >
+                    <button
+                      onClick={() =>
+                        setActiveSpotlight(
+                          activeSpotlight === index ? null : index
+                        )
+                      }
+                      className="re-spotlight-card-header"
+                    >
+                      <div className="re-spotlight-card-left">
+                        <span className="re-spotlight-card-num">
+                          {card.num}
+                        </span>
+                        <h3 className="re-spotlight-card-title">
+                          {card.title}
+                        </h3>
+                      </div>
+                      <svg
+                        className={`re-spotlight-card-icon ${
+                          activeSpotlight === index ? "rotate" : ""
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                    <div
+                      className={`re-spotlight-card-body ${
+                        activeSpotlight === index ? "expanded" : ""
+                      }`}
+                    >
+                      <p>{card.content}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+             
+            </div>
+          </section>
+
+          {/* Stats Section */}
+          <section className="py-24 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 stats-web-dev mb-5">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16 content">
+                <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
+                  Since 2018
+                </p>
+                <h2 className="main-section-heading mt-0!" id="devHeading">
+                  Building custom systems since 2018
+                </h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  Businesses across aviation, healthcare, real estate, dental,
+                  and pet services trust us to build the systems that run their
+                  operations.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
+                <div className="text-center">
+                  <div className="text-6xl md:text-7xl font-bold mb-3">5+</div>
+                  <p className="inner-heading">Custom CRMs Delivered</p>
+                  <p className="text-sm text-gray-500">
+                    Across aviation, healthcare, real estate, dental, and pet
+                    services
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="text-6xl md:text-7xl font-bold mb-3">
+                    Since 2018
+                  </div>
+                  <p className="inner-heading">Building Web Applications</p>
+                  <p className="text-sm text-gray-500">
+                    8 years of agency experience
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="text-6xl md:text-7xl font-bold mb-3">7</div>
+                  <p className="inner-heading">Specialist Team Members</p>
+                  <p className="text-sm text-gray-500">
+                    Design, frontend, backend, and project management
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section className="py-24 max-w-7xl mx-auto mt-5 web-dev-tabs">
-            <h3 className="main-section-heading mb-4">Our Shopify portfolio</h3>
+            <h3 className="main-section-heading mb-4">
+              Our CRM and web app projects
+            </h3>
             <div className="mb-12">
               {/* Tab Navigation */}
               <Swiper
@@ -937,14 +1103,9 @@ const ShopifyDevelopment = () => {
                     <h2 className="inner-heading !text-xl">
                       {portfolioContent[activeTab].title}
                     </h2>
-                    <p className="text-sm text-gray-500 mb-1">
+                    <p className="text-sm text-gray-500 mb-2">
                       {portfolioContent[activeTab].subtitle}
                     </p>
-                    {portfolioContent[activeTab].type && (
-                      <p className="text-sm text-gray-500 mb-2">
-                        Type: {portfolioContent[activeTab].type}
-                      </p>
-                    )}
 
                     {portfolioContent[activeTab].url && (
                       <a
@@ -981,7 +1142,7 @@ const ShopifyDevelopment = () => {
                               </svg>
                               <span className="text-gray-700">{item}</span>
                             </li>
-                          )
+                          ),
                         )}
                       </ul>
                     </div>
@@ -997,7 +1158,7 @@ const ShopifyDevelopment = () => {
                       href="/book-a-call"
                       className="inline-block c_button_black mt-4"
                     >
-                      {portfolioContent[activeTab].cta || "Build Your Store →"}
+                      Build Your CRM →
                     </Link>
                   </div>
                 </div>
@@ -1022,12 +1183,12 @@ const ShopifyDevelopment = () => {
                               activeTab === "customized"
                                 ? "/silvago.mp4"
                                 : activeTab === "tailored"
-                                ? "/relaxer.mp4"
-                                : activeTab === "coaches"
-                                ? "/luxeliv.mp4"
-                                : activeTab === "custom"
-                                ? "/pearlsnpastels.mp4"
-                                : "/silvago.mp4"
+                                  ? "/relaxer.mp4"
+                                  : activeTab === "coaches"
+                                    ? "/luxeliv.mp4"
+                                    : activeTab === "custom"
+                                      ? "/pearlsnpastels.mp4"
+                                      : "/silvago.mp4"
                             }
                             type="video/mp4"
                           />
@@ -1040,47 +1201,6 @@ const ShopifyDevelopment = () => {
             </div>
           </section>
 
-          {/* Stats Section */}
-          <section className="py-24 -mx-4 md:-mx-6 lg:-mx-8 px-4 md:px-6 lg:px-8 stats-web-dev mb-5">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16 content">
-                <p className="text-sm uppercase tracking-wider text-gray-500 mb-2">
-                  Since 2018
-                </p>
-                <h2 className="main-section-heading mt-0!" id="devHeading">
-                  Building Shopify stores since 2018
-                </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">
-                  D2C and ecommerce brands across India have trusted us to
-                  build, optimize, and scale their stores.
-                </p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
-                <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">5+</div>
-                  <p className="inner-heading">Shopify Stores Delivered</p>
-                  <p className="text-sm text-gray-500">
-                    Across jewelry, home decor, baby care, fashion, and accessories
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">Since 2018</div>
-                  <p className="inner-heading">Building Ecommerce</p>
-                  <p className="text-sm text-gray-500">
-                    8 years of agency experience
-                  </p>
-                </div>
-                <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">7</div>
-                  <p className="inner-heading">Specialist Team Members</p>
-                  <p className="text-sm text-gray-500">
-                    Design, development, and conversion optimization
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
           {/* call to action */}
           <section className="py-24 bg-white standard-feature pt-5 mb-5 shopify-cta-section">
             <div className="max-w-7xl mx-auto">
@@ -1088,8 +1208,11 @@ const ShopifyDevelopment = () => {
                 <div className="row">
                   {/* Left Column - Pain Points */}
                   <div className="col-md-6 col-lg-6 col-sm-12 cta-left">
-                    <h2 className="main-section-heading mb-4 mt-5" id="devHeading">
-                      Is your D2C store struggling?
+                    <h2
+                      className="main-section-heading mb-4 mt-5"
+                      id="devHeading"
+                    >
+                      Does this sound like your business?
                     </h2>
                     <ul className="space-y-3 mb-8">
                       <li className="flex items-start">
@@ -1105,7 +1228,8 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Your conversion rate is stuck below 2% despite traffic
+                          Your team is running operations on Excel sheets that
+                          should be in a proper system
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1121,8 +1245,8 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Mobile load time is over 2 seconds, hurting both SEO
-                          and sales
+                          You&apos;re paying for a SaaS CRM that doesn&apos;t
+                          actually fit how your business works
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1138,8 +1262,8 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          You&apos;ve installed too many apps trying to fix
-                          conversion problems
+                          Customer or lead data is scattered across multiple
+                          disconnected tools
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1155,7 +1279,8 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Cart abandonment is high but you don&apos;t know why
+                          Your team wastes hours on manual tasks that should be
+                          automated
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1171,8 +1296,8 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Product pages look fine but don&apos;t convert
-                          browsers to buyers
+                          You can&apos;t see what&apos;s happening in your
+                          business in real time
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1188,8 +1313,8 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Your checkout flow is confusing customers at the
-                          final step
+                          Adding a new team member means another monthly
+                          subscription cost
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1205,8 +1330,8 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          You&apos;re moving from another platform and worried
-                          about losing SEO
+                          Your existing system can&apos;t handle complex
+                          workflows or partial transactions
                         </span>
                       </li>
                       <li className="flex items-start">
@@ -1222,8 +1347,8 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          You need a Shopify store that scales beyond just
-                          looking good
+                          You need a custom solution but don&apos;t want to
+                          manage in-house developers
                         </span>
                       </li>
                     </ul>
@@ -1231,7 +1356,7 @@ const ShopifyDevelopment = () => {
                       href="/book-a-call"
                       className="inline-block c_button_black mt-4"
                     >
-                      Book a Strategy Call →
+                      Book a Discovery Call →
                     </Link>
                   </div>
 
@@ -1252,9 +1377,13 @@ const ShopifyDevelopment = () => {
           </section>
 
           {/* FAQs */}
-          <h3 className="main-section-heading mb-4" id="devHeading">
+          <h3
+            className="main-section-heading mb-4 faq-heading text-center"
+            id="devHeading"
+          >
             Frequently asked questions
           </h3>
+          {/* CRM page heading retained */}
           <section className="py-24 bg-gray-50 -mx-4 md:-mx-6 lg:-mx-8 md:px-6 lg:px-8 faq-web-dev">
             <div className="max-w-7xl mx-auto">
               <div className="space-y-4">
@@ -1309,9 +1438,9 @@ const ShopifyDevelopment = () => {
           <div className="row">
             <div className="col-12">
               <div className="p">
-                Ready to launch your high-converting Shopify store?
+                Ready to build a CRM or web app that fits your business?
               </div>
-              <Link href="/book-a-call">Get Your Free Quote</Link>
+              <Link href="/book-a-call">Book a Discovery Call →</Link>
             </div>
           </div>
         </div>

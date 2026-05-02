@@ -6,6 +6,12 @@ import Image from "next/image";
 import aboutImg from "../../../public/about/about-page.webp";
 import usePageTitle from "@/hooks/usePageTitle";
 
+import Tarun from "../../../public/team/Tarun-Badhana.webp";
+import Sagar from "../../../public/team/Sagar.webp";
+import Manawwar from "../../../public/team/Manawwar.webp";
+import Yashika from "../../../public/team/Yashika.webp";
+import Anjali from "../../../public/team/Anjali.webp";
+
 const principles = [
   {
     title: "Fixed quotes, not hourly billing.",
@@ -25,14 +31,14 @@ const principles = [
   },
 ];
 
-const team = [
-  "Founder & Lead Developer",
-  "Full-stack Developer",
-  "Project coordinator",
-  "Frontend Developer",
-  "Backend Developer",
-  "Designer",
-  "Designer",
+const teams = [
+  { name: "Tarun Badhana", role: "Founder & Lead Developer", image: Tarun    },
+  { name: "",              role: "Full-stack Developer",     image: null     },
+  { name: "Sagar",         role: "Project coordinator",     image: Sagar    },
+  { name: "Yashika",       role: "Frontend Developer",      image: Yashika  },
+  { name: "Manawwar",      role: "Backend Developer",       image: Manawwar },
+  { name: "Anjali",        role: "Designer",                image: Anjali   },
+  { name: "",              role: "Designer",                image: null     },
 ];
 
 const stats = [
@@ -113,12 +119,19 @@ const About = () => {
             happen fast.
           </p>
           <div className="about-team-grid">
-            {team.map((role, i) => (
+            {teams.map((member, i) => (
               <div key={i} className="about-team-card">
                 <div className="about-team-photo">
-                  <span>Photo</span>
+                  {member.image ? (
+                    <Image src={member.image} alt={member.name} width={300} height={300} />
+                  ) : (
+                    <div className="about-team-placeholder">
+                      <i className="ri-user-3-line"></i>
+                    </div>
+                  )}
                 </div>
-                <p className="about-team-name">{role}</p>
+                {member.name && <p className="about-team-name">{member.name}</p>}
+                <p className="about-team-role">{member.role}</p>
               </div>
             ))}
           </div>

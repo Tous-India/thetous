@@ -1,85 +1,183 @@
 "use client";
 
+import { useState } from "react";
 import "./style.css";
 import WorkCard from "@/components/WorkCard";
-import caseStudiesData from "@/data/caseStudies.json";
 import usePageTitle from "@/hooks/usePageTitle";
 
-/* ================= IMAGES ================= */
+import silvago from "../../../public/work/silvago_website copy.webp";
+import luxeliv from "../../../public/work/luxeliv_website_2.webp";
+import omp from "../../../public/work/omp_website.webp";
+import kb from "../../../public/work/kb_website copy (2).webp";
+import nestloom from "../../../public/work/nestloom_website.webp";
+import barebub from "../../../public/work/barebub_website copy.webp";
+import boxika from "../../../public/work/boxika_website.webp";
+import smartrays from "../../../public/work/smartrayssolutions_website.webp";
+import ujjwal from "../../../public/work/ujjwal_dental_planet.webp";
+import caselulu from "../../../public/work/caselulu_website.webp";
+import svaa from "../../../public/work/svaa_website (1).webp";
+import engine from "../../../public/work/used engine_website.webp";
+import ssr from "../../../public/work/ssr_website.webp";
+import transaction from "../../../public/work/transection point_website.webp";
 
-import prozvofit from "../../../public/home/work/1726132161.webp";
-import silvago from "../../../public/home/work/silvago.png";
-import luxeliv from "../../../public/home/work/1731492385.webp";
-import executive from "../../../public/work/executive.webp";
-import ohmypet from "../../../public/work/ohmypet.webp";
-import dhirsons from "../../../public/work/dhirsons.webp";
-import crossraod from "../../../public/home/work/1731492317.webp";
-import godrej from "../../../public/home/work/godrej.jpg";
-import m3mPanipat from "../../../public/home/work/m3m-panipat.webp";
-import sbp from "../../../public/home/work/sbp.png";
-import skaOrion from "../../../public/home/work/SKA orion.jpg";
-import tarc from "../../../public/home/work/TARC.jpg";
+const TABS = [
+  { key: "all", label: "All Projects", count: 13 },
+  { key: "crm", label: "CRM & Web Apps", count: 4 },
+  { key: "shopify", label: "Shopify", count: 5 },
+  { key: "web", label: "Custom Web", count: 4 },
+];
 
-/* ================= IMAGE MAP ================= */
-
-const imageMap = {
-  "/home/work/1726132161.webp": prozvofit,
-  "/home/work/1731492385.webp": luxeliv,
-  "/work/executive.webp": executive,
-  "/work/ohmypet.webp": ohmypet,
-  "/work/dhirsons.webp": dhirsons,
-  "/home/work/1731492317.webp": crossraod,
-  "/home/work/silvago.png": silvago,
-  "/home/work/godrej.jpg": godrej,
-  "/home/work/m3m-panipat.webp": m3mPanipat,
-  "/home/work/sbp.png": sbp,
-  "/home/work/SKA orion.jpg": skaOrion,
-  "/home/work/TARC.jpg": tarc,
-};
-
-/* ================= DATA ================= */
-
-const workData = {
-  brandSolution: caseStudiesData.caseStudies.map((study) => ({
-    id: study.id,
-    image: imageMap[study.image],
-    title: study.title,
-    projectType: study.projectType,
-    desc: study.description,
-    tags: study.tags,
-    disabled: study.id === "ska-orion" || study.id === "tarc",
-  })),
-};
-
-/* ================= PAGE ================= */
+const workProjects = [
+  {
+    id: "omp-crm",
+    category: "crm",
+    title: "OMP CRM + Mobile App",
+    projectType: "B2B · CRM & Mobile App",
+    desc: "Lead capture from web and ads, groomer assignment, customer login portal, and a companion mobile app for the field team.",
+    image: omp,
+  },
+  {
+    id: "kb-crm",
+    category: "crm",
+    title: "KB Enterprise CRM",
+    projectType: "B2B · CRM",
+    desc: "Custom CRM for an aviation spare parts trading business — quotations, invoices, partial deliveries, and multi-month order tracking in one system.",
+    image: kb,
+  },
+  {
+    id: "ujjwal-dental",
+    category: "crm",
+    title: "Ujjwal Dental Patient Management System",
+    projectType: "Healthcare · CRM",
+    desc: "Patient records, treatment plans, payment tracking, and automated appointment reminders for a busy dental practice.",
+    image: ujjwal,
+  },
+  {
+    id: "real-estate-crm",
+    category: "crm",
+    title: "Real Estate Lead Management System",
+    projectType: "Real Estate · CRM",
+    desc: "Custom CRM for a real estate firm — lead distribution, agent follow-up tracking, and business intelligence dashboards.",
+    image: transaction,
+    badge: "In Development",
+  },
+  {
+    id: "silvago",
+    category: "shopify",
+    title: "Silvago",
+    projectType: "D2C · Shopify · Premium Jewelry",
+    desc: "Custom Shopify build for a silver jewelry brand. Conversion lifted from 0.7% to 2.4% through targeted UX optimization — no redesign needed.",
+    image: silvago,
+  },
+  {
+    id: "caselulu",
+    category: "shopify",
+    title: "Caselulu",
+    projectType: "D2C · Shopify · Mobile Accessories",
+    desc: "Complete Shopify rebuild for a phone case brand — fixed broken variant logic, removed 12+ apps, and dropped page load from 2.2s to 1.4s.",
+    image: caselulu,
+  },
+  {
+    id: "luxeliv",
+    category: "shopify",
+    title: "Luxeliv",
+    projectType: "D2C · Shopify · Loungewear",
+    desc: "Premium Shopify store for a luxe loungewear brand — editorial product layouts and high-AOV checkout designed for Instagram traffic.",
+    image: luxeliv,
+  },
+  {
+    id: "nestloom",
+    category: "shopify",
+    title: "Nestloom",
+    projectType: "D2C · Shopify · Home Decor",
+    desc: "Custom Shopify store for a Panipat-based home decor brand — flagship-quality design that stands out in their regional market.",
+    image: nestloom,
+  },
+  {
+    id: "barebub",
+    category: "shopify",
+    title: "Barebub",
+    projectType: "D2C · Shopify · Baby Care",
+    desc: "End-to-end Shopify build for a baby wipes, skincare, and hygiene brand — payment gateway, logistics integration, and ready to launch.",
+    image: barebub,
+  },
+  {
+    id: "smartrays",
+    category: "web",
+    title: "Smartrays",
+    projectType: "B2B · WordPress · Solar",
+    desc: "Custom WordPress site for a commercial solar panel company — clean lead generation site that's been driving steady inbound business.",
+    image: smartrays,
+  },
+  {
+    id: "usedengines4cars",
+    category: "web",
+    title: "UsedEngines4Cars",
+    projectType: "B2C · WordPress · Automotive · USA",
+    desc: "Lead-capture WordPress site for a US-based used engines marketplace — detailed enquiry forms, on-page SEO driving organic leads month-on-month.",
+    image: engine,
+  },
+  {
+    id: "ssr-dies",
+    category: "web",
+    title: "SSR Dies and Moulds",
+    projectType: "B2B · Custom Code · Manufacturing",
+    desc: "Custom-coded website for a plastic OEM manufacturer producing casings for geysers, coolers, and consumer appliances.",
+    image: ssr,
+  },
+  {
+    id: "boxika",
+    category: "web",
+    title: "Boxika",
+    projectType: "B2B · WordPress · Manufacturing",
+    desc: "WordPress site for a corrugated packaging manufacturer — visually rich design that's helped them stand out in a commodity industry.",
+    image: boxika,
+  },
+];
 
 export default function Work() {
-  usePageTitle("Our Work – Case Studies & Success Stories in Digital Marketing");
+  usePageTitle("Our Work – The Tous");
+
+  const [activeTab, setActiveTab] = useState("all");
+  const filtered =
+    activeTab === "all"
+      ? workProjects
+      : workProjects.filter((p) => p.category === activeTab);
 
   return (
     <div className="work-main-page">
-      <section>
-        <div className="container bs-container my-5">
-          <div className="row">
-            <div className="col-md-6 d-flex flex-column brand-strategy-div">
-              <h1>Our Work</h1>
-              <p>
-                Our strategists, designers, video editors and animators provide
-                holistic solutions to grow your digital presence and achieve
-                your business goals through integrated campaigns.
-              </p>
-            </div>
-          </div>
+      <div className="container">
+        <div className="work-hero">
+          <h1>Selected Work</h1>
+          <p className="work-hero-sub">
+            Real projects we&apos;ve shipped for D2C, B2B, and ecommerce brands
+            across India and the US.
+          </p>
+          <p className="work-hero-trust">
+            150+ projects delivered since 2018 &middot; 12 featured below
+          </p>
         </div>
+      </div>
 
-        <div className="container container-2">
-          <div className="row">
-            {workData.brandSolution.map((item) => (
-              <WorkCard key={item.id} item={item} />
-            ))}
-          </div>
+      <div className="work-tabs-bar container">
+        {TABS.map((tab) => (
+          <button
+            key={tab.key}
+            className={`work-tab-btn${activeTab === tab.key ? " active" : ""}`}
+            onClick={() => setActiveTab(tab.key)}
+          >
+            {tab.label} <span className="work-tab-count">({tab.count})</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="container container-2">
+        <div className="row">
+          {filtered.map((project) => (
+            <WorkCard key={project.id} item={project} />
+          ))}
         </div>
-      </section>
+      </div>
     </div>
   );
 }

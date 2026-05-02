@@ -5,7 +5,7 @@ import Link from "next/link";
 const cards = [
   {
     icon: "ri-code-s-slash-line",
-    title: "Custom Web Development",
+    title: "Website Development",
     oneliner: "For brands that need more than a template.",
     points: [
       "Built on Next.js, React, and Node",
@@ -31,7 +31,7 @@ const cards = [
   },
   {
     icon: "ri-dashboard-line",
-    title: "Custom CRM & Web Apps",
+    title: "CRM & Web Apps",
     oneliner: "Built for your team's exact workflow.",
     points: [
       "Internal dashboards and admin panels",
@@ -39,7 +39,7 @@ const cards = [
       "Role-based access and reporting",
       "Integrates with tools you already use",
     ],
-    href: "/tech-solution/web-development",
+    href: "/tech-solution/crm-development",
     col: "third",
   },
 ];

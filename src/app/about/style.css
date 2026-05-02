@@ -161,7 +161,7 @@
     padding: 3rem 0;
     position: relative;
     z-index: 5;
-    margin-bottom: -3.25rem !important;
+    margin-bottom: 0px !important;
 
     .row {
       align-items: center;
@@ -287,31 +287,47 @@
 
 .about-team-photo {
   width: 100%;
-  padding-bottom: 100%;
+  aspect-ratio: 1 / 1;
   background: #f4f4f4;
   border-radius: 8px;
   margin-bottom: 0.6rem;
-  position: relative;
+  overflow: hidden;
 }
 
-.about-team-photo span {
-  position: absolute;
-  inset: 0;
+.about-team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.about-team-placeholder {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
-  color: #bbb;
-  font-family: "Poppins", sans-serif;
+  color: #ccc;
+  font-size: 2.5rem;
 }
 
 .about-team-name {
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: #000;
   margin: 0;
   line-height: 20px !important;
+}
+
+.about-team-role {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px !important;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+  line-height: 18px !important;
 }
 
 .about-team-note {

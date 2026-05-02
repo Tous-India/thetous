@@ -57,27 +57,18 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-NVVQMS4Z');
           `}
         </Script>
-        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-          rel="stylesheet"
-        /> */}
+       
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${lato.variable} ${poppins.variable}`}
       >
         <QueryProvider>
           <LenisProvider>
-            <Header />
-            {children}
-            <MousePointer />
+            <div className="page-content-wrapper">
+              <Header />
+              {children}
+              <MousePointer />
+            </div>
             <Footer />
             <BootstrapClient />
           </LenisProvider>
@@ -93,10 +84,7 @@ export default function RootLayout({ children }) {
           />
         </noscript>
 
-        {/* <!-- Google Tag Manager --> */}
-        {/* <script>(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NVVQMS4Z');</script> */}
-        {/* <!-- End Google Tag Manager --> */}
-
+ 
 
 
       </body>
