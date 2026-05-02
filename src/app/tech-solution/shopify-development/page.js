@@ -1057,7 +1057,7 @@ const ShopifyDevelopment = () => {
               </div>
               <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">5+</div>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">50+</div>
                   <p className="inner-heading">Shopify Stores Delivered</p>
                   <p className="text-sm text-gray-500">
                     Across jewelry, home decor, baby care, fashion, and accessories

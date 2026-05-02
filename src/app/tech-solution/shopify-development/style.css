@@ -585,6 +585,11 @@
 }
 
 @media (max-width: 720px) {
+
+  .shopify-devlopment-main-page p{
+    line-height: 25px;
+  }
+
   .webDevCta {
     .row {
       .col-12 {
