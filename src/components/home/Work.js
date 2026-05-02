@@ -6,35 +6,35 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import Img4 from "../../../public/home/work/1731492385.webp";
-import Img6 from "../../../public/home/work/1726133585.webp";
-import Img12 from "../../../public/home/work/1742807329.webp";
-import Img13 from "../../../public/home/work/silvago.png";
+import luxeliv from "../../../public/work/luxeliv_website_2.webp";
+import prozvofit from "../../../public/work/prozvofit_resized.png";
+import omp from "../../../public/work/omp_website.webp";
+import silvago from "../../../public/work/silvago_website copy.webp";
 
 const projects = [
   {
     title: "Silvago",
     slug: "silvago",
     description: "Premium silver jewelry D2C brand. Built custom Shopify store with 200+ SKUs and mobile-optimized checkout.",
-    image: Img13,
+    image: silvago,
   },
   {
     title: "Luxeliv",
     slug: "luxeliv",
-    description: "Luxury lifestyle brand. Designed and developed a high-converting product landing page with editorial-style layout.",
-    image: Img4,
+    description: "Luxury lifestyle brand. High-converting editorial-style product page.",
+    image: luxeliv,
   },
   {
     title: "Prozvofit",
     slug: "prozvofit",
-    description: "B2B fitness equipment brand platform built on Laravel with integrated lead management and customer relationship system.",
-    image: Img6,
+    description: "B2B fitness equipment platform built on Laravel with integrated CRM.",
+    image: prozvofit,
   },
   {
     title: "Oh My Pet Grooming",
     slug: "oh-my-pet-grooming",
     description: "Pet grooming service brand. Built appointment booking system, local SEO setup, and Google Ads landing pages.",
-    image: Img12,
+    image: omp,
   },
 ];
 

@@ -893,7 +893,7 @@
   padding: 5rem 0;
   position: relative;
   z-index: 5;
-  margin-bottom: -2rem !important;
+  margin-bottom: 0rem !important;
 
   .row {
     align-items: center;
@@ -930,19 +930,22 @@
     }
   }
 }
- 
+
 .web-devlopment-main-page .faq-web-dev {
   width: 60%;
   margin: auto;
 }
-.web-devlopment-main-page .faq-heading{
+.web-devlopment-main-page .faq-heading {
   text-align: center;
-  &::after{
+  &::after {
     left: 45%;
   }
 }
 
 @media (max-width: 720px) {
+  .swiper-slide button {
+    font-size: 12px !important;
+  }
   .web-devlopment-main-page
     .what-we-offer-web-dev
     .content-wrapper
@@ -950,7 +953,10 @@
     position: relative;
     padding: 1rem;
   }
-
+  .web-devlopment-main-page .why-choose-us-web-dev .inner-heading {
+    line-height: 25px;
+    margin-bottom: 1rem;
+  }
   .web-devlopment-main-page {
     background-color: #fff;
     padding-top: 1rem;

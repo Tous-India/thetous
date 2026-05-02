@@ -212,7 +212,7 @@ const About = () => {
                   justifyContent: "center",
                 }}
               >
-                <Link href="/contact">Book a Strategy Call</Link>
+                <Link href="/book-a-call">Book a Strategy Call</Link>
                 <a
                   href="mailto:grow@thetous.com"
                   style={{

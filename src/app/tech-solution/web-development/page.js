@@ -322,7 +322,10 @@ const WebDevelopment = () => {
                   used auto parts, and packaging brands across India and the US.
                 </p>
 
-                <Link href="/book-a-call" className="inline-block c_button_black">
+                <Link
+                  href="/book-a-call"
+                  className="inline-block c_button_black"
+                >
                   Book a Discovery Call →
                 </Link>
               </div>
@@ -937,7 +940,9 @@ const WebDevelopment = () => {
               </div>
               <div className="grid md:grid-cols-3 gap-12 md:gap-16 numbers">
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">15+</div>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">
+                    150+
+                  </div>
                   <p className="inner-heading">Websites Delivered</p>
                   <p className="text-sm text-gray-500">
                     Across manufacturing, energy, automotive, and services
@@ -1189,12 +1194,12 @@ const WebDevelopment = () => {
                               <source
                                 src={
                                   activeTab === "customized"
-                                    ? "/silvago.mp4"
+                                    ? "/new-ssr.mp4"
                                     : activeTab === "tailored"
-                                      ? "/KB Crm.mp4"
+                                      ? "/new-engine.mp4"
                                       : activeTab === "coaches"
-                                        ? "/Vaqya.mp4"
-                                        : "/vis.mp4"
+                                        ? "/new-smartrays.mp4"
+                                        : "/new-svaa.mp4"
                                 }
                                 type="video/mp4"
                               />
@@ -1435,7 +1440,7 @@ const WebDevelopment = () => {
               <div className="p">
                 Together, let&apos;s have a quantifiable effect on your company.
               </div>
-              <Link href="/book-a-call">Design A Quote</Link>
+              <Link href="/book-a-call">Book a Strategy Call</Link>
             </div>
           </div>
         </div>
