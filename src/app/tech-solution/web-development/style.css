@@ -965,6 +965,7 @@
     .border-div {
     position: relative;
     padding: 1rem;
+    height: 10rem;
   }
   .web-devlopment-main-page .why-choose-us-web-dev .inner-heading {
     line-height: 25px;
@@ -1090,7 +1091,7 @@
       row-gap: 1rem;
 
       .inner-div {
-        width: 48%;
+        width: 100%;
       }
     }
   }

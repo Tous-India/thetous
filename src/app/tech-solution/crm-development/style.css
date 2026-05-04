@@ -618,6 +618,10 @@
 }
 
 @media (max-width: 720px) {
+  .crm-devlopment-main-page .what-we-offer-web-dev .inner-heading {
+    height: 6rem;
+  }
+
   .faq-web-dev {
     width: 100% !important;
     margin: auto;
@@ -710,7 +714,7 @@
       gap: 5px;
       row-gap: 1rem;
       .inner-div {
-        width: 48%;
+        width: 100%;
       }
     }
   }

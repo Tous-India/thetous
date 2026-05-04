@@ -10,6 +10,7 @@ import luxeliv from "../../../public/work/luxeliv_website_2.webp";
 import prozvofit from "../../../public/work/prozvofit_resized.png";
 import omp from "../../../public/work/omp_website.webp";
 import silvago from "../../../public/work/silvago_website copy.webp";
+import engine from "../../../public/work/used engine_website.webp";
 
 const projects = [
   {
@@ -39,6 +40,13 @@ const projects = [
     description:
       "Pet grooming brand. Built booking system, local SEO, and Google Ads pages.",
     image: omp,
+  },
+  {
+    title: "Used Engine",
+    slug: "use-engine",
+    description:
+      "Re seller brand. Built website, local SEO, and Google Ads pages.",
+    image: engine,
   },
 ];
 
