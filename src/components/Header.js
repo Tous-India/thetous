@@ -78,17 +78,38 @@ const Header = () => {
                     <div className="inner-ul-dropdown">
                       <ul>
                         <li>
-                          <Link href="/tech-solution/web-development">
+                          <Link
+                            href="/tech-solution/web-development"
+                            className={
+                              pathname === "/tech-solution/web-development"
+                                ? "active-nav"
+                                : ""
+                            }
+                          >
                             Website Development
                           </Link>
                         </li>
                         <li>
-                          <Link href="/tech-solution/shopify-development">
+                          <Link
+                            href="/tech-solution/shopify-development"
+                            className={
+                              pathname === "/tech-solution/shopify-development"
+                                ? "active-nav"
+                                : ""
+                            }
+                          >
                             Shopify Development
                           </Link>
                         </li>
                         <li>
-                          <Link href="/tech-solution/crm-development">
+                          <Link
+                            href="/tech-solution/crm-development"
+                            className={
+                              pathname === "/tech-solution/crm-development"
+                                ? "active-nav"
+                                : ""
+                            }
+                          >
                             CRM & Web Apps
                           </Link>
                         </li>
@@ -153,13 +174,34 @@ const Header = () => {
                       <div
                         className={`phone-services-box ${open ? "openclass" : "closeclass"}`}
                       >
-                        <Link href="/tech-solution/web-development">
+                        <Link
+                          href="/tech-solution/web-development"
+                          className={
+                            pathname === "/tech-solution/web-development"
+                              ? "active-nav"
+                              : ""
+                          }
+                        >
                            Website Development
                         </Link>
-                        <Link href="/tech-solution/shopify-development">
+                        <Link
+                          href="/tech-solution/shopify-development"
+                          className={
+                            pathname === "/tech-solution/shopify-development"
+                              ? "active-nav"
+                              : ""
+                          }
+                        >
                           Shopify Development
                         </Link>
-                        <Link href="/tech-solution/crm-development">
+                        <Link
+                          href="/tech-solution/crm-development"
+                          className={
+                            pathname === "/tech-solution/crm-development"
+                              ? "active-nav"
+                              : ""
+                          }
+                        >
                            CRM & Web Apps
                         </Link>
                       </div>

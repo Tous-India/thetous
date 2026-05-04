@@ -101,6 +101,16 @@
       flex-direction: column;
       align-items: start;
       justify-content: center;
+      text-align: center;
+      a {
+        margin: 0 auto;
+      }
+      .portfolio-button {
+        margin-top: 1rem;
+        padding: 5px 10px;
+        font-size: 14px !important;
+        opacity: 0.75;
+      }
       ul {
         padding: 0;
         padding-left: 10px;
@@ -585,6 +595,13 @@
 }
 
 @media (max-width: 720px) {
+  .swiper-slide button {
+    font-size: 13px !important;
+  }
+  .shopify-devlopment-main-page p {
+    line-height: 25px;
+  }
+
   .webDevCta {
     .row {
       .col-12 {

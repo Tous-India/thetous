@@ -288,7 +288,7 @@ const ShopifyDevelopment = () => {
           <section className="py-24 hero-web-dev">
             <div className="row">
               {/* Left Column - Video */}
-              <div className="col-md-6 col-lg-9 col-sm-12">
+              <div className="col-md-6 col-lg-5 col-sm-12">
                 <div className="video-container">
                   <video
                     ref={videoRef}
@@ -298,10 +298,7 @@ const ShopifyDevelopment = () => {
                     playsInline
                     className="w-100 h-auto rounded-lg"
                   >
-                    <source
-                      src="/Tous-Web-shopify -video.mp4"
-                      type="video/mp4"
-                    />
+                    <source src="/new-crm development.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
 
@@ -347,7 +344,7 @@ const ShopifyDevelopment = () => {
               </div>
 
               {/* Right Column - Content */}
-              <div className="col-md-6 col-lg-3 col-sm-12 right-banner">
+              <div className="col-md-6 col-lg-6 col-sm-12 right-banner">
                 <h1 className="main-section-heading mb-3!" id="noLine">
                   Custom CRMs and web apps built around your workflow
                 </h1>
@@ -362,8 +359,15 @@ const ShopifyDevelopment = () => {
                   estate, dental, and pet services across India and the US.
                 </p>
 
-                <Link href="/book-a-call" className="inline-block c_button_black">
+                <Link
+                  href="/book-a-call"
+                  className="inline-block c_button_black"
+                >
                   Book a Discovery Call →
+                </Link>
+                <Link className="portfolio-button" href="#portfolio-tabs">
+                  View Our Portfolio
+                  <i className="ri-corner-right-down-line"></i>
                 </Link>
               </div>
             </div>
@@ -916,16 +920,15 @@ const ShopifyDevelopment = () => {
                 <p className="re-spotlight-subtext">
                   Service businesses — dental practices, pet services, real
                   estate firms, healthcare providers — often run their
-                  operations on a patchwork of tools, spreadsheets, and
-                  manual processes. We build custom CRMs that bring it all
-                  into one system, designed for the specific way each
-                  business operates.
+                  operations on a patchwork of tools, spreadsheets, and manual
+                  processes. We build custom CRMs that bring it all into one
+                  system, designed for the specific way each business operates.
                 </p>
-                 <p className="re-spotlight-subtext mt-4">
-                <strong>Recent build:</strong> OMP CRM — pet grooming service
-                with custom CRM, customer self-service portal, and field team
-                mobile app — all connected to one system.
-              </p>
+                <p className="re-spotlight-subtext mt-4">
+                  <strong>Recent build:</strong> OMP CRM — pet grooming service
+                  with custom CRM, customer self-service portal, and field team
+                  mobile app — all connected to one system.
+                </p>
               </div>
 
               <div className="re-spotlight-grid">
@@ -964,7 +967,7 @@ const ShopifyDevelopment = () => {
                     <button
                       onClick={() =>
                         setActiveSpotlight(
-                          activeSpotlight === index ? null : index
+                          activeSpotlight === index ? null : index,
                         )
                       }
                       className="re-spotlight-card-header"
@@ -1003,7 +1006,6 @@ const ShopifyDevelopment = () => {
                   </div>
                 ))}
               </div>
-             
             </div>
           </section>
 
@@ -1052,7 +1054,10 @@ const ShopifyDevelopment = () => {
             </div>
           </section>
 
-          <section className="py-24 max-w-7xl mx-auto mt-5 web-dev-tabs">
+          <section
+            className="py-24 max-w-7xl mx-auto mt-5 web-dev-tabs"
+            id="portfolio-tabs"
+          >
             <h3 className="main-section-heading mb-4">
               Our CRM and web app projects
             </h3>
@@ -1169,7 +1174,7 @@ const ShopifyDevelopment = () => {
                     {/* Video Container */}
                     <div className="relative mx-auto">
                       <div className="rounded-lg overflow-hidden">
-                        <video
+                        {/* <video
                           key={activeTab}
                           autoPlay
                           loop
@@ -1177,22 +1182,26 @@ const ShopifyDevelopment = () => {
                           playsInline
                           preload="auto"
                           className="lg:w-75 sm:w-100 object-cover"
-                        >
-                          <source
-                            src={
-                              activeTab === "customized"
-                                ? "/silvago.mp4"
-                                : activeTab === "tailored"
-                                  ? "/relaxer.mp4"
-                                  : activeTab === "coaches"
-                                    ? "/luxeliv.mp4"
-                                    : activeTab === "custom"
-                                      ? "/pearlsnpastels.mp4"
-                                      : "/silvago.mp4"
-                            }
-                            type="video/mp4"
-                          />
-                        </video>
+                        > */}
+                        <Image
+                          src={
+                            activeTab === "customized"
+                              ? "/omp-new.png"
+                              : activeTab === "tailored"
+                                ? "/kb-new.png"
+                                : activeTab === "coaches"
+                                  ? "/placeholder.png"
+                                  : activeTab === "custom"
+                                    ? "/ujjwal-new.png"
+                                    : "/transaction-new.png"
+                          }
+                          width={1000}
+                          height={800}
+                          alt="Project Image"
+                          className="crm-tab-image"
+                          // quality={100}
+                        />
+                        {/* </video> */}
                       </div>
                     </div>
                   </div>

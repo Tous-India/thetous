@@ -55,7 +55,7 @@ const WhyWeUs = () => {
                   fontSize: "2.5rem !important",
                   fontWeight: 800,
                   color: "#000",
-                  opacity: 0.07,
+                  opacity: 0.02,
                   fontFamily: "'Poppins', sans-serif",
                   lineHeight: 1,
                 }}>
