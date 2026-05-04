@@ -595,6 +595,13 @@
 }
 
 @media (max-width: 720px) {
+  .shopify-devlopment-main-page
+    .what-we-offer-web-dev
+    .content-wrapper
+    .border-div {
+    height: 11rem;
+  }
+
   .swiper-slide button {
     font-size: 13px !important;
   }
