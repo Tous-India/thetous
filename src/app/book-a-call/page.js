@@ -52,6 +52,9 @@ const Quote = () => {
           timeline: "",
           budget: "",
         });
+        if (typeof window !== "undefined") {
+          window.open("/thank-you", "_blank");
+        }
       } else {
         setSubmitStatus({
           type: "error",
@@ -74,7 +77,8 @@ const Quote = () => {
         <div className="quote-header">
           <h1>Let&apos;s Talk About Your Project</h1>
           <p className="lg:w-[55%] ms-auto me-auto">
-            Tell us a bit about what you&apos;re working on. We&apos;ll get back within one business day to schedule a 30-minute strategy call.
+            Tell us a bit about what you&apos;re working on. We&apos;ll get back
+            within one business day to schedule a 30-minute strategy call.
           </p>
         </div>
 
@@ -95,11 +99,13 @@ const Quote = () => {
           </div>
         )}
 
-        <form className="quote-form" onSubmit={handleSubmit}>
+        <form className="quote-form lg:w-[55%] mx-auto" onSubmit={handleSubmit}>
           <div className="form-grid">
             {/* Name + Email */}
             <div className="form-group">
-              <label>Your name <span className="required">*</span></label>
+              <label>
+                Your name <span className="required">*</span>
+              </label>
               <input
                 type="text"
                 name="name"
@@ -111,7 +117,9 @@ const Quote = () => {
             </div>
 
             <div className="form-group">
-              <label>Email <span className="required">*</span></label>
+              <label>
+                Email <span className="required">*</span>
+              </label>
               <input
                 type="email"
                 name="email"
@@ -137,19 +145,34 @@ const Quote = () => {
 
             {/* What to build */}
             <div className="form-group full-width">
-              <label>What are you looking to build? <span className="required">*</span></label>
+              <label>
+                What are you looking to build?{" "}
+                <span className="required">*</span>
+              </label>
               <select
                 name="buildType"
                 value={formData.buildType}
                 onChange={handleInputChange}
                 required
               >
-                <option value="" disabled>Select an option</option>
-                <option value="New website (custom development)">New website (custom development)</option>
-                <option value="Shopify store (new build)">Shopify store (new build)</option>
-                <option value="Shopify migration / redesign">Shopify migration / redesign</option>
-                <option value="Custom CRM or web app">Custom CRM or web app</option>
-                <option value="Not sure yet — want to discuss">Not sure yet — want to discuss</option>
+                <option value="" disabled>
+                  Select an option
+                </option>
+                <option value="New website (custom development)">
+                  New website (custom development)
+                </option>
+                <option value="Shopify store (new build)">
+                  Shopify store (new build)
+                </option>
+                <option value="Shopify migration / redesign">
+                  Shopify migration / redesign
+                </option>
+                <option value="Custom CRM or web app">
+                  Custom CRM or web app
+                </option>
+                <option value="Not sure yet — want to discuss">
+                  Not sure yet — want to discuss
+                </option>
               </select>
             </div>
 
@@ -167,14 +190,18 @@ const Quote = () => {
 
             {/* Timeline + Budget */}
             <div className="form-group">
-              <label>Project timeline <span className="required">*</span></label>
+              <label>
+                Project timeline <span className="required">*</span>
+              </label>
               <select
                 name="timeline"
                 value={formData.timeline}
                 onChange={handleInputChange}
                 required
               >
-                <option value="" disabled>Select timeline</option>
+                <option value="" disabled>
+                  Select timeline
+                </option>
                 <option value="ASAP / urgent">ASAP / urgent</option>
                 <option value="Within next month">Within next month</option>
                 <option value="1–3 months out">1–3 months out</option>
@@ -189,7 +216,9 @@ const Quote = () => {
                 value={formData.budget}
                 onChange={handleInputChange}
               >
-                <option value="" disabled>Select budget</option>
+                <option value="" disabled>
+                  Select budget
+                </option>
                 <option value="Under ₹1 lakh">Under ₹1 lakh</option>
                 <option value="₹1–3 lakhs">₹1–3 lakhs</option>
                 <option value="₹3–5 lakhs">₹3–5 lakhs</option>
@@ -223,7 +252,11 @@ const Quote = () => {
               href="https://wa.link/vj2khp"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#000", fontWeight: 600, textDecoration: "underline" }}
+              style={{
+                color: "#000",
+                fontWeight: 600,
+                textDecoration: "underline",
+              }}
             >
               WhatsApp us
             </Link>{" "}

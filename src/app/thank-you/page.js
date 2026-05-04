@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import "./style.css";
 import thanks from "../../../public/thanks.webp";
 
@@ -20,6 +21,9 @@ const Page = () => {
             <p>
               Thanks for submitting your query! We’ll connect with you shortly.
             </p>
+            <Link href="/" className="thank-you-back-btn">
+              ← Back to Home
+            </Link>
           </div>
         </div>
       </div>
