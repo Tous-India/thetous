@@ -230,27 +230,27 @@ const Header = () => {
         </div>
         {/* Cta floating button whatapp */}
 
-        <a
+        {/* <a
           href="https://wa.link/wfv5k1"
           id="whatsappFloatingButton"
           rel={null}
           // rel="noopener noreferrer"
         >
           <Image src={whatsapp} alt="whatsapp" width={100} height={100} />
-        </a>
+        </a> */}
 
         <Link href="/book-a-call" id="quoteFloatingButton">
           Book a Call
         </Link>
 
-        {/* <a href="tel:8901440322" id="phoneFloatingButton" rel={null}>
+        <a href="tel:8901440322" id="phoneFloatingButton" rel={null}>
           <Image
             src={phone}
             alt="The Tous - Phone Number"
             width={100}
             height={100}
           />
-        </a> */}
+        </a>
       </header>
     </div>
   );

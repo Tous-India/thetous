@@ -59,6 +59,9 @@ const Contact = () => {
         });
         setFormData({ name: "", email: "", phone: "", message: "" });
         setSelectedServices([]);
+        if (typeof window !== "undefined") {
+          window.open("/thank-you", "_blank");
+        }
       } else {
         setSubmitStatus({
           type: "error",
