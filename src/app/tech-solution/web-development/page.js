@@ -249,7 +249,7 @@ const WebDevelopment = () => {
           <section className="py-24 hero-web-dev">
             <div className="row">
               {/* Right Column - Client Logos */}
-              <div className="col-md-6 col-lg-9 col-sm-12 video-div">
+              <div className="col-md-6 col-lg-5 col-sm-12 video-div">
                 <div className="video-container">
                   <video
                     ref={videoRef}
@@ -260,7 +260,7 @@ const WebDevelopment = () => {
                     className="w-100 h-auto rounded-lg"
                   >
                     <source
-                      src="/The-Tous-Web-&-App-development.mp4"
+                      src="/new-Web development page.mp4"
                       type="video/mp4"
                     />
                     Your browser does not support the video tag.
@@ -307,7 +307,7 @@ const WebDevelopment = () => {
                 </div>
               </div>
               {/* Left Column - Content */}
-              <div className="col-md-6 col-lg-3 col-sm-12 left-banner ">
+              <div className="col-md-6 col-lg-6 col-sm-12 left-banner ">
                 <h1 className="main-section-heading mt-5! mb-3!" id="noLine">
                   Custom-coded websites for businesses that need more than a
                   template
@@ -328,6 +328,10 @@ const WebDevelopment = () => {
                   className="inline-block c_button_black"
                 >
                   Book a Discovery Call →
+                </Link>
+                <Link href="#portfolio-tabs" className="portfolio-button">
+                  View Our Portfolio
+                  <i className="ri-corner-right-down-line"></i>
                 </Link>
               </div>
             </div>
@@ -1064,10 +1068,14 @@ const WebDevelopment = () => {
             </div>
           </section>
 
-          <section className="py-24 max-w-7xl mx-auto mt-5 mb-5 web-dev-tabs">
+          <section
+            className="py-24 max-w-7xl mx-auto mt-5 mb-5 web-dev-tabs"
+            id="portfolio-tabs"
+          >
             <h3 className="main-section-heading">
               Our web development projects
             </h3>
+
             <div className="mb-12">
               {/* Tab Navigation */}
 
@@ -1200,7 +1208,9 @@ const WebDevelopment = () => {
                                       ? "/new-engine.mp4"
                                       : activeTab === "coaches"
                                         ? "/new-smartrays.mp4"
-                                        : "/new-svaa.mp4"
+                                        : activeTab === "custom"
+                                          ? "/new-svaa.mp4"
+                                          : "/new-boxika.mp4"
                                 }
                                 type="video/mp4"
                               />

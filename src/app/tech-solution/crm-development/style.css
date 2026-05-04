@@ -8,8 +8,8 @@
     align-items: center;
   }
 
-  .crm-spotlight{
-    .main-section-heading:after{
+  .crm-spotlight {
+    .main-section-heading:after {
       left: 47%;
     }
   }
@@ -121,6 +121,22 @@
       flex-direction: column;
       align-items: start;
       justify-content: center;
+      text-align: center;
+      .main-section-heading {
+        &::after {
+          left: 45%;
+        }
+      }
+      a {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .portfolio-button {
+        margin-top: 1rem;
+        padding: 5px 10px;
+        font-size: 14px !important;
+        opacity: 0.75;
+      }
       ul {
         padding: 0;
         padding-left: 10px;
@@ -429,6 +445,10 @@
   }
 
   .web-dev-tabs {
+    .crm-tab-image {
+      width: 100%;
+      height: auto;
+    }
     .inner-heading {
       font-size: 16px;
       line-height: 25px !important;
@@ -784,22 +804,12 @@
       }
     }
   }
-
-
-
-
-
-
- 
-
-
-
-
-
-
 }
 
 @media (max-width: 720px) {
+  .swiper-slide button {
+    font-size: 12px !important;
+  }
   .shopify-devlopment-main-page {
     padding-top: 1rem;
   }
@@ -844,8 +854,8 @@
   #devHeading {
     font-size: 1.6rem !important;
   }
-  .spotlight-heading{
-    &::after{
+  .spotlight-heading {
+    &::after {
       left: 45%;
     }
   }

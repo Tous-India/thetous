@@ -79,8 +79,8 @@ const shopifyFaqSchema = {
   ],
 };
 const ShopifyDevelopment = () => {
-    usePageTitle("Shopify Development Services for D2C Brands | The Tous");
-  
+  usePageTitle("Shopify Development Services for D2C Brands | The Tous");
+
   const [activeFaq, setActiveFaq] = useState(null);
   const [activeService, setActiveService] = useState(null);
   const [activeTab, setActiveTab] = useState("customized");
@@ -290,7 +290,7 @@ const ShopifyDevelopment = () => {
           <section className="py-24 hero-web-dev">
             <div className="row">
               {/* Left Column - Video */}
-              <div className="col-md-6 col-lg-9 col-sm-12">
+              <div className="col-md-6 col-lg-5 col-sm-12">
                 <div className="video-container">
                   <video
                     ref={videoRef}
@@ -300,10 +300,7 @@ const ShopifyDevelopment = () => {
                     playsInline
                     className="w-100 h-auto rounded-lg"
                   >
-                    <source
-                      src="/Tous-Web-shopify -video.mp4"
-                      type="video/mp4"
-                    />
+                    <source src="/new-Shopify Page.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
 
@@ -349,7 +346,7 @@ const ShopifyDevelopment = () => {
               </div>
 
               {/* Right Column - Content */}
-              <div className="col-md-6 col-lg-3 col-sm-12 right-banner">
+              <div className="col-md-6 col-lg-6 col-sm-12 right-banner">
                 <h1 className="main-section-heading mb-3!" id="noLine">
                   High-converting Shopify stores for D2C brands
                 </h1>
@@ -365,8 +362,15 @@ const ShopifyDevelopment = () => {
                   fashion, and mobile accessories brands.
                 </p>
 
-                <Link href="/book-a-call" className="inline-block c_button_black">
+                <Link
+                  href="/book-a-call"
+                  className="inline-block c_button_black"
+                >
                   Book a Strategy Call →
+                </Link>
+                <Link href="#portfolio-tabs" className="portfolio-button">
+                  View Our Portfolio
+                  <i className="ri-corner-right-down-line"></i>
                 </Link>
               </div>
             </div>
@@ -435,9 +439,9 @@ const ShopifyDevelopment = () => {
                 >
                   <div className="px-6 pb-6">
                     <p>
-                      End-to-end Shopify development for D2C brands launching
-                      or rebuilding. Custom theme, payment integration,
-                      logistics setup, on-page SEO, ready to scale.
+                      End-to-end Shopify development for D2C brands launching or
+                      rebuilding. Custom theme, payment integration, logistics
+                      setup, on-page SEO, ready to scale.
                     </p>
                   </div>
                 </div>
@@ -502,8 +506,8 @@ const ShopifyDevelopment = () => {
                   <div className="px-6 pb-6">
                     <p>
                       Already on Shopify but conversion is below 2%? We audit,
-                      fix the broken pieces (bloated apps, slow load times,
-                      weak product pages, leaky checkouts), and ship a faster,
+                      fix the broken pieces (bloated apps, slow load times, weak
+                      product pages, leaky checkouts), and ship a faster,
                       cleaner store.
                     </p>
                   </div>
@@ -538,9 +542,7 @@ const ShopifyDevelopment = () => {
                             d="M13 10V3L4 14h7v7l9-11h-7z"
                           />
                         </svg>
-                        <h3 className="inner-heading">
-                          Shopify Migrations
-                        </h3>
+                        <h3 className="inner-heading">Shopify Migrations</h3>
                       </div>
                       <svg
                         className={`w-5 h-5 flex-shrink-0 ml-4 transition-transform ${
@@ -574,7 +576,6 @@ const ShopifyDevelopment = () => {
                   </div>
                 </div>
               </div>
-
             </div>
           </section>
 
@@ -596,8 +597,8 @@ const ShopifyDevelopment = () => {
                     >
                       We start by understanding your customer, not just your
                       design preferences. What are they searching for? Where do
-                      they drop off? What competitors are they comparing you
-                      to? Strategy first, design second.
+                      they drop off? What competitors are they comparing you to?
+                      Strategy first, design second.
                     </p>
                     <button
                       onClick={() =>
@@ -673,9 +674,9 @@ const ShopifyDevelopment = () => {
                         expandedProcesses[3] ? "expanded" : ""
                       }`}
                     >
-                      First 30 days post-launch are about watching real
-                      behavior and fixing what doesn&apos;t work. Most agencies
-                      stop here. We treat this as the most important phase.
+                      First 30 days post-launch are about watching real behavior
+                      and fixing what doesn&apos;t work. Most agencies stop
+                      here. We treat this as the most important phase.
                     </p>
                     <button
                       onClick={() =>
@@ -724,7 +725,9 @@ const ShopifyDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">We don&apos;t disappear after launch</h3>
+                <h3 className="inner-heading">
+                  We don&apos;t disappear after launch
+                </h3>
                 <p className="text-sm text-gray-500 mb-3">
                   30 days post-launch optimization included
                 </p>
@@ -734,8 +737,8 @@ const ShopifyDevelopment = () => {
                       expandedWhyChoose[0] ? "expanded" : ""
                     }`}
                   >
-                    Most agencies build the store, hand over keys, and move
-                    on. We monitor real user behavior, A/B test what&apos;s not
+                    Most agencies build the store, hand over keys, and move on.
+                    We monitor real user behavior, A/B test what&apos;s not
                     working, and keep optimizing — because launch day is the
                     start, not the finish.
                   </p>
@@ -769,7 +772,9 @@ const ShopifyDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Performance is built in, not bolted on</h3>
+                <h3 className="inner-heading">
+                  Performance is built in, not bolted on
+                </h3>
                 <p className="text-sm text-gray-500 mb-3">
                   Sub-1.5 second load times on mobile
                 </p>
@@ -858,7 +863,9 @@ const ShopifyDevelopment = () => {
                     </svg>
                   </div>
                 </div>
-                <h3 className="inner-heading">Real conversion data, not vanity metrics</h3>
+                <h3 className="inner-heading">
+                  Real conversion data, not vanity metrics
+                </h3>
                 <p className="text-sm text-gray-500 mb-3">
                   Silvago: 0.7% → 2.4% in 4 weeks
                 </p>
@@ -883,12 +890,14 @@ const ShopifyDevelopment = () => {
                   </button>
                 </div>
               </div>
-
             </div>
           </section>
 
           {/* Portfolio Section (moved to position 5) */}
-          <section className="py-24 max-w-7xl mx-auto mt-5 web-dev-tabs">
+          <section
+            className="py-24 max-w-7xl mx-auto mt-5 web-dev-tabs"
+            id="portfolio-tabs"
+          >
             <h3 className="main-section-heading mb-4">Our Shopify portfolio</h3>
             <div className="mb-12">
               {/* Tab Navigation */}
@@ -981,7 +990,7 @@ const ShopifyDevelopment = () => {
                               </svg>
                               <span className="text-gray-700">{item}</span>
                             </li>
-                          )
+                          ),
                         )}
                       </ul>
                     </div>
@@ -1022,12 +1031,12 @@ const ShopifyDevelopment = () => {
                               activeTab === "customized"
                                 ? "/silvago.mp4"
                                 : activeTab === "tailored"
-                                ? "/relaxer.mp4"
-                                : activeTab === "coaches"
-                                ? "/luxeliv.mp4"
-                                : activeTab === "custom"
-                                ? "/pearlsnpastels.mp4"
-                                : "/silvago.mp4"
+                                  ? "/Caselulu-new.mp4"
+                                  : activeTab === "coaches"
+                                    ? "/luxeliv.mp4"
+                                    : activeTab === "custom"
+                                      ? "/Nestloom-new.mp4"
+                                      : "/Barebub-new.mp4"
                             }
                             type="video/mp4"
                           />
@@ -1060,11 +1069,14 @@ const ShopifyDevelopment = () => {
                   <div className="text-6xl md:text-7xl font-bold mb-3">50+</div>
                   <p className="inner-heading">Shopify Stores Delivered</p>
                   <p className="text-sm text-gray-500">
-                    Across jewelry, home decor, baby care, fashion, and accessories
+                    Across jewelry, home decor, baby care, fashion, and
+                    accessories
                   </p>
                 </div>
                 <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold mb-3">Since 2018</div>
+                  <div className="text-6xl md:text-7xl font-bold mb-3">
+                    Since 2018
+                  </div>
                   <p className="inner-heading">Building Ecommerce</p>
                   <p className="text-sm text-gray-500">
                     8 years of agency experience
@@ -1088,7 +1100,10 @@ const ShopifyDevelopment = () => {
                 <div className="row">
                   {/* Left Column - Pain Points */}
                   <div className="col-md-6 col-lg-6 col-sm-12 cta-left">
-                    <h2 className="main-section-heading mb-4 mt-5" id="devHeading">
+                    <h2
+                      className="main-section-heading mb-4 mt-5"
+                      id="devHeading"
+                    >
                       Is your D2C store struggling?
                     </h2>
                     <ul className="space-y-3 mb-8">
@@ -1188,8 +1203,8 @@ const ShopifyDevelopment = () => {
                           />
                         </svg>
                         <span>
-                          Your checkout flow is confusing customers at the
-                          final step
+                          Your checkout flow is confusing customers at the final
+                          step
                         </span>
                       </li>
                       <li className="flex items-start">
