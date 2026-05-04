@@ -158,8 +158,8 @@ const Quote = () => {
                 <option value="" disabled>
                   Select an option
                 </option>
-                <option value="New website (custom development)">
-                  New website (custom development)
+                <option value="New website">
+                  New website
                 </option>
                 <option value="Shopify store (new build)">
                   Shopify store (new build)

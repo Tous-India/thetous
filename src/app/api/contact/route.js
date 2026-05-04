@@ -61,7 +61,7 @@ export async function POST(request) {
     const userMailOptions = {
       from: '"The Tous" <' + (process.env.EMAIL_FROM || "grow@thetous.com") + ">",
       to: safeEmail,
-      subject: "We've received your message — The Tous",
+      subject: "Your strategy call has been booked — The Tous",
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:20px;background:#f5f5f5">
           <div style="background:white;padding:30px;border-radius:10px;box-shadow:0 2px 4px rgba(0,0,0,0.1)">
@@ -71,7 +71,7 @@ export async function POST(request) {
             <h2 style="color:#333;border-bottom:2px solid #000;padding-bottom:10px">Thanks for reaching out.</h2>
             <p style="color:#555;line-height:1.7;margin:20px 0">Hi ${safeName},</p>
             <p style="color:#555;line-height:1.7;margin:0 0 16px 0">We've received your message and will get back to you within one business day.</p>
-            <p style="color:#555;line-height:1.7;margin:0 0 16px 0">If you need a faster response, WhatsApp us at <a href="https://wa.link/vj2khp" style="color:#000;font-weight:bold">+91-8901440322</a>.</p>
+            <p style="color:#555;line-height:1.7;margin:0 0 16px 0">If you need a faster response, WhatsApp or call us at <a href="https://wa.link/vj2khp" style="color:#000;font-weight:bold">+91-8901440322</a>.</p>
             <div style="margin-top:30px;padding-top:20px;border-top:1px solid #ddd">
               <p style="color:#333;font-weight:bold;margin:5px 0">The Tous</p>
               <p style="color:#888;font-size:13px;margin:5px 0"><a href="mailto:grow@thetous.com" style="color:#888;text-decoration:none">grow@thetous.com</a></p>
