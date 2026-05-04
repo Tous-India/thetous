@@ -690,7 +690,7 @@
       gap: 5px;
       row-gap: 1rem;
       .inner-div {
-        width: 48%;
+        width: 100%;
       }
     }
   }

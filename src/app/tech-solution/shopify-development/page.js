@@ -191,12 +191,12 @@ const ShopifyDevelopment = () => {
 
   const portfolioContent = {
     customized: {
-      title: "Silvago — Minimal Silver Jewelry Brand",
-      subtitle: "Industry: Silver Jewelry & Lifestyle, D2C",
+      title: "Silvago — Minimal Silver Jewellery Brand",
+      subtitle: "Industry: Silver Jewellery & Lifestyle, D2C",
       type: "Custom Shopify Store + Conversion Optimization",
       url: "https://silvago.in/",
       description:
-        "Crafted a clean, aesthetic Shopify storefront for Silvago focused on premium minimal jewelry. Emphasis on elegant visuals, fast browsing, and conversion-focused product discovery.",
+        "Crafted a clean, aesthetic Shopify storefront for Silvago focused on premium minimal jewellery. Emphasis on elegant visuals, fast browsing, and conversion-focused product discovery.",
       deliverables: [
         "Custom responsive Shopify design aligned with brand identity",
         "High-impact product imagery, filtering & collection setup",
@@ -358,7 +358,7 @@ const ShopifyDevelopment = () => {
                   </strong>
                 </p>
                 <p className="mb-6">
-                  Shopify stores delivered for jewelry, home decor, baby care,
+                  Shopify stores delivered for jewellery, home decor, baby care,
                   fashion, and mobile accessories brands.
                 </p>
 
@@ -1069,7 +1069,7 @@ const ShopifyDevelopment = () => {
                   <div className="text-6xl md:text-7xl font-bold mb-3">50+</div>
                   <p className="inner-heading">Shopify Stores Delivered</p>
                   <p className="text-sm text-gray-500">
-                    Across jewelry, home decor, baby care, fashion, and
+                    Across jewellery, home decor, baby care, fashion, and
                     accessories
                   </p>
                 </div>
