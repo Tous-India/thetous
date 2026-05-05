@@ -1,0 +1,391 @@
+/* ================= SILVAGO CASE STUDY ================= */
+
+.silvago-case-study {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  border-radius: 0 0 30px 30px;
+  margin-bottom: 0rem;
+  box-shadow: 0px 20px 10px -18px gray;
+  padding-bottom: 3rem;
+}
+
+/* ── Section 1: Hero ── */
+.silvago-hero {
+  padding: 4rem 0 3rem;
+}
+
+.silvago-hero-row {
+  gap: 2rem 0;
+  text-align: center;
+  img {
+    margin-top: 1rem;
+  }
+}
+
+.silvago-hero-text {
+  padding-right: 2rem;
+}
+
+.silvago-hero-eyebrow {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 1rem;
+}
+
+.silvago-hero-heading {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+  margin: 0 0 1.25rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.silvago-hero-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  border-radius: 2px;
+  left: 45%;
+}
+
+.silvago-hero-sub {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin: 0 0 2rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.silvago-hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-direction: column;
+}
+
+.silvago-hero-cta-primary {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  padding: 0.85rem 1.75rem;
+  border: 2px solid #000;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.silvago-hero-cta-primary:hover {
+  background: #fff;
+  color: #000;
+}
+
+.silvago-hero-cta-secondary {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1.5px solid #111;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.silvago-hero-cta-secondary:hover {
+  opacity: 0.6;
+}
+
+.silvago-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.silvago-hero-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 991px) {
+  .silvago-hero-text {
+    padding-right: 0;
+  }
+  .silvago-hero-visual {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .silvago-hero {
+    padding: 2.5rem 0 2rem;
+  }
+  .silvago-hero-heading::after {
+    width: 60px;
+  }
+}
+
+/* ── Sections 2-4: Client / Problem / Approach ── */
+.silvago-section {
+  padding: 3rem 0;
+  border-top: 1px solid #f0f0f0;
+}
+
+.silvago-section-alt {
+  background: #fafafa;
+}
+
+.silvago-section-eyebrow {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0 0 0.75rem;
+}
+
+.silvago-section-heading {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #111;
+  line-height: 1.25;
+  margin: 0 0 1.5rem;
+  position: relative;
+  padding-bottom: 0.85rem;
+  max-width: 760px;
+}
+
+.silvago-section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  border-radius: 2px;
+}
+
+.silvago-section-body {
+  max-width: 760px;
+}
+
+.silvago-section-body p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin: 0 0 1rem;
+}
+
+.silvago-section-body p:last-child {
+  margin-bottom: 0;
+}
+
+.silvago-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.silvago-list li {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.silvago-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00dbde, #fc00ff);
+}
+
+@media (max-width: 480px) {
+  .silvago-section {
+    padding: 2rem 0;
+  }
+}
+
+/* ── Section 6: Results table + anchor line + compare grid ── */
+.silvago-results-table-wrap {
+  margin: 1rem 0 2rem;
+  overflow-x: auto;
+}
+
+.silvago-results-table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  border: 1px solid #ececec;
+}
+
+.silvago-results-table th,
+.silvago-results-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.silvago-results-table th {
+  background: #fafafa;
+  font-weight: 600;
+  color: #111;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.silvago-results-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.silvago-results-table td {
+  color: #444;
+}
+
+.silvago-results-table td:first-child {
+  font-weight: 600;
+  color: #111;
+}
+
+.silvago-change-strong {
+  font-weight: 700;
+  background: linear-gradient(135deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.silvago-anchor-line {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-weight: 600;
+  color: #111;
+  line-height: 1.5;
+  max-width: 760px;
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 4px solid;
+  border-image: linear-gradient(to bottom, #00dbde, #fc00ff) 1;
+  background: #fff;
+}
+
+.silvago-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.silvago-compare-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.silvago-compare-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.silvago-compare-caption {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #555;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid #f0f0f0;
+  background: #fafafa;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .silvago-compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .silvago-results-table thead {
+    display: none;
+  }
+
+  .silvago-results-table,
+  .silvago-results-table tbody,
+  .silvago-results-table tr,
+  .silvago-results-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .silvago-results-table tr {
+    border: 1px solid #ececec;
+    margin-bottom: 0.75rem;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .silvago-results-table td {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .silvago-results-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #888;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+
+  .silvago-results-table td:first-child {
+    background: #fafafa;
+  }
+}

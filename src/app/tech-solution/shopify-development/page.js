@@ -1243,10 +1243,10 @@ const ShopifyDevelopment = () => {
                       </li>
                     </ul>
                     <Link
-                      href="/book-a-call"
+                      href="/case-studies/silvago"
                       className="inline-block c_button_black mt-4"
                     >
-                      Book a Strategy Call →
+                     View Full Case Study →
                     </Link>
                   </div>
 
