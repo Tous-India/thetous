@@ -602,6 +602,10 @@
     height: 11rem;
   }
 
+  .shopify-devlopment-main-page .main-section-heading:after {
+    left:39%;
+  }
+
   .swiper-slide button {
     font-size: 13px !important;
   }
@@ -668,9 +672,9 @@
   .what-we-offer-web-dev .content-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     column-gap: 10px;
-    row-gap: 20px;
+    row-gap:1rem;
     .content-div {
       width: 47%;
     }
@@ -754,7 +758,7 @@
   }
 
   .shopify-devlopment-main-page .stats-web-dev .main-section-heading:after {
-    left: 40%;
+    left: 38%;
   }
 
   .web-dev-tabs {

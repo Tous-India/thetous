@@ -1169,11 +1169,11 @@ const ShopifyDevelopment = () => {
                 </div>
 
                 {/* Right Content - Video */}
-                <div className="order-1 md:order-2">
-                  <div className="relative">
+                <div className="order-1 md:order-2 h-100">
+                  <div className="relative h-100">
                     {/* Video Container */}
-                    <div className="relative mx-auto">
-                      <div className="rounded-lg overflow-hidden">
+                    <div className="relative mx-auto h-100">
+                      <div className="h-100 flex justify-center items-start">
                         {/* <video
                           key={activeTab}
                           autoPlay
@@ -1190,7 +1190,7 @@ const ShopifyDevelopment = () => {
                               : activeTab === "tailored"
                                 ? "/kb-new.png"
                                 : activeTab === "coaches"
-                                  ? "/placeholder.png"
+                                  ? "/vaqya.webp"
                                   : activeTab === "custom"
                                     ? "/ujjwal-new.png"
                                     : "/transaction-new.png"
@@ -1198,7 +1198,7 @@ const ShopifyDevelopment = () => {
                           width={1000}
                           height={800}
                           alt="Project Image"
-                          className="crm-tab-image"
+                          className="crm-tab-image shadow rounded-lg border! border-gray-400!"
                           // quality={100}
                         />
                         {/* </video> */}

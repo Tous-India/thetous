@@ -11,6 +11,7 @@ import Sagar from "../../../public/team/Sagar.webp";
 import Manawwar from "../../../public/team/Manawwar.webp";
 import Yashika from "../../../public/team/Yashika.webp";
 import Anjali from "../../../public/team/Anjali.webp";
+import Sunny from "../../../public/team/Sunny.webp";
 
 const principles = [
   {
@@ -32,13 +33,13 @@ const principles = [
 ];
 
 const teams = [
-  { name: "Tarun Badhana", role: "Founder & Lead Developer", image: Tarun    },
-  { name: "",              role: "Full-stack Developer",     image: null     },
-  { name: "Sagar",         role: "Project coordinator",     image: Sagar    },
-  { name: "Yashika",       role: "Frontend Developer",      image: Yashika  },
-  { name: "Manawwar",      role: "Backend Developer",       image: Manawwar },
-  { name: "Anjali",        role: "Designer",                image: Anjali   },
-  { name: "",              role: "Designer",                image: null     },
+  { name: "Sandeep", role: "Founder & Lead Developer", image: Sunny },
+  { name: "Tarun Badhana", role: "Full-stack Developer", image: Tarun },
+  { name: "Sagar", role: "Project coordinator", image: Sagar },
+  { name: "Yashika", role: "Frontend Developer", image: Yashika },
+  { name: "Manawwar", role: "Backend Developer", image: Manawwar },
+  { name: "Anjali", role: "Designer", image: Anjali },
+  { name: "", role: "Designer", image: null },
 ];
 
 const stats = [
@@ -123,14 +124,21 @@ const About = () => {
               <div key={i} className="about-team-card">
                 <div className="about-team-photo">
                   {member.image ? (
-                    <Image src={member.image} alt={member.name} width={300} height={300} />
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={300}
+                      height={300}
+                    />
                   ) : (
                     <div className="about-team-placeholder">
                       <i className="ri-user-3-line"></i>
                     </div>
                   )}
                 </div>
-                {member.name && <p className="about-team-name">{member.name}</p>}
+                {member.name && (
+                  <p className="about-team-name">{member.name}</p>
+                )}
                 <p className="about-team-role">{member.role}</p>
               </div>
             ))}

@@ -37,7 +37,7 @@ const Header = () => {
       <div className="para-div">
         <div className="p-tag">
           <p>
-            <a href="/quote">
+            <a href="/book-a-call">
               <span>Currently booking development projects for June 2026.</span>{" "}
               Book a call →
             </a>

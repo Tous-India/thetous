@@ -1934,10 +1934,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: start;
+  margin: 0 auto;
 }
 .swiper-slide {
   button {
-    font-size: 14px;
+    font-size: 14px !important;
   }
 }
 

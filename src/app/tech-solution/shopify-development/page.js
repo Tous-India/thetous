@@ -615,7 +615,7 @@ const ShopifyDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">02</span>
-                  <h3 className="inner-heading">Build</h3>
+                  <h3 className="inner-heading">Build the website</h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
@@ -667,7 +667,7 @@ const ShopifyDevelopment = () => {
                 </div>
                 <div className="content-div">
                   <span className="text-6xl font-bold text-gray-200">04</span>
-                  <h3 className="inner-heading">Optimize</h3>
+                  <h3 className="inner-heading">Optimize & Support</h3>
                   <div className="process-text-wrapper">
                     <p
                       className={`process-text ${
@@ -1024,7 +1024,7 @@ const ShopifyDevelopment = () => {
                           muted
                           playsInline
                           preload="auto"
-                          className="lg:w-75 sm:w-100 object-cover"
+                          className="lg:w-75 sm:w-100 object-cover mx-auto"
                         >
                           <source
                             src={
