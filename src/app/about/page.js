@@ -12,6 +12,7 @@ import Manawwar from "../../../public/team/Manawwar.webp";
 import Yashika from "../../../public/team/Yashika.webp";
 import Anjali from "../../../public/team/Anjali.webp";
 import Sunny from "../../../public/team/Sunny.webp";
+import gunjan from "../../../public/team/gunjan.webp";
 
 const principles = [
   {
@@ -39,7 +40,7 @@ const teams = [
   { name: "Yashika", role: "Frontend Developer", image: Yashika },
   { name: "Manawwar", role: "Backend Developer", image: Manawwar },
   { name: "Anjali", role: "Designer", image: Anjali },
-  { name: "", role: "Designer", image: null },
+  { name: "Gunjan", role: "UX Designer", image: gunjan },
 ];
 
 const stats = [
