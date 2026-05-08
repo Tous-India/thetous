@@ -24,27 +24,30 @@ const orgSchema = {
   name: "The Tous",
   alternateName: "The Tous Media",
   url: "https://thetous.com",
-  logo: "https://thetous.com/images/logo.png",
+  logo: "https://www.thetous.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fblack-the-tous-new.266d68ba.png&w=2048&q=75",
   description:
-    "The Tous builds high-converting websites, Shopify stores, and custom CRMs for D2C and B2B brands. Building digital products since 2018.",
+    "Web. Shopify. CRM. The Tous builds custom websites, Shopify stores, and CRMs for D2C and B2B brands. 150+ projects shipped since 2018.",
   foundingDate: "2018",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "C-116, 1st Floor, Sector-2",
     addressLocality: "Noida",
     addressRegion: "Uttar Pradesh",
+    postalCode: "201301",
     addressCountry: "IN",
   },
   contactPoint: [
     {
       "@type": "ContactPoint",
       email: "grow@thetous.com",
+      telephone: "+91-8901440322",
       contactType: "Sales",
       availableLanguage: ["English", "Hindi"],
     },
   ],
   sameAs: [
     "https://www.instagram.com/thetousmedia",
-    "https://www.linkedin.com/company/thetous",
+    "https://www.linkedin.com/company/the-tous",
   ],
   parentOrganization: {
     "@type": "Organization",
@@ -84,11 +87,11 @@ const professionalServiceSchema = {
   image: "https://thetous.com/images/og-homepage.jpg",
   "@id": "https://thetous.com",
   url: "https://thetous.com",
-  telephone: "+91-XXXXXXXXXX",
-  priceRange: "₹40,000 - ₹6,00,000+",
+  telephone: "+91-8901440322",
+  priceRange: "₹50,000 - ₹2,00,000+",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Your office address",
+    streetAddress: "C-116, 1st Floor, Sector-2",
     addressLocality: "Noida",
     addressRegion: "Uttar Pradesh",
     postalCode: "201301",
@@ -102,12 +105,12 @@ const professionalServiceSchema = {
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "10:00",
-    closes: "19:00",
+    opens: "09:30",
+    closes: "17:30",
   },
   sameAs: [
     "https://www.instagram.com/thetousmedia",
-    "https://www.linkedin.com/company/thetous",
+    "https://www.linkedin.com/company/the-tous",
   ],
 };
 
@@ -120,7 +123,7 @@ const faqSchema = {
       name: "How much does a website cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our typical website builds range ₹40,000 to ₹2,00,000 depending on scope. Custom CRM and web app projects range ₹1,50,000 to ₹6,00,000+. Shopify stores range ₹50,000 to ₹2,00,000. We provide a fixed quote after a 30-minute discovery call.",
+        text: "Our typical website builds range ₹50,000 to ₹2,00,000 depending on scope. Custom CRM and web app projects range ₹1,50,000 to ₹6,00,000+. Shopify stores range ₹50,000 to ₹2,00,000. We provide a fixed quote after a 30-minute discovery call.",
       },
     },
     {
@@ -197,7 +200,7 @@ const localBusinessSchema = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5.0",
-    reviewCount: "11",
+    reviewCount: "16",
     bestRating: "5",
     worstRating: "1",
   },
@@ -262,12 +265,38 @@ export default function Index() {
     };
   }, []);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "The Tous",
+    alternateName: "The Tous - A Brand of Grid IT Solutions",
+    url: "https://www.thetous.com",
+    logo: "https://www.thetous.com/black-the-tous-new.png",
+    description:
+      "Web, Shopify, and CRM development for D2C and B2B brands. 150+ projects shipped since 2018.",
+    foundingDate: "2018",
+    email: "grow@thetous.com",
+    telephone: "+91-8901440322",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "C-116, 1st Floor, Sector-2",
+      addressLocality: "Noida",
+      addressRegion: "Uttar Pradesh",
+      postalCode: "201301",
+      addressCountry: "IN",
+    },
+    sameAs: [
+      "https://www.linkedin.com/company/the-tous",
+      "https://www.instagram.com/thetousmedia/",
+    ],
+  };
+
   return (
     <div className="home-page-main">
       {/* Meta description + OG/Twitter — React 19 hoists these to <head> */}
       <meta
         name="description"
-        content="We build high-converting websites, Shopify stores, and custom CRMs for D2C and B2B brands. 150+ projects delivered since 2018. Book a free strategy call."
+        content="We build high-converting websites, Shopify stores, and custom CRMs for D2C and B2B brands. 150+ projects delivered since 2018. Book 30-min strategy call."
       />
 
       <meta
@@ -336,21 +365,25 @@ export default function Index() {
       <Marquee speed={15}>
         <div className="flex items-center gap-8 px-4">
           <h4 className="text-black text-2xl font-semibold whitespace-nowrap">
-            Your ecommerce Success Starts Here
+            Web. Shopify. CRM.
           </h4>
           <h4 className="text-black">
             <i className="ri-asterisk"></i>
           </h4>
           <h4 className="text-black text-2xl font-semibold whitespace-nowrap">
-            Reach Out for a Custom Strategy
+            150+ projects shipped since 2018
+          </h4>
+          <h4 className="text-black">
+            <i className="ri-asterisk"></i>
+          </h4>
+          <h4 className="text-black text-2xl font-semibold whitespace-nowrap">
+            Built for D2C and B2B brands
           </h4>
           <h4 className="text-black">
             <i className="ri-asterisk"></i>
           </h4>
         </div>
       </Marquee>
-
-
 
       <Testimonials />
       <FAQ />
