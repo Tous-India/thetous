@@ -121,7 +121,6 @@ const Work = () => {
                           src={project.image}
                           alt={project.title}
                           fill
-                          priority
                           style={{ objectFit: "cover" }}
                         />
                       </div>
