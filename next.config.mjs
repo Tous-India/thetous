@@ -13,6 +13,9 @@ const securityHeaders = [
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   outputFileTracingRoot: __dirname,
+  experimental: {
+    optimizeCss: true,
+  },
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
   },
