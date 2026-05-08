@@ -136,7 +136,9 @@ const workProjects = [
 ];
 
 export default function Work() {
-  usePageTitle("Our Work – The Tous");
+  usePageTitle(
+    "Our Work — Shopify, CRM & Custom Web Projects | The Tous"
+  );
 
   const [activeTab, setActiveTab] = useState("all");
   const filtered =
@@ -146,6 +148,43 @@ export default function Work() {
 
   return (
     <div className="work-main-page">
+      {/* Meta description + canonical + OG/Twitter — React 19 hoists to <head> */}
+      <meta
+        name="description"
+        content="Real projects we've shipped for D2C and B2B brands across India and the US. Shopify stores, custom CRMs, and custom-coded websites since 2018."
+      />
+      <link rel="canonical" href="https://www.thetous.com/work" />
+
+      <meta
+        property="og:title"
+        content="Our Work — Shopify, CRM & Custom Web Projects | The Tous"
+      />
+      <meta
+        property="og:description"
+        content="Real projects we've shipped for D2C and B2B brands across India and the US. Shopify stores, custom CRMs, and custom-coded websites since 2018."
+      />
+      <meta property="og:url" content="https://www.thetous.com/work" />
+      <meta property="og:site_name" content="The Tous" />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:image"
+        content="https://www.thetous.com/og-work.jpg"
+      />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:title"
+        content="Our Work — Shopify, CRM & Custom Web Projects | The Tous"
+      />
+      <meta
+        name="twitter:description"
+        content="Real projects we've shipped for D2C and B2B brands across India and the US. Shopify stores, custom CRMs, and custom-coded websites since 2018."
+      />
+      <meta
+        name="twitter:image"
+        content="https://www.thetous.com/og-work.jpg"
+      />
+
       <div className="container">
         <div className="work-hero">
           <h1>Selected Work</h1>
