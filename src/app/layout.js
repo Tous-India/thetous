@@ -1,4 +1,3 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Script from 'next/script'
 import "@/app/globals.css";
@@ -17,18 +16,8 @@ import { Lato, Poppins } from 'next/font/google';
 
 const lato = Lato({ weight: ['100', '300', '400', '700', '900'], style: ['normal', 'italic'], subsets: ['latin'], variable: '--font-lato', });
 
-const poppins = Poppins({ weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], style: ['normal', 'italic'], subsets: ['latin'], variable: '--font-poppins', });
+const poppins = Poppins({ weight: ['200', '300', '400', '500', '600', '700', '800'], style: ['normal', 'italic'], subsets: ['latin'], variable: '--font-poppins', });
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: {
@@ -60,7 +49,7 @@ export default function RootLayout({ children }) {
        
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${lato.variable} ${poppins.variable}`}
+        className={`antialiased ${lato.variable} ${poppins.variable}`}
       >
         <QueryProvider>
           <LenisProvider>
