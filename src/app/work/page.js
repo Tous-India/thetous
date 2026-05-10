@@ -21,10 +21,10 @@ import ssr from "../../../public/work/ssr_website.webp";
 import transaction from "../../../public/work/transection point_website.webp";
 
 const TABS = [
-  { key: "all", label: "All Projects", count: 13 },
-  { key: "crm", label: "CRM & Web Apps", count: 4 },
+  { key: "all", label: "All Projects", count: 15 },
+  { key: "crm", label: "CRM & Web Apps", count: 5 },
   { key: "shopify", label: "Shopify", count: 5 },
-  { key: "web", label: "Custom Web", count: 4 },
+  { key: "web", label: "Custom Web", count: 5 },
 ];
 
 const workProjects = [
@@ -60,6 +60,14 @@ const workProjects = [
     desc: "Custom CRM for a real estate firm — lead distribution, agent follow-up tracking, and business intelligence dashboards.",
     image: transaction,
     badge: "In Development",
+  },
+  {
+    id: "vaqya",
+    category: "crm",
+    title: "Vaqya",
+    projectType: "Healthcare · CRM · USA",
+    desc: "Healthcare practice management CRM for US clinics. Patient scheduling, billing, and care coordination workflows.",
+    image: transaction,
   },
   {
     id: "silvago",
@@ -133,6 +141,14 @@ const workProjects = [
     desc: "WordPress site for a corrugated packaging manufacturer — visually rich design that's helped them stand out in a commodity industry.",
     image: boxika,
   },
+  {
+    id: "svaa",
+    category: "web",
+    title: "Svaa",
+    projectType: "B2B · Custom Code · Water Purification",
+    desc: "Custom website for a water purification brand. Built on Next.js with product catalog and inquiry workflow.",
+    image: svaa,
+  },
 ];
 
 export default function Work() {
@@ -193,7 +209,7 @@ export default function Work() {
             across India and the US.
           </p>
           <p className="work-hero-trust">
-            150+ projects delivered since 2018 &middot; 12 featured below
+            150+ projects delivered since 2018 &middot; Selected work, featured below
           </p>
         </div>
       </div>

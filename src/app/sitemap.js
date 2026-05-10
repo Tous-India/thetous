@@ -112,30 +112,6 @@ export default function sitemap() {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/case-studies/crossroads-hospital`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/case-studies/godrej`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/case-studies/m3m-panipat`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/case-studies/sbp`,
-      lastModified,
-      changeFrequency: 'weekly',
-      priority: 0.85,
-    },
-    {
       url: `https://www.blog.thetous.com`,
       lastModified,
       changeFrequency: 'weekly',

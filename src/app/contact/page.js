@@ -5,13 +5,11 @@ import "./style.css";
 import usePageTitle from "@/hooks/usePageTitle";
 
 const serviceOptions = [
-  "Web Development",
-  "Social Media Management",
-  "Social Media Ads",
-  "Google Ads",
-  "SEO",
-  "Shoot & Influencers",
-  "Others",
+  "Custom Web Development",
+  "Shopify Development",
+  "CRM and Web Apps",
+  "Website Redesign",
+  "Other",
 ];
 
 const Contact = () => {
@@ -78,7 +76,7 @@ const Contact = () => {
     }
   };
 
-  usePageTitle("Contact – Start Your Digital Growth Journey");
+  usePageTitle("Contact The Tous | Web, Shopify & CRM Development");
 
   return (
     <div className="contact-page-main">
@@ -177,12 +175,15 @@ const Contact = () => {
                 <p className="contact-address">
                   C-116, 1st Floor, Sector-2, Noida, UP 201301
                 </p>
+                <p style={{ marginTop: "0.5rem", fontSize: "14px", color: "#555" }}>
+                  Office hours: Monday – Friday, 9:30 AM – 5:30 PM IST
+                </p>
               </div>
               <p className="d-flex gap-2 fs-2">
-                <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.instagram.com/thetousmedia" target="_blank" rel="noopener noreferrer">
                   <i className="ri-instagram-line"></i>
                 </Link>
-                <Link href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Link href="https://www.linkedin.com/company/the-tous" target="_blank" rel="noopener noreferrer">
                   <i className="ri-linkedin-fill"></i>
                 </Link>
               </p>

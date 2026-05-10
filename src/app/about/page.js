@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import "./style.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -105,9 +104,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      {/* ── Original tabs section — Vision / Mission / Values ── */}
-      <AboutTest />
 
       {/* ── New sections ── */}
       <div className="container">
@@ -242,29 +238,3 @@ const About = () => {
 };
 
 export default About;
-
-/* ── Original AboutTest component — UI unchanged, content updated ── */
-const AboutTest = () => {
-  const [activeTab, setActiveTab] = useState(0);
-
-  const tabs = [
-    {
-      label: "Vision",
-      heading: "Built to last",
-      description:
-        "To be the most trusted web development partner for D2C and B2B brands in India — known for delivery, not just promises. We believe websites should work as hard as the businesses they represent.",
-    },
-    {
-      label: "Mission",
-      heading: "Three things. Done well.",
-      description:
-        "We build custom websites, Shopify stores, and CRMs that are fast, scalable, and designed to convert. Every project gets a fixed quote, a real timeline, and a team that treats it like their own product.",
-    },
-    {
-      label: "Values",
-      heading: "How we operate",
-      description:
-        "Fixed quotes over hourly billing. Honest scoping over overselling. Long-term relationships over quick contracts. Direct communication over account managers. We'd rather lose a project than ship something we're not proud of.",
-    },
-  ];
-};
