@@ -57,8 +57,7 @@
         outline: none;
 
         &::placeholder {
-          color: black;
-          opacity: 1;
+          color: #999;
         }
       }
 
@@ -67,10 +66,10 @@
         padding: 5px 10px;
         border-radius: 5px;
         outline: none;
+        margin-top: 1rem;
 
         &::placeholder {
-          color: black;
-          opacity: 1;
+          color: #999;
         }
       }
 
@@ -84,8 +83,7 @@
             width: 100%;
 
             &::placeholder {
-              color: black;
-              opacity: 1;
+              color: #999;
             }
           }
         }
@@ -552,6 +550,5 @@
 
   .contact-page-main .container-fluid form textarea {
     width: 100% !important;
-    margin-top: 0 !important;
   }
 }
