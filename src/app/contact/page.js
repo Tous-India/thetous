@@ -1,165 +1,98 @@
-"use client";
-import React, { useState } from "react";
 import Link from "next/link";
 import "./style.css";
-import usePageTitle from "@/hooks/usePageTitle";
+import ContactForm from "./contact-form";
 
-const serviceOptions = [
-  "Custom Web Development",
-  "Shopify Development",
-  "CRM and Web Apps",
-  "Website Redesign",
-  "Other",
-];
+export const metadata = {
+  title: "Contact The Tous | Web, Shopify & CRM Development",
+  description:
+    "Get in touch with The Tous. We build custom websites, Shopify stores, and CRMs for D2C and B2B brands. Office in Noida. Email grow@thetous.com or call +91-8901440322.",
+  openGraph: {
+    title: "Contact The Tous | Web, Shopify & CRM Development",
+    description:
+      "Get in touch — custom web, Shopify, and CRM development for D2C and B2B brands. Based in Noida, working with brands across India and the US.",
+    url: "https://thetous.com/contact",
+    siteName: "The Tous",
+    images: [
+      {
+        url: "https://thetous.com/images/og-homepage.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Tous — Web, Shopify, and CRM Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact The Tous",
+    description: "Web, Shopify, and CRM development for D2C and B2B brands.",
+    images: ["https://thetous.com/images/og-homepage.jpg"],
+  },
+  alternates: {
+    canonical: "https://thetous.com/contact",
+  },
+};
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const [selectedServices, setSelectedServices] = useState([]);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const toggleService = (service) => {
-    setSelectedServices((prev) =>
-      prev.includes(service)
-        ? prev.filter((s) => s !== service)
-        : [...prev, service]
-    );
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, services: selectedServices }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus({
-          type: "success",
-          message: "Message sent! We'll get back to you within one business day.",
-        });
-        setFormData({ name: "", email: "", phone: "", message: "" });
-        setSelectedServices([]);
-        if (typeof window !== "undefined") {
-          window.open("/thank-you", "_blank");
-        }
-      } else {
-        setSubmitStatus({
-          type: "error",
-          message: data.error || "Failed to send message. Please try again.",
-        });
-      }
-    } catch {
-      setSubmitStatus({
-        type: "error",
-        message: "An error occurred. Please try again later.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  usePageTitle("Contact The Tous | Web, Shopify & CRM Development");
-
   return (
     <div className="contact-page-main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: "Contact The Tous",
+            description:
+              "Get in touch with The Tous for web, Shopify, and CRM development projects.",
+            url: "https://thetous.com/contact",
+            mainEntity: {
+              "@type": "Organization",
+              name: "The Tous",
+              url: "https://thetous.com",
+              logo: "https://thetous.com/images/logo.png",
+              contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  telephone: "+91-8901440322",
+                  email: "grow@thetous.com",
+                  contactType: "Sales",
+                  areaServed: ["IN", "US"],
+                  availableLanguage: ["English", "Hindi"],
+                },
+              ],
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "C-116, 1st Floor, Sector-2",
+                addressLocality: "Noida",
+                addressRegion: "Uttar Pradesh",
+                postalCode: "201301",
+                addressCountry: "IN",
+              },
+              openingHoursSpecification: {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                ],
+                opens: "09:30",
+                closes: "17:30",
+              },
+              sameAs: [
+                "https://www.instagram.com/thetousmedia",
+                "https://www.linkedin.com/company/the-tous",
+              ],
+            },
+          }),
+        }}
+      />
       <div className="container-fluid">
         <div className="row row-two-contact my-5 justify-content-center">
-          <div className="col-sm-12 col-md-5 col-lg-5 contact-cols-4 left">
-            {submitStatus && (
-              <div
-                className={`alert rounded-0 py-2 ${
-                  submitStatus.type === "success" ? "alert-success" : "alert-danger"
-                } mb-3`}
-                role="alert"
-              >
-                {submitStatus.message}
-              </div>
-            )}
-
-            <form className="d-flex flex-column p-4 rounded-2" onSubmit={handleSubmit}>
-              <h3 className="text-start">Get In Touch</h3>
-
-              <div className="row first-form-row">
-                <div className="col-12 col-sm-6">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your name goes here"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="col-12 col-sm-6">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Drop your email here"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    suppressHydrationWarning
-                  />
-                </div>
-              </div>
-
-              <p className="contact-services-label">What brings you here?</p>
-              <div className="contact-services-wrap">
-                {serviceOptions.map((s) => (
-                  <button
-                    key={s}
-                    type="button"
-                    className={`contact-service-btn${selectedServices.includes(s) ? " active" : ""}`}
-                    onClick={() => toggleService(s)}
-                  >
-                    {s}
-                  </button>
-                ))}
-              </div>
-
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Share your digits"
-                value={formData.phone}
-                onChange={handleInputChange}
-                className="type-number"
-              />
-
-              <textarea
-                name="message"
-                rows="5"
-                placeholder="Type away, we're listening!"
-                value={formData.message}
-                onChange={handleInputChange}
-              ></textarea>
-
-              <div className="buttonDiv">
-                <button type="submit" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending..." : "Submit"}{" "}
-                  <i className="ri-arrow-right-up-long-line"></i>
-                </button>
-              </div>
-            </form>
-          </div>
+          <ContactForm />
 
           <div className="col-sm-12 col-md-5 col-lg-5 contact-cols-3 d-flex flex-column justify-content-center right">
             <div>
