@@ -19,6 +19,40 @@ const nextConfig = {
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
   },
+  async redirects() {
+    return [
+      {
+        source: "/case-studies/crossroads-hospital",
+        destination: "/work",
+        permanent: true,
+      },
+      {
+        source: "/case-studies/godrej",
+        destination: "/work",
+        permanent: true,
+      },
+      {
+        source: "/case-studies/m3m-panipat",
+        destination: "/work",
+        permanent: true,
+      },
+      {
+        source: "/case-studies/sbp",
+        destination: "/work",
+        permanent: true,
+      },
+      {
+        source: "/case-studies/ska-orion",
+        destination: "/work",
+        permanent: true,
+      },
+      {
+        source: "/case-studies/tarc",
+        destination: "/work",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "thetous.com", pathname: "/wp-content/uploads/**" },
