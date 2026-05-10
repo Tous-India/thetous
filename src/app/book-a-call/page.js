@@ -5,11 +5,12 @@ import "./style.css";
 import usePageTitle from "@/hooks/usePageTitle";
 
 const Quote = () => {
-  usePageTitle("Request a Quote – The Tous");
+  usePageTitle("Book a Call – The Tous");
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     company: "",
     buildType: "",
     message: "",
@@ -46,6 +47,7 @@ const Quote = () => {
         setFormData({
           name: "",
           email: "",
+          phone: "",
           company: "",
           buildType: "",
           message: "",
@@ -128,6 +130,18 @@ const Quote = () => {
                 onChange={handleInputChange}
                 required
                 suppressHydrationWarning
+              />
+            </div>
+
+            {/* Phone */}
+            <div className="form-group full-width">
+              <label>Phone</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your phone number"
+                value={formData.phone}
+                onChange={handleInputChange}
               />
             </div>
 

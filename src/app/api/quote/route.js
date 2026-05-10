@@ -10,7 +10,7 @@ export async function POST(request) {
   }
 
   try {
-    const { name, email, company, buildType, message, timeline, budget } = await request.json();
+    const { name, email, phone, company, buildType, message, timeline, budget } = await request.json();
 
     if (!name || !email || !buildType || !timeline) {
       return NextResponse.json({ error: "Please fill all required fields" }, { status: 400 });
@@ -21,6 +21,7 @@ export async function POST(request) {
 
     const safeName     = strip(name);
     const safeEmail    = strip(email);
+    const safePhone    = strip(phone);
     const safeCompany  = strip(company);
     const safeBuild    = strip(buildType);
     const safeMessage  = strip(message);
@@ -45,6 +46,7 @@ export async function POST(request) {
             <div style="margin:20px 0">
               <p style="margin:8px 0"><strong>Name:</strong> ${safeName}</p>
               <p style="margin:8px 0"><strong>Email:</strong> <a href="mailto:${safeEmail}" style="color:#000">${safeEmail}</a></p>
+              <p style="margin:8px 0"><strong>Phone:</strong> ${safePhone || "(not provided)"}</p>
               ${safeCompany ? `<p style="margin:8px 0"><strong>Company / Brand:</strong> ${safeCompany}</p>` : ""}
               <p style="margin:8px 0"><strong>Looking to build:</strong> ${safeBuild}</p>
               <p style="margin:8px 0"><strong>Timeline:</strong> ${safeTimeline}</p>
