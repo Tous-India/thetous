@@ -60,6 +60,7 @@ body {
   background-color: rgb(0, 0, 0);
   box-shadow: 0px 25px 20px -2px rgb(0, 0, 0);
   border-radius: 30px 30px !important;
+  overscroll-behavior: none;
 }
 
 .page-content-wrapper {
@@ -69,6 +70,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 span,
@@ -93,7 +95,7 @@ p {
   background-color: white;
   padding: 0 0 0px 0;
   border-radius: 0 0 30px 30px;
-  isolation: isolate;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.45);
 }
 
 .row-div {
@@ -2230,6 +2232,12 @@ footer#footer {
   background-color: white;
   margin-bottom: var(--footer-height);
   box-shadow: 0 20px 32px -12px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 768px) {
+  .home-page-main {
+    box-shadow: 0 18px 32px 0 rgba(0, 0, 0, 0.7);
+  }
 }
 
 /* ============================================
