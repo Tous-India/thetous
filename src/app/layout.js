@@ -53,12 +53,12 @@ export default function RootLayout({ children }) {
       >
         <QueryProvider>
           <LenisProvider>
+            <Footer />
             <div className="page-content-wrapper">
               <Header />
               {children}
               <MousePointer />
             </div>
-            <Footer />
             <BootstrapClient />
           </LenisProvider>
         </QueryProvider>

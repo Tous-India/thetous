@@ -2208,3 +2208,53 @@ p {
     font-weight: 300;
   }
 }
+
+/* ============================================
+   Footer parallax reveal
+   ============================================ */
+:root {
+  --footer-height: 420px; /* fallback; overridden by JS at runtime */
+}
+
+footer#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.page-content-wrapper {
+  /* keeps existing position:relative; z-index:1 from globals.css:65-68 */
+  background-color: white;
+  margin-bottom: var(--footer-height);
+  box-shadow: 0 20px 32px -12px rgba(0, 0, 0, 0.35);
+}
+
+/* ============================================
+   Footer nav separator dots (Home • Work • About)
+   ============================================ */
+footer .footer-ul .footer-ul-responsive-div {
+  align-items: center;
+}
+
+footer .footer-ul .footer-ul-responsive-div > li:nth-child(1)::after,
+footer .footer-ul .footer-ul-responsive-div > li:nth-child(2)::after {
+  content: "•";
+  display: inline-block;
+  margin-left: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 1.25rem;
+  line-height: 1;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+/* Hide dots on mobile where items go full-width and stack */
+@media (max-width: 480px) {
+  footer .footer-ul .footer-ul-responsive-div > li:nth-child(1)::after,
+  footer .footer-ul .footer-ul-responsive-div > li:nth-child(2)::after {
+    display: none;
+  }
+}
