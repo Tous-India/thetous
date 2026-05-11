@@ -3,7 +3,7 @@ import "./style.css";
 import BookACallForm from "./book-a-call-form";
 
 export const metadata = {
-  title: "Book a Call – The Tous | Web, Shopify & CRM Strategy Call",
+  title: "Book a Call — Free Shopify & Web Development Audit",
   description:
     "Book a free 30-minute strategy call with The Tous. We'll review your project — web, Shopify, or CRM — and tell you honestly whether we're the right fit. No obligation.",
   openGraph: {

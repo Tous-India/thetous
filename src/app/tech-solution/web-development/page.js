@@ -1,7 +1,7 @@
 import WebDevelopmentClient from "./web-development-client";
 
 export const metadata = {
-  title: "Custom Web Development for B2B Businesses | The Tous",
+  title: "Custom Web Development for B2B Businesses",
   description:
     "Custom-coded websites built with Next.js, React, and Node.js. The Tous builds high-performing B2B and SaaS websites that load fast and convert. 150+ projects since 2018.",
   openGraph: {
