@@ -65,8 +65,8 @@ const SilvagoCaseStudy = () => {
                 url: "https://thetous.com/images/logo.png",
               },
             },
-            datePublished: "2026-03-15",
-            dateModified: "2026-05-11",
+            datePublished: "2026-03-15T00:00:00+05:30",
+            dateModified: "2026-05-11T00:00:00+05:30",
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": "https://thetous.com/case-studies/silvago",
