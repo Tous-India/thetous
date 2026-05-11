@@ -1,7 +1,7 @@
 import CrmDevelopmentClient from "./crm-development-client";
 
 export const metadata = {
-  title: "Custom CRM & Web App Development | The Tous",
+  title: "Custom CRM & Web App Development",
   description:
     "Custom CRM and internal tools built for B2B operations — lead capture, agent assignment, customer portals, mobile apps. Built 5 CRMs in the last 8 months. The Tous specializes in CRMs that fit your workflow, not the other way around.",
   openGraph: {

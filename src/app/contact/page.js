@@ -3,7 +3,7 @@ import "./style.css";
 import ContactForm from "./contact-form";
 
 export const metadata = {
-  title: "Contact The Tous | Web, Shopify & CRM Development",
+  title: "Contact — Web, Shopify & CRM Development",
   description:
     "Get in touch with The Tous. We build custom websites, Shopify stores, and CRMs for D2C and B2B brands. Office in Noida. Email grow@thetous.com or call +91-8901440322.",
   openGraph: {

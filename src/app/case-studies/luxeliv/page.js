@@ -7,7 +7,7 @@ import luxelivJuly from "../../../../public/casestudy/luxeliv-july-2024.png";
 
 export const metadata = {
   title:
-    "Luxeliv Case Study: 0.77% to 1.86% Conversion + 7x ROAS Sustained 21 Months | The Tous",
+    "Luxeliv Case Study: 0.77% to 1.86% Conversion + 7x ROAS Sustained 21 Months",
   description:
     "How The Tous lifted Luxeliv's Shopify conversion from 0.77% to 1.86% in 30 days — same traffic, 5x revenue. Then ads averaged 7x ROAS for 21 months. Premium men's sleepwear D2C case study.",
   openGraph: {

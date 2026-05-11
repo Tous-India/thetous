@@ -1,7 +1,7 @@
 import ShopifyDevelopmentClient from "./shopify-development-client";
 
 export const metadata = {
-  title: "Shopify Development for D2C Brands | The Tous",
+  title: "Shopify Development for D2C Brands",
   description:
     "Shopify store development for D2C brands. Custom themes, migrations, and conversion optimization. The Tous shipped Silvago (0.7% to 2.4% conversion lift), Caselulu, Luxeliv, and more. ₹50K-₹2L typical range.",
   openGraph: {

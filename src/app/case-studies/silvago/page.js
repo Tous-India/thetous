@@ -6,7 +6,7 @@ import silvagoMockup from "../../../../public/casestudy/Silvago After (1).png";
 import silvagoBefore from "../../../../public/casestudy/silvago before.webp";
 
 export const metadata = {
-  title: "Silvago Case Study: 0.7% to 2.4% Shopify Conversion in 4 Weeks | The Tous",
+  title: "Silvago Case Study: 0.7% to 2.4% Shopify Conversion in 4 Weeks",
   description:
     "How we lifted Silvago's Shopify conversion rate from 0.7% to 2.4% in 4 weeks. No redesign, no new traffic. Real numbers, real timeline. The Tous Shopify case study.",
   openGraph: {

@@ -11,7 +11,7 @@ import Sunny from "../../../public/team/Sunny.webp";
 import gunjan from "../../../public/team/gunjan.webp";
 
 export const metadata = {
-  title: "About The Tous | Web, Shopify & CRM Development Studio",
+  title: "About — Web, Shopify & CRM Development Studio",
   description: "The Tous is a 7-person web development studio in Noida. We build custom websites, Shopify stores, and CRMs for D2C and B2B brands. 150+ projects shipped since 2018.",
   openGraph: {
     title: "About The Tous | Web, Shopify & CRM Development Studio",
