@@ -1,6 +1,6 @@
-/* ================= SILVAGO CASE STUDY ================= */
+/* ================= LUXELIV CASE STUDY ================= */
 
-.silvago-case-study {
+.luxeliv-case-study {
   background: #fff;
   position: relative;
   z-index: 1;
@@ -11,11 +11,11 @@
 }
 
 /* ── Section 1: Hero ── */
-.silvago-hero {
+.luxeliv-hero {
   padding: 4rem 0 3rem;
 }
 
-.silvago-hero-row {
+.luxeliv-hero-row {
   gap: 2rem 0;
   text-align: center;
   img {
@@ -23,11 +23,11 @@
   }
 }
 
-.silvago-hero-text {
+.luxeliv-hero-text {
   padding-right: 2rem;
 }
 
-.silvago-hero-eyebrow {
+.luxeliv-hero-eyebrow {
   font-family: "Poppins", sans-serif;
   font-size: 11px;
   font-weight: 600;
@@ -37,7 +37,7 @@
   margin: 0 0 1rem;
 }
 
-.silvago-hero-heading {
+.luxeliv-hero-heading {
   font-family: "Lato", sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
@@ -48,7 +48,7 @@
   padding-bottom: 1rem;
 }
 
-.silvago-hero-heading::after {
+.luxeliv-hero-heading::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -60,7 +60,7 @@
   left: 45%;
 }
 
-.silvago-hero-sub {
+.luxeliv-hero-sub {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 1.7;
@@ -70,7 +70,7 @@
   margin: 0 auto;
 }
 
-.silvago-hero-cta-row {
+.luxeliv-hero-cta-row {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -80,7 +80,7 @@
   flex-direction: column;
 }
 
-.silvago-hero-cta-primary {
+.luxeliv-hero-cta-primary {
   display: inline-block;
   background: #000;
   color: #fff;
@@ -96,12 +96,12 @@
   transition: all 0.3s ease;
 }
 
-.silvago-hero-cta-primary:hover {
+.luxeliv-hero-cta-primary:hover {
   background: #fff;
   color: #000;
 }
 
-.silvago-hero-cta-secondary {
+.luxeliv-hero-cta-secondary {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -112,51 +112,53 @@
   transition: opacity 0.2s;
 }
 
-.silvago-hero-cta-secondary:hover {
+.luxeliv-hero-cta-secondary:hover {
   opacity: 0.6;
 }
 
-.silvago-hero-visual {
+.luxeliv-hero-visual {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.silvago-hero-img {
+.luxeliv-hero-img {
   max-width: 100%;
   height: auto;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 991px) {
-  .silvago-hero-text {
+  .luxeliv-hero-text {
     padding-right: 0;
   }
-  .silvago-hero-visual {
+  .luxeliv-hero-visual {
     margin-top: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .silvago-hero {
+  .luxeliv-hero {
     padding: 2.5rem 0 2rem;
   }
-  .silvago-hero-heading::after {
+  .luxeliv-hero-heading::after {
     width: 60px;
   }
 }
 
 /* ── Sections 2-4: Client / Problem / Approach ── */
-.silvago-section {
+.luxeliv-section {
   padding: 3rem 0;
   border-top: 1px solid #f0f0f0;
 }
 
-.silvago-section-alt {
+.luxeliv-section-alt {
   background: #fafafa;
 }
 
-.silvago-section-eyebrow {
+.luxeliv-section-eyebrow {
   font-family: "Poppins", sans-serif;
   font-size: 11px;
   font-weight: 600;
@@ -166,7 +168,7 @@
   margin: 0 0 0.75rem;
 }
 
-.silvago-section-heading {
+.luxeliv-section-heading {
   font-family: "Lato", sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
@@ -178,7 +180,7 @@
   max-width: 760px;
 }
 
-.silvago-section-heading::after {
+.luxeliv-section-heading::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -189,11 +191,11 @@
   border-radius: 2px;
 }
 
-.silvago-section-body {
+.luxeliv-section-body {
   max-width: 760px;
 }
 
-.silvago-section-body p {
+.luxeliv-section-body p {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   line-height: 1.8;
@@ -201,11 +203,11 @@
   margin: 0 0 1rem;
 }
 
-.silvago-section-body p:last-child {
+.luxeliv-section-body p:last-child {
   margin-bottom: 0;
 }
 
-.silvago-list {
+.luxeliv-list {
   list-style: none;
   padding: 0;
   margin: 0 0 1.25rem;
@@ -214,7 +216,7 @@
   gap: 0.75rem;
 }
 
-.silvago-list li {
+.luxeliv-list li {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   line-height: 1.7;
@@ -223,7 +225,7 @@
   position: relative;
 }
 
-.silvago-list li::before {
+.luxeliv-list li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -235,18 +237,18 @@
 }
 
 @media (max-width: 480px) {
-  .silvago-section {
+  .luxeliv-section {
     padding: 2rem 0;
   }
 }
 
 /* ── Section 6: Results table + anchor line + compare grid ── */
-.silvago-results-table-wrap {
+.luxeliv-results-table-wrap {
   margin: 1rem 0 2rem;
   overflow-x: auto;
 }
 
-.silvago-results-table {
+.luxeliv-results-table {
   width: 100%;
   max-width: 900px;
   border-collapse: collapse;
@@ -255,8 +257,8 @@
   border: 1px solid #ececec;
 }
 
-.silvago-results-table th,
-.silvago-results-table td {
+.luxeliv-results-table th,
+.luxeliv-results-table td {
   padding: 0.85rem 1rem;
   text-align: left;
   font-size: 14px;
@@ -264,7 +266,7 @@
   border-bottom: 1px solid #f0f0f0;
 }
 
-.silvago-results-table th {
+.luxeliv-results-table th {
   background: #fafafa;
   font-weight: 600;
   color: #111;
@@ -273,20 +275,20 @@
   letter-spacing: 0.5px;
 }
 
-.silvago-results-table tbody tr:last-child td {
+.luxeliv-results-table tbody tr:last-child td {
   border-bottom: none;
 }
 
-.silvago-results-table td {
+.luxeliv-results-table td {
   color: #444;
 }
 
-.silvago-results-table td:first-child {
+.luxeliv-results-table td:first-child {
   font-weight: 600;
   color: #111;
 }
 
-.silvago-change-strong {
+.luxeliv-change-strong {
   font-weight: 700;
   background: linear-gradient(135deg, #00dbde, #fc00ff);
   -webkit-background-clip: text;
@@ -294,7 +296,7 @@
   background-clip: text;
 }
 
-.silvago-anchor-line {
+.luxeliv-anchor-line {
   font-family: "Lato", sans-serif;
   font-size: clamp(1.1rem, 2vw, 1.35rem);
   font-weight: 600;
@@ -308,14 +310,14 @@
   background: #fff;
 }
 
-.silvago-compare-grid {
+.luxeliv-compare-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
-.silvago-compare-card {
+.luxeliv-compare-card {
   margin: 0;
   background: #fff;
   border: 1px solid #ececec;
@@ -323,14 +325,14 @@
   overflow: hidden;
 }
 
-.silvago-compare-img {
+.luxeliv-compare-img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-.silvago-compare-caption {
+.luxeliv-compare-caption {
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-weight: 600;
@@ -344,30 +346,30 @@
 }
 
 @media (max-width: 720px) {
-  .silvago-compare-grid {
+  .luxeliv-compare-grid {
     grid-template-columns: 1fr;
   }
 
-  .silvago-results-table thead {
+  .luxeliv-results-table thead {
     display: none;
   }
 
-  .silvago-results-table,
-  .silvago-results-table tbody,
-  .silvago-results-table tr,
-  .silvago-results-table td {
+  .luxeliv-results-table,
+  .luxeliv-results-table tbody,
+  .luxeliv-results-table tr,
+  .luxeliv-results-table td {
     display: block;
     width: 100%;
   }
 
-  .silvago-results-table tr {
+  .luxeliv-results-table tr {
     border: 1px solid #ececec;
     margin-bottom: 0.75rem;
     border-radius: 4px;
     overflow: hidden;
   }
 
-  .silvago-results-table td {
+  .luxeliv-results-table td {
     padding: 0.6rem 1rem;
     border-bottom: 1px solid #f5f5f5;
     display: flex;
@@ -375,7 +377,7 @@
     gap: 1rem;
   }
 
-  .silvago-results-table td::before {
+  .luxeliv-results-table td::before {
     content: attr(data-label);
     font-weight: 600;
     color: #888;
@@ -385,13 +387,13 @@
     flex-shrink: 0;
   }
 
-  .silvago-results-table td:first-child {
+  .luxeliv-results-table td:first-child {
     background: #fafafa;
   }
 }
 
 /* ===== Bottom CTA section ===== */
-.silvago-bottom-cta {
+.luxeliv-bottom-cta {
   margin-top: 6rem;
   padding: 4rem 2rem;
   background: #000;
@@ -401,14 +403,14 @@
   margin-right: auto;
 }
 
-.silvago-bottom-cta-inner {
+.luxeliv-bottom-cta-inner {
   max-width: 680px;
   margin: 0 auto;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
 
-.silvago-bottom-cta-heading {
+.luxeliv-bottom-cta-heading {
   color: #fff;
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 700;
@@ -417,7 +419,7 @@
   font-family: 'Lato', sans-serif;
 }
 
-.silvago-bottom-cta-body {
+.luxeliv-bottom-cta-body {
   color: #fff;
   font-size: 1rem;
   line-height: 1.8;
@@ -425,7 +427,7 @@
   opacity: 0.92;
 }
 
-.silvago-bottom-cta-button {
+.luxeliv-bottom-cta-button {
   display: inline-block;
   background: #fff;
   color: #000;
@@ -438,11 +440,11 @@
   transition: transform 0.2s ease;
 }
 
-.silvago-bottom-cta-button:hover {
+.luxeliv-bottom-cta-button:hover {
   transform: translateY(-2px);
 }
 
-.silvago-bottom-cta-credibility {
+.luxeliv-bottom-cta-credibility {
   color: #fff;
   font-size: 0.82rem;
   opacity: 0.75;
@@ -451,12 +453,12 @@
 }
 
 /* ===== Mobile sticky CTA (visible only on small screens) ===== */
-.silvago-mobile-sticky-cta {
+.luxeliv-mobile-sticky-cta {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .silvago-mobile-sticky-cta {
+  .luxeliv-mobile-sticky-cta {
     display: block;
     position: fixed;
     bottom: 16px;
@@ -476,7 +478,7 @@
   }
 
   /* Reserve scroll space so sticky button doesn't cover the page footer */
-  .silvago-bottom-cta {
+  .luxeliv-bottom-cta {
     margin-bottom: 5rem;
   }
 }

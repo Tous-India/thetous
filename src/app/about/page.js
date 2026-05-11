@@ -1,9 +1,6 @@
-"use client";
 import "./style.css";
 import Link from "next/link";
 import Image from "next/image";
-import aboutImg from "../../../public/about/about-page.webp";
-import usePageTitle from "@/hooks/usePageTitle";
 
 import Tarun from "../../../public/team/Tarun-Badhana.webp";
 import Sagar from "../../../public/team/Sagar.webp";
@@ -12,6 +9,36 @@ import Yashika from "../../../public/team/Yashika.webp";
 import Anjali from "../../../public/team/Anjali.webp";
 import Sunny from "../../../public/team/Sunny.webp";
 import gunjan from "../../../public/team/gunjan.webp";
+
+export const metadata = {
+  title: "About The Tous | Web, Shopify & CRM Development Studio",
+  description: "The Tous is a 7-person web development studio in Noida. We build custom websites, Shopify stores, and CRMs for D2C and B2B brands. 150+ projects shipped since 2018.",
+  openGraph: {
+    title: "About The Tous | Web, Shopify & CRM Development Studio",
+    description: "7-person web development studio in Noida. 150+ projects shipped since 2018 for D2C and B2B brands across India and the US.",
+    url: "https://thetous.com/about",
+    siteName: "The Tous",
+    images: [
+      {
+        url: "https://thetous.com/images/og-homepage.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Tous — Web, Shopify, and CRM Development",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About The Tous | Web, Shopify & CRM Development",
+    description: "7-person studio in Noida. 150+ projects since 2018 for D2C and B2B brands.",
+    images: ["https://thetous.com/images/og-homepage.jpg"],
+  },
+  alternates: {
+    canonical: "https://thetous.com/about",
+  },
+};
 
 const principles = [
   {
@@ -49,10 +76,45 @@ const stats = [
 ];
 
 const About = () => {
-  usePageTitle("About – The Tous");
-
   return (
     <div className="about-page-main">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: "About The Tous",
+            description:
+              "The Tous is a 7-person web development studio in Noida. We build custom websites, Shopify stores, and CRMs for D2C and B2B brands.",
+            url: "https://thetous.com/about",
+            mainEntity: {
+              "@type": "Organization",
+              name: "The Tous",
+              alternateName: "The Tous Media",
+              url: "https://thetous.com",
+              logo: "https://thetous.com/images/logo.png",
+              foundingDate: "2018",
+              numberOfEmployees: {
+                "@type": "QuantitativeValue",
+                value: 7,
+              },
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "C-116, 1st Floor, Sector-2",
+                addressLocality: "Noida",
+                addressRegion: "Uttar Pradesh",
+                postalCode: "201301",
+                addressCountry: "IN",
+              },
+              sameAs: [
+                "https://www.instagram.com/thetousmedia",
+                "https://www.linkedin.com/company/the-tous",
+              ],
+            },
+          }),
+        }}
+      />
       {/* ── Original hero row ── */}
       <div className="container aboutRow">
         <div className="row align-items-start">

@@ -1,20 +1,83 @@
-"use client";
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import usePageTitle from "@/hooks/usePageTitle";
 import "./style.css";
 
 import silvagoMockup from "../../../../public/casestudy/Silvago After (1).png";
 import silvagoBefore from "../../../../public/casestudy/silvago before.webp";
 
-const SilvagoCaseStudy = () => {
-  usePageTitle(
-    "Silvago Case Study: 0.7% → 2.4% Shopify Conversion Rate in 4 Weeks | The Tous",
-  );
+export const metadata = {
+  title: "Silvago Case Study: 0.7% to 2.4% Shopify Conversion in 4 Weeks | The Tous",
+  description:
+    "How we lifted Silvago's Shopify conversion rate from 0.7% to 2.4% in 4 weeks. No redesign, no new traffic. Real numbers, real timeline. The Tous Shopify case study.",
+  openGraph: {
+    title: "Silvago: 0.7% to 2.4% Shopify Conversion in 4 Weeks",
+    description:
+      "Real Shopify conversion case study. 3.4× lift in 4 weeks with no redesign. By The Tous, web and Shopify development studio.",
+    url: "https://thetous.com/case-studies/silvago",
+    siteName: "The Tous",
+    images: [
+      {
+        url: "https://thetous.com/images/og-homepage.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Silvago Shopify Conversion Case Study by The Tous",
+      },
+    ],
+    locale: "en_US",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Silvago: 0.7% to 2.4% Shopify Conversion in 4 Weeks",
+    description: "Real Shopify conversion case study. 3.4× lift in 4 weeks.",
+    images: ["https://thetous.com/images/og-homepage.jpg"],
+  },
+  alternates: {
+    canonical: "https://thetous.com/case-studies/silvago",
+  },
+};
 
+const SilvagoCaseStudy = () => {
   return (
     <main className="silvago-case-study">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline:
+              "Silvago Case Study: 0.7% to 2.4% Shopify Conversion in 4 Weeks",
+            description:
+              "How The Tous lifted Silvago's Shopify conversion rate from 0.7% to 2.4% in 4 weeks through targeted UX optimization. No redesign.",
+            image: "https://thetous.com/images/og-homepage.jpg",
+            author: {
+              "@type": "Organization",
+              name: "The Tous",
+              url: "https://thetous.com",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "The Tous",
+              url: "https://thetous.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://thetous.com/images/logo.png",
+              },
+            },
+            datePublished: "2026-03-15",
+            dateModified: "2026-05-11",
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://thetous.com/case-studies/silvago",
+            },
+            about: {
+              "@type": "Thing",
+              name: "Shopify Conversion Rate Optimization",
+            },
+          }),
+        }}
+      />
       {/* ── Section 1: Hero ── */}
       <section className="silvago-hero">
         <div className="container">
@@ -32,9 +95,6 @@ const SilvagoCaseStudy = () => {
               <div className="silvago-hero-cta-row">
                 <Link href="/book-a-call" className="silvago-hero-cta-primary">
                   Get a free Shopify audit
-                </Link>
-                <Link href="/work" className="silvago-hero-cta-secondary">
-                  See more work →
                 </Link>
               </div>
 
@@ -272,6 +332,31 @@ const SilvagoCaseStudy = () => {
           </div>
         </div>
       </section>
+
+      {/* ── Section 7: Bottom CTA ── */}
+      <section className="silvago-bottom-cta">
+        <div className="silvago-bottom-cta-inner">
+          <h2 className="silvago-bottom-cta-heading">
+            Want a 3.4× conversion lift like Silvago?
+          </h2>
+          <p className="silvago-bottom-cta-body">
+            Book a 30-minute Shopify audit. We&apos;ll review your store,
+            identify the biggest conversion blockers, and tell you honestly
+            whether we&apos;re the right fit.
+          </p>
+          <Link href="/book-a-call" className="silvago-bottom-cta-button">
+            Book a Free Strategy Call
+          </Link>
+          <p className="silvago-bottom-cta-credibility">
+            150+ projects shipped since 2018 · Replies within one business day
+          </p>
+        </div>
+      </section>
+
+      {/* Sticky mobile-only CTA */}
+      <Link href="/book-a-call" className="silvago-mobile-sticky-cta">
+        Book a Free Strategy Call →
+      </Link>
     </main>
   );
 };
