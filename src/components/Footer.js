@@ -1,10 +1,36 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 
 const Footer = () => {
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    const el = footerRef.current;
+    if (!el || typeof window === "undefined" || typeof ResizeObserver === "undefined") {
+      return;
+    }
+
+    const setHeightVar = () => {
+      const height = el.offsetHeight;
+      document.documentElement.style.setProperty(
+        "--footer-height",
+        `${height}px`
+      );
+    };
+
+    setHeightVar();
+
+    const observer = new ResizeObserver(setHeightVar);
+    observer.observe(el);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <footer id="footer">
+    <footer id="footer" ref={footerRef}>
       <div id="footerSecond">
         <div className="container">
           <div className="row">
