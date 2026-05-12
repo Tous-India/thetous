@@ -58,7 +58,6 @@ a {
 body {
   overflow-x: hidden;
   background-color: rgb(0, 0, 0);
-  box-shadow: 0px 25px 20px -2px rgb(0, 0, 0);
   border-radius: 30px 30px !important;
   overscroll-behavior: none;
 }
@@ -94,8 +93,13 @@ p {
   z-index: 1;
   background-color: white;
   padding: 0 0 0px 0;
-  border-radius: 0 0 30px 30px;
-  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.45);
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+  .home-page-main {
+    border-radius: 0 0 30px 30px;
+  }
 }
 
 .row-div {
@@ -2231,13 +2235,6 @@ footer#footer {
   /* keeps existing position:relative; z-index:1 from globals.css:65-68 */
   background-color: white;
   margin-bottom: var(--footer-height);
-  box-shadow: 0 20px 32px -12px rgba(0, 0, 0, 0.35);
-}
-
-@media (max-width: 768px) {
-  .home-page-main {
-    box-shadow: 0 18px 32px 0 rgba(0, 0, 0, 0.7);
-  }
 }
 
 /* ============================================
