@@ -394,7 +394,7 @@ const OhMyPetCaseStudy = () => {
             <div className="silvago-compare-grid">
               <figure className="silvago-compare-card">
                 <Image
-                  src="/casestudy/omp-grooming/crm-dashboard.png"
+                  src="/casestudy/omp-grooming/crm-dashboard.webp"
                   alt="OhMyPet admin CRM dashboard — unified lead management built by The Tous"
                   width={1200}
                   height={800}
