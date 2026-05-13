@@ -51,6 +51,16 @@ const nextConfig = {
         destination: "/work",
         permanent: true,
       },
+      {
+        source: "/quote",
+        destination: "/book-a-call",
+        permanent: true,
+      },
+      {
+        source: "/get-your-custom-quote",
+        destination: "/book-a-call",
+        permanent: true,
+      },
     ];
   },
   images: {
