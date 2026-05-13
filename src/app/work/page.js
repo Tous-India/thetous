@@ -7,7 +7,7 @@ import usePageTitle from "@/hooks/usePageTitle";
 
 import silvago from "../../../public/work/silvago_website copy.webp";
 import luxeliv from "../../../public/work/luxeliv_website_2.webp";
-import omp from "../../../public/work/omp_website.webp";
+import omp from "../../../public/casestudy/omp-grooming/hero.webp";
 import kb from "../../../public/work/kb_website copy (2).webp";
 import nestloom from "../../../public/work/nestloom_website.webp";
 import barebub from "../../../public/work/barebub_website copy.webp";
@@ -29,11 +29,11 @@ const TABS = [
 
 const workProjects = [
   {
-    id: "omp-crm",
+    id: "omp-grooming",
     category: "crm",
-    title: "OMP CRM + Mobile App",
-    projectType: "B2B · CRM & Mobile App",
-    desc: "Lead capture from web and ads, groomer assignment, customer login portal, and a companion mobile app for the field team.",
+    title: "OhMyPet",
+    projectType: "Custom CRM & Mobile App",
+    desc: "Replaced WordPress + 4 disconnected lead sources with a custom CRM, groomer app, and customer portal across 10 cities.",
     image: omp,
   },
   {

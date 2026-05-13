@@ -61,6 +61,11 @@ const nextConfig = {
         destination: "/book-a-call",
         permanent: true,
       },
+      {
+        source: "/case-studies/oh-my-pet-grooming",
+        destination: "/case-studies/omp-grooming",
+        permanent: true,
+      },
     ];
   },
   images: {
