@@ -58,10 +58,10 @@ export default function sitemap() {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/case-studies/oh-my-pet-grooming`,
+      url: `${baseUrl}/case-studies/omp-grooming`,
       lastModified,
       changeFrequency: 'weekly',
-      priority: 0.85,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/case-studies/executive-cars`,
