@@ -19,6 +19,7 @@ import svaa from "../../../public/work/svaa_website (1).webp";
 import engine from "../../../public/work/used engine_website.webp";
 import ssr from "../../../public/work/ssr_website.webp";
 import transaction from "../../../public/work/transection point_website.webp";
+import vaqya from "../../../public/work/vaqya.jpg";
 
 const TABS = [
   { key: "all", label: "All Projects", count: 15 },
@@ -67,7 +68,7 @@ const workProjects = [
     title: "Vaqya",
     projectType: "Healthcare · CRM · USA",
     desc: "Healthcare practice management CRM for US clinics. Patient scheduling, billing, and care coordination workflows.",
-    image: transaction,
+    image: vaqya,
   },
   {
     id: "silvago",
