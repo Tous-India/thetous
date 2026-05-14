@@ -7,7 +7,7 @@ import usePageTitle from "@/hooks/usePageTitle";
 
 import silvago from "../../../public/work/silvago_website copy.webp";
 import luxeliv from "../../../public/work/luxeliv_website_2.webp";
-import omp from "../../../public/casestudy/omp-grooming/hero.webp";
+import omp from "../../../public/work/oh-my-pet-crm.jpg";
 import kb from "../../../public/work/kb_website copy (2).webp";
 import nestloom from "../../../public/work/nestloom_website.webp";
 import barebub from "../../../public/work/barebub_website copy.webp";
