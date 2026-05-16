@@ -1,8 +1,16 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import "./style.css";
 import thanks from "../../../public/thanks.webp";
+
+export const metadata = {
+  title: "Thank You | The Tous",
+  description: "Your message has been received. We'll be in touch shortly.",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 const Page = () => {
   return (

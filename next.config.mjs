@@ -161,6 +161,26 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      {
+        source: "/case-studies/the-pet-center",
+        destination: "/case-studies/omp-grooming",
+        permanent: true,
+      },
+      {
+        source: "/case-studies/the-pet-center/",
+        destination: "/case-studies/omp-grooming",
+        permanent: true,
+      },
+      {
+        source: "/media-solution",
+        destination: "/tech-solution",
+        permanent: true,
+      },
+      {
+        source: "/media-solution/",
+        destination: "/tech-solution",
+        permanent: true,
+      },
     ];
   },
   images: {
