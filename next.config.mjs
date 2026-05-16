@@ -66,6 +66,101 @@ const nextConfig = {
         destination: "/case-studies/omp-grooming",
         permanent: true,
       },
+      {
+        source: "/hiring",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/hiring/",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/contact-us",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/contact-us/",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/about-us",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/about-us/",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/transforming-brands-online",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/transforming-brands-online/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/marketing-solution",
+        destination: "/tech-solution",
+        permanent: true,
+      },
+      {
+        source: "/marketing-solution/",
+        destination: "/tech-solution",
+        permanent: true,
+      },
+      {
+        source: "/category/paid-ads",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/category/paid-ads/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/the-secret-sauce-to-scale-your-ecommerce-business-with-paid-ads",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/the-secret-sauce-to-scale-your-ecommerce-business-with-paid-ads/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/elementor-hf/footer",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/elementor-hf/footer/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/elementor-hf/header",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/elementor-hf/header/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/blog-details/transforming-brands-online",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
   images: {

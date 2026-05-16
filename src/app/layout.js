@@ -26,7 +26,6 @@ export const metadata = {
   icons: {
     icon: "/tousfavicon.webp",      // main favicon
     shortcut: "/favicon.ico",  // fallback
-    apple: "/apple-touch-icon.png", // optional
   }
 };
 
