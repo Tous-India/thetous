@@ -1,5 +1,6 @@
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
+import { getFormRecipients } from "@/lib/email-config";
 
 const strip = (str) => String(str || "").replace(/[<>"'&]/g, "").trim().slice(0, 1000);
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -34,7 +35,8 @@ export async function POST(request) {
 
     const adminMailOptions = {
       from: process.env.EMAIL_FROM || process.env.EMAIL_USER,
-      to: process.env.EMAIL_FROM || process.env.EMAIL_USER,
+      to: getFormRecipients(),
+      replyTo: process.env.EMAIL_FROM || "grow@thetous.com",
       subject: `New Enquiry from ${safeName}`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:20px;background:#f5f5f5">
