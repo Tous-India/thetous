@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { pushLeadEvent } from "@/lib/track-lead";
 
 const BookACallForm = () => {
   const [formData, setFormData] = useState({
@@ -35,6 +36,7 @@ const BookACallForm = () => {
       const data = await response.json();
 
       if (response.ok) {
+        pushLeadEvent({ eventId: data?.eventId, formType: "book-a-call" });
         setSubmitStatus({
           type: "success",
           message: "Thank you! We'll get back to you within one business day.",

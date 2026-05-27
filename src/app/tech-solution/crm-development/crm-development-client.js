@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { pushLeadEvent } from "@/lib/track-lead";
 
 const ShopifyDevelopment = () => {
   const [activeFaq, setActiveFaq] = useState(null);
@@ -45,7 +46,10 @@ const ShopifyDevelopment = () => {
         }),
       });
 
+      const data = await response.json().catch(() => ({}));
+
       if (response.ok) {
+        pushLeadEvent({ eventId: data?.eventId, formType: "crm-development" });
         setFormStatus("success");
         setFormData({ name: "", email: "", phone: "", message: "" });
         setTimeout(() => setFormStatus(""), 3000);

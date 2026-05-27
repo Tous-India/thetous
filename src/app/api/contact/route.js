@@ -1,6 +1,8 @@
+import crypto from "node:crypto";
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { getFormRecipients } from "@/lib/email-config";
+import { sendMetaEvent } from "@/lib/meta-capi";
 
 const strip = (str) => String(str || "").replace(/[<>"'&]/g, "").trim().slice(0, 1000);
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -85,7 +87,32 @@ export async function POST(request) {
     await transporter.sendMail(adminMailOptions);
     await transporter.sendMail(userMailOptions);
 
-    return NextResponse.json({ message: "Email sent successfully" }, { status: 200 });
+    const eventId = crypto.randomUUID();
+    const forwardedFor = request.headers.get("x-forwarded-for");
+    const clientIp =
+      (forwardedFor ? forwardedFor.split(",")[0].trim() : request.headers.get("x-real-ip")) ||
+      undefined;
+    const clientUserAgent = request.headers.get("user-agent") || undefined;
+    const eventSourceUrl = request.headers.get("referer") || undefined;
+
+    try {
+      await sendMetaEvent({
+        eventName: "Lead",
+        eventId,
+        userData: { email: safeEmail, phone: safePhone, firstName: safeName },
+        customData: { form_type: "contact", services: safeServices },
+        eventSourceUrl,
+        clientIp,
+        clientUserAgent,
+      });
+    } catch (capiErr) {
+      console.warn("[contact] CAPI Lead event failed:", capiErr?.message || capiErr);
+    }
+
+    return NextResponse.json(
+      { message: "Email sent successfully", eventId },
+      { status: 200 }
+    );
   } catch (error) {
     console.error("[contact] Email error:", error.message);
     return NextResponse.json({ error: "Failed to send email" }, { status: 500 });

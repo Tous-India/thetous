@@ -6,6 +6,7 @@ import Image from "next/image";
 import painPoints from "../../../../public/pain-point-of-shopify-dev.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import usePageTitle from "@/hooks/usePageTitle";
+import { pushLeadEvent } from "@/lib/track-lead";
 
 //
 //
@@ -50,7 +51,10 @@ const PerformanceMarketing = () => {
         }),
       });
 
+      const data = await response.json().catch(() => ({}));
+
       if (response.ok) {
+        pushLeadEvent({ eventId: data?.eventId, formType: "google-ads" });
         setFormStatus("success");
         setFormData({ name: "", email: "", phone: "", message: "" });
         setTimeout(() => setFormStatus(""), 3000);

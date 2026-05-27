@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { pushLeadEvent } from "@/lib/track-lead";
 
 const serviceOptions = [
   "Custom Web Development",
@@ -48,6 +49,7 @@ const ContactForm = () => {
       const data = await response.json();
 
       if (response.ok) {
+        pushLeadEvent({ eventId: data?.eventId, formType: "contact" });
         setSubmitStatus({
           type: "success",
           message: "Message sent! We'll get back to you within one business day.",
