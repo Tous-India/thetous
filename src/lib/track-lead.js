@@ -1,14 +1,20 @@
-// Pushes a 'lead_submitted' event to the GTM dataLayer with the server-
-// generated event_id, so a GTM-side Meta Pixel tag can use the same ID for
-// deduplication with the CAPI event fired from the API route.
+// Calls Meta Pixel's fbq directly with the same event_id used by CAPI,
+// so the server-side (CAPI) and client-side (Pixel) Lead events are
+// deduplicated by Meta. Replaces the previous dataLayer push approach.
 
 export function pushLeadEvent({ eventId, formType }) {
   if (typeof window === "undefined") return;
   if (!eventId) return;
-  if (!Array.isArray(window.dataLayer)) window.dataLayer = [];
-  window.dataLayer.push({
-    event: "lead_submitted",
-    event_id: eventId,
-    form_type: formType,
-  });
+  if (typeof window.fbq !== "function") {
+    console.warn(
+      "[track-lead] window.fbq not available — Pixel Lead event skipped"
+    );
+    return;
+  }
+  window.fbq(
+    "track",
+    "Lead",
+    { form_type: formType },
+    { eventID: eventId }
+  );
 }
