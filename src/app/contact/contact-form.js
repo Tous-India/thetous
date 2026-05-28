@@ -20,6 +20,8 @@ const ContactForm = () => {
   const [selectedServices, setSelectedServices] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  // Honeypot: must stay empty for a real human. Bots that fill every input trip it.
+  const [contactReason2, setContactReason2] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -43,7 +45,11 @@ const ContactForm = () => {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, services: selectedServices }),
+        body: JSON.stringify({
+          ...formData,
+          services: selectedServices,
+          contact_reason_2: contactReason2,
+        }),
       });
 
       const data = await response.json();
@@ -90,6 +96,19 @@ const ContactForm = () => {
 
       <form className="d-flex flex-column p-4 rounded-2" onSubmit={handleSubmit}>
         <h3 className="text-start">Get In Touch</h3>
+
+        {/* Honeypot — hidden from humans (off-screen, non-tabbable, autofill-proof
+            field name). If filled, the API rejects with 400 before any processing. */}
+        <div style={{ position: "absolute", left: "-9999px" }} aria-hidden="true">
+          <input
+            type="text"
+            name="contact_reason_2"
+            tabIndex={-1}
+            autoComplete="off"
+            value={contactReason2}
+            onChange={(e) => setContactReason2(e.target.value)}
+          />
+        </div>
 
         <div className="row first-form-row">
           <div className="col-12 col-sm-6">

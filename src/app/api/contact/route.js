@@ -13,7 +13,14 @@ export async function POST(request) {
   }
 
   try {
-    const { name, email, phone, message, services } = await request.json();
+    const { name, email, phone, message, services, contact_reason_2 } = await request.json();
+
+    // Honeypot: a real human cannot fill this hidden field. If present, drop the
+    // request before any email/CAPI work so response.ok is false and the client
+    // never redirects to /thank-you (no Google Ads conversion logged).
+    if (contact_reason_2) {
+      return NextResponse.json({ error: "Rejected" }, { status: 400 });
+    }
 
     if (!name || !email) {
       return NextResponse.json({ error: "Please fill all required fields" }, { status: 400 });
