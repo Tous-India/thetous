@@ -7,13 +7,60 @@ import { sendMetaEvent } from "@/lib/meta-capi";
 const strip = (str) => String(str || "").replace(/[<>"'&]/g, "").trim().slice(0, 1000);
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+// Verifies a reCAPTCHA v3 token with Google. FAIL-OPEN by design: only a
+// positive bot signal returns false (reject). Anything that just means "no
+// verdict available" returns true (allow) so a real human is never blocked
+// because a script didn't load or an outage occurred.
+//   reject  → token present, Google ran it, and score < threshold OR the
+//             token was explicitly invalid/duplicate
+//   allow   → no token, our own secret misconfig, or Google unreachable
+async function verifyRecaptcha(token, secret, minScore) {
+  if (!token) {
+    console.warn("[contact] reCAPTCHA token missing — allowing (fail-open)");
+    return true;
+  }
+  try {
+    const params = new URLSearchParams({ secret, response: token });
+    const res = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: params.toString(),
+    });
+    const data = await res.json();
+
+    if (!data.success) {
+      const errorCodes = data["error-codes"] || [];
+      // Our own misconfiguration (bad/missing secret) must never block a human.
+      const configError =
+        errorCodes.includes("missing-input-secret") ||
+        errorCodes.includes("invalid-input-secret");
+      if (configError) {
+        console.warn("[contact] reCAPTCHA secret misconfig — allowing (fail-open):", errorCodes);
+        return true;
+      }
+      console.warn("[contact] reCAPTCHA token rejected:", errorCodes);
+      return false;
+    }
+
+    if (typeof data.score === "number" && data.score < minScore) {
+      console.warn(`[contact] reCAPTCHA score ${data.score} < ${minScore} — rejecting`);
+      return false;
+    }
+
+    return true;
+  } catch (err) {
+    console.warn("[contact] reCAPTCHA verify error — allowing (fail-open):", err?.message || err);
+    return true;
+  }
+}
+
 export async function POST(request) {
   if (!process.env.EMAIL_HOST || !process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
     return NextResponse.json({ error: "Email service is not configured" }, { status: 500 });
   }
 
   try {
-    const { name, email, phone, message, services, contact_reason_2 } = await request.json();
+    const { name, email, phone, message, services, contact_reason_2, recaptcha_token } = await request.json();
 
     // Honeypot: a real human cannot fill this hidden field. If present, drop the
     // request before any email/CAPI work so response.ok is false and the client
@@ -27,6 +74,19 @@ export async function POST(request) {
     }
     if (!emailRegex.test(email)) {
       return NextResponse.json({ error: "Invalid email address" }, { status: 400 });
+    }
+
+    // reCAPTCHA v3: verify after cheap checks, before email/CAPI. A reject here
+    // returns 400 (same as honeypot) so the client's response.ok gate blocks the
+    // /thank-you redirect and no conversion is logged. Skipped if the secret
+    // isn't configured (e.g. local dev), matching the CAPI/Pixel pattern.
+    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+    if (recaptchaSecret) {
+      const minScore = parseFloat(process.env.RECAPTCHA_MIN_SCORE || "0.3");
+      const passed = await verifyRecaptcha(recaptcha_token, recaptchaSecret, minScore);
+      if (!passed) {
+        return NextResponse.json({ error: "Verification failed" }, { status: 400 });
+      }
     }
 
     const safeName     = strip(name);
