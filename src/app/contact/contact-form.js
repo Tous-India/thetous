@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
+import Script from "next/script";
 import { pushLeadEvent } from "@/lib/track-lead";
+
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 const serviceOptions = [
   "Custom Web Development",
@@ -9,6 +12,22 @@ const serviceOptions = [
   "Website Redesign",
   "Other",
 ];
+
+// Requests a reCAPTCHA v3 token for the submit action. Returns null if the
+// script isn't loaded (e.g. blocked by an extension) — the server decides
+// what to do with a missing token.
+const getRecaptchaToken = async () => {
+  if (!RECAPTCHA_SITE_KEY) return null;
+  if (typeof window === "undefined" || !window.grecaptcha) return null;
+  try {
+    await new Promise((resolve) => window.grecaptcha.ready(resolve));
+    return await window.grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+      action: "contact_submit",
+    });
+  } catch {
+    return null;
+  }
+};
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -20,6 +39,8 @@ const ContactForm = () => {
   const [selectedServices, setSelectedServices] = useState([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  // Honeypot: must stay empty for a real human. Bots that fill every input trip it.
+  const [contactReason2, setContactReason2] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -40,10 +61,17 @@ const ContactForm = () => {
     setSubmitStatus(null);
 
     try {
+      const recaptchaToken = await getRecaptchaToken();
+
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...formData, services: selectedServices }),
+        body: JSON.stringify({
+          ...formData,
+          services: selectedServices,
+          contact_reason_2: contactReason2,
+          recaptcha_token: recaptchaToken,
+        }),
       });
 
       const data = await response.json();
@@ -57,7 +85,7 @@ const ContactForm = () => {
         setFormData({ name: "", email: "", phone: "", message: "" });
         setSelectedServices([]);
         if (typeof window !== "undefined") {
-          window.open("/thank-you", "_blank");
+          window.location.href = "/thank-you";
         }
       } else {
         setSubmitStatus({
@@ -77,6 +105,13 @@ const ContactForm = () => {
 
   return (
     <div className="col-sm-12 col-md-5 col-lg-5 contact-cols-4 left">
+      {RECAPTCHA_SITE_KEY && (
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
+          strategy="afterInteractive"
+        />
+      )}
+
       {submitStatus && (
         <div
           className={`alert rounded-0 py-2 ${
@@ -90,6 +125,19 @@ const ContactForm = () => {
 
       <form className="d-flex flex-column p-4 rounded-2" onSubmit={handleSubmit}>
         <h3 className="text-start">Get In Touch</h3>
+
+        {/* Honeypot — hidden from humans (off-screen, non-tabbable, autofill-proof
+            field name). If filled, the API rejects with 400 before any processing. */}
+        <div style={{ position: "absolute", left: "-9999px" }} aria-hidden="true">
+          <input
+            type="text"
+            name="contact_reason_2"
+            tabIndex={-1}
+            autoComplete="off"
+            value={contactReason2}
+            onChange={(e) => setContactReason2(e.target.value)}
+          />
+        </div>
 
         <div className="row first-form-row">
           <div className="col-12 col-sm-6">
