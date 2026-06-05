@@ -19,6 +19,10 @@ const lato = Lato({ weight: ['100', '300', '400', '700', '900'], style: ['normal
 const poppins = Poppins({ weight: ['200', '300', '400', '500', '600', '700', '800'], style: ['normal', 'italic'], subsets: ['latin'], variable: '--font-poppins', });
 
 
+// Revalidate the prerendered HTML daily so the booking banner's
+// dynamically computed next-month label never goes stale.
+export const revalidate = 86400; // 24 hours in seconds
+
 export const metadata = {
   title: {
     template: "%s | The Tous",

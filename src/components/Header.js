@@ -9,7 +9,21 @@ import phone from "../../public/phone-call.png";
 // brand
 // import copywriter from "../../public/services/brand/meta-ads.webp"; //default
 
+// Returns the month after the current one, e.g. "July 2026".
+// Date handles year rollover automatically (Dec -> Jan of next year).
+const getNextBookingMonth = () => {
+  const d = new Date();
+  d.setMonth(d.getMonth() + 1);
+  return d.toLocaleString("en-US", { month: "long", year: "numeric" });
+};
+
 const Header = () => {
+  // Booking banner: always show next month, no manual updates needed.
+  const [bookingMonth, setBookingMonth] = useState(getNextBookingMonth);
+  useEffect(() => {
+    setBookingMonth(getNextBookingMonth());
+  }, []);
+
   // Phone Menu
   const [showPhoneMenu, setShowPhoneMenu] = useState(false);
   const handleShowPhoneMenu = () => {
@@ -38,7 +52,7 @@ const Header = () => {
         <div className="p-tag">
           <p>
             <a href="/book-a-call">
-              <span>Currently booking development projects for June 2026.</span>{" "}
+              <span>Currently booking development projects for {bookingMonth}.</span>{" "}
               Book a call →
             </a>
           </p>
